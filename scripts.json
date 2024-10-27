@@ -1,32 +1,277 @@
 [
- {
-  "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/trouble_brewing.json", 
-  "teensyville": "false", 
-  "official": "true", 
-  "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/trouble_brewing.png", 
-  "synopsis": "먹구름이 레이븐우드 블러프 상공에서 뒤틀리며, 깊이 잠든 마을과 미신을 믿는 주민들을 불길한 그림자로 뒤덮는다. 방금 널은 빨래가 오두막 사이를 잇는 줄에서 섬뜩하게 춤추고, 굴뚝에서는 연기가 자욱하게 피어오른다.\n\n숨겨진 가마솥이 보글보글 끓어오르며, 이국적인 향이 창틈과 문틈 사이로 새어나온다. 유난히 따뜻한 가을바람이 덩굴 뒤덮인 벽을 휘감고 돌아다니며, 자갈길을 걸을 만큼 용감한 이들에게 불길한 속삭임을 전한다.\n\n지평선에서 천둥소리가 울리자 불안한 어머니들이 놀이에 빠진 아이들을 집으로 부른다. 하지만 귀 기울여 들어보면, 이웃한 숲에서는 더욱 기이한 소리들이 메아리쳐 온다. 어슴푸레 솟은 수도원의 주시하는 눈길 아래, 어둑한 그림자들이 문에서 문으로 새어 다닌다.\n\n그 징조를 읽을 수 있는 자들만이 알고 있다. \n불길한 조짐이 시작되었음을...", 
-  "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/trouble_brewing.pdf", 
-  "name": "불길한 조짐", 
-  "id": "trouble_brewing"
- }, 
- {
-  "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/bad_moon_rising.json", 
-  "teensyville": "false", 
-  "official": "true", 
-  "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/bad_moon_rising.png", 
-  "synopsis": "겨울 해가 저물어가고, 톱날 같은 지평선이 태양을 삼켜간다. 주황빛 단풍은 점점 짙은 갈색으로 물들어가고, 숲은 곧 내릴 눈을 기다리며 침묵에 잠겨있다.\n\n마을 경계 너머 바위 틈새 깊숙한 곳에서 굶주린 늑대들의 울음소리가 울려 퍼지자, 까마귀 떼가 아늑한 보금자리를 버리고 흩어져간다. 여행자들은 점점 더해가는 한기를 피해 서둘러 여관으로 발걸음을 옮긴다. 그들은 따뜻한 차와 달콤한 음악, 진한 맥주로 몸을 녹이지만, 한때 웅장했던 이 도시의 폐허에서 기이하고 불길한 눈동자들이 자신들을 노려보고 있다는 사실은 전혀 알지 못한다.\n\n오늘 밤, 짐승들조차 알고 있다. \n어둠을 부르는 달이 떠오른다는 것을...", 
-  "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/bad_moon_rising.pdf", 
-  "name": "어둠을 부르는 달", 
-  "id": "bad_moon_rising"
- }, 
- {
-  "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/sects_and_violets.json", 
-  "teensyville": "FALSE", 
-  "official": "TRUE", 
-  "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/sects_and_violets.png", 
-  "synopsis": "생기 넘치던 봄이 따스한 여름의 품으로 스러져간다. 공원과 거리의 창가마다 정성스레 가꾼 화원이 만발하여 시선이 닿는 곳마다 향기로운 꽃무리가 피어오른다. 새들은 노래하고, 예술가들은 그림을 그리며, 철학자들은 북적이는 술집에서 삶의 비밀을 속삭인다. 그 사이 서커스단은 도시 변두리에 낡고 정겨운 천막을 펼쳐놓았다.\n\n황금빛 술잔과 달콤한 공연에 취해 흥청거리는 동안, 어둠의 세력이 은밀히 깨어난다. 마을 외곽의 웅장한 폐허 속에서 마녀들과 이단자들은 지하 동굴에 모여들어, 레이븐우드 블러프의 몰락을 위한 의식을 준비한다. 하지만 축제의 열기에 휩싸인 이들은 자신들을 둘러싸고 있는 불길한 기운을 알지 못한 채, 화원의 환상에 취해있을 뿐.\n\n꽃잎 사이로 환란이 피어나니...", 
-  "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/sects_and_violets.pdf", 
-  "name": "환란의 화원", 
-  "id": "sects_and_violets"
- }
-]
+    {
+      "id": "trouble_brewing",
+      "name": "불길한 조짐",
+      "author": "The Pandemonium Institute",
+      "official": "TRUE",
+      "teensyville": "FALSE",
+      "synopsis": "먹구름이 레이븐우드 블러프 상공에서 뒤틀리며, 깊이 잠든 마을과 미신을 믿는 주민들을 불길한 그림자로 뒤덮는다. 방금 널은 빨래가 오두막 사이를 잇는 줄에서 섬뜩하게 춤추고, 굴뚝에서는 연기가 자욱하게 피어오른다.\n\n숨겨진 가마솥이 보글보글 끓어오르며, 이국적인 향이 창틈과 문틈 사이로 새어나온다. 유난히 따뜻한 가을바람이 덩굴 뒤덮인 벽을 휘감고 돌아다니며, 자갈길을 걸을 만큼 용감한 이들에게 불길한 속삭임을 전한다.\n\n지평선에서 천둥소리가 울리자 불안한 어머니들이 놀이에 빠진 아이들을 집으로 부른다. 하지만 귀 기울여 들어보면, 이웃한 숲에서는 더욱 기이한 소리들이 메아리쳐 온다. 어슴푸레 솟은 수도원의 주시하는 눈길 아래, 어둑한 그림자들이 문에서 문으로 새어 다닌다.\n\n그 징조를 읽을 수 있는 자들만이 알고 있다. \n불길한 조짐이 시작되었음을...",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/trouble_brewing.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/trouble_brewing.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/trouble_brewing.png"
+    },
+    {
+      "id": "bad_moon_rising",
+      "name": "어둠을 부르는 달",
+      "author": "The Pandemonium Institute",
+      "official": "TRUE",
+      "teensyville": "FALSE",
+      "synopsis": "겨울 해가 저물어가고, 톱날 같은 지평선이 태양을 삼켜간다. 주황빛 단풍은 점점 짙은 갈색으로 물들어가고, 숲은 곧 내릴 눈을 기다리며 침묵에 잠겨있다.\n\n마을 경계 너머 바위 틈새 깊숙한 곳에서 굶주린 늑대들의 울음소리가 울려 퍼지자, 까마귀 떼가 아늑한 보금자리를 버리고 흩어져간다. 여행자들은 점점 더해가는 한기를 피해 서둘러 여관으로 발걸음을 옮긴다. 그들은 따뜻한 차와 달콤한 음악, 진한 맥주로 몸을 녹이지만, 한때 웅장했던 이 도시의 폐허에서 기이하고 불길한 눈동자들이 자신들을 노려보고 있다는 사실은 전혀 알지 못한다.\n\n오늘 밤, 짐승들조차 알고 있다. \n어둠을 부르는 달이 떠오른다는 것을...",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/bad_moon_rising.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/bad_moon_rising.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/bad_moon_rising.png"
+    },
+    {
+      "id": "sects_and_violets",
+      "name": "환란의 화원",
+      "author": "The Pandemonium Institute",
+      "official": "TRUE",
+      "teensyville": "FALSE",
+      "synopsis": "생기 넘치던 봄이 따스한 여름의 품으로 스러져간다. 공원과 거리의 창가마다 정성스레 가꾼 화원이 만발하여 시선이 닿는 곳마다 향기로운 꽃무리가 피어오른다. 새들은 노래하고, 예술가들은 그림을 그리며, 철학자들은 북적이는 술집에서 삶의 비밀을 속삭인다. 그 사이 서커스단은 도시 변두리에 낡고 정겨운 천막을 펼쳐놓았다.\n\n황금빛 술잔과 달콤한 공연에 취해 흥청거리는 동안, 어둠의 세력이 은밀히 깨어난다. 마을 외곽의 웅장한 폐허 속에서 마녀들과 이단자들은 지하 동굴에 모여들어, 레이븐우드 블러프의 몰락을 위한 의식을 준비한다. 하지만 축제의 열기에 휩싸인 이들은 자신들을 둘러싸고 있는 불길한 기운을 알지 못한 채, 화원의 환상에 취해있을 뿐.\n\n꽃잎 사이로 환란이 피어나니...",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/sects_and_violets.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/sects_and_violets.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/sects_and_violets.png"
+    },
+    {
+        "id": "high_seas_of_mutiny",
+        "name": "반란의 거친 바다",
+        "author": "Gordon Edward Fitzgerald",
+        "official": "FALSE",
+        "teensyville": "FALSE",
+        "synopsis": "",
+        "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
+        "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
+        "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png"
+      },
+    {
+      "id": "all_of_trouble_brewing",
+      "name": "불길한 조짐 (확장)",
+      "author": "라이너스 (프로)",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "'불길한 조짐'을 경험하신 분들이 '어둠을 부르는 달'이나 '환란의 화원'로 넘어가기 전 중간 단계로 하기 좋은 스크립트입니다.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/all_of_trouble_brewing.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/all_of_trouble_brewing.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/all_of_trouble_brewing.png"
+    },
+    {
+        "id": "pokemon_the_great_gen1",
+        "name": "포켓몬스터: 위대한 1세대",
+        "author": "",
+        "official": "FALSE",
+        "teensyville": "FALSE",
+        "synopsis": "",
+        "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pokemon_the_great_gen1.json",
+        "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pokemon_the_great_gen1.pdf",
+        "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/pokemon_the_great_gen1.png"
+      },
+    {
+      "id": "duck_duck_goose",
+      "name": "수건돌리기",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/duck_duck_goose.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/duck_duck_goose.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/duck_duck_goose.png"
+    },
+    {
+      "id": "no_roles_barred",
+      "name": "영웅집결",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/no_roles_barred.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/no_roles_barred.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/no_roles_barred.png"
+    },
+    {
+      "id": "baby_its_cold_outside",
+      "name": "밖은 추워요",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/baby_its_cold_outside.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/baby_its_cold_outside.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/baby_its_cold_outside.png"
+    },
+    {
+      "id": "fishbucket",
+      "name": "물고기 양동이",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/fishbucket.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/fishbucket.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/fishbucket.png"
+    },
+    {
+      "id": "on_thin_ice",
+      "name": "살얼음판 위에서",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/on_thin_ice.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/on_thin_ice.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/on_thin_ice.png"
+    },
+    {
+      "id": "trouble_with_violets",
+      "name": "제비꽃의 소란",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/trouble_with_violets.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/trouble_with_violets.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/trouble_with_violets.png"
+    },
+    {
+      "id": "frankensteins_mayor",
+      "name": "프랑켄슈타인의 시장",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/frankensteins_mayor.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/frankensteins_mayor.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/frankensteins_mayor.png"
+    },
+    {
+      "id": "one_bad_day",
+      "name": "최악의 하루",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/one_bad_day.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/one_bad_day.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/one_bad_day.png"
+    },
+    {
+      "id": "vigormortis_high_school",
+      "name": "비거모티스 고등학교",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/vigormortis_high_school.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/vigormortis_high_school.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/vigormortis_high_school.png"
+    },
+    {
+      "id": "barbie_on_the_clocktower",
+      "name": "시계탑의 바비",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/barbie_on_the_clocktower.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/barbie_on_the_clocktower.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/barbie_on_the_clocktower.png"
+    },
+    {
+      "id": "hide_n_seek",
+      "name": "숨바꼭질",
+      "author": "Narninian and Zaba",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "'숨바꼭질' 스크립트는 선한 팀이든 악한 팀이든 상관없이 모두가 자신의 정체를 숨기고 거짓말을 해야 하는 재미있는 각본입니다. \n세레노부스와 픽시, 그리고 여러 아웃사이더들이 자신의 진짜 정체를 숨기거나 밝힐 수 없는 상황이라 여러 사람이 같은 역할을 주장하는 일이 자연스럽게 발생합니다. 이런 상황은 실제로 거짓말을 하지 않아도 되는 악한 팀에게도 좋은 위장 기회가 됩니다. \n\n보통은 정직하게 행동하면 되는 선한 팀 플레이어들도 이 각본에서는 사정이 다릅니다. 특히 아가씨의 정체가 밝혀지면 게임에서 질 수 있기 때문에, 아가씨를 보호하기 위해 거짓말이 필요할 수도 있죠. 게다가 메제펠레스가 게임에 있을 수 있어서 아무리 확실해 보이는 정보라도 한 번쯤은 의심해봐야 합니다.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png"
+    },
+    {
+      "id": "whose_cult_is_it_anyway",
+      "name": "누구의 광신도인가?",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/whose_cult_is_it_anyway.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/whose_cult_is_it_anyway.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/whose_cult_is_it_anyway.png"
+    },
+    {
+      "id": "catfishing",
+      "name": "속임수 데이트",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/catfishing.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/catfishing.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/catfishing.png"
+    },
+    {
+      "id": "laissez_un_faire",
+      "name": "자유방임주의",
+      "author": "Steven Medway",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "'자유방임주의' 스크립트는 기만과 예측불가한 플레이가 가득한, 길고 흥미진진한 게임을 만들어냅니다. 틴시빌 게임치고는 굉장히 오래 걸리는 편으로(7-9인용 일반 게임만큼 혹은 그보다 더 길어질 수 있습니다), 덕분에 플레이어들은 정보를 모으거나 완벽한 블러프를 준비할 충분한 시간을 가질 수 있습니다. 이를 균형잡기 위해, 게임에서 얻을 수 있는 정보는 평소보다 훨씬 모호합니다. 많은 캐릭터들이 처음에는 흐릿하지만 시간이 지날수록 선명해지는 정보를 가지고 있거나, 가장 효과적인 순간에 사용해야 하는 능력을 보유하고 있습니다.\n\n풍부한 정보로 인해 엄청난 토론이 이뤄지는 게임이며, 게임 중후반부에 놀라운 반전이 자주 일어납니다(광인이 자신의 정체를 깨닫거나, 기구탑승자, 자폐증 천재, 기억상실자가 4-5일차에 퍼즐을 맞추는 등). 이는 추리가 핵심이 되는 게임을 마지막 날 흥미진진한 절정으로 이끕니다. 스토리텔러의 높은 수준의 창의력이 요구되기 때문에, 매 게임이 믿을 수 없을 만큼 다르게 진행됩니다.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/laissez_un_faire.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/laissez_un_faire.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/laissez_un_faire.png"
+    },
+    {
+      "id": "race_to_the_bottom",
+      "name": "끝없는 추락",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/race_to_the_bottom.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/race_to_the_bottom.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/race_to_the_bottom.png"
+    },
+    {
+      "id": "commitment_issues",
+      "name": "신뢰의 문제",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/commitment_issues.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/commitment_issues.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/commitment_issues.png"
+    },
+    {
+      "id": "largery_un_faire",
+      "name": "불공정 게임",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/largery_un_faire.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/largery_un_faire.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/largery_un_faire.png"
+    },
+    {
+      "id": "deadly_penance_day",
+      "name": "치명적인 참회의 날",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/deadly_penance_day.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/deadly_penance_day.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/deadly_penance_day.png"
+    },
+    {
+      "id": "no_greater_joy",
+      "name": "더 없는 기쁨",
+      "author": "Steven Medway",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "'더 없는 기쁨'은 빠르고, 재미있고, 활기차며, 이해하기 쉬운 게임을 위해 설계된 스크립트입니다. 20분 정도의 게임을 원하거나, 여러 번의 짧은 게임을 진행하고 싶다면 이 스크립트가 제격일 것입니다.\n\n만약 여러분의 그룹이 '불길한 조짐'을 해본 적이 있다면, 대부분의 캐릭터들이 이미 익숙할 것입니다. 다른 에디션에서 가져온 몇 가지 추가 캐릭터들이 있지만, 전혀 새로운 것을 배울 필요 없이 게임의 대부분을 이해할 수 있을 것입니다.\n\n선한 팀이 받는 정보는 꽤 단순하지만, 다른 플레이어들의 정보와 결합되면 오히려 너무 강력할 수도 있습니다! 그래서 악한 팀은 최대한 빨리 나서서 허위 정보를 퍼뜨려 선한 팀을 혼란스럽게 만들어야 합니다. 악한 팀이 침묵을 지키면 예상치 못하게 패배할 수 있습니다. 하지만 설득력 있게 이야기한다면, 선한 팀의 누가 누구인지에 대한 믿음을 크게 뒤흔들 수 있는 여러 선한 캐릭터들로 위장할 수 있습니다.\n\n참고로, 일반적으로 아웃사이더 2명을 추가하는 남작(Baron)은 이 스크립트에 아웃사이더가 2명밖에 없기 때문에, 이미 아웃사이더가 1명 있는 경우 추가로 1명만 더할 수 있습니다.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/no_greater_joy.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/no_greater_joy.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/no_greater_joy.png"
+    }
+  ]
