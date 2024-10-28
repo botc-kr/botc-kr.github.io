@@ -33,19 +33,19 @@
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/sects_and_violets.png"
     },
     {
-        "id": "high_seas_of_mutiny",
-        "name": "반란의 거친 바다",
-        "author": "Gordon Edward Fitzgerald",
-        "official": "FALSE",
-        "teensyville": "FALSE",
-        "synopsis": "",
-        "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
-        "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
-        "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png"
-      },
+      "id": "high_seas_of_mutiny",
+      "name": "반란의 거친 바다",
+      "author": "Gordon Edward Fitzgerald",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "소위 해적시트",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png"
+    },
     {
       "id": "all_of_trouble_brewing",
-      "name": "불길한 조짐 (확장)",
+      "name": "깊어지는 불길한 조짐",
       "author": "라이너스 (프로)",
       "official": "FALSE",
       "teensyville": "FALSE",
@@ -55,16 +55,27 @@
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/all_of_trouble_brewing.png"
     },
     {
-        "id": "pokemon_the_great_gen1",
-        "name": "포켓몬스터: 위대한 1세대",
-        "author": "",
-        "official": "FALSE",
-        "teensyville": "FALSE",
-        "synopsis": "",
-        "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pokemon_the_great_gen1.json",
-        "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pokemon_the_great_gen1.pdf",
-        "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/pokemon_the_great_gen1.png"
-      },
+      "id": "hide_n_seek",
+      "name": "숨바꼭질",
+      "author": "Narninian and Zaba",
+      "official": "FALSE",
+      "teensyville": "FALSE",
+      "synopsis": "숨바꼭질\" 스크립트는 선한 팀을 포함해 모든 사람이 거짓말과 블러프를 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 아웃사이더들로 인해 동일 역할 주장(더블 클레임)은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 데미젤을 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠레스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png"
+    },
+    {
+      "id": "laissez_un_faire",
+      "name": "자유방임주의",
+      "author": "Steven Medway",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "자유방임주의'는 속임수와 예측할 수 없는 전개로 가득한, 긴 호흡의 흥미진진한 게임입니다. \n\n일반적인 틴시빌 게임보다 훨씬 오래 걸리는 편으로, 보통 7-9인용 게임과 비슷하거나 더 길수도 있습니다. 덕분에 플레이어들은 정보를 수집하고 완벽한 거짓말을 준비할 시간을 충분히 가질 수 있죠. 이런 특징을 조율하기 위해, 게임에서 얻을 수 있는 정보는 평소보다 훨씬 모호하게 설계되어 있습니다. 많은 캐릭터들이 처음엔 희미하다가 시간이 지날수록 뚜렷해지는 정보를 가지고 있거나, 가장 효과적인 타이밍에 써야 하는 능력을 지니고 있습니다. \n\n풍부한 정보로 인해 열띤 토론이 이어지는 게임이며, 게임 중후반부에는 극적인 반전도 자주 일어납니다. 미치광이가 자신의 정체를 깨닫거나 기구조종사, 자폐증 천재, 기억상실자가 4-5일차에 퍼즐을 완성하는 식이죠. \n\n이는 추리가 핵심인 게임을 마지막 날 손에 땀을 쥐게 하는 결말로 이끕니다. 스토리텔러의 높은 수준의 창의력이 필요한 만큼, 매 게임마다 완전히 다른 이야기가 펼쳐집니다.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/laissez_un_faire.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/laissez_un_faire.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/laissez_un_faire.png"
+    },
     {
       "id": "duck_duck_goose",
       "name": "수건돌리기",
@@ -78,7 +89,7 @@
     },
     {
       "id": "no_roles_barred",
-      "name": "영웅집결",
+      "name": "\b아수라장",
       "author": "",
       "official": "FALSE",
       "teensyville": "FALSE",
@@ -100,7 +111,7 @@
     },
     {
       "id": "fishbucket",
-      "name": "물고기 양동이",
+      "name": "만선",
       "author": "",
       "official": "FALSE",
       "teensyville": "FALSE",
@@ -108,17 +119,6 @@
       "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/fishbucket.json",
       "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/fishbucket.pdf",
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/fishbucket.png"
-    },
-    {
-      "id": "on_thin_ice",
-      "name": "살얼음판 위에서",
-      "author": "",
-      "official": "FALSE",
-      "teensyville": "TRUE",
-      "synopsis": "",
-      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/on_thin_ice.json",
-      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/on_thin_ice.pdf",
-      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/on_thin_ice.png"
     },
     {
       "id": "trouble_with_violets",
@@ -133,7 +133,7 @@
     },
     {
       "id": "frankensteins_mayor",
-      "name": "프랑켄슈타인의 시장",
+      "name": "프랑켄슈타인 시장",
       "author": "",
       "official": "FALSE",
       "teensyville": "TRUE",
@@ -165,8 +165,19 @@
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/vigormortis_high_school.png"
     },
     {
+      "id": "no_greater_joy",
+      "name": "더 없는 기쁨",
+      "author": "Steven Medway",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "'더 없는 기쁨'은 빠르고, 재미있고, 활기차며, 이해하기 쉬운 게임을 위해 설계된 스크립트입니다. 20분 정도의 게임을 원하거나, 여러 번의 짧은 게임을 진행하고 싶다면 이 스크립트가 제격일 것입니다.\n\n만약 여러분의 그룹이 '불길한 조짐'을 해본 적이 있다면, 대부분의 캐릭터들이 이미 익숙할 것입니다. 다른 에디션에서 가져온 몇 가지 추가 캐릭터들이 있지만, 전혀 새로운 것을 배울 필요 없이 게임의 대부분을 이해할 수 있을 것입니다.\n\n선한 팀이 받는 정보는 꽤 단순하지만, 다른 플레이어들의 정보와 결합되면 오히려 너무 강력할 수도 있습니다! 그래서 악한 팀은 최대한 빨리 나서서 허위 정보를 퍼뜨려 선한 팀을 혼란스럽게 만들어야 합니다. 악한 팀이 침묵을 지키면 예상치 못하게 패배할 수 있습니다. 하지만 설득력 있게 이야기한다면, 선한 팀의 누가 누구인지에 대한 믿음을 크게 뒤흔들 수 있는 여러 선한 캐릭터들로 위장할 수 있습니다.\n\n참고로, 일반적으로 아웃사이더 2명을 추가하는 남작(Baron)은 이 스크립트에 아웃사이더가 2명밖에 없기 때문에, 이미 아웃사이더가 1명 있는 경우 추가로 1명만 더할 수 있습니다.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/no_greater_joy.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/no_greater_joy.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/no_greater_joy.png"
+    },
+    {
       "id": "barbie_on_the_clocktower",
-      "name": "시계탑의 바비",
+      "name": "\b\b시계탑의 바비인형",
       "author": "",
       "official": "FALSE",
       "teensyville": "FALSE",
@@ -176,19 +187,30 @@
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/barbie_on_the_clocktower.png"
     },
     {
-      "id": "hide_n_seek",
-      "name": "숨바꼭질",
-      "author": "Narninian and Zaba",
+      "id": "on_thin_ice",
+      "name": "살얼음판 위에서",
+      "author": "",
+      "official": "FALSE",
+      "teensyville": "TRUE",
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/on_thin_ice.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/on_thin_ice.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/on_thin_ice.png"
+    },
+    {
+      "id": "pokemon_the_great_gen1",
+      "name": "포켓몬스터: 위대한 1세대",
+      "author": "",
       "official": "FALSE",
       "teensyville": "FALSE",
-      "synopsis": "'숨바꼭질' 스크립트는 선한 팀이든 악한 팀이든 상관없이 모두가 자신의 정체를 숨기고 거짓말을 해야 하는 재미있는 각본입니다. \n세레노부스와 픽시, 그리고 여러 아웃사이더들이 자신의 진짜 정체를 숨기거나 밝힐 수 없는 상황이라 여러 사람이 같은 역할을 주장하는 일이 자연스럽게 발생합니다. 이런 상황은 실제로 거짓말을 하지 않아도 되는 악한 팀에게도 좋은 위장 기회가 됩니다. \n\n보통은 정직하게 행동하면 되는 선한 팀 플레이어들도 이 각본에서는 사정이 다릅니다. 특히 아가씨의 정체가 밝혀지면 게임에서 질 수 있기 때문에, 아가씨를 보호하기 위해 거짓말이 필요할 수도 있죠. 게다가 메제펠레스가 게임에 있을 수 있어서 아무리 확실해 보이는 정보라도 한 번쯤은 의심해봐야 합니다.",
-      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
-      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
-      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png"
+      "synopsis": "",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pokemon_the_great_gen1.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pokemon_the_great_gen1.pdf",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/pokemon_the_great_gen1.png"
     },
     {
       "id": "whose_cult_is_it_anyway",
-      "name": "누구의 광신도인가?",
+      "name": "의심스러운 교단",
       "author": "",
       "official": "FALSE",
       "teensyville": "FALSE",
@@ -209,17 +231,6 @@
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/catfishing.png"
     },
     {
-      "id": "laissez_un_faire",
-      "name": "자유방임주의",
-      "author": "Steven Medway",
-      "official": "FALSE",
-      "teensyville": "TRUE",
-      "synopsis": "'자유방임주의' 스크립트는 기만과 예측불가한 플레이가 가득한, 길고 흥미진진한 게임을 만들어냅니다. 틴시빌 게임치고는 굉장히 오래 걸리는 편으로(7-9인용 일반 게임만큼 혹은 그보다 더 길어질 수 있습니다), 덕분에 플레이어들은 정보를 모으거나 완벽한 블러프를 준비할 충분한 시간을 가질 수 있습니다. 이를 균형잡기 위해, 게임에서 얻을 수 있는 정보는 평소보다 훨씬 모호합니다. 많은 캐릭터들이 처음에는 흐릿하지만 시간이 지날수록 선명해지는 정보를 가지고 있거나, 가장 효과적인 순간에 사용해야 하는 능력을 보유하고 있습니다.\n\n풍부한 정보로 인해 엄청난 토론이 이뤄지는 게임이며, 게임 중후반부에 놀라운 반전이 자주 일어납니다(광인이 자신의 정체를 깨닫거나, 기구탑승자, 자폐증 천재, 기억상실자가 4-5일차에 퍼즐을 맞추는 등). 이는 추리가 핵심이 되는 게임을 마지막 날 흥미진진한 절정으로 이끕니다. 스토리텔러의 높은 수준의 창의력이 요구되기 때문에, 매 게임이 믿을 수 없을 만큼 다르게 진행됩니다.",
-      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/laissez_un_faire.json",
-      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/laissez_un_faire.pdf",
-      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/laissez_un_faire.png"
-    },
-    {
       "id": "race_to_the_bottom",
       "name": "끝없는 추락",
       "author": "",
@@ -232,7 +243,7 @@
     },
     {
       "id": "commitment_issues",
-      "name": "신뢰의 문제",
+      "name": "약속의 무게",
       "author": "",
       "official": "FALSE",
       "teensyville": "FALSE",
@@ -254,7 +265,7 @@
     },
     {
       "id": "deadly_penance_day",
-      "name": "치명적인 참회의 날",
+      "name": "죽음의 속죄",
       "author": "",
       "official": "FALSE",
       "teensyville": "FALSE",
@@ -262,16 +273,5 @@
       "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/deadly_penance_day.json",
       "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/deadly_penance_day.pdf",
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/deadly_penance_day.png"
-    },
-    {
-      "id": "no_greater_joy",
-      "name": "더 없는 기쁨",
-      "author": "Steven Medway",
-      "official": "FALSE",
-      "teensyville": "TRUE",
-      "synopsis": "'더 없는 기쁨'은 빠르고, 재미있고, 활기차며, 이해하기 쉬운 게임을 위해 설계된 스크립트입니다. 20분 정도의 게임을 원하거나, 여러 번의 짧은 게임을 진행하고 싶다면 이 스크립트가 제격일 것입니다.\n\n만약 여러분의 그룹이 '불길한 조짐'을 해본 적이 있다면, 대부분의 캐릭터들이 이미 익숙할 것입니다. 다른 에디션에서 가져온 몇 가지 추가 캐릭터들이 있지만, 전혀 새로운 것을 배울 필요 없이 게임의 대부분을 이해할 수 있을 것입니다.\n\n선한 팀이 받는 정보는 꽤 단순하지만, 다른 플레이어들의 정보와 결합되면 오히려 너무 강력할 수도 있습니다! 그래서 악한 팀은 최대한 빨리 나서서 허위 정보를 퍼뜨려 선한 팀을 혼란스럽게 만들어야 합니다. 악한 팀이 침묵을 지키면 예상치 못하게 패배할 수 있습니다. 하지만 설득력 있게 이야기한다면, 선한 팀의 누가 누구인지에 대한 믿음을 크게 뒤흔들 수 있는 여러 선한 캐릭터들로 위장할 수 있습니다.\n\n참고로, 일반적으로 아웃사이더 2명을 추가하는 남작(Baron)은 이 스크립트에 아웃사이더가 2명밖에 없기 때문에, 이미 아웃사이더가 1명 있는 경우 추가로 1명만 더할 수 있습니다.",
-      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/no_greater_joy.json",
-      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/no_greater_joy.pdf",
-      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/no_greater_joy.png"
     }
   ]
