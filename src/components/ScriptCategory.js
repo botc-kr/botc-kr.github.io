@@ -16,15 +16,21 @@ const ScriptCategory = ({
     </h2>
     <div className="grid gap-6 sm:gap-8">
       {scripts.map((script) => (
-        <ScriptCard
+        <div
           key={script.id}
-          script={script}
-          onCopyJson={onCopyJson}
-          onDownloadJson={onDownloadJson}
-          onDownloadPdf={onDownloadPdf}
-          copiedId={copiedId}
-          downloadingId={downloadingId}
-        />
+          id={script.id}
+          className="bg-white rounded-lg shadow-md p-4"
+        >
+          <ScriptCard
+            key={script.id}
+            script={script}
+            onCopyJson={onCopyJson}
+            onDownloadJson={onDownloadJson}
+            onDownloadPdf={onDownloadPdf}
+            copiedId={copiedId}
+            downloadingId={downloadingId}
+          />
+        </div>
       ))}
     </div>
   </div>

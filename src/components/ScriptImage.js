@@ -1,18 +1,26 @@
 import React, { useState, useEffect } from "react";
+import defaultImage from "../assets/images/blood_on_the_clocktower.png";
+import tb from "../assets/images/trouble_brewing.png";
+import bmr from "../assets/images/bad_moon_rising.png";
+import snv from "../assets/images/sects_and_violets.png";
 
-const DEFAULT_IMAGE = "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/blood_on_the_clocktower.png";
+const imageMap = {
+  tb: tb,
+  bmr: bmr,
+  snv: snv,
+};
 
 const ScriptImage = ({ src, alt }) => {
-  const [imgSrc, setImgSrc] = useState(src);
+  const [imgSrc, setImgSrc] = useState(imageMap[src] || src);
 
   const handleError = () => {
-    if (imgSrc !== DEFAULT_IMAGE) {
-      setImgSrc(DEFAULT_IMAGE);
+    if (imgSrc !== defaultImage) {
+      setImgSrc(defaultImage);
     }
   };
 
   useEffect(() => {
-    setImgSrc(src);
+    setImgSrc(imageMap[src] || src);
   }, [src]);
 
   return (
