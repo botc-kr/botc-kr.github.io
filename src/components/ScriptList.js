@@ -6,6 +6,7 @@ import {
   handleDownloadJson,
   handleDownloadPdf,
 } from "../utils/ScriptUtils";
+import { Header, Footer } from "./HeaderFooter";
 
 const ScriptList = () => {
   const [scripts, setScripts] = useState([]);
@@ -46,47 +47,53 @@ const ScriptList = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4 sm:p-6">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-        Blood on the Clocktower 비공식 한글화
-      </h1>
+    <>
+      <Header />
+      <div className="max-w-6xl mx-auto p-4 sm:p-6">
+        {officialScripts.length > 0 && (
+          <div id="official">
+            <ScriptCategory
+              title="공식 스크립트"
+              scripts={officialScripts}
+              onCopyJson={onCopyJson}
+              onDownloadJson={onDownloadJson}
+              onDownloadPdf={onDownloadPdf}
+              copiedId={copiedId}
+              downloadingId={downloadingId}
+            />
+          </div>
+        )}
 
-      {officialScripts.length > 0 && (
-        <ScriptCategory
-          title="공식 스크립트"
-          scripts={officialScripts}
-          onCopyJson={onCopyJson}
-          onDownloadJson={onDownloadJson}
-          onDownloadPdf={onDownloadPdf}
-          copiedId={copiedId}
-          downloadingId={downloadingId}
-        />
-      )}
+        {communityScripts.length > 0 && (
+          <div id="community">
+            <ScriptCategory
+              title="커스텀 스크립트"
+              scripts={communityScripts}
+              onCopyJson={onCopyJson}
+              onDownloadJson={onDownloadJson}
+              onDownloadPdf={onDownloadPdf}
+              copiedId={copiedId}
+              downloadingId={downloadingId}
+            />
+          </div>
+        )}
 
-      {communityScripts.length > 0 && (
-        <ScriptCategory
-          title="커뮤니티 스크립트"
-          scripts={communityScripts}
-          onCopyJson={onCopyJson}
-          onDownloadJson={onDownloadJson}
-          onDownloadPdf={onDownloadPdf}
-          copiedId={copiedId}
-          downloadingId={downloadingId}
-        />
-      )}
-
-      {teensyvilleScripts.length > 0 && (
-        <ScriptCategory
-          title="틴시빌 스크립트"
-          scripts={teensyvilleScripts}
-          onCopyJson={onCopyJson}
-          onDownloadJson={onDownloadJson}
-          onDownloadPdf={onDownloadPdf}
-          copiedId={copiedId}
-          downloadingId={downloadingId}
-        />
-      )}
-    </div>
+        {teensyvilleScripts.length > 0 && (
+          <div id="teensyville">
+            <ScriptCategory
+              title="틴시빌 스크립트"
+              scripts={teensyvilleScripts}
+              onCopyJson={onCopyJson}
+              onDownloadJson={onDownloadJson}
+              onDownloadPdf={onDownloadPdf}
+              copiedId={copiedId}
+              downloadingId={downloadingId}
+            />
+          </div>
+        )}
+      </div>
+      <Footer />
+    </>
   );
 };
 
