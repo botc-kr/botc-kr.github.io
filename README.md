@@ -32,4 +32,10 @@
 
 ## 라이선스
 
-이 프로젝트는 비상업적 목적으로만 사용 가능합니다. Blood on the Clocktower의 모든 컨텐츠에 대한 권리는 원작자에게 있습니다.
+이 프로젝트는 CC BY-NC 4.0 라이선스를 따릅니다.
+
+- 비상업적 용도로만 사용 가능
+- 원작자 및 한글화 프로젝트 크레딧 표시 필수
+- 수정 및 재배포 허용
+
+Blood on the Clocktower의 모든 지적재산권은 The Pandemonium Institute에 있습니다.
