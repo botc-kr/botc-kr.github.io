@@ -28,7 +28,7 @@ const Header = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <a href="/" className="text-xl font-bold">
-                BotC 비공식 한글화
+                BotC 한글화 프로젝트
               </a>
               <div className="hidden sm:flex space-x-4">
                 <a
@@ -101,10 +101,18 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
+                  href="https://botc.app/"
+                  className="text-gray-400 hover:text-white"
+                >
+                  공식 앱 (English)
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://bloodontheclocktower.com/"
                   className="text-gray-400 hover:text-white"
                 >
-                  공식 웹사이트
+                  공식 웹사이트 (English)
                 </a>
               </li>
               <li>
@@ -112,7 +120,15 @@ const Footer = () => {
                   href="https://wiki.bloodontheclocktower.com/"
                   className="text-gray-400 hover:text-white"
                 >
-                  공식 위키
+                  공식 위키 (English)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://clocktower-wiki.gstonegames.com/"
+                  className="text-gray-400 hover:text-white"
+                >
+                  공식 위키 (中文)
                 </a>
               </li>
             </ul>
