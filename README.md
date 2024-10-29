@@ -2,7 +2,7 @@
 
 ## 프로젝트 소개
 
-이 프로젝트는 보드게임 [Blood on the Clocktower](https://bloodontheclocktower.com/)의 비공식 한글화 프로젝트입니다. 한국어를 사용하는 플레이어들이 더 쉽게 게임을 즐길 수 있도록 하는 것을 목표로 합니다.
+이 프로젝트는 추리/마피아 게임인 [Blood on the Clocktower](https://bloodontheclocktower.com/)의 비공식 한글화 프로젝트입니다. 한국어를 사용하는 플레이어들이 더 쉽게 게임을 즐길 수 있도록 하는 것을 목표로 합니다.
 
 ## 주의사항
 
