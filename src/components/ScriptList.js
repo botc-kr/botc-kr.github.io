@@ -18,6 +18,36 @@ const ScriptList = () => {
     fetchScripts(setScripts, setLoading);
   }, []);
 
+  // 해시 변경을 감지하고 스크롤하는 효과
+  useEffect(() => {
+    const scrollToScript = () => {
+      const hash = window.location.hash.slice(1); // '#' 제거
+      if (!hash) return;
+
+      // 스크립트 로딩이 완료된 후에만 스크롤 실행
+      if (!loading && scripts.length > 0) {
+        const element = document.getElementById(hash);
+        if (element) {
+          // smooth scroll with offset for header
+          const headerOffset = 80; // 헤더 높이에 맞게 조정하세요
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
+
+    scrollToScript();
+    window.addEventListener("hashchange", scrollToScript);
+
+    return () => window.removeEventListener("hashchange", scrollToScript);
+  }, [loading, scripts]); // scripts와 loading이 변경될 때마다 실행
+
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">

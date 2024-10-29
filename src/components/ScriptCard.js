@@ -1,11 +1,5 @@
 import React, { useState } from "react";
 import { BookOpen, ChevronDown, ChevronUp, FileText } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "./ui/tooltip";
 import ScriptImage from "./ScriptImage";
 import ActionButtons from "./ActionButtons";
 
