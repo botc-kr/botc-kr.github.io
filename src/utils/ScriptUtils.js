@@ -42,9 +42,13 @@ export const handleDownloadJson = async (jsonUrl, fileName) => {
 export const handleDownloadPdf = async (pdfUrl, scriptId, setDownloadingId) => {
   try {
     setDownloadingId(scriptId);
+
+    // pdfUrl에서 마지막 컴포넌트(파일명) 추출
+    const fileName = pdfUrl.split("/").pop();
+
     const response = await fetch(pdfUrl);
     const blob = await response.blob();
-    downloadFile(blob, `${scriptId}.pdf`);
+    downloadFile(blob, fileName);
   } catch (error) {
     console.error("Error downloading PDF:", error);
     alert("PDF 다운로드 중 오류가 발생했습니다.");

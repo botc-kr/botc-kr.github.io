@@ -45,7 +45,7 @@
       "official": "",
       "teensyville": "",
       "isHidden": "",
-      "synopsis": "검은 돛이 수평선에서 모습을 드러내자, 복작이던 항구도시마저 숨죽여 온다. 늘어선 배들이 거친 바다의 소용돌이처럼 삐걱이고, 녹슨 닻줄이 항구의 바위에 기분 나쁜 소리를 긁어댄다. 달빛이 스며드는 선술집에서는 음모와 배신의 귓속말이 피어오르고, 비릿한 바다 냄새도 그 아래서는 서서히 부패해간다. 누군가는 선장실의 보물을 탐하고, 누군가는 칼자루를 쥔 손을 바라본다. 누군가는 반란을 꿈꾸고, 누군가는 이미 그 반란을 알고 있다. 닻을 올려라... 반란의 거친 바다가 시작된다.",
+      "synopsis": "차갑고 음울한 카리브해의 밤바다를 표류하던 중, 기이하리만치 잔잔한 파도를 가르며 비명이 울려 퍼진다. 놀란 선원들이 '저주받은 앵무' 호의 선창에서 달려 나와 확인해보니, 배의 사령관이 살해당한 채 까마귀 전망대에 꿰뚫려 있었고, 선갑판으로는 핏방울이 뚝뚝 떨어지고 있었다. 호기심은 곧 불신으로 바뀌었다. 악마가 밤에는 살인을 저지르고 낮에는 인간의 모습을 한 채 배회하는 저주받은 항해라는 사실이 곧 분명해졌기 때문이다.\n\n선원들, 즉 '마을주민'들은 각자 정보를 가지고 있었지만, 악마와 그의 사악한 하수인들은 거짓말을 퍼뜨리며 흉악한 범인의 정체에 대한 혼란과 공포를 부추기고 있었다. 선원들은 과연 시간 안에 수수께끼의 조각들을 맞출 수 있을까? 아니면 지평선에서 다가오는 격렬한 폭풍과 함께 사악한 기운이 배를 삼켜버릴 것인가.\n\n무엇이든 일어날 수 있는 이곳, 반란의 거친 바다에서...",
       "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
       "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png",
@@ -78,6 +78,19 @@
       "note": ""
     },
     {
+      "id": "pokemon_the_great_gen1",
+      "name": "포켓몬스터: 위대한 1세대",
+      "author": "Castle_Q",
+      "official": "",
+      "teensyville": "",
+      "isHidden": "",
+      "synopsis": "포켓몬 세계에 온 것을 환영합니다. \n이 세계에는 포켓몬스터, 줄여서 포켓몬이라 불리는 신비한 생명체들이 도처에 살고 있습니다. \n아, 이미 당신은 포켓몬이셨군요?\n\n위대한 1세대는 추론게임인 BOTC에 포켓몬스터 IP를 접목, 인지적&정서적 재미를 모두 잡고자 기획한 게임입니다. 포켓몬이 된 당신은, 어쩌면 진화할 수도 있습니다. 진화하게되면 당신의 능력과 직업이 달라집니다. 첫날 밤 정보를 얻고 능력이 없는 포켓몬도 살아남을 명분이 생깁니다. 또 어쩌면 당신은 진화로 인해 팀이 달라질수도 있습니다. 어쩌면 마을주민이 악마가 될 지도 모르겠네요.",
+      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pokemon_the_great_gen1.json",
+      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pokemon_the_great_gen1.jpeg",
+      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/pokemon_the_great_gen1.png",
+      "note": ""
+    },
+    {
       "id": "barbie_on_the_clocktower",
       "name": "시계탑의 바비인형",
       "author": "",
@@ -97,7 +110,7 @@
       "official": "",
       "teensyville": "",
       "isHidden": "",
-      "synopsis": "'숨바꼭질'은 선한 팀을 포함해 모든 사람이 거짓말을 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 \b외부인들로 인해 동일 역할 주장은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 데미젤을 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠리스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
+      "synopsis": "'숨바꼭질'은 선한 팀을 포함해 모든 사람이 거짓말을 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 외부인들로 인해 동일 역할 주장은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 데미젤을 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠리스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
       "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
       "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png",
@@ -131,7 +144,7 @@
     },
     {
       "id": "no_roles_barred",
-      "name": "\b아수라장",
+      "name": "아수라장",
       "author": "",
       "official": "",
       "teensyville": "",
@@ -244,19 +257,6 @@
       "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/on_thin_ice.json",
       "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/on_thin_ice.pdf",
       "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/on_thin_ice.png",
-      "note": ""
-    },
-    {
-      "id": "pokemon_the_great_gen1",
-      "name": "포켓몬스터: 위대한 1세대",
-      "author": "",
-      "official": "",
-      "teensyville": "",
-      "isHidden": true,
-      "synopsis": "",
-      "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pokemon_the_great_gen1.json",
-      "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pokemon_the_great_gen1.pdf",
-      "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/pokemon_the_great_gen1.png",
       "note": ""
     },
     {
