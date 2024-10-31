@@ -57,7 +57,7 @@ const ActionButtons = ({
         ) : (
           <>
             <Download size={16} className="shrink-0" />
-            <span className="whitespace-nowrap">PDF</span>
+            <span className="whitespace-nowrap">시트</span>
           </>
         )}
       </button>
