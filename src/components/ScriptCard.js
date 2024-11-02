@@ -7,7 +7,7 @@ const ScriptCard = ({
   script,
   onCopyJson,
   onDownloadJson,
-  onDownloadPdf,
+  onDownloadSheet,
   copiedId,
   downloadingId,
 }) => {
@@ -102,7 +102,7 @@ const ScriptCard = ({
                 script={script}
                 onCopyJson={onCopyJson}
                 onDownloadJson={onDownloadJson}
-                onDownloadPdf={onDownloadPdf}
+                onDownloadSheet={onDownloadSheet}
                 copiedId={copiedId}
                 downloadingId={downloadingId}
               />

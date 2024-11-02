@@ -6,7 +6,7 @@ const ScriptCategory = ({
   scripts,
   onCopyJson,
   onDownloadJson,
-  onDownloadPdf,
+  onDownloadSheet,
   copiedId,
   downloadingId,
 }) => (
@@ -26,7 +26,7 @@ const ScriptCategory = ({
             script={script}
             onCopyJson={onCopyJson}
             onDownloadJson={onDownloadJson}
-            onDownloadPdf={onDownloadPdf}
+            onDownloadSheet={onDownloadSheet}
             copiedId={copiedId}
             downloadingId={downloadingId}
           />

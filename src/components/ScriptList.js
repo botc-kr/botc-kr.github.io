@@ -72,7 +72,7 @@ const ScriptList = () => {
     await handleDownloadJson(jsonUrl, scriptId);
   };
 
-  const onDownloadPdf = async (pdfUrl, scriptId) => {
+  const onDownloadSheet = async (pdfUrl, scriptId) => {
     await handleDownloadPdf(pdfUrl, scriptId, setDownloadingId);
   };
 
@@ -87,7 +87,7 @@ const ScriptList = () => {
               scripts={officialScripts}
               onCopyJson={onCopyJson}
               onDownloadJson={onDownloadJson}
-              onDownloadPdf={onDownloadPdf}
+              onDownloadSheet={onDownloadSheet}
               copiedId={copiedId}
               downloadingId={downloadingId}
             />
@@ -101,7 +101,7 @@ const ScriptList = () => {
               scripts={communityScripts}
               onCopyJson={onCopyJson}
               onDownloadJson={onDownloadJson}
-              onDownloadPdf={onDownloadPdf}
+              onDownloadSheet={onDownloadSheet}
               copiedId={copiedId}
               downloadingId={downloadingId}
             />
@@ -115,7 +115,7 @@ const ScriptList = () => {
               scripts={teensyvilleScripts}
               onCopyJson={onCopyJson}
               onDownloadJson={onDownloadJson}
-              onDownloadPdf={onDownloadPdf}
+              onDownloadSheet={onDownloadSheet}
               copiedId={copiedId}
               downloadingId={downloadingId}
             />
