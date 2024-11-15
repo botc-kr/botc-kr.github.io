@@ -72,6 +72,7 @@ const SavantProposition: React.FC<SavantPropositionProps> = ({
           <div className="bg-white rounded-lg shadow-lg p-4 mb-6">
             <p className="text-gray-600 mb-6 italic">
               매일 낮에 이야기꾼을 찾아가 두 가지 정보를 들을 수 있습니다.
+              <br />
               하나는 진실이고 다른 하나는 거짓입니다.
             </p>
 
