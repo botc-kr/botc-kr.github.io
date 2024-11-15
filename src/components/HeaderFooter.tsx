@@ -1,8 +1,7 @@
-import React from "react";
 import { Github } from "lucide-react";
 
 const Header = () => {
-  const scrollToElement = (id) => {
+  const scrollToElement = (id: string) => {
     const element = document.getElementById(id);
     const headerOffset = 80; // 헤더 높이 + 여유 공간
 
@@ -179,4 +178,4 @@ const Footer = () => {
   );
 };
 
-export { Header, Footer };
+export { Footer, Header };

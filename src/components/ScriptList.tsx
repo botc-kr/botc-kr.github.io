@@ -1,35 +1,33 @@
-import React, { useState, useEffect } from "react";
-import ScriptCategory from "./ScriptCategory";
+import { Script } from "@/types/types";
+import React, { useEffect, useState } from "react";
 import {
   fetchScripts,
   handleCopyJson,
   handleDownloadJson,
   handleDownloadPdf,
 } from "../utils/ScriptUtils";
-import { Header, Footer } from "./HeaderFooter";
+import { Footer, Header } from "./HeaderFooter";
+import ScriptCategory from "./ScriptCategory";
 
-const ScriptList = () => {
-  const [scripts, setScripts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [copiedId, setCopiedId] = useState(null);
-  const [downloadingId, setDownloadingId] = useState(null);
+const ScriptList: React.FC = () => {
+  const [scripts, setScripts] = useState<Script[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [downloadingId, setDownloadingId] = useState<string | null>(null);
 
   useEffect(() => {
     fetchScripts(setScripts, setLoading);
   }, []);
 
-  // 해시 변경을 감지하고 스크롤하는 효과
   useEffect(() => {
     const scrollToScript = () => {
-      const hash = window.location.hash.slice(1); // '#' 제거
+      const hash = window.location.hash.slice(1);
       if (!hash) return;
 
-      // 스크립트 로딩이 완료된 후에만 스크롤 실행
       if (!loading && scripts.length > 0) {
         const element = document.getElementById(hash);
         if (element) {
-          // smooth scroll with offset for header
-          const headerOffset = 80; // 헤더 높이에 맞게 조정하세요
+          const headerOffset = 80;
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition =
             elementPosition + window.pageYOffset - headerOffset;
@@ -46,7 +44,7 @@ const ScriptList = () => {
     window.addEventListener("hashchange", scrollToScript);
 
     return () => window.removeEventListener("hashchange", scrollToScript);
-  }, [loading, scripts]); // scripts와 loading이 변경될 때마다 실행
+  }, [loading, scripts]);
 
   if (loading) {
     return (
@@ -64,15 +62,24 @@ const ScriptList = () => {
     (script) => !script.official && !script.teensyville
   );
 
-  const onCopyJson = async (jsonUrl, scriptId) => {
+  const onCopyJson = async (
+    jsonUrl: string,
+    scriptId: string
+  ): Promise<void> => {
     await handleCopyJson(jsonUrl, scriptId, setCopiedId);
   };
 
-  const onDownloadJson = async (jsonUrl, scriptId) => {
+  const onDownloadJson = async (
+    jsonUrl: string,
+    scriptId: string
+  ): Promise<void> => {
     await handleDownloadJson(jsonUrl, scriptId);
   };
 
-  const onDownloadSheet = async (pdfUrl, scriptId) => {
+  const onDownloadSheet = async (
+    pdfUrl: string,
+    scriptId: string
+  ): Promise<void> => {
     await handleDownloadPdf(pdfUrl, scriptId, setDownloadingId);
   };
 

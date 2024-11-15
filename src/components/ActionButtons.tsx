@@ -1,7 +1,8 @@
-import React from "react";
-import { Download, Copy, Check, Share2 } from "lucide-react";
+import { ActionButtonsProps } from "@/types/types";
+import { Check, Copy, Download, Share2 } from "lucide-react";
+import React, { useState } from "react";
 
-const ActionButtons = ({
+const ActionButtons: React.FC<ActionButtonsProps> = ({
   script,
   onCopyJson,
   onDownloadJson,
@@ -10,12 +11,12 @@ const ActionButtons = ({
   downloadingId,
 }) => {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const [isShared, setIsShared] = React.useState(false);
+  const [isShared, setIsShared] = useState<boolean>(false);
 
   const buttonBaseStyle =
     "inline-flex items-center justify-center gap-1 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg shadow-sm transition-all duration-200 font-medium";
 
-  const handleShare = async () => {
+  const handleShare = async (): Promise<void> => {
     try {
       await navigator.clipboard.writeText(
         `https://botc-kr.github.io/#${script.id}`
@@ -27,7 +28,7 @@ const ActionButtons = ({
     }
   };
 
-  const renderJsonButton = () => (
+  const renderJsonButton = (): JSX.Element => (
     <button
       onClick={() => onDownloadJson(script.json, script.id)}
       className={`${buttonBaseStyle} bg-gradient-to-r from-indigo-500 to-blue-500 text-white hover:from-indigo-600 hover:to-blue-600 hover:shadow-md active:scale-95`}
@@ -37,8 +38,10 @@ const ActionButtons = ({
     </button>
   );
 
-  const renderCopyButton = () =>
-    !isMobile && (
+  const renderCopyButton = () => {
+    if (isMobile) return null;
+
+    return (
       <button
         onClick={() => onCopyJson(script.json, script.id)}
         className={`${buttonBaseStyle} ${
@@ -60,8 +63,9 @@ const ActionButtons = ({
         )}
       </button>
     );
+  };
 
-  const renderShareButton = () => (
+  const renderShareButton = (): JSX.Element => (
     <button
       onClick={handleShare}
       className={`${buttonBaseStyle} ${
@@ -84,7 +88,7 @@ const ActionButtons = ({
     </button>
   );
 
-  const renderSheetButton = () => (
+  const renderSheetButton = (): JSX.Element => (
     <button
       onClick={() => onDownloadSheet(script.pdf, script.id)}
       disabled={downloadingId === script.id}

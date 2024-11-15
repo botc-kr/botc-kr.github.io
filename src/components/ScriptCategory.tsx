@@ -1,7 +1,9 @@
+// ScriptCategory.tsx
+import { ScriptCategoryProps } from "@/types/types";
 import React from "react";
 import ScriptCard from "./ScriptCard";
 
-const ScriptCategory = ({
+const ScriptCategory: React.FC<ScriptCategoryProps> = ({
   title,
   scripts,
   onCopyJson,
@@ -16,21 +18,15 @@ const ScriptCategory = ({
     </h2>
     <div className="grid gap-6 sm:gap-8">
       {scripts.map((script) => (
-        <div
+        <ScriptCard
           key={script.id}
-          id={script.id}
-          className="bg-white rounded-lg shadow-md p-4"
-        >
-          <ScriptCard
-            key={script.id}
-            script={script}
-            onCopyJson={onCopyJson}
-            onDownloadJson={onDownloadJson}
-            onDownloadSheet={onDownloadSheet}
-            copiedId={copiedId}
-            downloadingId={downloadingId}
-          />
-        </div>
+          script={script}
+          onCopyJson={onCopyJson}
+          onDownloadJson={onDownloadJson}
+          onDownloadSheet={onDownloadSheet}
+          copiedId={copiedId}
+          downloadingId={downloadingId}
+        />
       ))}
     </div>
   </div>

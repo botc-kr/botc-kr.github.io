@@ -1,9 +1,34 @@
+import { Script } from "@/types/types";
+import {
+  BookOpen,
+  ChevronDown,
+  ChevronUp,
+  FileText,
+  LucideIcon,
+} from "lucide-react";
 import React, { useState } from "react";
-import { BookOpen, ChevronDown, ChevronUp, FileText } from "lucide-react";
-import ScriptImage from "./ScriptImage";
 import ActionButtons from "./ActionButtons";
+import ScriptImage from "./ScriptImage";
 
-const ScriptCard = ({
+interface ScriptCardProps {
+  script: Script;
+  onCopyJson: (json: string, id: string) => void;
+  onDownloadJson: (json: string, id: string) => void;
+  onDownloadSheet: (pdf: string, id: string) => void;
+  copiedId: string | null;
+  downloadingId: string | null;
+}
+
+interface ExpandableSectionProps {
+  isExpanded: boolean;
+  onToggle: () => void;
+  icon: LucideIcon;
+  title: string;
+  content: string;
+  defaultExpanded?: boolean;
+}
+
+const ScriptCard: React.FC<ScriptCardProps> = ({
   script,
   onCopyJson,
   onDownloadJson,
@@ -11,10 +36,10 @@ const ScriptCard = ({
   copiedId,
   downloadingId,
 }) => {
-  const [isNoteExpanded, setIsNoteExpanded] = useState(false);
-  const [isSynopsisExpanded, setIsSynopsisExpanded] = useState(false);
+  const [isNoteExpanded, setIsNoteExpanded] = useState<boolean>(false);
+  const [isSynopsisExpanded, setIsSynopsisExpanded] = useState<boolean>(false);
 
-  const ExpandableSection = ({
+  const ExpandableSection: React.FC<ExpandableSectionProps> = ({
     isExpanded,
     onToggle,
     icon: Icon,
@@ -43,14 +68,17 @@ const ScriptCard = ({
     </div>
   );
 
-  const DesktopSynopsis = () => (
+  const DesktopSynopsis: React.FC = () => (
     <div className="hidden sm:block text-gray-600 text-sm sm:text-base whitespace-pre-line">
       {script.synopsis || "이 스크립트에 대한 설명이 곧 추가될 예정입니다."}
     </div>
   );
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+    <div
+      id={script.id}
+      className="bg-white rounded-lg shadow-lg overflow-hidden"
+    >
       <div className="p-4 sm:p-6">
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
           <ScriptImage src={script.logo} alt={script.name} />
