@@ -7,6 +7,7 @@
   ],
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "react/prop-types": "off",
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off"
   },
