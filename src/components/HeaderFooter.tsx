@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <a href="/" className="text-xl font-bold">
-                시계탑의 피
+                시계탑에 흐른 피
               </a>
 
               <div className="hidden sm:flex space-x-4">
@@ -193,10 +193,7 @@ export const Footer = () => {
             &copy; {new Date().getFullYear()} StevenMedway,
             bloodontheclocktower.com, All rights reserved.
           </p>
-          <p className="mt-2 text-sm">
-            이 웹사이트는 Blood on the Clocktower의 비공식 한글화
-            프로젝트입니다.
-          </p>
+          <p className="mt-2 text-sm">시계탑에 흐른 피 비공식 한글화</p>
         </div>
       </div>
     </footer>
