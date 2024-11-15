@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0885af0.css",
-    "main.js": "/static/js/main.30caf8d3.js",
+    "main.css": "/static/css/main.50486209.css",
+    "main.js": "/static/js/main.36afd4ed.js",
     "static/js/453.6d39a6cc.chunk.js": "/static/js/453.6d39a6cc.chunk.js",
     "static/media/trouble_brewing.png": "/static/media/trouble_brewing.26dcf6fa2ec4ebc67c80.png",
     "static/media/bad_moon_rising.png": "/static/media/bad_moon_rising.a48266443273917f41b1.png",
     "static/media/sects_and_violets.png": "/static/media/sects_and_violets.cf4d936056ccb7d7d561.png",
     "static/media/blood_on_the_clocktower.png": "/static/media/blood_on_the_clocktower.b36afe1ce1ad79a3e943.png",
     "index.html": "/index.html",
-    "main.a0885af0.css.map": "/static/css/main.a0885af0.css.map",
-    "main.30caf8d3.js.map": "/static/js/main.30caf8d3.js.map",
+    "main.50486209.css.map": "/static/css/main.50486209.css.map",
+    "main.36afd4ed.js.map": "/static/js/main.36afd4ed.js.map",
     "453.6d39a6cc.chunk.js.map": "/static/js/453.6d39a6cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0885af0.css",
-    "static/js/main.30caf8d3.js"
+    "static/css/main.50486209.css",
+    "static/js/main.36afd4ed.js"
   ]
 }
