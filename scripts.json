@@ -92,7 +92,7 @@
   },
   {
     "id": "lantern_festival",
-    "name": "\b중국 등불 축제",
+    "name": "중국 등불 축제",
     "author": "集石 & The Pandemonium Institute",
     "official": true,
     "teensyville": false,
@@ -105,7 +105,7 @@
   },
   {
     "id": "barbie_on_the_clocktower",
-    "name": "\b\b시계탑의 바비인형",
+    "name": "시계탑의 바비인형",
     "author": "",
     "official": false,
     "teensyville": false,
@@ -123,7 +123,7 @@
     "official": false,
     "teensyville": false,
     "isHidden": false,
-    "synopsis": "'숨바꼭질'은 선한 팀을 포함해 모든 사람이 거짓말을 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 \b외부인들로 인해 동일 역할 주장은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 데미젤을 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠리스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
+    "synopsis": "'숨바꼭질'은 선한 팀을 포함해 모든 사람이 거짓말을 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 외부인들로 인해 동일 역할 주장은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 아가씨를 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠리스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png",
@@ -144,7 +144,7 @@
   },
   {
     "id": "no_roles_barred",
-    "name": "\b아수라장",
+    "name": "아수라장",
     "author": "",
     "official": false,
     "teensyville": false,
