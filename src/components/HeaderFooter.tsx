@@ -1,9 +1,17 @@
 import { Github } from "lucide-react";
 
-const Header = () => {
+interface HeaderProps {
+  currentPage: "scripts" | "savant";
+  onPageChange: (page: "scripts" | "savant") => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  currentPage,
+  onPageChange,
+}) => {
   const scrollToElement = (id: string) => {
     const element = document.getElementById(id);
-    const headerOffset = 80; // 헤더 높이 + 여유 공간
+    const headerOffset = 80;
 
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
@@ -19,7 +27,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Spacer div to prevent content from hiding behind fixed header */}
       <div className="h-16"></div>
 
       <header className="fixed top-0 left-0 right-0 bg-gray-900 text-white z-50">
@@ -27,43 +34,64 @@ const Header = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <a href="/" className="text-xl font-bold">
-                BotC 한글화 프로젝트
+                시계탑의 피
               </a>
+
               <div className="hidden sm:flex space-x-4">
-                <a
-                  href="#official"
-                  className="hover:text-gray-300 transition duration-200"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToElement("official");
-                  }}
-                >
-                  공식
-                </a>
-                <a
-                  href="#community"
-                  className="hover:text-gray-300 transition duration-200"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToElement("community");
-                  }}
-                >
-                  커스텀
-                </a>
-                <a
-                  href="#teensyville"
-                  className="hover:text-gray-300 transition duration-200"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToElement("teensyville");
-                  }}
-                >
-                  틴시빌
-                </a>
+                {currentPage === "scripts" ? (
+                  <>
+                    <a
+                      href="#official"
+                      className="hover:text-gray-300 transition duration-200"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToElement("official");
+                      }}
+                    >
+                      공식
+                    </a>
+                    <a
+                      href="#community"
+                      className="hover:text-gray-300 transition duration-200"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToElement("community");
+                      }}
+                    >
+                      커스텀
+                    </a>
+                    <a
+                      href="#teensyville"
+                      className="hover:text-gray-300 transition duration-200"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToElement("teensyville");
+                      }}
+                    >
+                      틴시빌
+                    </a>
+                  </>
+                ) : null}
               </div>
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-6">
+              <button
+                onClick={() => onPageChange("scripts")}
+                className={`hover:text-gray-300 transition duration-200 ${
+                  currentPage === "scripts" ? "text-white" : "text-gray-400"
+                }`}
+              >
+                스크립트
+              </button>
+              <button
+                onClick={() => onPageChange("savant")}
+                className={`hover:text-gray-300 transition duration-200 ${
+                  currentPage === "savant" ? "text-white" : "text-gray-400"
+                }`}
+              >
+                서번트
+              </button>
               <a
                 href="https://github.com/botc-kr/botc-kr.github.io/tree/gh-pages"
                 target="_blank"
@@ -80,10 +108,7 @@ const Header = () => {
   );
 };
 
-export default Header;
-
-// Footer.jsx
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white mt-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
@@ -177,5 +202,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export { Footer, Header };

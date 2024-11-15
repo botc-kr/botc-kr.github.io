@@ -9,7 +9,15 @@ import {
 import { Footer, Header } from "./HeaderFooter";
 import ScriptCategory from "./ScriptCategory";
 
-const ScriptList: React.FC = () => {
+interface ScriptListProps {
+  currentPage: "scripts" | "savant";
+  onPageChange: (page: "scripts" | "savant") => void;
+}
+
+const ScriptList: React.FC<ScriptListProps> = ({
+  currentPage,
+  onPageChange,
+}) => {
   const [scripts, setScripts] = useState<Script[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -85,7 +93,7 @@ const ScriptList: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header currentPage={currentPage} onPageChange={onPageChange} />
       <div className="max-w-6xl mx-auto p-4 sm:p-6">
         {officialScripts.length > 0 && (
           <div id="official">
