@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Blood on the Clocktower 비공식 한글화 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 소개
 
-## Available Scripts
+이 프로젝트는 추리/마피아 게임인 [Blood on the Clocktower](https://bloodontheclocktower.com/)의 비공식 한글화 프로젝트입니다. 한국어를 사용하는 플레이어들이 더 쉽게 게임을 즐길 수 있도록 하는 것을 목표로 합니다.
 
-In the project directory, you can run:
+## 주의사항
 
-### `yarn start`
+- 이 프로젝트는 비영리 목적으로 운영되며, 어떠한 형태의 수익 창출도 하지 않습니다.
+- 이 한글화 프로젝트는 공식 라이선스를 받지 않은 팬 번역입니다.
+- Blood on the Clocktower의 모든 권리는 The Pandemonium Institute에 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 기여하기
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+다음과 같은 방법으로 프로젝트에 기여하실 수 있습니다:
 
-### `yarn test`
+- 한글 번역 개선 제안
+- 새로운 스크립트 추가
+- 오타 및 오류 수정
+- UI/UX 개선 제안
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 연락처 및 피드백
 
-### `yarn build`
+프로젝트에 관한 제안이나 개선사항이 있으시다면 다음 방법으로 연락해 주세요:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- GitHub Issues 등록
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 크레딧
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 원작: [Blood on the Clocktower](https://bloodontheclocktower.com/) by The Pandemonium Institute
+- 한글화 기여자 목록:
 
-### `yarn eject`
+## 라이선스
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+이 프로젝트는 CC BY-NC 4.0 라이선스를 따릅니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 비상업적 용도로만 사용 가능
+- 원작자 및 한글화 프로젝트 크레딧 표시 필수
+- 수정 및 재배포 허용
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Blood on the Clocktower의 모든 지적재산권은 The Pandemonium Institute에 있습니다.
