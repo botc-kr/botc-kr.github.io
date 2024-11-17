@@ -3,12 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // pathname을 세션 스토리지에 저장
-      const segments = window.location.pathname.split("/");
-      const repo = segments.length > 1 ? "/" + segments[1] : "";
-      sessionStorage.redirect = window.location.pathname;
-      // 메인 페이지로 리다이렉트
-      window.location.replace(window.location.origin + repo);
+      const l = window.location;
+      const port = l.port ? ":" + l.port : "";
+      const repoPath = l.pathname.split("/").slice(0, 2).join("/");
+      const queryParams = l.search
+        ? "?" + l.search.slice(1).replace(/&/g, "~and~")
+        : "";
+
+      // 실제 경로를 쿼리 파라미터로 인코딩
+      const redirectPath =
+        repoPath +
+        "/?route=" +
+        encodeURIComponent(l.pathname.replace(repoPath, "")) +
+        queryParams +
+        l.hash;
+
+      window.location.replace(
+        l.protocol + "//" + l.hostname + port + redirectPath
+      );
     </script>
   </head>
   <body></body>
