@@ -4,31 +4,15 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 1;
-
-      var l = window.location;
-      l.replace(
-        l.protocol +
-          "//" +
-          l.hostname +
-          (l.port ? ":" + l.port : "") +
-          l.pathname
-            .split("/")
-            .slice(0, 1 + pathSegmentsToKeep)
-            .join("/") +
-          "/?/" +
-          l.pathname
-            .slice(1)
-            .split("/")
-            .slice(pathSegmentsToKeep)
-            .join("/")
-            .replace(/&/g, "~and~") +
-          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-          l.hash
-      );
+      // 현재 URL의 경로를 세션 스토리지에 저장
+      sessionStorage.redirect = window.location.pathname;
+      // repository 이름을 포함한 base path 추출
+      const basePath = window.location.pathname
+        .split("/")
+        .slice(0, 2)
+        .join("/");
+      // 루트 페이지로 리다이렉트
+      window.location.href = basePath;
     </script>
   </head>
   <body></body>
