@@ -2,20 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-      // GitHub Pages의 repository 이름을 포함한 전체 경로를 저장
-      const pathSegments = window.location.pathname.split("/");
-      const repoName = pathSegments[1];
-      const path = window.location.pathname;
-
-      // 세션 스토리지에 전체 경로 저장
-      sessionStorage.redirect = path;
-
-      // repository 기본 경로로 리다이렉트
-      window.location.replace(
-        window.location.origin + (repoName ? "/" + repoName : "") + "/"
-      );
+    <script>
+      // pathname을 세션 스토리지에 저장
+      const segments = window.location.pathname.split("/");
+      const repo = segments.length > 1 ? "/" + segments[1] : "";
+      sessionStorage.redirect = window.location.pathname;
+      // 메인 페이지로 리다이렉트
+      window.location.replace(window.location.origin + repo);
     </script>
   </head>
   <body></body>
