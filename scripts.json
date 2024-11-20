@@ -39,16 +39,16 @@
     "note": "'환란의 화원'으로 번역한 이유\n\n원제 'Sects & Violets'의 다층적 의미(불길한 결사, 아름다운 꽃, Sex and Violence의 언어유희)를 반영하고자 했습니다. \n'화원'은 평화로운 표면을, '환란'은 그 이면의 혼란을 상징하며, 이 대비가 게임의 본질이라 생각했습니다. \n또한 '환란'이 주는 문학적 뉘앙스와 '화원'이 주는 포괄적 이미지를 통해 한국어의 미감도 살리고자 했습니다."
   },
   {
-    "id": "high_seas_of_mutiny",
-    "name": "반란의 거친 바다",
-    "author": "Gordon Edward Fitzgerald",
+    "id": "fall_of_rome",
+    "name": "로마의 몰락",
+    "author": "Alex Sadlier",
     "official": false,
     "teensyville": false,
     "isHidden": false,
-    "synopsis": "차갑고 음울한 카리브해의 밤바다를 표류하던 중, 기이하리만치 잔잔한 파도를 가르며 비명이 울려 퍼진다. 놀란 선원들이 '저주받은 앵무' 호의 선창에서 달려 나와 확인해보니, 배의 사령관이 살해당한 채 까마귀 전망대에 꿰뚫려 있었고, 선갑판으로는 핏방울이 뚝뚝 떨어지고 있었다. 호기심은 곧 불신으로 바뀌었다. 악마가 밤에는 살인을 저지르고 낮에는 인간의 모습을 한 채 배회하는 저주받은 항해라는 사실이 곧 분명해졌기 때문이다.\n\n선원들, 즉 '마을주민'들은 각자 정보를 가지고 있었지만, 악마와 그의 사악한 하수인들은 거짓말을 퍼뜨리며 흉악한 범인의 정체에 대한 혼란과 공포를 부추기고 있었다. 선원들은 과연 시간 안에 수수께끼의 조각들을 맞출 수 있을까? 아니면 지평선에서 다가오는 격렬한 폭풍과 함께 사악한 기운이 배를 삼켜버릴 것인가.\n\n무엇이든 일어날 수 있는 이곳, 반란의 거친 바다에서...",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png",
+    "synopsis": "천년에 걸쳐 지중해를 장악해온 제국, 로마. 제국의 심장인 로마를 버린 채 북쪽에서 쇠약해져가는 황제. 한때는 세계를 호령하던 그들의 패권이 이제는 사방에서 밀려드는 반란군들 앞에서 서서히 무너져가고 있다.\n\n콘스탄티노플에서 급격히 퍼져나가는 소문들. 트라키아 출신 검투사 스파르타쿠스가 이끄는 반란. 로마 군단의 의지를 시험할 전례 없는 규모의 야만족의 침략.\n\n하지만 가장 끔찍한 것은, 로마의 과거 황제들과 적들의 원혼이 원한에 사로잡혀 있다는 것. \n오래된 예언에 따르면, 로마가 가장 위태로울 때 그들 중 하나가 부활하여 도시를 폐허로 만들 것이라 한다.\n\n불길한 징조들이 넘쳐나는 가운데, 로마의 기반이 흔들리고 있다. \n지도자가 부재한 이때, 충직한 로마의 시민인 당신들의 손에 도시의 운명이 달렸다. \n그 영혼을, 그 악마를, 그 데모니움을 찾아내라. 어떤 대가를 치르더라도.\n\n실패한다면... 로마는 멸망할 것이다.",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/fall_of_rome.json",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/fall_of_rome.pdf",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/fall_of_rome.png",
     "note": ""
   },
   {
@@ -62,6 +62,19 @@
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/all_of_trouble_brewing.json",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/all_of_trouble_brewing.pdf",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/all_of_trouble_brewing.png",
+    "note": ""
+  },
+  {
+    "id": "high_seas_of_mutiny",
+    "name": "반란의 거친 바다",
+    "author": "Gordon Edward Fitzgerald",
+    "official": false,
+    "teensyville": false,
+    "isHidden": false,
+    "synopsis": "차갑고 음울한 카리브해의 밤바다를 표류하던 중, 기이하리만치 잔잔한 파도를 가르며 비명이 울려 퍼진다. 놀란 선원들이 '저주받은 앵무' 호의 선창에서 달려 나와 확인해보니, 배의 사령관이 살해당한 채 까마귀 전망대에 꿰뚫려 있었고, 선갑판으로는 핏방울이 뚝뚝 떨어지고 있었다. 호기심은 곧 불신으로 바뀌었다. 악마가 밤에는 살인을 저지르고 낮에는 인간의 모습을 한 채 배회하는 저주받은 항해라는 사실이 곧 분명해졌기 때문이다.\n\n선원들, 즉 '마을주민'들은 각자 정보를 가지고 있었지만, 악마와 그의 사악한 하수인들은 거짓말을 퍼뜨리며 흉악한 범인의 정체에 대한 혼란과 공포를 부추기고 있었다. 선원들은 과연 시간 안에 수수께끼의 조각들을 맞출 수 있을까? 아니면 지평선에서 다가오는 격렬한 폭풍과 함께 사악한 기운이 배를 삼켜버릴 것인가.\n\n무엇이든 일어날 수 있는 이곳, 반란의 거친 바다에서...",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png",
     "note": ""
   },
   {
@@ -123,7 +136,7 @@
     "official": false,
     "teensyville": false,
     "isHidden": false,
-    "synopsis": "'숨바꼭질'은 선한 팀을 포함해 모든 사람이 거짓말을 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 외부인들로 인해 동일 역할 주장은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 아가씨를 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠리스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
+    "synopsis": "'숨바꼭질'은 선한 팀을 포함해 모든 사람이 거짓말을 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 외부인들로 인해 맞직은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 아가씨를 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠리스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png",
