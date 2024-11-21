@@ -39,9 +39,22 @@
     "note": "'환란의 화원'으로 번역한 이유\n\n원제 'Sects & Violets'의 다층적 의미(불길한 결사, 아름다운 꽃, Sex and Violence의 언어유희)를 반영하고자 했습니다. \n'화원'은 평화로운 표면을, '환란'은 그 이면의 혼란을 상징하며, 이 대비가 게임의 본질이라 생각했습니다. \n또한 '환란'이 주는 문학적 뉘앙스와 '화원'이 주는 포괄적 이미지를 통해 한국어의 미감도 살리고자 했습니다."
   },
   {
+    "id": "lunar_eclipse",
+    "name": "월식",
+    "author": "Ekin",
+    "official": false,
+    "teensyville": false,
+    "isHidden": false,
+    "synopsis": "월식은 미치광이가 게임 끝까지 자신의 역할과 진영을 확신하지 못한 채 버티도록 설계되었습니다. 꼭두각시와 마술사 같은 캐릭터들은 미치광이가 누가 아군인지 헷갈리게 만들고, 늑대인간이나 시장 같은 캐릭터들은 살해 패턴이 일정하지 않은 이유를 자연스럽게 설명해줍니다.\n\n선한 참가자들은 누구를 믿을 수 있을지 알아내기 위해 수많은 직간접적인 정보와 거짓 정보를 파헤쳐야 하며, 때로는 자신의 진영조차 의심하게 됩니다. 반면 악한 참가자들은 선한 팀의 복잡한 입증 과정에 침투하기 전에 먼저 다른 악한 참가자를 찾아내야 할 수도 있습니다.\n\n핵심 캐릭터\n미치광이, 좀부울, 늑대인간\n\n전설\n상아의 영혼",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/lunar_eclipse.json",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/lunar_eclipse.pdf",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/lunar_eclipse.png",
+    "note": ""
+  },
+  {
     "id": "fall_of_rome",
     "name": "로마의 몰락",
-    "author": "Alex Sadlier (번역: 호두)",
+    "author": "Alex Sadlier",
     "official": false,
     "teensyville": false,
     "isHidden": false,
@@ -106,7 +119,7 @@
   {
     "id": "lantern_festival",
     "name": "중국 등불 축제",
-    "author": "集石 & The Pandemonium Institute (번역: 홍팔팔)",
+    "author": "集石 & The Pandemonium Institute",
     "official": true,
     "teensyville": false,
     "isHidden": false,
