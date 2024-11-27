@@ -1,7 +1,7 @@
 // ScriptCategory.tsx
-import { ScriptCategoryProps } from "@/types/types";
-import React from "react";
-import ScriptCard from "./ScriptCard";
+import { ScriptCategoryProps } from '@/types/types'
+import React from 'react'
+import ScriptCard from './ScriptCard'
 
 const ScriptCategory: React.FC<ScriptCategoryProps> = ({
   title,
@@ -13,11 +13,9 @@ const ScriptCategory: React.FC<ScriptCategoryProps> = ({
   downloadingId,
 }) => (
   <div className="mb-12">
-    <h2 className="text-xl sm:text-2xl font-bold mb-6 border-b pb-2">
-      {title}
-    </h2>
+    <h2 className="text-xl sm:text-2xl font-bold mb-6 border-b pb-2">{title}</h2>
     <div className="grid gap-6 sm:gap-8">
-      {scripts.map((script) => (
+      {scripts.map(script => (
         <ScriptCard
           key={script.id}
           script={script}
@@ -30,6 +28,6 @@ const ScriptCategory: React.FC<ScriptCategoryProps> = ({
       ))}
     </div>
   </div>
-);
+)
 
-export default ScriptCategory;
+export default ScriptCategory

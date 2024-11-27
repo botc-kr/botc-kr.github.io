@@ -1,31 +1,25 @@
-import { Script } from "@/types/types";
-import {
-  BookOpen,
-  ChevronDown,
-  ChevronUp,
-  FileText,
-  LucideIcon,
-} from "lucide-react";
-import React, { useState } from "react";
-import ActionButtons from "./ActionButtons";
-import ScriptImage from "./ScriptImage";
+import { Script } from '@/types/types'
+import { BookOpen, ChevronDown, ChevronUp, FileText, LucideIcon } from 'lucide-react'
+import React, { useState } from 'react'
+import ActionButtons from './ActionButtons'
+import ScriptImage from './ScriptImage'
 
 interface ScriptCardProps {
-  script: Script;
-  onCopyJson: (json: string, id: string) => void;
-  onDownloadJson: (json: string, id: string) => void;
-  onDownloadSheet: (pdf: string, id: string) => void;
-  copiedId: string | null;
-  downloadingId: string | null;
+  script: Script
+  onCopyJson: (json: string, id: string) => void
+  onDownloadJson: (json: string, id: string) => void
+  onDownloadSheet: (pdf: string, id: string) => void
+  copiedId: string | null
+  downloadingId: string | null
 }
 
 interface ExpandableSectionProps {
-  isExpanded: boolean;
-  onToggle: () => void;
-  icon: LucideIcon;
-  title: string;
-  content: string;
-  defaultExpanded?: boolean;
+  isExpanded: boolean
+  onToggle: () => void
+  icon: LucideIcon
+  title: string
+  content: string
+  defaultExpanded?: boolean
 }
 
 const ScriptCard: React.FC<ScriptCardProps> = ({
@@ -36,8 +30,8 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
   copiedId,
   downloadingId,
 }) => {
-  const [isNoteExpanded, setIsNoteExpanded] = useState<boolean>(false);
-  const [isSynopsisExpanded, setIsSynopsisExpanded] = useState<boolean>(false);
+  const [isNoteExpanded, setIsNoteExpanded] = useState<boolean>(false)
+  const [isSynopsisExpanded, setIsSynopsisExpanded] = useState<boolean>(false)
 
   const ExpandableSection: React.FC<ExpandableSectionProps> = ({
     isExpanded,
@@ -47,11 +41,10 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
     content,
     defaultExpanded = false,
   }) => (
-    <div className={`w-full ${defaultExpanded ? "sm:hidden" : ""}`}>
+    <div className={`w-full ${defaultExpanded ? 'sm:hidden' : ''}`}>
       <button
         onClick={onToggle}
-        className="w-full mt-2 p-2 bg-gray-50 rounded-md flex items-center justify-between text-gray-600 hover:bg-gray-100 transition-colors"
-      >
+        className="w-full mt-2 p-2 bg-gray-50 rounded-md flex items-center justify-between text-gray-600 hover:bg-gray-100 transition-colors">
         <div className="flex items-center gap-2">
           <Icon size={16} />
           <span className="text-sm">{title}</span>
@@ -60,25 +53,20 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
       </button>
       {isExpanded && (
         <div className="mt-2 p-3 bg-gray-50 rounded-md">
-          <div className="whitespace-pre-line text-sm text-gray-600">
-            {content}
-          </div>
+          <div className="whitespace-pre-line text-sm text-gray-600">{content}</div>
         </div>
       )}
     </div>
-  );
+  )
 
   const DesktopSynopsis: React.FC = () => (
     <div className="hidden sm:block text-gray-600 text-sm sm:text-base whitespace-pre-line">
-      {script.synopsis || "이 스크립트에 대한 설명이 곧 추가될 예정입니다."}
+      {script.synopsis || '이 스크립트에 대한 설명이 곧 추가될 예정입니다.'}
     </div>
-  );
+  )
 
   return (
-    <div
-      id={script.id}
-      className="bg-white rounded-lg shadow-lg overflow-hidden"
-    >
+    <div id={script.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
       <div className="p-4 sm:p-6">
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
           <ScriptImage src={script.logo} alt={script.name} />
@@ -91,11 +79,7 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
                     틴시빌
                   </span>
                 )}
-                {script.author && (
-                  <span className="text-gray-600 text-sm sm:text-base">
-                    by {script.author}
-                  </span>
-                )}
+                {script.author && <span className="text-gray-600 text-sm sm:text-base">by {script.author}</span>}
               </div>
             </div>
 
@@ -107,10 +91,7 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
                 onToggle={() => setIsSynopsisExpanded(!isSynopsisExpanded)}
                 icon={FileText}
                 title="개요"
-                content={
-                  script.synopsis ||
-                  "이 스크립트에 대한 설명이 곧 추가될 예정입니다."
-                }
+                content={script.synopsis || '이 스크립트에 대한 설명이 곧 추가될 예정입니다.'}
                 defaultExpanded={true}
               />
 
@@ -139,7 +120,7 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ScriptCard;
+export default ScriptCard

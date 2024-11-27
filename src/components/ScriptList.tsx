@@ -1,95 +1,69 @@
-import { Script } from "@/types/types";
-import React, { useEffect, useState } from "react";
-import {
-  fetchScripts,
-  handleCopyJson,
-  handleDownloadJson,
-  handleDownloadPdf,
-} from "../utils/ScriptUtils";
-import { Footer, Header } from "./HeaderFooter";
-import ScriptCategory from "./ScriptCategory";
+import { Script } from '@/types/types'
+import React, { useEffect, useState } from 'react'
+import { fetchScripts, handleCopyJson, handleDownloadJson, handleDownloadPdf } from '@/utils/ScriptUtils'
+import { Footer, Header } from './HeaderFooter'
+import ScriptCategory from './ScriptCategory'
 
 interface ScriptListProps {
-  currentPage: "scripts" | "savant";
-  onPageChange: (page: "scripts" | "savant") => void;
+  currentPage: 'scripts' | 'savant'
+  onPageChange: (page: 'scripts' | 'savant') => void
 }
 
-const ScriptList: React.FC<ScriptListProps> = ({
-  currentPage,
-  onPageChange,
-}) => {
-  const [scripts, setScripts] = useState<Script[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [copiedId, setCopiedId] = useState<string | null>(null);
-  const [downloadingId, setDownloadingId] = useState<string | null>(null);
+const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) => {
+  const [scripts, setScripts] = useState<Script[]>([])
+  const [loading, setLoading] = useState<boolean>(true)
+  const [copiedId, setCopiedId] = useState<string | null>(null)
+  const [downloadingId, setDownloadingId] = useState<string | null>(null)
 
   useEffect(() => {
-    fetchScripts(setScripts, setLoading);
-  }, []);
+    fetchScripts(setScripts, setLoading)
+  }, [])
 
   useEffect(() => {
     const scrollToScript = () => {
-      const hash = window.location.hash.slice(1);
-      if (!hash) return;
+      const hash = window.location.hash.slice(1)
+      if (!hash) return
 
       if (!loading && scripts.length > 0) {
-        const element = document.getElementById(hash);
+        const element = document.getElementById(hash)
         if (element) {
-          const headerOffset = 80;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition =
-            elementPosition + window.pageYOffset - headerOffset;
+          const headerOffset = 80
+          const elementPosition = element.getBoundingClientRect().top
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
           window.scrollTo({
             top: offsetPosition,
-            behavior: "smooth",
-          });
+            behavior: 'smooth',
+          })
         }
       }
-    };
+    }
 
-    scrollToScript();
-    window.addEventListener("hashchange", scrollToScript);
+    scrollToScript()
+    window.addEventListener('hashchange', scrollToScript)
 
-    return () => window.removeEventListener("hashchange", scrollToScript);
-  }, [loading, scripts]);
+    return () => window.removeEventListener('hashchange', scrollToScript)
+  }, [loading, scripts])
 
   if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        Loading...
-      </div>
-    );
+    return <div className="flex justify-center items-center min-h-screen">Loading...</div>
   }
 
-  const officialScripts = scripts.filter((script) => script.official);
-  const teensyvilleScripts = scripts.filter(
-    (script) => !script.official && script.teensyville
-  );
-  const communityScripts = scripts.filter(
-    (script) => !script.official && !script.teensyville
-  );
+  const officialScripts = scripts.filter(script => script.official)
+  const teensyvilleScripts = scripts.filter(script => !script.official && script.teensyville)
+  const communityScripts = scripts.filter(script => !script.official && !script.teensyville)
 
-  const onCopyJson = async (
-    jsonUrl: string,
-    scriptId: string
-  ): Promise<void> => {
-    await handleCopyJson(jsonUrl, scriptId, setCopiedId);
-  };
+  const onCopyJson = async (jsonUrl: string, scriptId: string): Promise<void> => {
+    await handleCopyJson(jsonUrl, scriptId, setCopiedId)
+  }
 
-  const onDownloadJson = async (
-    jsonUrl: string,
-    scriptId: string
-  ): Promise<void> => {
-    await handleDownloadJson(jsonUrl, scriptId);
-  };
+  const onDownloadJson = async (jsonUrl: string, scriptId: string): Promise<void> => {
+    await handleDownloadJson(jsonUrl, scriptId)
+  }
 
-  const onDownloadSheet = async (
-    pdfUrl: string,
-    scriptId: string
-  ): Promise<void> => {
-    await handleDownloadPdf(pdfUrl, scriptId, setDownloadingId);
-  };
+  const onDownloadSheet = async (pdfUrl: string, scriptId: string): Promise<void> => {
+    await handleDownloadPdf(pdfUrl, scriptId, setDownloadingId)
+  }
 
   return (
     <>
@@ -139,7 +113,7 @@ const ScriptList: React.FC<ScriptListProps> = ({
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default ScriptList;
+export default ScriptList

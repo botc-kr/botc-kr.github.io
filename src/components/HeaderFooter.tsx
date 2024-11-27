@@ -1,29 +1,25 @@
-import { Github } from "lucide-react";
+import { Github } from 'lucide-react'
 
 interface HeaderProps {
-  currentPage: "scripts" | "savant";
-  onPageChange: (page: "scripts" | "savant") => void;
+  currentPage: 'scripts' | 'savant'
+  onPageChange: (page: 'scripts' | 'savant') => void
 }
 
-export const Header: React.FC<HeaderProps> = ({
-  currentPage,
-  onPageChange,
-}) => {
+export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   const scrollToElement = (id: string) => {
-    const element = document.getElementById(id);
-    const headerOffset = 80;
+    const element = document.getElementById(id)
+    const headerOffset = 80
 
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
-      });
+        behavior: 'smooth',
+      })
     }
-  };
+  }
 
   return (
     <>
@@ -38,36 +34,33 @@ export const Header: React.FC<HeaderProps> = ({
               </a>
 
               <div className="hidden sm:flex space-x-4">
-                {currentPage === "scripts" ? (
+                {currentPage === 'scripts' ? (
                   <>
                     <a
                       href="#official"
                       className="hover:text-gray-300 transition duration-200"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        scrollToElement("official");
-                      }}
-                    >
+                      onClick={e => {
+                        e.preventDefault()
+                        scrollToElement('official')
+                      }}>
                       공식
                     </a>
                     <a
                       href="#community"
                       className="hover:text-gray-300 transition duration-200"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        scrollToElement("community");
-                      }}
-                    >
+                      onClick={e => {
+                        e.preventDefault()
+                        scrollToElement('community')
+                      }}>
                       커스텀
                     </a>
                     <a
                       href="#teensyville"
                       className="hover:text-gray-300 transition duration-200"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        scrollToElement("teensyville");
-                      }}
-                    >
+                      onClick={e => {
+                        e.preventDefault()
+                        scrollToElement('teensyville')
+                      }}>
                       틴시빌
                     </a>
                   </>
@@ -77,19 +70,17 @@ export const Header: React.FC<HeaderProps> = ({
 
             <div className="flex items-center space-x-6">
               <button
-                onClick={() => onPageChange("scripts")}
+                onClick={() => onPageChange('scripts')}
                 className={`hover:text-gray-300 transition duration-200 ${
-                  currentPage === "scripts" ? "text-white" : "text-gray-400"
-                }`}
-              >
+                  currentPage === 'scripts' ? 'text-white' : 'text-gray-400'
+                }`}>
                 스크립트
               </button>
               <button
-                onClick={() => onPageChange("savant")}
+                onClick={() => onPageChange('savant')}
                 className={`hover:text-gray-300 transition duration-200 ${
-                  currentPage === "savant" ? "text-white" : "text-gray-400"
-                }`}
-              >
+                  currentPage === 'savant' ? 'text-white' : 'text-gray-400'
+                }`}>
                 서번트
               </button>
               <a
@@ -97,7 +88,7 @@ export const Header: React.FC<HeaderProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300"
-              >
+                title="GitHub Repository">
                 <Github className="w-6 h-6" />
               </a>
             </div>
@@ -105,8 +96,8 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
       </header>
     </>
-  );
-};
+  )
+}
 
 export const Footer = () => {
   return (
@@ -114,9 +105,7 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">
-              Blood on the Clocktower
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Blood on the Clocktower</h3>
             <p className="text-gray-400">비공식 한글화 프로젝트</p>
           </div>
 
@@ -124,34 +113,22 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">링크</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://botc.app/"
-                  className="text-gray-400 hover:text-white"
-                >
+                <a href="https://botc.app/" className="text-gray-400 hover:text-white">
                   공식 앱 (English)
                 </a>
               </li>
               <li>
-                <a
-                  href="https://bloodontheclocktower.com/"
-                  className="text-gray-400 hover:text-white"
-                >
+                <a href="https://bloodontheclocktower.com/" className="text-gray-400 hover:text-white">
                   공식 웹사이트 (English)
                 </a>
               </li>
               <li>
-                <a
-                  href="https://wiki.bloodontheclocktower.com/"
-                  className="text-gray-400 hover:text-white"
-                >
+                <a href="https://wiki.bloodontheclocktower.com/" className="text-gray-400 hover:text-white">
                   공식 위키 (English)
                 </a>
               </li>
               <li>
-                <a
-                  href="https://clocktower-wiki.gstonegames.com/"
-                  className="text-gray-400 hover:text-white"
-                >
+                <a href="https://clocktower-wiki.gstonegames.com/" className="text-gray-400 hover:text-white">
                   공식 위키 (中文)
                 </a>
               </li>
@@ -162,18 +139,14 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">커뮤니티</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://discord.gg/botc"
-                  className="text-gray-400 hover:text-white"
-                >
+                <a href="https://discord.gg/botc" className="text-gray-400 hover:text-white">
                   Discord
                 </a>
               </li>
               <li>
                 <a
                   href="https://github.com/ThePandemoniumInstitute/botc-release"
-                  className="text-gray-400 hover:text-white"
-                >
+                  className="text-gray-400 hover:text-white">
                   GitHub
                 </a>
               </li>
@@ -182,20 +155,15 @@ export const Footer = () => {
 
           <div>
             <h3 className="text-lg font-semibold mb-4">문의</h3>
-            <p className="text-gray-400">
-              한글화 참여, 스크립트 추가 등은 연락주세요.
-            </p>
+            <p className="text-gray-400">한글화 참여, 스크립트 추가 등은 연락주세요.</p>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>
-            &copy; {new Date().getFullYear()} StevenMedway,
-            bloodontheclocktower.com, All rights reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} StevenMedway, bloodontheclocktower.com, All rights reserved.</p>
           <p className="mt-2 text-sm">시계탑에 흐른 피 비공식 한글화</p>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
