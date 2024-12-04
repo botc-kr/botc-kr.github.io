@@ -78,6 +78,19 @@
     "note": ""
   },
   {
+    "id": "hodu_brewing",
+    "name": "불길한 호두",
+    "author": "호두",
+    "official": false,
+    "teensyville": false,
+    "isHidden": false,
+    "synopsis": "'불길한 조짐'과 확장을 한 번에 플레이 할 수 있는 스크립트입니다.",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hodu_brewing.json",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hodu_brewing.pdf",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hodu_brewing.png",
+    "note": ""
+  },
+  {
     "id": "high_seas_of_mutiny",
     "name": "반란의 거친 바다",
     "author": "Gordon Edward Fitzgerald",
@@ -112,7 +125,7 @@
     "isHidden": false,
     "synopsis": "포켓몬 세계에 온 것을 환영합니다. \n이 세계에는 포켓몬스터, 줄여서 포켓몬이라 불리는 신비한 생명체들이 도처에 살고 있습니다. \n아, 이미 당신은 포켓몬이셨군요?\n\n위대한 1세대는 추론게임인 BOTC에 포켓몬스터 IP를 접목, 인지적&정서적 재미를 모두 잡고자 기획한 게임입니다. 포켓몬이 된 당신은, 어쩌면 진화할 수도 있습니다. 진화하게되면 당신의 능력과 직업이 달라집니다. 첫날 밤 정보를 얻고 능력이 없는 포켓몬도 살아남을 명분이 생깁니다. 또 어쩌면 당신은 진화로 인해 팀이 달라질수도 있습니다. 어쩌면 마을주민이 악마가 될 지도 모르겠네요.",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pokemon_the_great_gen1.json",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pokemon_the_great_gen1.jpeg",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pokemon_the_great_gen1.pdf",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/pokemon_the_great_gen1.png",
     "note": ""
   },
@@ -149,7 +162,7 @@
     "official": false,
     "teensyville": false,
     "isHidden": false,
-    "synopsis": "'숨바꼭질'은 선한 팀을 포함해 모든 사람이 거짓말을 하도록 동기부여되는 각본입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝히기 꺼리거나 밝힐 수 없는 외부인들로 인해 맞직은 피할 수 없습니다. 이는 블러프가 없는 악한 팀에게도 훌륭한 은신처를 제공합니다. 거짓말을 할 필요가 없는 선한 플레이어들조차도 정체가 드러나면 패배의 원인이 될 수 있는 아가씨를 보호하기 위해 거짓말을 해야 할 수도 있습니다. 메제펠리스가 있을 가능성 때문에 확실해 보이는 정보조차 의심해봐야 합니다.",
+    "synopsis": "선한 진영조차도 거짓말과 눈속임이 불가피한 스크립트입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝힐 수 없거나 밝히고 싶지 않은 아웃사이더들로 인해 동일 역할 주장이 빈번히 발생합니다. \n이는 거짓 주장 없이도 악의 팀에게 완벽한 위장의 기회를 제공하죠. \n심지어 거짓말이 필요 없는 선한 참가자조차 정체가 드러나면 패배를 초래할 수 있는 아가씨를 보호하기 위해 거짓말을 해야 할 수도 있습니다. \n메제펠레스가 존재할 가능성이 있어 확실해 보이는 정보조차 의심해봐야 합니다.\n\n핵심 캐릭터\n아가씨, 메제펠리스, 픽시\n\n전설\n없음",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png",
@@ -279,7 +292,7 @@
     "official": false,
     "teensyville": true,
     "isHidden": false,
-    "synopsis": "'자유방임주의'는 속임수와 예측할 수 없는 전개로 가득한, 긴 호흡의 흥미진진한 게임입니다. \n\n일반적인 틴시빌 게임보다 훨씬 오래 걸리는 편으로, 보통 7-9인용 게임과 비슷하거나 더 길수도 있습니다. 덕분에 플레이어들은 정보를 수집하고 완벽한 거짓말을 준비할 시간을 충분히 가질 수 있죠. 이런 특징을 조율하기 위해, 게임에서 얻을 수 있는 정보는 평소보다 훨씬 모호하게 설계되어 있습니다. 많은 캐릭터들이 처음엔 희미하다가 시간이 지날수록 뚜렷해지는 정보를 가지고 있거나, 가장 효과적인 타이밍에 써야 하는 능력을 지니고 있습니다. \n\n풍부한 정보로 인해 열띤 토론이 이어지는 게임이며, 게임 중후반부에는 극적인 반전도 자주 일어납니다. 미치광이가 자신의 정체를 깨닫거나 기구조종사, 자폐증 천재, 기억상실자가 4-5일차에 퍼즐을 완성하는 식이죠. \n\n이는 추리가 핵심인 게임을 마지막 날 손에 땀을 쥐게 하는 결말로 이끕니다. 스토리텔러의 높은 수준의 창의력이 필요한 만큼, 매 게임마다 완전히 다른 이야기가 펼쳐집니다.",
+    "synopsis": "'자유방임주의'는 속임수와 예측할 수 없는 전개로 가득한, 긴 호흡의 흥미진진한 게임입니다. \n\n일반적인 틴시빌 게임보다 훨씬 오래 걸리는 편으로, 보통 7-9인용 게임과 비슷하거나 더 길수도 있습니다. 덕분에 참가자들은 정보를 수집하고 완벽한 거짓말을 준비할 시간을 충분히 가질 수 있죠. 이런 특징을 조율하기 위해, 게임에서 얻을 수 있는 정보는 평소보다 훨씬 모호하게 설계되어 있습니다. 많은 캐릭터들이 처음엔 희미하다가 시간이 지날수록 뚜렷해지는 정보를 가지고 있거나, 가장 효과적인 타이밍에 써야 하는 능력을 지니고 있습니다. \n\n풍부한 정보로 인해 열띤 토론이 이어지는 게임이며, 게임 중후반부에는 극적인 반전도 자주 일어납니다. 미치광이가 자신의 정체를 깨닫거나 기구조종사, 자폐증 천재, 기억상실자가 4-5일차에 퍼즐을 완성하는 식이죠. \n\n이는 추리가 핵심인 게임을 마지막 날 손에 땀을 쥐게 하는 결말로 이끕니다. 스토리텔러의 높은 수준의 창의력이 필요한 만큼, 매 게임마다 완전히 다른 이야기가 펼쳐집니다.",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/laissez_un_faire.json",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/laissez_un_faire.pdf",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/laissez_un_faire.png",
