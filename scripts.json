@@ -388,5 +388,44 @@
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/deadly_penance_day.pdf",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/deadly_penance_day.png",
     "note": ""
+  },
+  {
+    "id": "for_psychopath",
+    "name": "사이코패스를 위하여",
+    "author": "동찬",
+    "official": false,
+    "teensyville": false,
+    "isHidden": false,
+    "synopsis": "",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/for_psychopath.json",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/for_psychopath.pdf",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/for_psychopath.png",
+    "note": ""
+  },
+  {
+    "id": "where_is_the_demon",
+    "name": "악마는 어디에",
+    "author": "Kkull",
+    "official": false,
+    "teensyville": false,
+    "isHidden": false,
+    "synopsis": "",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/where_is_the_demon.json",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/where_is_the_demon.pdf",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/where_is_the_demon.png",
+    "note": ""
+  },
+  {
+    "id": "for_newbie",
+    "name": "초보자들을 위한",
+    "author": "동찬",
+    "official": false,
+    "teensyville": false,
+    "isHidden": false,
+    "synopsis": "",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/for_newbie.json",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/for_newbie.pdf",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/for_newbie.png",
+    "note": ""
   }
 ]
