@@ -6,9 +6,9 @@ import outsider from '@assets/images/outsider.png'
 import minion from '@assets/images/minion.png'
 import demon from '@assets/images/demon.png'
 import { dum1 } from '@/assets/fonts/dum1'
-import { chungjuKimSaeng } from '@/assets/fonts/chungjukimsaeng'
-import { nanumGothic } from '@/assets/fonts/nanumgothic'
-import { nanumGothicBold } from '@/assets/fonts/nanumgothicBold'
+import { chungjuKimSaeng } from '@/assets/fonts/chungjuKimSaeng'
+import { nanumGothic } from '@/assets/fonts/nanumGothic'
+import { nanumGothicBold } from '@/assets/fonts/nanumGothicBold'
 
 const TEAMS = ['townsfolk', 'outsider', 'minion', 'demon']
 const PAGE_WIDTH = 210
