@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useRef, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ChevronLeft, X } from 'lucide-react'
 import { Alignment, ALL_TEAM, Character, HelperInfo, Team } from '@/types/types'
@@ -6,7 +6,7 @@ import { ALL_GENERIC_INFO } from '@/constants/nightInfo'
 
 type CharacterDialogProps = {
   character: Character
-  script: Character[] // 현재 스크립트의 모든 캐릭터 목록
+  script: Character[]
   genericInfos: Record<string, HelperInfo>
 }
 
@@ -121,9 +121,23 @@ const allCharacterInfos: Record<string, HelperInfo[]> = {
       isAlignment: true,
     },
   ],
+  cerenovus: [
+    {
+      title: '매일 밤',
+      message: '참가자와 선한 직업을 선택하세요. 그 사람은 내일 그 직업이라는 `광기`에 빠집니다.',
+    },
+    {
+      title: '광기 알려주기',
+      message: `세레노부스가 당신을 선택했습니다. 내일부터 자신이 {character}라고 다른 사람들을 광적으로 설득해야 합니다.`,
+      teams: [Team.Townsfolk, Team.Outsider],
+      count: 1,
+    },
+  ],
 }
 
 export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, genericInfos }) => {
+  const contentRef = useRef<HTMLDivElement>(null)
+
   const [selectedInfo, setSelectedInfo] = useState<HelperInfo | null>(null)
   const [selectedCharacters, setSelectedCharacters] = useState<Set<string>>(new Set())
   const [selectedAlignment, setSelectedAlignment] = useState<Alignment>(Alignment.Good)
@@ -148,13 +162,29 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
 
   const handleCharacterSelect = (characterId: string) => {
     setSelectedCharacters(prev => {
-      const newSelection = new Set(prev)
-      if (newSelection.has(characterId)) {
-        newSelection.delete(characterId)
-      } else if (selectedInfo?.count && newSelection.size < selectedInfo.count) {
-        newSelection.add(characterId)
+      const currentSelection = Array.from(prev)
+      const isAlreadySelected = currentSelection.includes(characterId)
+      const maxCount = selectedInfo?.count ?? Infinity
+
+      if (isAlreadySelected) {
+        return new Set(currentSelection.filter(id => id !== characterId))
       }
-      return newSelection
+
+      if (maxCount > 0) {
+        if (currentSelection.length >= maxCount) {
+          currentSelection.shift()
+        }
+
+        currentSelection.push(characterId)
+
+        if (contentRef.current) {
+          contentRef.current.scrollTo({ top: 0 })
+        }
+
+        return new Set(currentSelection)
+      }
+
+      return prev
     })
   }
 
@@ -196,9 +226,7 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
             className={`p-2 rounded-lg border flex flex-col items-center ${
               selectedCharacters.has(char.id) ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
             }`}
-            disabled={Boolean(
-              !selectedCharacters.has(char.id) && selectedInfo?.count && selectedCharacters.size >= selectedInfo.count,
-            )}>
+            disabled={Boolean(selectedInfo?.count !== undefined && selectedInfo.count <= 0)}>
             <img src={char.image} alt={char.name} className="w-12 h-12 object-contain mb-1" />
             <span className="text-xs text-center font-medium">{char.name}</span>
           </button>
@@ -249,7 +277,7 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-6 pb-6">
+      <div ref={contentRef} className="flex-1 overflow-y-auto px-6 pb-6">
         {selectedInfo ? (
           <div className="space-y-4">
             <button onClick={handleBackClick} className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
