@@ -54,7 +54,13 @@ export const NIGHT_INFO: Character[] = [
 export const ALL_GENERIC_INFO: Record<string, HelperInfo> = {
   youare: {
     title: '당신은',
-    message: '당신은 {character}입니다.',
+    message: '당신은 {character} 입니다.',
+    teams: [Team.Townsfolk, Team.Outsider, Team.Minion, Team.Demon],
+    count: 1,
+  },
+  theyis: {
+    title: '이 사람은',
+    message: '이 사람은 {character} 입니다.',
     teams: [Team.Townsfolk, Team.Outsider, Team.Minion, Team.Demon],
     count: 1,
   },

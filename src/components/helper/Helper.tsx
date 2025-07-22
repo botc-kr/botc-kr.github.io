@@ -24,6 +24,26 @@ const SCRIPTS = [
     name: '환란의 화원',
     url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/sects_and_violets.json',
   },
+  {
+    id: 'everyone_can_play',
+    name: '모두를 위한 밤',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/everyone_can_play.json',
+  },
+  {
+    id: 'no_greater_joy',
+    name: '극한의 즐거움',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/no_greater_joy.json',
+  },
+  {
+    id: 'laissez_un_faire',
+    name: '자유방임불평등주의',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/laissez_un_faire.json',
+  },
+  {
+    id: 'over_the_river',
+    name: '할머니댁으로',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/over_the_river.json',
+  },
 ] as const
 
 const Helper: FC<HelperProps> = ({}) => {

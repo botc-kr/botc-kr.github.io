@@ -133,6 +133,58 @@ const allCharacterInfos: Record<string, HelperInfo[]> = {
       count: 1,
     },
   ],
+  witch: [
+    {
+      title: '매일 밤',
+      message: '참가자 한 명을 선택하세요. 다음날 그 사람이 지명하면 죽습니다.',
+    },
+  ],
+  eviltwin: [
+    {
+      title: '첫날 밤',
+      message: '당신의 선한 쌍둥이의 직업입니다.',
+      teams: [Team.Townsfolk, Team.Outsider, Team.Minion],
+      count: 1,
+    },
+  ],
+  devilsadvocate: [
+    {
+      title: '매일 밤',
+      message: '어제와 다른 참가자 한 명을 선택하세요. 그 사람은 처형으로 죽지 않습니다.',
+    },
+  ],
+  grandmother: [
+    {
+      title: '첫날 밤',
+      message: '당신의 손주는 {character} 입니다.',
+      teams: [Team.Townsfolk, Team.Outsider],
+      count: 1,
+    },
+  ],
+  clockmaker: [
+    {
+      title: '첫날 밤',
+      message: '악마와 가장 가까운 하수인의 거리 (바로 옆은 1)',
+    },
+  ],
+  gambler: [
+    {
+      title: '매일 밤*',
+      message: '참가자 한 명과 그의 직업을 추측하세요. (본인 가능) ',
+      teams: [Team.Townsfolk, Team.Outsider, Team.Minion, Team.Demon, Team.Traveler],
+      count: 1,
+    },
+  ],
+  assassin: [
+    {
+      title: '게임 중 한 번',
+      message: '능력을 사용하시겠습니까?',
+    },
+    {
+      title: '능력을 사용한다면',
+      message: '암살하고 싶은 사람을 선택하세요',
+    },
+  ],
 }
 
 export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, genericInfos }) => {
