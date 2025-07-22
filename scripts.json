@@ -6,7 +6,6 @@
     "id": "trouble_brewing",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/trouble_brewing.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/trouble_brewing.json",
-    "teensyville": false,
     "official": true,
     "logo": "tb",
     "note": "'불길한 조짐'으로 번역한 이유\n\n시나리오 전반에 드리운 불안과 예감의 분위기를 담고자 했습니다. 먹구름이 뒤틀리고, 빨래가 섬뜩하게 춤추며, 불길한 속삭임이 이어지는 이 음험한 서사에 '소란'이라는 단어보다는 '불길한'이라는 표현이, 단순한 '발생'보다는 무언가가 다가오고 있음을 암시하는 '조짐'이라는 단어가 더 어울린다고 생각했습니다"
@@ -18,7 +17,6 @@
     "id": "bad_moon_rising",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/bad_moon_rising.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/bad_moon_rising.json",
-    "teensyville": false,
     "official": true,
     "logo": "bmr",
     "note": "'어둠을 부르는 달'로 번역한 이유\n\n단순히 '악한 달 혹은 불길한 달이 뜨다'는 직역보다, 시나리오가 가진 능동적인 불길함을 전달하고자 했습니다. \n'달'이 단순히 떠오르는 것이 아니라 '어둠을 부른다'는 표현을 통해, 늑대의 울음소리, 흩어지는 까마귀, 기이한 눈동자들로 이어지는 시나리오의 점진적 긴장감을 더 잘 담아낼 수 있다고 생각했습니다. \n또한 Creedence Clearwater Revival의 Bad Moon Rising이라는 동명의 곡이 가진 묵시록적 예언의 뉘앙스도 자연스럽게 녹여내고자 했습니다."
@@ -30,7 +28,6 @@
     "id": "sects_and_violets",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/sects_and_violets.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/sects_and_violets.json",
-    "teensyville": false,
     "official": true,
     "logo": "snv",
     "note": "'환란의 화원'으로 번역한 이유\n\n원제 'Sects & Violets'의 다층적 의미(불길한 결사, 아름다운 꽃, Sex and Violence의 언어유희)를 반영하고자 했습니다. \n'화원'은 평화로운 표면을, '환란'은 그 이면의 혼란을 상징하며, 이 대비가 게임의 본질이라 생각했습니다. \n또한 '환란'이 주는 문학적 뉘앙스와 '화원'이 주는 포괄적 이미지를 통해 한국어의 미감도 살리고자 했습니다."
@@ -42,7 +39,6 @@
     "id": "lunar_eclipse",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/lunar_eclipse.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/lunar_eclipse.json",
-    "teensyville": false,
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/lunar_eclipse.png",
     "note": ""
   },
@@ -53,7 +49,6 @@
     "id": "fall_of_rome",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/fall_of_rome.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/fall_of_rome.json",
-    "teensyville": false,
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/fall_of_rome.png",
     "note": ""
   },
@@ -64,7 +59,6 @@
     "id": "high_seas_of_mutiny",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
-    "teensyville": false,
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png",
     "note": ""
   },
@@ -75,7 +69,6 @@
     "id": "harry_potter",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/harry_potter.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/harry_potter.json",
-    "teensyville": false,
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/harry_potter.png",
     "note": ""
   },
@@ -86,7 +79,6 @@
     "id": "hide_n_seek",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
-    "teensyville": false,
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png",
     "note": ""
   },
@@ -97,7 +89,6 @@
     "id": "everyone_can_play",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/everyone_can_play.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/everyone_can_play.json",
-    "teensyville": false,
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/everyone_can_play.png",
     "note": ""
   },
