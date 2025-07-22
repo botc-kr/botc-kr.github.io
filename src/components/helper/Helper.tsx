@@ -46,12 +46,26 @@ const SCRIPTS = [
   },
 ] as const
 
+const STORAGE_KEY = 'helper_selected_script'
+
 const Helper: FC<HelperProps> = ({}) => {
-  const [selectedScript, setSelectedScript] = useState<string>(SCRIPTS[0].id)
+  // localStorage에서 저장된 스크립트를 가져오거나 기본값 사용
+  const [selectedScript, setSelectedScript] = useState<string>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY)
+    const isValidScript = saved && SCRIPTS.some(script => script.id === saved)
+    return isValidScript ? saved : SCRIPTS[0].id
+  })
+
   const [data, setData] = useState<(ScriptData | Character)[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
+
+  // 스크립트 선택 시 localStorage에 저장
+  const handleScriptChange = (scriptId: string) => {
+    setSelectedScript(scriptId)
+    localStorage.setItem(STORAGE_KEY, scriptId)
+  }
 
   useEffect(() => {
     const fetchScript = async () => {
@@ -98,7 +112,7 @@ const Helper: FC<HelperProps> = ({}) => {
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-6">
-        <Select.Root value={selectedScript} onValueChange={setSelectedScript}>
+        <Select.Root value={selectedScript} onValueChange={handleScriptChange}>
           <Select.Trigger className="inline-flex items-center justify-between rounded px-4 py-2 text-sm gap-2 bg-white border border-gray-300 hover:bg-gray-50 focus:outline-none min-w-[200px]">
             <Select.Value placeholder="스크립트 선택" />
             <Select.Icon>
