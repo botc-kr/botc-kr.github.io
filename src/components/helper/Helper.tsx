@@ -30,6 +30,11 @@ const SCRIPTS = [
     url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/everyone_can_play.json',
   },
   {
+    id: 'uncertain_death',
+    name: '의문사 (Uncertain Death)',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/uncertain_death.json',
+  },
+  {
     id: 'no_greater_joy',
     name: '극한의 즐거움',
     url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/no_greater_joy.json',
