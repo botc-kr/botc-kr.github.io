@@ -71,14 +71,14 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
 
             <div className="flex items-center space-x-6">
               <button
-                onClick={() => onPageChange('scripts')}
+                 onClick={() => onPageChange('scripts')}
                 className={`hover:text-gray-300 transition duration-200 ${
                   currentPage === 'scripts' ? 'text-white' : 'text-gray-400'
                 }`}>
                 스크립트
               </button>
               <button
-                onClick={() => onPageChange('savant')}
+                 onClick={() => onPageChange('savant')}
                 className={`hover:text-gray-300 transition duration-200 ${
                   currentPage === 'savant' ? 'text-white' : 'text-gray-400'
                 }`}>

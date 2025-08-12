@@ -1,8 +1,8 @@
 import { Script } from '@/types/types'
 import React, { useEffect, useState } from 'react'
 import { fetchScripts, handleCopyJson, handleDownloadJson, handleDownloadPdf } from '@/utils/ScriptUtils'
-import { Footer, Header } from './HeaderFooter'
-import ScriptCategory from './ScriptCategory'
+import { Footer, Header } from '@/components/HeaderFooter'
+import ScriptCategory from '@/components/ScriptCategory'
 import { type PageType } from '@/constants/pages'
 
 interface ScriptListProps {

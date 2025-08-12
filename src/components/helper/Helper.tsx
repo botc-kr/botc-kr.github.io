@@ -4,8 +4,8 @@ import * as Dialog from '@radix-ui/react-dialog'
 import * as Select from '@radix-ui/react-select'
 import { Character, ScriptData, Team, HelperTab } from '@/types/types'
 import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
-import { CharacterRow } from './CharacterRow'
-import { CharacterDialog } from './CharacterDialog'
+import { CharacterRow } from '@/components/helper/CharacterRow'
+import { CharacterDialog } from '@/components/helper/CharacterDialog'
 import { ChevronDownIcon } from 'lucide-react'
 
 const SCRIPTS = [

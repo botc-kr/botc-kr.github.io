@@ -1,6 +1,6 @@
 import { RefreshCwIcon } from 'lucide-react'
 import { useState } from 'react'
-import { Header } from './HeaderFooter'
+import { Header } from '@/components/HeaderFooter'
 import { type PageType } from '@/constants/pages'
 
 const propositions = [

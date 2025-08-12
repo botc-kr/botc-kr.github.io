@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Footer } from './components/HeaderFooter'
-import SavantProposition from './components/SavantProposition'
-import ScriptList from './components/ScriptList'
-// import PDFGenerator from './components/PDFGenerator'
-import Helper from './components/helper/Helper'
+import { Footer } from '@/components/HeaderFooter'
+import SavantProposition from '@/components/SavantProposition'
+import ScriptList from '@/components/ScriptList'
+// import PDFGenerator from '@/components/PDFGenerator'
+import Helper from '@/components/helper/Helper'
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
 import { pageTypeFromHash, hashFromPageType } from '@/constants/routes'
 
@@ -36,7 +36,7 @@ function App() {
         // <PDFGenerator />
         <></>
       ) : currentPage === PAGE_TYPES.HELPER ? (
-        <Helper currentPage={currentPage} onPageChange={handlePageChange} />
+        <Helper />
       ) : (
         <>
           <SavantProposition currentPage={currentPage} onPageChange={handlePageChange} />
