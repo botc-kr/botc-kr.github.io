@@ -163,6 +163,12 @@
 ### 13) 변경이력(수기 업데이트)
 
 - 2025-08-12: 최초 작성. 프로젝트 구조/데이터 흐름/작업 플레이북 정리.
+- 2025-08-12: 리팩토링 1차
+  - PageType 중앙화(`src/constants/pages.ts`), 해시 라우팅 유틸 추가(`src/constants/routes.ts`)
+  - 컴포넌트 prop 타입 통일, alias import 표준화
+  - 섹션 id 상수화(`src/constants/sections.ts`), 번역 리소스 URL 헬퍼 추가(`src/constants/urls.ts`)
+  - `alert()` → `notify()`로 공통화(`src/lib/utils.js`), `ScriptUtils` 전반 적용
+  - 중복 타입/미사용 props 제거(`src/types/types.tsx`)
 
 ### 14) 라이선스/크레딧
 
