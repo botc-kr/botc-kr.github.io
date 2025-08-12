@@ -5,6 +5,7 @@ import { Footer, Header } from '@/components/HeaderFooter'
 import ScriptCategory from '@/components/ScriptCategory'
 import { type PageType } from '@/constants/pages'
 import { SECTIONS } from '@/constants/sections'
+import { HEADER_OFFSET_PX } from '@/constants/ui'
 
 interface ScriptListProps {
   currentPage: PageType
@@ -29,7 +30,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
       if (!loading && scripts.length > 0) {
         const element = document.getElementById(hash)
         if (element) {
-          const headerOffset = 80
+          const headerOffset = HEADER_OFFSET_PX
           const elementPosition = element.getBoundingClientRect().top
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 

@@ -1,6 +1,7 @@
 import { Github } from 'lucide-react'
 import { type PageType } from '@/constants/pages'
 import { SECTIONS } from '@/constants/sections'
+import { HEADER_OFFSET_PX } from '@/constants/ui'
 
 interface HeaderProps {
   currentPage: PageType
@@ -10,7 +11,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   const scrollToElement = (id: string) => {
     const element = document.getElementById(id)
-    const headerOffset = 80
+    const headerOffset = HEADER_OFFSET_PX
 
     if (element) {
       const elementPosition = element.getBoundingClientRect().top

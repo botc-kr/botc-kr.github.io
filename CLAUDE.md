@@ -169,6 +169,10 @@
   - 섹션 id 상수화(`src/constants/sections.ts`), 번역 리소스 URL 헬퍼 추가(`src/constants/urls.ts`)
   - `alert()` → `notify()`로 공통화(`src/lib/utils.js`), `ScriptUtils` 전반 적용
   - 중복 타입/미사용 props 제거(`src/types/types.tsx`)
+- 2025-08-12: 리팩토링 2차
+  - UI 상수 분리: `HEADER_OFFSET_PX`(`src/constants/ui.ts`)
+  - 서번트 명제 상수 분리: `SAVANT_PROPOSITIONS`(`src/constants/savant.ts`)
+  - 네트워크 안정성: `fetchWithRetry` 도입(`src/utils/fetchRetry.ts`) 및 `ScriptUtils` 적용
 
 ### 14) 라이선스/크레딧
 

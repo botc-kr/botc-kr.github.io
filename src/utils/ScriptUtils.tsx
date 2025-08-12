@@ -1,5 +1,6 @@
 import { Script } from '@/types/types'
 import { notify } from '@/lib/utils'
+import { fetchWithRetry } from '@/utils/fetchRetry'
 
 type SetStateFunction<T> = React.Dispatch<React.SetStateAction<T>>
 
@@ -8,7 +9,7 @@ export const fetchScripts = async (
   setLoading: SetStateFunction<boolean>
 ): Promise<void> => {
   try {
-    const response = await fetch('/scripts.json')
+    const response = await fetchWithRetry('/scripts.json')
     const data: Script[] = await response.json()
     setScripts(data)
     setLoading(false)
@@ -24,7 +25,7 @@ export const handleCopyJson = async (
   setCopiedId: SetStateFunction<string | null>
 ): Promise<void> => {
   try {
-    const response = await fetch(jsonUrl)
+    const response = await fetchWithRetry(jsonUrl)
     const json = await response.json()
     await navigator.clipboard.writeText(JSON.stringify(json, null, 2))
     setCopiedId(scriptId)
@@ -42,7 +43,7 @@ export const handleDownloadJson = async (
   fileName: string
 ): Promise<void> => {
   try {
-    const response = await fetch(jsonUrl)
+    const response = await fetchWithRetry(jsonUrl)
     const json = await response.json()
     const blob = new Blob([JSON.stringify(json, null, 2)], {
       type: 'application/json'
@@ -62,7 +63,7 @@ export const handleDownloadPdf = async (
   try {
     setDownloadingId(scriptId)
     const fileName = pdfUrl.split('/').pop() as string
-    const response = await fetch(pdfUrl)
+    const response = await fetchWithRetry(pdfUrl)
     const blob = await response.blob()
     downloadFile(blob, fileName)
   } catch (error) {

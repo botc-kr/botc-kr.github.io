@@ -2,48 +2,8 @@ import { RefreshCwIcon } from 'lucide-react'
 import { useState } from 'react'
 import { Header } from '@/components/HeaderFooter'
 import { type PageType } from '@/constants/pages'
+import { SAVANT_PROPOSITIONS } from '@/constants/savant'
 
-const propositions = [
-  '외지인의 수가 변경되었다/변경되지 않았다.',
-  '지난밤 n명의 능력이 제대로 발동되지 않았다.',
-  '지난밤 요리사는 정보 n을 받았을 것이다.',
-  "지난밤 정확히 n명의 마을주민이 '악한 플레이어/악마'를 대상으로 능력을 사용했다.",
-  'n명 이상의 플레이어가 광기의 영향을 받고 있다.',
-  '사망한 플레이어 중 n명 이상이 악한 진영이다.',
-  'n개의 1회성 능력이 사용되었다.',
-  '당신의 (생존한) 이웃 중 n명이 취함이나 중독 상태다.',
-  '[캐릭터]와 [캐릭터]가 나란히 앉아 있다.',
-  '[캐릭터]나 [캐릭터] 중 하나가 게임에 있다.',
-  '[악마 캐릭터]는 이번 게임에 없다.',
-  '1회성 능력이 사용되었다/사용되지 않았다.',
-  '악마는 하수인/외지인과 이웃이다.',
-  '선/악 진영 플레이어가 연속으로 n명 앉아있다.',
-  '당신은 마녀의 저주에 걸렸다.',
-  '지난밤 뱀조련사가 [캐릭터/유형]을 선택했다.',
-  '악마는 n명의 마을주민과 이웃이다.',
-  '지난밤 마을주민들이 받은 모든 정보는 정확했다.',
-  '지난밤 선한 진영 플레이어들이 일어났다.',
-  '지난밤 누군가의 역할이 바뀌었다.',
-  '오늘은 광기에 걸린 사람이 없다.',
-  '선/악 진영 플레이어가 광기에 걸렸다.',
-  '지난밤 누군가의 진영이 바뀌었다.',
-  '[플레이어]와 [플레이어]는 같은 진영이다.',
-  '지난밤 누군가가 능력 사용을 거부했다.',
-  '이번 게임에는 광기 관련 역할이 없다.',
-  '지난밤 n명의 플레이어가 숫자 정보를 받았다.',
-  '[하수인]은 매일 밤 같은 플레이어를 선택했다.',
-  '게임 시작 때보다 외지인/마을주민의 수가 더 많다/적다.',
-  '당신의 (생존한) 이웃들은 같은/다른 진영이다.',
-  '[캐릭터]가 어제 지목을 했다.',
-  '1회성 능력이 잘못된 정보를 받았다.',
-  '악마가 다른 플레이어로 바뀌는 것은 불가능하다.',
-  '지난밤 새로운 역할이 생성되지 않았다.',
-  '당신의 이웃 중 n명이 중독되었다.',
-  '악한 플레이어들이 모두 살아있다.',
-  '지난밤 [하수인]이 [캐릭터]를 선택했다.',
-  '당신의 이웃 중 n명이 다른 플레이어의 능력 대상이 되었다.',
-  '게임 시작 시 하수인 중 최소 한 명은 악마가 누구인지 몰랐다.',
-]
 
 interface SavantPropositionProps {
   currentPage: PageType
@@ -51,11 +11,11 @@ interface SavantPropositionProps {
 }
 
 const SavantProposition: React.FC<SavantPropositionProps> = ({ currentPage, onPageChange }) => {
-  const [currentProposition, setCurrentProposition] = useState(propositions[0])
+  const [currentProposition, setCurrentProposition] = useState(SAVANT_PROPOSITIONS[0])
 
   const generateNewProposition = () => {
-    const newIndex = Math.floor(Math.random() * propositions.length)
-    setCurrentProposition(propositions[newIndex])
+    const newIndex = Math.floor(Math.random() * SAVANT_PROPOSITIONS.length)
+    setCurrentProposition(SAVANT_PROPOSITIONS[newIndex])
   }
 
   return (
