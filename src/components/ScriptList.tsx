@@ -3,10 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { fetchScripts, handleCopyJson, handleDownloadJson, handleDownloadPdf } from '@/utils/ScriptUtils'
 import { Footer, Header } from './HeaderFooter'
 import ScriptCategory from './ScriptCategory'
+import { type PageType } from '@/constants/pages'
 
 interface ScriptListProps {
-  currentPage: 'scripts' | 'savant'
-  onPageChange: (page: 'scripts' | 'savant') => void
+  currentPage: PageType
+  onPageChange: (page: PageType) => void
 }
 
 const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) => {

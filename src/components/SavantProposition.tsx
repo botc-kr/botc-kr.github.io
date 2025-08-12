@@ -1,9 +1,10 @@
 import { RefreshCwIcon } from 'lucide-react'
 import { useState } from 'react'
 import { Header } from './HeaderFooter'
+import { type PageType } from '@/constants/pages'
 
 const propositions = [
-  '외부인의 수가 변경되었다/변경되지 않았다.',
+  '외지인의 수가 변경되었다/변경되지 않았다.',
   '지난밤 n명의 능력이 제대로 발동되지 않았다.',
   '지난밤 요리사는 정보 n을 받았을 것이다.',
   "지난밤 정확히 n명의 마을주민이 '악한 플레이어/악마'를 대상으로 능력을 사용했다.",
@@ -15,7 +16,7 @@ const propositions = [
   '[캐릭터]나 [캐릭터] 중 하나가 게임에 있다.',
   '[악마 캐릭터]는 이번 게임에 없다.',
   '1회성 능력이 사용되었다/사용되지 않았다.',
-  '악마는 하수인/외부인과 이웃이다.',
+  '악마는 하수인/외지인과 이웃이다.',
   '선/악 진영 플레이어가 연속으로 n명 앉아있다.',
   '당신은 마녀의 저주에 걸렸다.',
   '지난밤 뱀조련사가 [캐릭터/유형]을 선택했다.',
@@ -31,7 +32,7 @@ const propositions = [
   '이번 게임에는 광기 관련 역할이 없다.',
   '지난밤 n명의 플레이어가 숫자 정보를 받았다.',
   '[하수인]은 매일 밤 같은 플레이어를 선택했다.',
-  '게임 시작 때보다 외부인/마을주민의 수가 더 많다/적다.',
+  '게임 시작 때보다 외지인/마을주민의 수가 더 많다/적다.',
   '당신의 (생존한) 이웃들은 같은/다른 진영이다.',
   '[캐릭터]가 어제 지목을 했다.',
   '1회성 능력이 잘못된 정보를 받았다.',
@@ -45,8 +46,8 @@ const propositions = [
 ]
 
 interface SavantPropositionProps {
-  currentPage: 'scripts' | 'savant'
-  onPageChange: (page: 'scripts' | 'savant') => void
+  currentPage: PageType
+  onPageChange: (page: PageType) => void
 }
 
 const SavantProposition: React.FC<SavantPropositionProps> = ({ currentPage, onPageChange }) => {

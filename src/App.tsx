@@ -4,48 +4,22 @@ import SavantProposition from './components/SavantProposition'
 import ScriptList from './components/ScriptList'
 // import PDFGenerator from './components/PDFGenerator'
 import Helper from './components/helper/Helper'
-
-const PAGE_TYPES = {
-  SCRIPTS: 'scripts',
-  SAVANT: 'savant',
-  PDF: 'pdf',
-  HELPER: 'helper',
-} as const
-
-export type PageType = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES]
+import { PAGE_TYPES, type PageType } from '@/constants/pages'
+import { pageTypeFromHash, hashFromPageType } from '@/constants/routes'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<PageType>(() => {
-    if (window.location.hash === '#savant-generator') return PAGE_TYPES.SAVANT
-    if (window.location.hash === '#pdfgen') return PAGE_TYPES.PDF
-    if (window.location.hash === '#helper') return PAGE_TYPES.HELPER
-    return PAGE_TYPES.SCRIPTS
-  })
+  const [currentPage, setCurrentPage] = useState<PageType>(() => pageTypeFromHash(window.location.hash))
 
   const handlePageChange = (page: PageType) => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
     setCurrentPage(page)
-    window.location.hash =
-      page === PAGE_TYPES.SAVANT
-        ? 'savant-generator'
-        : page === PAGE_TYPES.PDF
-        ? 'pdfgen'
-        : page === PAGE_TYPES.HELPER
-        ? 'helper'
-        : ''
+    window.location.hash = hashFromPageType(page)
   }
 
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash
-      const page =
-        hash === '#savant-generator'
-          ? PAGE_TYPES.SAVANT
-          : hash === '#pdfgen'
-          ? PAGE_TYPES.PDF
-          : hash === '#helper'
-          ? PAGE_TYPES.HELPER
-          : PAGE_TYPES.SCRIPTS
+      const page = pageTypeFromHash(hash)
       setCurrentPage(page)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }

@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs'
 import * as Dialog from '@radix-ui/react-dialog'
 import * as Select from '@radix-ui/react-select'
-import { Character, ScriptData, HelperProps, Team, HelperTab } from '@/types/types'
+import { Character, ScriptData, Team, HelperTab } from '@/types/types'
 import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
 import { CharacterRow } from './CharacterRow'
 import { CharacterDialog } from './CharacterDialog'
@@ -53,7 +53,7 @@ const SCRIPTS = [
 
 const STORAGE_KEY = 'helper_selected_script'
 
-const Helper: FC<HelperProps> = ({}) => {
+const Helper: FC = () => {
   // localStorage에서 저장된 스크립트를 가져오거나 기본값 사용
   const [selectedScript, setSelectedScript] = useState<string>(() => {
     const saved = localStorage.getItem(STORAGE_KEY)

@@ -1,8 +1,9 @@
 import { Github } from 'lucide-react'
+import { type PageType } from '@/constants/pages'
 
 interface HeaderProps {
-  currentPage: 'scripts' | 'savant'
-  onPageChange: (page: 'scripts' | 'savant') => void
+  currentPage: PageType
+  onPageChange: (page: PageType) => void
 }
 
 export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {

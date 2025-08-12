@@ -30,6 +30,7 @@ export interface ActionButtonsProps {
   downloadingId: string | null
 }
 
+// Centralized in src/constants/pages.ts
 export type PageType = string
 
 export enum Team {
