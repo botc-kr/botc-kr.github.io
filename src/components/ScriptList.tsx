@@ -4,6 +4,7 @@ import { fetchScripts, handleCopyJson, handleDownloadJson, handleDownloadPdf } f
 import { Footer, Header } from '@/components/HeaderFooter'
 import ScriptCategory from '@/components/ScriptCategory'
 import { type PageType } from '@/constants/pages'
+import { SECTIONS } from '@/constants/sections'
 
 interface ScriptListProps {
   currentPage: PageType
@@ -71,7 +72,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
       <Header currentPage={currentPage} onPageChange={onPageChange} />
       <div className="max-w-6xl mx-auto p-4 sm:p-6">
         {officialScripts.length > 0 && (
-          <div id="official">
+          <div id={SECTIONS.OFFICIAL}>
             <ScriptCategory
               title="공식 스크립트"
               scripts={officialScripts}
@@ -85,7 +86,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
         )}
 
         {communityScripts.length > 0 && (
-          <div id="community">
+          <div id={SECTIONS.COMMUNITY}>
             <ScriptCategory
               title="커스텀 스크립트"
               scripts={communityScripts}
@@ -99,7 +100,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
         )}
 
         {teensyvilleScripts.length > 0 && (
-          <div id="teensyville">
+          <div id={SECTIONS.TEENSYVILLE}>
             <ScriptCategory
               title="틴시빌 스크립트"
               scripts={teensyvilleScripts}

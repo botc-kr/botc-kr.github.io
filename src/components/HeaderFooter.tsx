@@ -1,5 +1,6 @@
 import { Github } from 'lucide-react'
 import { type PageType } from '@/constants/pages'
+import { SECTIONS } from '@/constants/sections'
 
 interface HeaderProps {
   currentPage: PageType
@@ -38,29 +39,29 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
                 {currentPage === 'scripts' ? (
                   <>
                     <a
-                      href="#official"
+                      href={`#${SECTIONS.OFFICIAL}`}
                       className="hover:text-gray-300 transition duration-200"
                       onClick={e => {
                         e.preventDefault()
-                        scrollToElement('official')
+                        scrollToElement(SECTIONS.OFFICIAL)
                       }}>
                       공식
                     </a>
                     <a
-                      href="#community"
+                      href={`#${SECTIONS.COMMUNITY}`}
                       className="hover:text-gray-300 transition duration-200"
                       onClick={e => {
                         e.preventDefault()
-                        scrollToElement('community')
+                        scrollToElement(SECTIONS.COMMUNITY)
                       }}>
                       커스텀
                     </a>
                     <a
-                      href="#teensyville"
+                      href={`#${SECTIONS.TEENSYVILLE}`}
                       className="hover:text-gray-300 transition duration-200"
                       onClick={e => {
                         e.preventDefault()
-                        scrollToElement('teensyville')
+                        scrollToElement(SECTIONS.TEENSYVILLE)
                       }}>
                       틴시빌
                     </a>
