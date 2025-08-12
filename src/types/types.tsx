@@ -30,8 +30,7 @@ export interface ActionButtonsProps {
   downloadingId: string | null
 }
 
-// Centralized in src/constants/pages.ts
-export type PageType = string
+// PageType is defined in src/constants/pages.ts
 
 export enum Team {
   Townsfolk = 'townsfolk',
@@ -87,7 +86,4 @@ export type ScriptData = {
   name: string
 }
 
-export type HelperProps = {
-  currentPage: string
-  onPageChange: (page: 'scripts' | 'savant') => void
-}
+export type HelperProps = never
