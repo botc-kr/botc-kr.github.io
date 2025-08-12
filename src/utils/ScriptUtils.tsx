@@ -1,4 +1,5 @@
 import { Script } from '@/types/types'
+import { notify } from '@/lib/utils'
 
 type SetStateFunction<T> = React.Dispatch<React.SetStateAction<T>>
 
@@ -32,7 +33,7 @@ export const handleCopyJson = async (
     }, 1000)
   } catch (error) {
     console.error('Error copying JSON:', error)
-    alert('JSON 복사 중 오류가 발생했습니다.')
+    notify('JSON 복사 중 오류가 발생했습니다.')
   }
 }
 
@@ -49,7 +50,7 @@ export const handleDownloadJson = async (
     downloadFile(blob, `${fileName}.json`)
   } catch (error) {
     console.error('Error downloading JSON:', error)
-    alert('JSON 다운로드 중 오류가 발생했습니다.')
+    notify('JSON 다운로드 중 오류가 발생했습니다.')
   }
 }
 
@@ -66,7 +67,7 @@ export const handleDownloadPdf = async (
     downloadFile(blob, fileName)
   } catch (error) {
     console.error('Error downloading PDF:', error)
-    alert('PDF 다운로드 중 오류가 발생했습니다.')
+    notify('PDF 다운로드 중 오류가 발생했습니다.')
   } finally {
     setDownloadingId(null)
   }
