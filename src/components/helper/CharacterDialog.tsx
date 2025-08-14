@@ -11,6 +11,7 @@ type CharacterDialogProps = {
 }
 
 const allCharacterInfos: Record<string, HelperInfo[]> = {
+  minion_info: [ALL_GENERIC_INFO.thisisyourdemon],
   demon_info: [ALL_GENERIC_INFO.theseareyourminions, ALL_GENERIC_INFO.notinplay],
   poisoner: [
     {
@@ -73,7 +74,7 @@ const allCharacterInfos: Record<string, HelperInfo[]> = {
   monk: [
     {
       title: '매일 밤',
-      message: '당신을 제외한 선택된 참가자는 악마로부터 안전합니다.',
+      message: '참가자 한 명을 선택하세요. 그 사람은 오늘 밤 악마로부터 안전합니다.',
     },
   ],
   imp: [
@@ -183,6 +184,40 @@ const allCharacterInfos: Record<string, HelperInfo[]> = {
     {
       title: '능력을 사용한다면',
       message: '암살하고 싶은 사람을 선택하세요',
+    },
+  ],
+  godfather: [
+    {
+      title: '첫날 밤',
+      message: '다음 이방인들이 게임에 참가중입니다.',
+      teams: [Team.Outsider],
+      count: 3,
+    },
+    {
+      title: '이방인이 죽었다면',
+      message: '죽이고 싶은 참가자를 선택하세요.',
+    },
+  ],
+  seamstress: [
+    {
+      title: '게임 중 한 번',
+      message: '능력을 사용하시겠습니까?',
+    },
+    {
+      title: '능력을 사용한다면',
+      message: '참가자 2명을 선택하세요. 그 사람들이 같은 팀인지 알려드립니다.',
+    },
+  ],
+  exorcist: [
+    {
+      title: '매일 밤',
+      message: '어제와 다른 참가자를 선택하세요.',
+    },
+  ],
+  pukka: [
+    {
+      title: '매일 밤',
+      message: '중독시킬 사람을 선택하세요. 이전에 중독되었던 사람은 죽고, 중독이 풀립니다.',
     },
   ],
 }

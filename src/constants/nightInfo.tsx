@@ -109,4 +109,10 @@ export const ALL_GENERIC_INFO: Record<string, HelperInfo> = {
     title: '오늘 지명했나요?',
     message: '오늘 지명했나요?',
   },
+  thischaracterselectedyou: {
+    title: '이 캐릭터가 당신을 선택했습니다.',
+    message: '이 캐릭터가 당신을 선택했습니다.',
+    teams: [Team.Townsfolk, Team.Outsider, Team.Minion, Team.Demon],
+    count: 1,
+  },
 } as const
