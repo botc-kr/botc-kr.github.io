@@ -20,7 +20,7 @@ interface ScriptImageProps {
 }
 
 function ScriptImage({ src, alt }: ScriptImageProps): JSX.Element {
-  const [imgSrc, setImgSrc] = useState<string>(imageMap[src] || src)
+  const [imgSrc, setImgSrc] = useState<string>(imageMap[src] || src || defaultImage)
 
   const handleError = (): void => {
     if (imgSrc !== defaultImage) {
@@ -29,7 +29,7 @@ function ScriptImage({ src, alt }: ScriptImageProps): JSX.Element {
   }
 
   useEffect(() => {
-    setImgSrc(imageMap[src] || src)
+    setImgSrc(imageMap[src] || src || defaultImage)
   }, [src])
 
   return <img src={imgSrc} alt={alt} onError={handleError} className="w-24 h-24 sm:w-32 sm:h-32 object-contain" />
