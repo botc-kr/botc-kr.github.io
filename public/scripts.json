@@ -154,5 +154,15 @@
     "teensyville": true,
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/race_to_the_bottom.png",
     "note": ""
+  },
+  {
+    "author": "Emily",
+    "synopsis": "",
+    "name": "Catfishing",
+    "id": "catfishing",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/catfishing.pdf",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/catfishing.json",
+    "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/bad_moon_rising_bg.webp",
+    "note": ""
   }
 ]

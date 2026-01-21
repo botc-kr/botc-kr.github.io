@@ -49,6 +49,16 @@ const SCRIPTS = [
     name: '할머니댁으로',
     url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/over_the_river.json',
   },
+  {
+    id: 'pies_baking',
+    name: '익어가는 파이 (Pies Baking)',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/pies_baking.json',
+  },
+  {
+    id: 'catfishing',
+    name: 'Catfishing',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/catfishing.json',
+  },
 ] as const
 
 const STORAGE_KEY = 'helper_selected_script'
