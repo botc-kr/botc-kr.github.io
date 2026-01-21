@@ -59,6 +59,11 @@ const SCRIPTS = [
     name: 'Catfishing',
     url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/catfishing.json',
   },
+  {
+    id: 'onion_pies',
+    name: 'Onion Pies',
+    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/onion_pies.json',
+  },
 ] as const
 
 const STORAGE_KEY = 'helper_selected_script'
