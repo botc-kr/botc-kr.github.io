@@ -164,5 +164,14 @@
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/catfishing.json",
     "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/bad_moon_rising_bg.webp",
     "note": ""
+  },
+  {
+    "author": "Ryback",
+    "synopsis": "Pies Baking의 추가 변형 스크립트입니다. \n집사 대신 오우거를 추가했습니다. \n그리고 픽시를 추가했습니다. \n스크립트에 마을 주민을 추가로 넣는 것은 스토리텔러에게 더 많은 선택권을 주는 데 도움이 됩니다. 꼭두각시와 주정뱅이가 포함될 경우 마을 주민 캐릭터를 두 명 더 추가해야 하는데요, 인원이 많은 게임에서는 마을주민이 부족할 수 있기 때문입니다.",
+    "name": "Onion Pies",
+    "id": "onion_pies",
+    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/onion_pies.pdf",
+    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/onion_pies.json",
+    "note": ""
   }
 ]
