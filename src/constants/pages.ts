@@ -3,6 +3,7 @@ export const PAGE_TYPES = {
   SAVANT: 'savant',
   PDF: 'pdf',
   HELPER: 'helper',
+  TRACKER: 'tracker',
 } as const
 
 export type PageType = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES]

@@ -8,6 +8,8 @@ import { CharacterRow } from '@/components/helper/CharacterRow'
 import { CharacterDialog } from '@/components/helper/CharacterDialog'
 import { ChevronDownIcon } from 'lucide-react'
 
+const localIcons = import.meta.glob('../../assets/icons/*.png', { eager: true, as: 'url' })
+
 const SCRIPTS = [
   {
     id: 'trouble_brewing',
@@ -100,7 +102,35 @@ const Helper: FC = () => {
           throw new Error('스크립트 데이터를 불러오는데 실패했습니다')
         }
         const jsonData = await response.json()
-        setData(jsonData)
+
+        // Override images with local assets
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const processedData = jsonData.map((item: any, index: number) => {
+          if (item.id === '_meta') return item
+
+          // remove 'kokr' or 'ko_KR' or 'ko_KR_' prefix
+          const cleanId = item.id.replace(/^(kokr|ko_KR)_?/, '')
+          const iconKey = `../../assets/icons/Icon_${cleanId}.png`
+          const localImage = localIcons[iconKey]
+
+          if (!localImage && index < 5) { // Only log first few failures to avoid spam
+            console.debug(`[Helper] Icon lookup failed for ${item.id}`, {
+              cleanId,
+              iconKey,
+              hasKey: iconKey in localIcons,
+              firstKey: Object.keys(localIcons)[0]
+            })
+          }
+
+          const finalImage = localImage || item.image
+
+          return {
+            ...item,
+            image: finalImage
+          }
+        })
+
+        setData(processedData)
       } catch (err) {
         setError(err instanceof Error ? err.message : '스크립트를 불러오는데 실패했습니다')
       } finally {
