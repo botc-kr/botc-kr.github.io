@@ -4,6 +4,7 @@ import SavantProposition from '@/components/SavantProposition'
 import ScriptList from '@/components/ScriptList'
 // import PDFGenerator from '@/components/PDFGenerator'
 import Helper from '@/components/helper/Helper'
+import TrackerApp from '@/components/tracker/TrackerApp'
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
 import { pageTypeFromHash, hashFromPageType } from '@/constants/routes'
 
@@ -37,6 +38,8 @@ function App() {
         <></>
       ) : currentPage === PAGE_TYPES.HELPER ? (
         <Helper />
+      ) : currentPage === PAGE_TYPES.TRACKER ? (
+        <TrackerApp />
       ) : (
         <>
           <SavantProposition currentPage={currentPage} onPageChange={handlePageChange} />

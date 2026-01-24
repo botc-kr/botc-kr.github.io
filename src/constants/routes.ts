@@ -8,6 +8,8 @@ export const hashFromPageType = (page: PageType): string => {
       return 'pdfgen'
     case PAGE_TYPES.HELPER:
       return 'helper'
+    case PAGE_TYPES.TRACKER:
+      return 'tracker'
     case PAGE_TYPES.SCRIPTS:
     default:
       return ''
@@ -22,6 +24,8 @@ export const pageTypeFromHash = (hash: string): PageType => {
       return PAGE_TYPES.PDF
     case '#helper':
       return PAGE_TYPES.HELPER
+    case '#tracker':
+      return PAGE_TYPES.TRACKER
     default:
       return PAGE_TYPES.SCRIPTS
   }
