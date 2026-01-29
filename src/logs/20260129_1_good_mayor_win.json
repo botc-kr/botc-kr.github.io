@@ -1,0 +1,517 @@
+{
+    "bluffs": [
+        "kokrnoble",
+        "kokrravenkeeper",
+        "kokrsaint"
+    ],
+    "edition": {
+        "author": "Ryback",
+        "id": "custom",
+        "isOfficial": false,
+        "name": "Onion Pies"
+    },
+    "roles": [
+        {
+            "0": "kokrchef",
+            "1": "요리사",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_chef.png?raw=true",
+            "3": "서로 인접한 악한 참가자 쌍의 수를 알고 시작합니다.",
+            "4": "tb",
+            "5": 35,
+            "6": "이웃한 악한 참가자 쌍의 수에 대한 손가락 신호(0, 1, 2, ...)를 보여줍니다.",
+            "9": []
+        },
+        {
+            "0": "kokrnoble",
+            "1": "귀족",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_noble.png?raw=true",
+            "3": "당신은 처음에 3명의 참가자를 알고 시작하며, 그 중 오직 1명만이 악합니다.",
+            "4": "experimental",
+            "5": 43,
+            "6": "특정 순서 없이 1명의 악한 참가자를 포함한 3명의 참가자를 가리킵니다.",
+            "9": [
+                "본"
+            ]
+        },
+        {
+            "0": "kokrwasherwoman",
+            "1": "세탁부",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_washerwoman.png?raw=true",
+            "3": "두 참가자 중 한 명이 특정 마을주민임을 알고 시작합니다.",
+            "4": "tb",
+            "5": 32,
+            "6": "게임에 있는 마을 주민의 캐릭터 토큰을 보여줍니다. 두 명의 참가자를 가리키는데, 그 중 한 명이 그 캐릭터입니다.",
+            "9": [
+                "마을 주민",
+                "틀림"
+            ]
+        },
+        {
+            "0": "kokrlibrarian",
+            "1": "사서",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_librarian.png?raw=true",
+            "3": "두 참가자 중 한 명이 특정 외지인임을 알거나, 외지인이 없음을 알고 시작합니다.",
+            "4": "tb",
+            "5": 33,
+            "6": "게임에 있는 외지인의 캐릭터 토큰을 보여줍니다. 두 명의 참가자를 가리키는데, 그 중 한 명이 그 캐릭터입니다.",
+            "9": [
+                "외지인",
+                "틀림"
+            ]
+        },
+        {
+            "0": "kokrpixie",
+            "1": "픽시",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_pixie.png?raw=true",
+            "3": "당신은 처음에 게임에 있는 마을 주민 1명을 알고 시작합니다. 당신이 이 캐릭터라고 미쳐 있었다면, 그들이 죽을 때 그들의 능력을 얻습니다.",
+            "4": "experimental",
+            "5": 29,
+            "6": "픽시에게 게임에 있는 마을 주민 캐릭터 토큰 1개를 보여줍니다.",
+            "9": [
+                "미침",
+                "능력 있음"
+            ]
+        },
+        {
+            "0": "kokrempath",
+            "1": "초민감자",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_empath.png?raw=true",
+            "3": "매일 밤, 당신의 좌우에 있는 생존자들 중 악한 진영의 수를 알 수 있습니다.",
+            "4": "tb",
+            "5": 36,
+            "6": "초민감자의 살아있는 이웃 중 악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
+            "7": 54,
+            "8": "악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
+            "9": []
+        },
+        {
+            "0": "kokrfortuneteller",
+            "1": "점쟁이",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_fortuneteller.png?raw=true",
+            "3": "매일 밤, 참가자 2명을 지목하면 그중에 악마가 있는지 알 수 있습니다. 단, 선한 진영 참가자 1명이 악마로 간주됩니다.",
+            "4": "tb",
+            "5": 37,
+            "6": "점쟁이가 두 명의 참가자를 가리킵니다. 그 참가자들 중 한 명이 악마인지에 대해 머리 신호를 줍니다(고개를 끄덕이면 예, 고개를 저으면 아니오).",
+            "7": 55,
+            "8": "점쟁이가 두 명의 참가자를 가리킵니다. 그 참가자들 중 한 명이 악마인지에 대해 머리 신호를 보여줍니다(고개를 끄덕이면 '예', 고개를 저으면 '아니오').",
+            "9": [
+                "붉은청어"
+            ]
+        },
+        {
+            "0": "kokrmonk",
+            "1": "수도사",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_monk.png?raw=true",
+            "3": "매일 밤*, 자신을 제외한 참가자 한 명을 선택합니다. 그 참가자는 오늘 밤 악마로부터 안전합니다.",
+            "4": "tb",
+            "7": 13,
+            "8": "이전에 보호받던 참가자는 더 이상 보호받지 않습니다. 수도사가 자신을 제외한 참가자를 가리킵니다. 그 참가자를 '보호됨'으로 표시합니다.",
+            "9": [
+                "보호됨"
+            ]
+        },
+        {
+            "0": "kokrslayer",
+            "1": "처단자",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_slayer.png?raw=true",
+            "3": "게임 중 한 번, 낮에 공개적으로 참가자 한 명을 선택할 수 있습니다. 선택된 참가자가 악마라면 즉시 사망합니다.",
+            "4": "tb",
+            "9": [
+                "능력 없음"
+            ]
+        },
+        {
+            "0": "kokrsoldier",
+            "1": "군인",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_soldier.png?raw=true",
+            "3": "악마의 모든 능력은 당신에게 통하지 않습니다.",
+            "4": "tb",
+            "9": []
+        },
+        {
+            "0": "kokrcannibal",
+            "1": "식인종",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_cannibal.png?raw=true",
+            "3": "당신은 최근 처형된 사람의 능력을 가집니다. 그 사람이 악하다면, 선한 참가자가 처형으로 죽을 때까지 당신은 중독됩니다.",
+            "4": "experimental",
+            "9": [
+                "중독됨",
+                "오늘 사망"
+            ]
+        },
+        {
+            "0": "kokrravenkeeper",
+            "1": "까마귀 사육사",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_ravenkeeper.png?raw=true",
+            "3": "밤에 죽으면, 깨어나서 참가자 한 명을 선택해서 그 참가자의 직업을 알아낼 수 있습니다.",
+            "4": "tb",
+            "7": 42,
+            "8": "까마귀 사육사가 오늘 밤 죽었다면: 까마귀 사육사가 참가자를 가리킵니다. 그 참가자의 캐릭터 토큰을 보여줍니다.",
+            "9": []
+        },
+        {
+            "0": "kokrmayor",
+            "1": "시장",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mayor.png?raw=true",
+            "3": "생존자가 3명 남았을 때 처형이 발생하지 않으면 당신 팀이 승리합니다. 밤에 당신이 죽을 경우, 다른 참가자가 대신 죽을 수 있습니다.",
+            "4": "tb",
+            "9": []
+        },
+        {
+            "0": "kokrvirgin",
+            "1": "성결자",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_virgin.png?raw=true",
+            "3": "낮에 처형 후보로 처음 지명되었을 때, 당신을 지명한 사람이 마을주민이라면 그 사람은 즉시 처형됩니다.",
+            "4": "tb",
+            "9": [
+                "능력 없음"
+            ]
+        },
+        {
+            "0": "kokrogre",
+            "1": "오우거",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_ogre.png?raw=true",
+            "3": "첫날 밤, 자신 외의 참가자 한 명을 선택합니다. 어느 쪽인지 모른 채 그와 같은 진영이 되며, 취하거나 중독되어도 이 능력은 반드시 적용됩니다.",
+            "4": "experimental",
+            "5": 54,
+            "6": "The Ogre points to a player (not themself). They become that alignment.",
+            "9": [
+                "친구"
+            ],
+            "12": "outsider"
+        },
+        {
+            "0": "kokrdrunk",
+            "1": "주정뱅이",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_drunk.png?raw=true",
+            "3": "자신이 주정뱅이라는 사실을 모르며, 마을주민 중 하나라고 착각하고 있습니다.",
+            "4": "tb",
+            "9": [],
+            "10": [
+                "취함"
+            ],
+            "11": true,
+            "12": "outsider"
+        },
+        {
+            "0": "kokrrecluse",
+            "1": "은둔자",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_recluse.png?raw=true",
+            "3": "죽은 후에도 다른 사람의 능력에는 악한 진영, 하수인, 또는 악마로 간주될 수 있습니다.",
+            "4": "tb",
+            "9": [],
+            "12": "outsider"
+        },
+        {
+            "0": "kokrsaint",
+            "1": "성자",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_saint.png?raw=true",
+            "3": "낮에 투표로 처형되면 당신의 팀은 패배합니다.",
+            "4": "tb",
+            "9": [],
+            "12": "outsider"
+        },
+        {
+            "0": "kokrpoisoner",
+            "1": "독살범",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_poisoner.png?raw=true",
+            "3": "매일 밤, 참가자 한 명을 선택해서 그날 밤부터 다음 날 낮까지 중독 상태로 만듭니다.",
+            "4": "tb",
+            "5": 18,
+            "6": "독살범이 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
+            "7": 8,
+            "8": "이전에 중독된 참가자는 더 이상 중독되지 않습니다. 독살범이 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
+            "9": [
+                "중독됨"
+            ],
+            "12": "minion"
+        },
+        {
+            "0": "kokrspy",
+            "1": "스파이",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_spy.png?raw=true",
+            "3": "매일 밤, 그리모어를 확인할 수 있습니다. 죽은 후에도 다른 사람의 능력에는 선한 진영, 마을 주민, 또는 외지인으로 간주될 수 있습니다.",
+            "4": "tb",
+            "5": 19,
+            "6": "스파이에게 필요한 만큼 그리모어를 보여줍니다.",
+            "7": 14,
+            "8": "스파이에게 필요한 만큼 그리모어를 보여줍니다.",
+            "9": [],
+            "12": "minion"
+        },
+        {
+            "0": "kokrmarionette",
+            "1": "꼭두각시",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_marionette.png?raw=true",
+            "3": "당신은 자신이 선한 캐릭터라고 생각하지만 그렇지 않습니다. 악마는 당신이 누구인지 알고 있습니다. [당신은 악마와 이웃합니다]",
+            "4": "experimental",
+            "5": 11,
+            "6": "악마 옆의 선한 참가자 중 한 명을 선택하고 꼭두각시임 리마인더 토큰을 놓습니다. 악마를 깨우고 그들에게 꼭두각시를 보여줍니다.",
+            "9": [],
+            "10": [
+                "꼭두각시임"
+            ],
+            "11": true,
+            "12": "minion"
+        },
+        {
+            "0": "kokrscarletwoman",
+            "1": "진홍의 여인",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_scarletwoman.png?raw=true",
+            "3": "악마가 죽을 때 생존자가 5명 이상이면 당신은 새로운 악마가 됩니다. (여행자는 생존자 수에서 제외)",
+            "4": "tb",
+            "7": 20,
+            "8": "진홍의 여인이 오늘 악마가 되었다면: '당신은' 카드를 보여준 다음 악마 토큰을 보여줍니다.",
+            "9": [
+                "악마"
+            ],
+            "12": "minion"
+        },
+        {
+            "0": "kokrbaron",
+            "1": "남작",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_baron.png?raw=true",
+            "3": "게임에 외지인 2명이 추가로 참여합니다. [외지인 +2]",
+            "4": "tb",
+            "9": [],
+            "11": true,
+            "12": "minion"
+        },
+        {
+            "0": "kokrimp",
+            "1": "임프",
+            "2": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_imp.png?raw=true",
+            "3": "매일 밤*, 한 명을 선택해 사망시킵니다. 이 능력으로 자결할 경우, 하수인 중 한 명이 새로운 임프가 됩니다.",
+            "4": "tb",
+            "7": 24,
+            "8": "임프가 참가자를 가리킵니다. 그 참가자는 죽습니다. 임프가 자신을 선택했다면: 살아있는 하수인 1명의 캐릭터를 여분의 임프 토큰으로 교체합니다. '당신은' 카드를 보여준 다음 임프 토큰을 보여줍니다.",
+            "9": [
+                "사망"
+            ],
+            "12": "demon"
+        }
+    ],
+    "npcs": [
+        {
+            "id": "bootlegger"
+        }
+    ],
+    "players": [
+        {
+            "name": "로이",
+            "id": "",
+            "connected": false,
+            "role": "kokrmayor",
+            "alignmentIndex": 0,
+            "reminders": [
+                {
+                    "role": "fabled",
+                    "name": "시장 승리!"
+                }
+            ],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {},
+            "isDead": false,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "은둔자",
+            "id": "",
+            "connected": false,
+            "role": "kokrogre",
+            "alignmentIndex": 0,
+            "reminders": [],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {
+                "kokrogre": true
+            },
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "제이시",
+            "id": "",
+            "connected": false,
+            "role": "kokrwasherwoman",
+            "alignmentIndex": 0,
+            "reminders": [],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {
+                "kokrwasherwoman": true
+            },
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "예준",
+            "id": "",
+            "connected": false,
+            "role": "kokrsoldier",
+            "alignmentIndex": 0,
+            "reminders": [
+                {
+                    "role": "kokrwasherwoman",
+                    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_washerwoman.png?raw=true",
+                    "imageAlt": "townsfolk",
+                    "name": "틀림"
+                }
+            ],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {},
+            "isDead": false,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "지수",
+            "id": "",
+            "connected": false,
+            "role": "kokrimp",
+            "alignmentIndex": 0,
+            "reminders": [],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {
+                "demoninfo": true,
+                "kokrimp": true
+            },
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "밤",
+            "id": "",
+            "connected": false,
+            "role": "kokrpixie",
+            "alignmentIndex": 0,
+            "reminders": [
+                {
+                    "role": "kokrmarionette",
+                    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_marionette.png?raw=true",
+                    "imageAlt": "minion",
+                    "name": "꼭두각시임"
+                },
+                {
+                    "role": "fabled",
+                    "name": "초민감자"
+                }
+            ],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {
+                "kokrpixie": true
+            },
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "엘리",
+            "id": "",
+            "connected": false,
+            "role": "kokrimp",
+            "alignmentIndex": 0,
+            "reminders": [],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {
+                "minioninfo": true,
+                "kokrimp": true
+            },
+            "isDead": false,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "둘리",
+            "id": "",
+            "connected": false,
+            "role": "kokrvirgin",
+            "alignmentIndex": 0,
+            "reminders": [
+                {
+                    "role": "kokrvirgin",
+                    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_virgin.png?raw=true",
+                    "imageAlt": "townsfolk",
+                    "name": "능력 없음"
+                }
+            ],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {},
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "파이리",
+            "id": "",
+            "connected": false,
+            "role": "kokrslayer",
+            "alignmentIndex": 0,
+            "reminders": [
+                {
+                    "role": "kokrwasherwoman",
+                    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_washerwoman.png?raw=true",
+                    "imageAlt": "townsfolk",
+                    "name": "마을 주민"
+                },
+                {
+                    "role": "kokrcannibal",
+                    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_cannibal.png?raw=true",
+                    "imageAlt": "townsfolk",
+                    "name": "오늘 사망"
+                }
+            ],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {},
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "도도새",
+            "id": "",
+            "connected": false,
+            "role": "kokrcannibal",
+            "alignmentIndex": 0,
+            "reminders": [],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {},
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        },
+        {
+            "name": "슈",
+            "id": "",
+            "connected": false,
+            "role": "kokrchef",
+            "alignmentIndex": 0,
+            "reminders": [
+                {
+                    "role": "fabled",
+                    "name": "2"
+                }
+            ],
+            "isVoteless": false,
+            "hasTwoVotes": false,
+            "hasResponded": {
+                "kokrchef": true
+            },
+            "isDead": true,
+            "handRaised": false,
+            "pronouns": ""
+        }
+    ]
+}

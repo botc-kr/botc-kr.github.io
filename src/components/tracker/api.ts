@@ -66,17 +66,27 @@ export const fetchGameLogs = async (): Promise<GameLog[]> => {
                 }
             })
 
-            const aliveDemon = enhancedPlayers.find(p =>
-                demonRoleIds.has(p.role) && !p.isDead
-            )
-            const winner = aliveDemon ? 'evil' : 'good'
+            // Determine winner:
+            // 1. Check filename for 'good' or 'evil' (e.g. 20260129_1_good_mayor_win.json)
+            // 2. Fallback to alive demon check
+            let winner = 'unknown'
+            if (filename.includes('good')) {
+                winner = 'good'
+            } else if (filename.includes('evil')) {
+                winner = 'evil'
+            } else {
+                const aliveDemon = enhancedPlayers.find(p =>
+                    demonRoleIds.has(p.role) && !p.isDead
+                )
+                winner = aliveDemon ? 'evil' : 'good'
+            }
 
             logs.push({
                 ...rawLog,
                 players: enhancedPlayers,
                 id: filename,
                 date,
-                winner
+                winner: winner as 'good' | 'evil'
             })
         }
 

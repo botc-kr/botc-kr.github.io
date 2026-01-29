@@ -12,7 +12,9 @@ const TrackerApp = () => {
             setLoading(true)
             const data = await fetchGameLogs()
             // Sort by date desc
-            const sorted = data.sort((a, b) => b.date.localeCompare(a.date))
+            // Sort by date desc, then by id desc (for same date)
+            // Actually, id contains date, so sorting by id desc is sufficient
+            const sorted = data.sort((a, b) => b.id.localeCompare(a.id))
             setLogs(sorted)
             setLoading(false)
         }
