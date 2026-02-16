@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Footer } from '@/components/HeaderFooter'
 import SavantProposition from '@/components/SavantProposition'
-import ScriptList from '@/components/ScriptList'
+import ScriptList from '@/features/scripts/components/ScriptList'
 // import PDFGenerator from '@/components/PDFGenerator'
 import Helper from '@/components/helper/Helper'
 import TrackerApp from '@/components/tracker/TrackerApp'

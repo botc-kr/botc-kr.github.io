@@ -1,8 +1,8 @@
 import { Script } from '@/types/types'
 import { BookOpen, ChevronDown, ChevronUp, FileText, LucideIcon } from 'lucide-react'
 import React, { useState } from 'react'
-import ActionButtons from './ActionButtons'
-import ScriptImage from './ScriptImage'
+import ActionButtons from '@/features/scripts/components/ActionButtons'
+import ScriptImage from '@/features/scripts/components/ScriptImage'
 
 interface ScriptCardProps {
   script: Script

@@ -1,7 +1,7 @@
 // ScriptCategory.tsx
 import { ScriptCategoryProps } from '@/types/types'
 import React from 'react'
-import ScriptCard from './ScriptCard'
+import ScriptCard from '@/features/scripts/components/ScriptCard'
 
 const ScriptCategory: React.FC<ScriptCategoryProps> = ({
   title,
