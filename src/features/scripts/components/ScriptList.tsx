@@ -48,13 +48,18 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
     return () => window.removeEventListener('hashchange', scrollToScript)
   }, [loading, scripts])
 
-  if (loading) {
-    return <div className="flex justify-center items-center min-h-screen">Loading...</div>
-  }
-
   const officialScripts = scripts.filter(script => script.official)
   const teensyvilleScripts = scripts.filter(script => !script.official && script.teensyville)
   const communityScripts = scripts.filter(script => !script.official && !script.teensyville)
+  const scriptCategories = [
+    { id: SECTIONS.OFFICIAL, title: '공식 스크립트', scripts: officialScripts },
+    { id: SECTIONS.COMMUNITY, title: '커스텀 스크립트', scripts: communityScripts },
+    { id: SECTIONS.TEENSYVILLE, title: '틴시빌 스크립트', scripts: teensyvilleScripts },
+  ]
+
+  if (loading) {
+    return <div className="flex justify-center items-center min-h-screen">Loading...</div>
+  }
 
   const onCopyJson = async (jsonUrl: string, scriptId: string): Promise<void> => {
     await handleCopyJson(jsonUrl, scriptId, setCopiedId)
@@ -72,47 +77,21 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
     <>
       <Header currentPage={currentPage} onPageChange={onPageChange} />
       <div className="max-w-6xl mx-auto p-4 sm:p-6">
-        {officialScripts.length > 0 && (
-          <div id={SECTIONS.OFFICIAL}>
-            <ScriptCategory
-              title="공식 스크립트"
-              scripts={officialScripts}
-              onCopyJson={onCopyJson}
-              onDownloadJson={onDownloadJson}
-              onDownloadSheet={onDownloadSheet}
-              copiedId={copiedId}
-              downloadingId={downloadingId}
-            />
-          </div>
-        )}
-
-        {communityScripts.length > 0 && (
-          <div id={SECTIONS.COMMUNITY}>
-            <ScriptCategory
-              title="커스텀 스크립트"
-              scripts={communityScripts}
-              onCopyJson={onCopyJson}
-              onDownloadJson={onDownloadJson}
-              onDownloadSheet={onDownloadSheet}
-              copiedId={copiedId}
-              downloadingId={downloadingId}
-            />
-          </div>
-        )}
-
-        {teensyvilleScripts.length > 0 && (
-          <div id={SECTIONS.TEENSYVILLE}>
-            <ScriptCategory
-              title="틴시빌 스크립트"
-              scripts={teensyvilleScripts}
-              onCopyJson={onCopyJson}
-              onDownloadJson={onDownloadJson}
-              onDownloadSheet={onDownloadSheet}
-              copiedId={copiedId}
-              downloadingId={downloadingId}
-            />
-          </div>
-        )}
+        {scriptCategories
+          .filter(category => category.scripts.length > 0)
+          .map(category => (
+            <div key={category.id} id={category.id}>
+              <ScriptCategory
+                title={category.title}
+                scripts={category.scripts}
+                onCopyJson={onCopyJson}
+                onDownloadJson={onDownloadJson}
+                onDownloadSheet={onDownloadSheet}
+                copiedId={copiedId}
+                downloadingId={downloadingId}
+              />
+            </div>
+          ))}
       </div>
       <Footer />
     </>

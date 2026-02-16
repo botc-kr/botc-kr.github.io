@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { Footer } from '@/components/HeaderFooter'
-import SavantProposition from '@/components/SavantProposition'
-import ScriptList from '@/features/scripts/components/ScriptList'
 // import PDFGenerator from '@/components/PDFGenerator'
-import Helper from '@/components/helper/Helper'
-import TrackerApp from '@/components/tracker/TrackerApp'
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
 import { pageTypeFromHash, hashFromPageType } from '@/constants/routes'
+
+const SavantProposition = lazy(() => import('@/components/SavantProposition'))
+const ScriptList = lazy(() => import('@/features/scripts/components/ScriptList'))
+const Helper = lazy(() => import('@/components/helper/Helper'))
+const TrackerApp = lazy(() => import('@/components/tracker/TrackerApp'))
 
 function App() {
   const [currentPage, setCurrentPage] = useState<PageType>(() => pageTypeFromHash(window.location.hash))
@@ -31,21 +32,23 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {currentPage === PAGE_TYPES.SCRIPTS ? (
-        <ScriptList currentPage={currentPage} onPageChange={handlePageChange} />
-      ) : currentPage === PAGE_TYPES.PDF ? (
-        // <PDFGenerator />
-        <></>
-      ) : currentPage === PAGE_TYPES.HELPER ? (
-        <Helper />
-      ) : currentPage === PAGE_TYPES.TRACKER ? (
-        <TrackerApp />
-      ) : (
-        <>
-          <SavantProposition currentPage={currentPage} onPageChange={handlePageChange} />
-          <Footer />
-        </>
-      )}
+      <Suspense fallback={<div className="flex justify-center items-center min-h-screen">Loading...</div>}>
+        {currentPage === PAGE_TYPES.SCRIPTS ? (
+          <ScriptList currentPage={currentPage} onPageChange={handlePageChange} />
+        ) : currentPage === PAGE_TYPES.PDF ? (
+          // <PDFGenerator />
+          <></>
+        ) : currentPage === PAGE_TYPES.HELPER ? (
+          <Helper />
+        ) : currentPage === PAGE_TYPES.TRACKER ? (
+          <TrackerApp />
+        ) : (
+          <>
+            <SavantProposition currentPage={currentPage} onPageChange={handlePageChange} />
+            <Footer />
+          </>
+        )}
+      </Suspense>
     </div>
   )
 }
