@@ -40,9 +40,12 @@
   - `#helper`: 밤 순서/캐릭터 헬퍼
   - `#pdfgen`: PDF 생성기(현재 UI 연결 비활성)
 - `public/scripts.json`: 노출 스크립트 메타 소스
-- `src/components/ScriptList.tsx`: 스크립트 목록 페이지 루트
-  - `ScriptCategory.tsx`, `ScriptCard.tsx`, `ScriptImage.tsx`, `ActionButtons.tsx`
-  - 데이터 로딩/다운로드 유틸: `src/utils/ScriptUtils.tsx`
+- `src/features/scripts/components/ScriptList.tsx`: 스크립트 목록 페이지 루트
+  - `src/features/scripts/components/ScriptCategory.tsx`
+  - `src/features/scripts/components/ScriptCard.tsx`
+  - `src/features/scripts/components/ScriptImage.tsx`
+  - `src/features/scripts/components/ActionButtons.tsx`
+  - 데이터 로딩/다운로드 유틸: `src/features/scripts/services/ScriptUtils.tsx`
 - `src/components/SavantProposition.tsx`: 서번트 명제 생성기 (문구 배열 유지)
 - `src/components/helper/`:
   - `Helper.tsx`: 원격 JSON 스크립트 로드(ko_KR 경로), 라디ックス UI(Tabs/Select/Dialog)

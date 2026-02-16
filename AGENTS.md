@@ -23,6 +23,13 @@
   - `public/scripts.json`: Metadata for all scripts.
 - `translations-tooling/` directory is now included under this repo and contains generation scripts + source assets for translation data.
 - Runtime assets are served from `public/translations/assets` and `VITE_TRANSLATIONS_BASE` defaults to `/translations/assets`.
+- Script UI is now organized by feature under `src/features/scripts/`:
+  - `src/features/scripts/components/ScriptList.tsx`
+  - `src/features/scripts/components/ScriptCard.tsx`
+  - `src/features/scripts/components/ScriptCategory.tsx`
+  - `src/features/scripts/components/ScriptImage.tsx`
+  - `src/features/scripts/components/ActionButtons.tsx`
+  - `src/features/scripts/services/ScriptUtils.tsx`
 
 ## 4. Agent Guidelines
 - **Read First**: Always check `CLAUDE.md` for the latest conventions, directory structure, and "Playbook".
