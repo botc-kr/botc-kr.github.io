@@ -95,9 +95,12 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                                     <YAxis allowDecimals={false} />
                                     <Tooltip
                                         cursor={{ fill: 'transparent' }}
-                                        content={({ payload, label }) => {
+                                        content={({ payload, label }: {
+                                            payload?: ReadonlyArray<{ payload: { winner: 'good' | 'evil' } }>
+                                            label?: string | number
+                                        }) => {
                                             if (payload && payload.length) {
-                                                const data = payload[0].payload;
+                                                const data = payload[0].payload
                                                 return (
                                                     <div className="bg-white p-2 border shadow-sm rounded">
                                                         <p className="font-bold">{label}</p>
@@ -105,7 +108,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                                                             Winner: {data.winner.toUpperCase()}
                                                         </p>
                                                     </div>
-                                                );
+                                                )
                                             }
                                             return null;
                                         }}

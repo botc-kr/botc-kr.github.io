@@ -9,7 +9,15 @@ import { CharacterDialog } from '@/components/helper/CharacterDialog'
 import { ChevronDownIcon } from 'lucide-react'
 import { buildScriptJsonUrl } from '@/constants/urls'
 
-const localIcons = import.meta.glob('../../assets/icons/*.png', { eager: true, as: 'url' })
+const localIcons = import.meta.glob<string>('../../assets/icons/*.png', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+})
+type HelperEntry = ScriptData | Character
+const normalizeRoleIdForIcon = (roleId: string): string => roleId.replace(/^(kokr|ko_KR)_?/, '')
+const isCharacterEntry = (item: HelperEntry): item is Character =>
+  item.id !== '_meta' && typeof (item as Character).firstNight === 'number'
 
 const SCRIPTS = [
   {
@@ -79,7 +87,7 @@ const Helper: FC = () => {
     return isValidScript ? saved : SCRIPTS[0].id
   })
 
-  const [data, setData] = useState<(ScriptData | Character)[]>([])
+  const [data, setData] = useState<HelperEntry[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
@@ -102,24 +110,25 @@ const Helper: FC = () => {
         if (!response.ok) {
           throw new Error('스크립트 데이터를 불러오는데 실패했습니다')
         }
-        const jsonData = await response.json()
+        const jsonData = (await response.json()) as HelperEntry[]
+        if (!Array.isArray(jsonData)) {
+          throw new Error('스크립트 데이터 형식이 올바르지 않습니다')
+        }
 
         // Override images with local assets
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const processedData = jsonData.map((item: any, index: number) => {
-          if (item.id === '_meta') return item
+        const processedData = jsonData.map((item, index) => {
+          if (!isCharacterEntry(item)) return item
 
-          // remove 'kokr' or 'ko_KR' or 'ko_KR_' prefix
-          const cleanId = item.id.replace(/^(kokr|ko_KR)_?/, '')
+          const cleanId = normalizeRoleIdForIcon(item.id)
           const iconKey = `../../assets/icons/Icon_${cleanId}.png`
           const localImage = localIcons[iconKey]
 
-          if (!localImage && index < 5) { // Only log first few failures to avoid spam
+          if (!localImage && index < 5) {
             console.debug(`[Helper] Icon lookup failed for ${item.id}`, {
               cleanId,
               iconKey,
               hasKey: iconKey in localIcons,
-              firstKey: Object.keys(localIcons)[0]
+              firstKey: Object.keys(localIcons)[0],
             })
           }
 
@@ -127,7 +136,7 @@ const Helper: FC = () => {
 
           return {
             ...item,
-            image: finalImage
+            image: finalImage,
           }
         })
 

@@ -19,7 +19,7 @@ interface ScriptImageProps {
   alt: string
 }
 
-function ScriptImage({ src, alt }: ScriptImageProps): JSX.Element {
+function ScriptImage({ src, alt }: ScriptImageProps) {
   const [imgSrc, setImgSrc] = useState<string>(imageMap[src] || src || defaultImage)
 
   const handleError = (): void => {

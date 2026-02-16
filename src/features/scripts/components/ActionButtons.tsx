@@ -26,7 +26,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
     }
   }
 
-  const renderJsonButton = (): JSX.Element => (
+  const renderJsonButton = () => (
     <button
       onClick={() => onDownloadJson(script.json, script.id)}
       className={`${buttonBaseStyle} bg-gradient-to-r from-indigo-500 to-blue-500 text-white hover:from-indigo-600 hover:to-blue-600 hover:shadow-md active:scale-95`}>
@@ -61,7 +61,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
     )
   }
 
-  const renderShareButton = (): JSX.Element => (
+  const renderShareButton = () => (
     <button
       onClick={handleShare}
       className={`${buttonBaseStyle} ${
@@ -81,7 +81,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
     </button>
   )
 
-  const renderSheetButton = (): JSX.Element => (
+  const renderSheetButton = () => (
     <button
       onClick={() => onDownloadSheet(script.pdf, script.id)}
       disabled={downloadingId === script.id}
