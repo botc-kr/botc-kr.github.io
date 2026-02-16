@@ -7,7 +7,9 @@ import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
 import { CharacterRow } from '@/components/helper/CharacterRow'
 import { CharacterDialog } from '@/components/helper/CharacterDialog'
 import { ChevronDownIcon } from 'lucide-react'
-import { buildScriptJsonUrl } from '@/constants/urls'
+import { HELPER_SCRIPTS, HELPER_SELECTED_SCRIPT_STORAGE_KEY } from '@/components/helper/scripts'
+import { normalizeRoleIdForIcon } from '@/utils/normalizeRoleId'
+import type { HelperScriptId } from '@/components/helper/scripts'
 
 const localIcons = import.meta.glob<string>('../../assets/icons/*.png', {
   eager: true,
@@ -15,76 +17,16 @@ const localIcons = import.meta.glob<string>('../../assets/icons/*.png', {
   import: 'default',
 })
 type HelperEntry = ScriptData | Character
-const normalizeRoleIdForIcon = (roleId: string): string => roleId.replace(/^(kokr|ko_KR)_?/, '')
 const isCharacterEntry = (item: HelperEntry): item is Character =>
   item.id !== '_meta' && typeof (item as Character).firstNight === 'number'
-
-const SCRIPTS = [
-  {
-    id: 'trouble_brewing',
-    name: '불길한 조짐',
-    url: buildScriptJsonUrl('trouble_brewing'),
-  },
-  {
-    id: 'bad_moon_rising',
-    name: '어둠을 부르는 달',
-    url: buildScriptJsonUrl('bad_moon_rising'),
-  },
-  {
-    id: 'sects_and_violets',
-    name: '환란의 화원',
-    url: buildScriptJsonUrl('sects_and_violets'),
-  },
-  {
-    id: 'everyone_can_play',
-    name: '모두를 위한 밤',
-    url: buildScriptJsonUrl('everyone_can_play'),
-  },
-  {
-    id: 'uncertain_death',
-    name: '의문사 (Uncertain Death)',
-    url: buildScriptJsonUrl('uncertain_death'),
-  },
-  {
-    id: 'no_greater_joy',
-    name: '극한의 즐거움',
-    url: buildScriptJsonUrl('no_greater_joy'),
-  },
-  {
-    id: 'laissez_un_faire',
-    name: '자유방임불평등주의',
-    url: buildScriptJsonUrl('laissez_un_faire'),
-  },
-  {
-    id: 'over_the_river',
-    name: '할머니댁으로',
-    url: buildScriptJsonUrl('over_the_river'),
-  },
-  {
-    id: 'pies_baking',
-    name: '익어가는 파이 (Pies Baking)',
-    url: buildScriptJsonUrl('pies_baking'),
-  },
-  {
-    id: 'catfishing',
-    name: 'Catfishing',
-    url: buildScriptJsonUrl('catfishing'),
-  },
-  {
-    id: 'onion_pies',
-    name: 'Onion Pies',
-    url: buildScriptJsonUrl('onion_pies'),
-  },
-] as const
-
-const STORAGE_KEY = 'helper_selected_script'
+const isHelperScriptId = (scriptId: string): scriptId is HelperScriptId =>
+  HELPER_SCRIPTS.some(script => script.id === scriptId)
 
 const Helper: FC = () => {
   // localStorage에서 저장된 스크립트를 가져오거나 기본값 사용
-  const [selectedScript, setSelectedScript] = useState<string>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY)
-    const isValidScript = saved && SCRIPTS.some(script => script.id === saved)
-    return isValidScript ? saved : SCRIPTS[0].id
+  const [selectedScript, setSelectedScript] = useState<HelperScriptId>(() => {
+    const saved = localStorage.getItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY)
+    return saved && isHelperScriptId(saved) ? saved : HELPER_SCRIPTS[0].id
   })
 
   const [data, setData] = useState<HelperEntry[]>([])
@@ -94,8 +36,9 @@ const Helper: FC = () => {
 
   // 스크립트 선택 시 localStorage에 저장
   const handleScriptChange = (scriptId: string) => {
+    if (!isHelperScriptId(scriptId)) return
     setSelectedScript(scriptId)
-    localStorage.setItem(STORAGE_KEY, scriptId)
+    localStorage.setItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY, scriptId)
   }
 
   useEffect(() => {
@@ -103,7 +46,7 @@ const Helper: FC = () => {
       setIsLoading(true)
       setError(null)
       try {
-        const script = SCRIPTS.find(s => s.id === selectedScript)
+        const script = HELPER_SCRIPTS.find(s => s.id === selectedScript)
         if (!script) throw new Error('스크립트를 찾을 수 없습니다')
 
         const response = await fetch(script.url)
@@ -182,7 +125,7 @@ const Helper: FC = () => {
           <Select.Portal>
             <Select.Content className="overflow-hidden bg-white rounded-md shadow-lg border border-gray-200">
               <Select.Viewport className="p-1">
-                {SCRIPTS.map(script => (
+                {HELPER_SCRIPTS.map(script => (
                   <Select.Item
                     key={script.id}
                     value={script.id}
@@ -204,7 +147,7 @@ const Helper: FC = () => {
           </Select.Portal>
         </Select.Root>
       </div>
-      <h1 className="text-3xl font-bold">{SCRIPTS.find(script => script.id === selectedScript)?.name}</h1>
+      <h1 className="text-3xl font-bold">{HELPER_SCRIPTS.find(script => script.id === selectedScript)?.name}</h1>
 
       {isLoading ? (
         <div className="flex justify-center items-center h-[200px]">불러오는 중...</div>

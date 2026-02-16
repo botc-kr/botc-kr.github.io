@@ -1,4 +1,5 @@
 import { Alignment, GameLog, RawGameLog, RoleDefinition, Team } from './types'
+import { normalizeRoleIdForIcon } from '@/utils/normalizeRoleId'
 
 type LogModule = RawGameLog | { default: RawGameLog }
 
@@ -8,8 +9,6 @@ const localIcons = import.meta.glob<string>('../../assets/icons/*.png', {
   query: '?url',
   import: 'default',
 })
-
-const normalizeRoleIdForIcon = (roleId: string): string => roleId.replace(/^(kokr|ko_KR)_?/, '')
 
 const readRoleString = (
   role: RoleDefinition,
