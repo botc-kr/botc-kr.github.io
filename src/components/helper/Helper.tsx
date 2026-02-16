@@ -7,6 +7,7 @@ import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
 import { CharacterRow } from '@/components/helper/CharacterRow'
 import { CharacterDialog } from '@/components/helper/CharacterDialog'
 import { ChevronDownIcon } from 'lucide-react'
+import { buildScriptJsonUrl } from '@/constants/urls'
 
 const localIcons = import.meta.glob('../../assets/icons/*.png', { eager: true, as: 'url' })
 
@@ -14,57 +15,57 @@ const SCRIPTS = [
   {
     id: 'trouble_brewing',
     name: '불길한 조짐',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/trouble_brewing.json',
+    url: buildScriptJsonUrl('trouble_brewing'),
   },
   {
     id: 'bad_moon_rising',
     name: '어둠을 부르는 달',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/bad_moon_rising.json',
+    url: buildScriptJsonUrl('bad_moon_rising'),
   },
   {
     id: 'sects_and_violets',
     name: '환란의 화원',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/sects_and_violets.json',
+    url: buildScriptJsonUrl('sects_and_violets'),
   },
   {
     id: 'everyone_can_play',
     name: '모두를 위한 밤',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/everyone_can_play.json',
+    url: buildScriptJsonUrl('everyone_can_play'),
   },
   {
     id: 'uncertain_death',
     name: '의문사 (Uncertain Death)',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/uncertain_death.json',
+    url: buildScriptJsonUrl('uncertain_death'),
   },
   {
     id: 'no_greater_joy',
     name: '극한의 즐거움',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/no_greater_joy.json',
+    url: buildScriptJsonUrl('no_greater_joy'),
   },
   {
     id: 'laissez_un_faire',
     name: '자유방임불평등주의',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/laissez_un_faire.json',
+    url: buildScriptJsonUrl('laissez_un_faire'),
   },
   {
     id: 'over_the_river',
     name: '할머니댁으로',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/over_the_river.json',
+    url: buildScriptJsonUrl('over_the_river'),
   },
   {
     id: 'pies_baking',
     name: '익어가는 파이 (Pies Baking)',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/pies_baking.json',
+    url: buildScriptJsonUrl('pies_baking'),
   },
   {
     id: 'catfishing',
     name: 'Catfishing',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/catfishing.json',
+    url: buildScriptJsonUrl('catfishing'),
   },
   {
     id: 'onion_pies',
     name: 'Onion Pies',
-    url: 'https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/scripts/ko_KR/onion_pies.json',
+    url: buildScriptJsonUrl('onion_pies'),
   },
 ] as const
 

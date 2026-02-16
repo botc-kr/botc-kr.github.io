@@ -1,0 +1,37 @@
+{
+    "meta":
+    {
+        "name": "반란의 거친 바다 (High seas of Mutiny)",
+        "author": "Gordon Edward Fitzgerald",
+        "background": "https://i.imgur.com/44Ilwt2.jpg",
+        "isOfficial": false
+    },
+    "roles":
+    [
+        "oldseadog",
+        "navigator",
+        "boatswain",
+        "deckhand",
+        "captain",
+        "buccaneer",
+        "landlubber",
+        "wench",
+        "privateer",
+        "firstmate",
+        "powdermonkey",
+        "corsair",
+        "hermitcrab",
+        "barnacle",
+        "grogblossom",
+        "mermaid",
+        "stowaway",
+        "mysticpriestess",
+        "undeadpirate",
+        "seaspirit",
+        "flesheater",
+        "kraken",
+        "calypso",
+        "rusalka",
+        "umibozu"
+    ]
+}

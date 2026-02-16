@@ -9,7 +9,8 @@
 - **배포**: GitHub Pages (`gh-pages` 패키지 사용)
 - **데이터 소스**:
   - `public/scripts.json`: 사이트에서 노출할 스크립트 메타데이터 목록
-  - 원문/번역 리소스: `wonhyo-e/botc-translations` 저장소의 Raw 파일 (JSON/PDF/이미지)
+  - 원문/번역 리소스: `public/translations/assets` 내 정적 파일(JSON/PDF/이미지).  
+    (레거시 환경변수로 기존 GitHub Raw 경로를 받아올 수 있습니다.)
 
 ### 2) 빠른 시작(init)
 
@@ -122,7 +123,8 @@
 
 ### 10) 외부 의존/통신
 
-- 원격 번역 리소스: `https://raw.githubusercontent.com/wonhyo-e/botc-translations/...`
+- 기본 번역 리소스: `public/translations/assets` (로컬 정적 경로 `/translations/assets`)
+- `normalizeTranslationUrl`은 과거 `https://raw.githubusercontent.com/wonhyo-e/botc-translations/...` URL을 상응하는 로컬 경로로 변환해 하위 호환을 지원합니다.
 - 네트워크 장애 대비: JSON/PDF fetch 실패 시 경고 노출(`ScriptUtils`)
 - 현재 Firebase 등 추가 백엔드는 사용하지 않음(의존은 있으나 미사용)
 

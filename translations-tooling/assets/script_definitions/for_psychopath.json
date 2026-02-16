@@ -1,0 +1,37 @@
+{
+    "meta":
+    {
+        "name": "For Psychopath",
+        "author": "Dongchan",
+        "isOfficial": false
+    },
+    "roles":
+    [
+        "chef",
+        "shugenja",
+        "bountyhunter",
+        "empath",
+        "fortuneteller",
+        "preacher",
+        "slayer",
+        "courtier",
+        "cannibal",
+        "poppygrower",
+        "minstrel",
+        "tealady",
+        "alchemist",
+        "drunk",
+        "hatter",
+        "plaguedoctor",
+        "recluse",
+        "witch",
+        "psychopath",
+        "pithag",
+        "devilsadvocate",
+        "alhadikhia",
+        "kazali",
+        "vigormortis",
+        "shabaloth",
+        "spiritofivory"
+    ]
+}

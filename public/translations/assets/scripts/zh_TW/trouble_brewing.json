@@ -1,0 +1,414 @@
+[
+  {
+    "ability": "遊戲中會出現額外的城外人。[+2 城外人]",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_baron",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/baron.png?raw=true",
+    "name": "男爵",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": true,
+    "team": "minion"
+  },
+  {
+    "ability": "你需要使用投票代幣投票，死去的玩家可以將自己的代幣給你，若如此，你得知該玩家的隊伍。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_beggar",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/beggar.png?raw=true",
+    "name": "乞丐",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "每天晚上，選擇一位其他玩家，明天該玩家投的票計為三票。",
+    "edition": "tb",
+    "firstNight": 1,
+    "firstNightReminder": "官僚指向一位玩家，以「票數x3」標記該玩家。",
+    "id": "zh_TW_bureaucrat",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/bureaucrat.png?raw=true",
+    "name": "官僚",
+    "otherNight": 1,
+    "otherNightReminder": "官僚指向一位玩家，以「票數x3」標記該玩家。",
+    "reminders": [
+      "票數x3"
+    ],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "每天晚上，選擇一位玩家，明天，你只能在該玩家有投票時投票。",
+    "edition": "tb",
+    "firstNight": 38,
+    "firstNightReminder": "管家指向一位玩家，以「主人」標記該玩家。",
+    "id": "zh_TW_butler",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/butler.png?raw=true",
+    "name": "管家",
+    "otherNight": 55,
+    "otherNightReminder": "管家指向一位玩家，以「主人」標記該玩家。",
+    "reminders": [
+      "主人"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "你開始遊戲時得知總共有幾對邪惡的玩家坐在一起。",
+    "edition": "tb",
+    "firstNight": 35,
+    "firstNightReminder": "展示比鄰而坐的邪惡玩家們的對數。",
+    "id": "zh_TW_chef",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/chef.png?raw=true",
+    "name": "廚師",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "你不知道自己是醉漢，你認為自己是某一位鎮民，但你不是。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_drunk",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/drunk.png?raw=true",
+    "name": "醉漢",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [
+      "醉酒"
+    ],
+    "setup": true,
+    "team": "outsider"
+  },
+  {
+    "ability": "每天晚上，你得知你活著的鄰居中有幾位是邪惡的(0/1/2)。",
+    "edition": "tb",
+    "firstNight": 36,
+    "firstNightReminder": "展示靈媒的邪惡鄰居數量。",
+    "id": "zh_TW_empath",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/empath.png?raw=true",
+    "name": "靈媒",
+    "otherNight": 53,
+    "otherNightReminder": "展示靈媒的邪惡鄰居數量。",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "每天晚上，選擇兩位玩家，你得知他們其中是否有惡魔。場上有一位好人的身分會被你視為惡魔。",
+    "edition": "tb",
+    "firstNight": 37,
+    "firstNightReminder": "算命師選擇兩位玩家，以點頭或搖頭來告知他們之中是否有惡魔。",
+    "id": "zh_TW_fortuneteller",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fortuneteller.png?raw=true",
+    "name": "算命師",
+    "otherNight": 54,
+    "otherNightReminder": "算命師選擇兩位玩家，以點頭或搖頭來告知他們之中是否有惡魔。",
+    "reminders": [
+      "視為惡魔"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "每天的第一次提名中，第一票投下後，你可以選擇其中一位投票的玩家，該玩家死亡。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_gunslinger",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/gunslinger.png?raw=true",
+    "name": "槍手",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "每天晚上*，選擇一位玩家，該玩家死亡。如果你以此法殺死自己，一位僕從變成小惡魔。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_imp",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/imp.png?raw=true",
+    "name": "小惡魔",
+    "otherNight": 24,
+    "otherNightReminder": "小惡魔指向一位玩家，該玩家死亡，如果他選擇自己，將一個活著的僕從角色代幣換成小惡魔的角色代幣，喚醒該玩家並展示「你是」提示卡 + 小惡魔的角色代幣。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "你遊戲開始時得知在某兩位玩家中有一位特定的僕從角色。",
+    "edition": "tb",
+    "firstNight": 34,
+    "firstNightReminder": "將一個在遊戲中的僕從角色代幣展示給調查員並指向兩位玩家，他們其中一位是該角色。",
+    "id": "zh_TW_investigator",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/investigator.png?raw=true",
+    "name": "調查員",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "僕從",
+      "非僕從"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "你遊戲開始時得知在某兩位玩家中有一位特定的城外人角色(或者沒有城外人角色)。",
+    "edition": "tb",
+    "firstNight": 33,
+    "firstNightReminder": "將一個在遊戲中的城外人角色代幣展示給圖書管理員並指向兩位玩家，他們其中一位是該角色(或者沒有城外人角色)。",
+    "id": "zh_TW_librarian",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/librarian.png?raw=true",
+    "name": "圖書管理員",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "城外人",
+      "非城外人"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "如果只有三名玩家存活且今天沒有人被處死，則你的隊伍獲勝。如果你在晚上死亡，則可能改為另一位玩家死亡。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_mayor",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/mayor.png?raw=true",
+    "name": "市長",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "每天晚上*，選擇一位其他的玩家，該玩家今晚免受惡魔攻擊。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_monk",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/monk.png?raw=true",
+    "name": "僧侶",
+    "otherNight": 13,
+    "otherNightReminder": "先前被保護的玩家不再被保護。僧侶選擇一位其他的玩家，以「保護」標記該玩家。",
+    "reminders": [
+      "保護"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "每天晚上，選擇一位玩家，該玩家今晚與明天早上中毒。",
+    "edition": "tb",
+    "firstNight": 17,
+    "firstNightReminder": "投毒人指向一位玩家，該玩家中毒。",
+    "id": "zh_TW_poisoner",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/poisoner.png?raw=true",
+    "name": "投毒人",
+    "otherNight": 8,
+    "otherNightReminder": "先前中毒的玩家不再中毒，投毒人指向一位玩家，該玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "如果你在晚上死亡，你醒來並選擇一位玩家，你得知他的角色。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_ravenkeeper",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/ravenkeeper.png?raw=true",
+    "name": "養鴉人",
+    "otherNight": 42,
+    "otherNightReminder": "如果養鴉人在今晚死亡，養鴉人指向一位玩家，展示該玩家的角色代幣。",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "你的身分可能會被視為邪惡的僕從或惡魔(即使你死亡)。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_recluse",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/recluse.png?raw=true",
+    "name": "隱居者",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "如果你被處死，你的隊伍落敗。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_saint",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/saint.png?raw=true",
+    "name": "聖人",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "如果你的隊伍的玩家被處死，則可能改為你被處死。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_scapegoat",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/scapegoat.png?raw=true",
+    "name": "替罪羊",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "如果有五個或更多非旅行者的玩家存活時惡魔死亡，則你會變成惡魔。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_scarletwoman",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/scarletwoman.png?raw=true",
+    "name": "淫魔",
+    "otherNight": 20,
+    "otherNightReminder": "如果淫魔今天成為了惡魔，將「你是」提示卡 + 惡魔的角色代幣展示給他。",
+    "reminders": [
+      "是惡魔"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "每場遊戲一次，白天時，公開選擇一位玩家，如果該玩家是惡魔，他會死亡。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_slayer",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/slayer.png?raw=true",
+    "name": "獵魔人",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "無能力"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "你免受惡魔攻擊。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_soldier",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/soldier.png?raw=true",
+    "name": "士兵",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "每天晚上，你都可以查看魔典，你的身分可能會被視為好人的鎮民或城外人(即使你死亡)。",
+    "edition": "tb",
+    "firstNight": 48,
+    "firstNightReminder": "將魔典展示給間諜。",
+    "id": "zh_TW_spy",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/spy.png?raw=true",
+    "name": "間諜",
+    "otherNight": 68,
+    "otherNightReminder": "將魔典展示給間諜。",
+    "reminders": [],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "每天晚上，選擇一位其他的玩家，明天該玩家投下的票都計為負票。",
+    "edition": "tb",
+    "firstNight": 1,
+    "firstNightReminder": "小偷指向一位玩家，以「負數票」標記該玩家。",
+    "id": "zh_TW_thief",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/thief.png?raw=true",
+    "name": "小偷",
+    "otherNight": 1,
+    "otherNightReminder": "小偷指向一位玩家，以「負數票」標記該玩家。",
+    "reminders": [
+      "負數票"
+    ],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "每天晚上*，你得知今天被處死的玩家的角色。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_undertaker",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/undertaker.png?raw=true",
+    "name": "掘墓人",
+    "otherNight": 56,
+    "otherNightReminder": "如果今天有玩家被處決，將該玩家的角色代幣展示給掘墓人。",
+    "reminders": [
+      "處決"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "如果第一次提名你的人是鎮民，該玩家會被立即處死。",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "zh_TW_virgin",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/virgin.png?raw=true",
+    "name": "處女",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "無能力"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "你遊戲開始時得知在某兩位玩家中有一位特定的鎮民角色。",
+    "edition": "tb",
+    "firstNight": 32,
+    "firstNightReminder": "將一個在遊戲中的鎮民角色代幣展示給洗衣婦並指向兩位玩家，他們其中一位是該角色。",
+    "id": "zh_TW_washerwoman",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/washerwoman.png?raw=true",
+    "name": "洗衣婦",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "鎮民",
+      "非鎮民"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  }
+]

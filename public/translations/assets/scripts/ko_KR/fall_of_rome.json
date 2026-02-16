@@ -1,0 +1,508 @@
+[
+  {
+    "author": "Alex Sadlier",
+    "id": "_meta",
+    "isOfficial": false,
+    "logo": "https://www.bloodstar.xyz/p/AlexS/Fall_of_Rome/_meta.png",
+    "name": "로마의 몰락 (Fall of Rome)"
+  },
+  {
+    "ability": "참가자 1명을 조각상으로 알고 시작합니다. 매일 밤*, 그가 가장 최근에 지명한 참가자의 진영을 알게 됩니다.",
+    "edition": "rome",
+    "firstNight": 18,
+    "firstNightReminder": "한 참가자를 지목하세요. 해당 참가자 옆에 '조각상' 토큰을 놓으세요.",
+    "flavor": "조각가의 손은 오직 돌 속에 잠자는 형상들을 해방시키기 위해 주문을 깨뜨릴 수 있을 뿐이다. - 미켈란젤로 (1501)",
+    "id": "ko_KR_sculptor_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_sculptor_fall_of_rome.png?raw=true",
+    "name": "조각가",
+    "otherNight": 19,
+    "otherNightReminder": "'조각상' 토큰을 가진 참가자가 오늘 지목했다면, 지목된 참가자가 악이면 조각가에게 엄지 아래(악)를, 그렇지 않다면 엄지 위(선)를 보여주세요. '지목됨' 토큰이 있다면 제거하세요.",
+    "reminders": [
+      "조각상",
+      "지목됨"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "선과 악 캐릭터를 1개씩 알고 시작합니다. 둘 중 하나는 게임에 참여 중입니다. 참여 중인 캐릭터가 죽으면, 그날 밤 새로운 선과 악 캐릭터를 1개씩 알게 됩니다. 둘 중 하나는 게임에 참여 중입니다.",
+    "edition": "rome",
+    "firstNight": 19,
+    "firstNightReminder": "선과 악 각각의 캐릭터 토큰을 1개씩 보여주세요: 이 중 하나가 게임에 참여 중입니다. 게임 중인 캐릭터 옆에 '깨달음' 토큰을 놓으세요.",
+    "flavor": "어떤 이들은 이 베스타 신전의 처녀들이 신성한 불을 지키는 일 외에는 다른 일이 없다고 생각한다. 하지만 다른 이들은 그들이 자신들만 알고 있는 신성한 비밀들을 간직하고 있다고 여긴다. - 루키우스 메스트리우스 '플루타르코스' 플루타르쿠스 (약 49년 - 119년)",
+    "id": "ko_KR_vestalvirgin_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_vestalvirgin_fall_of_rome.png?raw=true",
+    "name": "베스타의 무녀",
+    "otherNight": 20,
+    "otherNightReminder": "'깨달음' 토큰을 가진 참가자가 오늘 죽었다면, 토큰을 제거하세요. 선과 악 각각의 캐릭터 토큰을 1개씩 보여주세요: 이 중 하나가 게임에 참여 중입니다. 게임 중인 캐릭터 옆에 '깨달음' 토큰을 놓으세요.",
+    "reminders": [
+      "깨달음"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤, 자신을 제외한 2명을 선택합니다. 그들은 술에서 깨고, 건강해지며, 올바른 정보를 받습니다. 처음으로 악마가 그들 중 1명을 죽이면, 당신은 악마의 종류를 알게 됩니다.",
+    "edition": "rome",
+    "firstNight": 17,
+    "firstNightReminder": "의사는 자신을 제외한 두 참가자를 지목합니다. 두 참가자 모두에게 '환자' 토큰을 표시하세요.",
+    "flavor": "의사를 믿기 때문에 회복되는 환자들도 있다. - 히포크라테스 (기원전 약 460년 - 기원전 약 370년)",
+    "id": "ko_KR_physician_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_physician_fall_of_rome.png?raw=true",
+    "name": "의사",
+    "otherNight": 11,
+    "otherNightReminder": "모든 '환자' 토큰을 제거하세요. 의사는 자신을 제외한 두 참가자를 지목합니다. 두 참가자 모두에게 '환자' 토큰을 표시하세요. '환자' 토큰이 있는 참가자가 악마에게 살해당했다면, 의사 옆에 '첫 악마' 토큰을 놓고 의사를 깨워 악마 토큰을 보여주세요.",
+    "reminders": [
+      "환자",
+      "첫 악마"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤, 자신과 시계방향으로 앉아있는 살아있는 군단병 사이에, 살아있는 악한 참가자의 수를 알게 됩니다. [+0 ~ +2 군단병]",
+    "edition": "rome",
+    "firstNight": 20,
+    "firstNightReminder": "군단병과 시계방향으로 다음 군단병 사이에 있는 살아있는 악의 참가자 수(0, 1, 2 등)를 수신호로 보여주세요(양끝은 제외).",
+    "flavor": "로마인들이 세계 정복을 이룬 것은 끊임없는 군사 훈련, 엄격한 야영 규율 준수, 그리고 전쟁의 다른 기술들을 꾸준히 연마한 덕분이라는 것을 우리는 알고 있다. - 푸블리우스 플라비우스 베게티우스 레나투스 (약 385년 - 약 450년)",
+    "id": "ko_KR_legionary_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_legionary_fall_of_rome.png?raw=true",
+    "name": "군단병",
+    "otherNight": 21,
+    "otherNightReminder": "군단병과 시계방향으로 다음 군단병 사이에 있는 살아있는 악의 참가자 수(0, 1, 2 등)를 수신호로 보여주세요(양끝은 제외).",
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤*, 오늘 낮에 공개적으로 '스파르타쿠스' 라고 주장한 악한 참가자의 수를 알게 됩니다.",
+    "edition": "rome",
+    "flavor": "내가 해야 할 모든 일을 했지만, 결과는 운명의 손에 달렸다. - 네로 클라우디우스 카이사르 (37년 - 68년)",
+    "id": "ko_KR_trumpeter_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_trumpeter_fall_of_rome.png?raw=true",
+    "name": "나팔수",
+    "otherNight": 22,
+    "otherNightReminder": "오늘 공개적으로 스파르타쿠스라고 주장한 악 참가자의 수(0, 1, 2 등)를 수신호로 보여주세요.",
+    "reminders": [
+      "악 주장"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤*, 오늘 낮에 처형으로 죽은 참가자의 살아있는 이웃 중 악이 있는지 알게 됩니다.",
+    "edition": "rome",
+    "flavor": "누구도 나를 위해 울지 말고, 애도의 장례식으로 나를 기리지 말라. 나는 여전히 살아있어, 사람들의 입을 통해 오가며. - 퀸투스 엔니우스 (기원전 239년 - 기원전 169년)",
+    "id": "ko_KR_mortician_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mortician_fall_of_rome.png?raw=true",
+    "name": "장의사",
+    "otherNight": 23,
+    "otherNightReminder": "오늘 처형된 참가자가 있다면: 이웃 중 한 명이 악인지 여부를 머리 신호로 보여주세요(끄덕임 '예', 좌우 흔듦 '아니오').",
+    "reminders": [
+      "최근에 처형됨"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "당신은 지명 당했을 때, 지명한 참가자(본인 제외)에 대해 공개적으로 유일무이한 발언 1개를 할 수 있습니다. 오늘 밤, 그 발언이 사실이었는지 알게 됩니다.",
+    "edition": "rome",
+    "flavor": "당신이 아는 것을 항상 말하지 말라. 하지만 당신이 말하는 것은 항상 알고 있어라. - 티베리우스 클라우디우스 카이사르 아우구스투스 게르마니쿠스 (기원전 10년 - 54년)",
+    "id": "ko_KR_standardbearer_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_standardbearer_fall_of_rome.png?raw=true",
+    "name": "군단기수",
+    "otherNight": 24,
+    "otherNightReminder": "깃발수의 공개 발언이 사실 여부를 머리 신호로 보여주세요(끄덕임 '사실', 좌우 흔듦 '거짓').",
+    "reminders": [
+      "참",
+      "거짓"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "당신이 살아있는 참가자를 지명하고, 그가 처형당하면 그의 팀이 패배합니다. 당신은 악마로부터 안전합니다. 오늘 낮에 공개적으로 '스파르타쿠스' 라고 주장했다면 새벽까지 술에 취합니다.",
+    "edition": "rome",
+    "flavor": "죽음을 자원하는 사람을 찾는 것이 인내심을 가지고 고통을 견디려는 사람을 찾는 것보다 쉽다. - 가이우스 율리우스 카이사르 (기원전 100년 - 기원전 44년)",
+    "id": "ko_KR_centurion1_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_centurion1_fall_of_rome.png?raw=true",
+    "name": "백인대장",
+    "reminders": [
+      "취함"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임당 한 번 밤에* 당신을 지명했었던 참가자들의 캐릭터를 랜덤한 순서로 알 수 있습니다.",
+    "edition": "rome",
+    "flavor": "탐욕은 질투하는 자들이 야심찬 자들에게 씌우는 단어일 뿐이다. - 마르쿠스 리키니우스 크라수스 (기원전 115년 - 기원전 53년)",
+    "id": "ko_KR_merchant_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_merchant_fall_of_rome.png?raw=true",
+    "name": "상인",
+    "otherNight": 26,
+    "otherNightReminder": "상인이 아직 능력을 사용하지 않았다면: 상인은 좌우 흔듦 '아니오' 또는 끄덕임 '예' 머리 신호 중 하나를 보여줍니다. 상인이 '예'를 선택했다면, '지명함' 토큰이 있는 참가자들의 캐릭터 토큰을 보여주세요(순서 무관). '능력 없음' 토큰을 놓으세요.",
+    "reminders": [
+      "지명함",
+      "능력 없음"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임당 한 번 낮에 공개적으로 살아있는 1명을 선택합니다. 오늘 밤, 그와 당신은 조용히 일어나서 누군가 이길 때까지 '가위바위보'를 합니다. 진 사람은 죽습니다.",
+    "edition": "rome",
+    "flavor": "용서하시오. 나는 검으로 훈련받았지, 말로 훈련받지 않았소! - 크릭수스 (기원전 72년)",
+    "id": "ko_KR_gladiator_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_gladiator_fall_of_rome.png?raw=true",
+    "name": "검투사",
+    "otherNight": 18,
+    "otherNightReminder": "검투사가 오늘 능력을 사용했다면 검투사와 그가 선택한 참가자를 깨우세요: 두 참가자는 조용히 가위바위보를 합니다. 둘 다 같은 것을 냈다면, 다시 합니다. 누군가 이길 때까지 합니다. 진 사람이 죽습니다.",
+    "reminders": [
+      "결투",
+      "사망",
+      "능력 없음"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임당 한 번 낮에 공개적으로 참가자 3명의 캐릭터 유형을 추측합니다.(본인 제외, 유형 당 1개) 그날 밤, 그 중 몇 개가 맞았는지 알게 됩니다.",
+    "edition": "rome",
+    "flavor": "내가 역할을 잘 해냈는가? 그렇다면 내가 퇴장할 때 박수를 쳐 주시오! - 카이사르 아우구스투스 (기원전 63년 - 14년)",
+    "id": "ko_KR_actor_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_actor_fall_of_rome.png?raw=true",
+    "name": "배우",
+    "otherNight": 25,
+    "otherNightReminder": "배우가 오늘 능력을 사용했다면: '맞힘' 표시의 개수(0, 1, 2, 또는 3)를 수신호로 보여주세요. '능력 없음' 표시를 놓으세요.",
+    "reminders": [
+      "맞힘",
+      "능력 없음"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "당신이 악마에게 처음 죽으면, 당신은 죽지 않고 플레이 중이 아닌 마을 주민 능력 1개를 갖습니다.",
+    "edition": "rome",
+    "flavor": "모든 새로운 시작은 다른 어떤 시작의 끝에서 온다. - 루키우스 안나이우스 세네카 (기원전 4년 - 65년)",
+    "id": "ko_KR_blacksmith_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_blacksmith_fall_of_rome.png?raw=true",
+    "name": "대장장이",
+    "otherNight": 17,
+    "otherNightReminder": "대장장이가 악마에게 살해당했다면. 대장장이에게 게임에 참여하지 않은 마을 주민 캐릭터 토큰을 보여주세요. 게임에 참여하지 않은 캐릭터 토큰과 대장장이 토큰을 교체하세요. 대장장이임 토큰을 제거하세요. 대장장이를 깨워, 새로운 캐릭터 능력을 보여주세요.",
+    "reminders": [
+      "대장장이임"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "당신이 처음으로 살아있는 외지인을 지명하면, 그는 즉시 플레이 중이 아닌 마을 주민이 됩니다. [+1 외지인]",
+    "edition": "rome",
+    "flavor": "아침에 일어날 때, 살아있다는 것이 얼마나 귀중한 특권인지 생각하라 - 숨 쉬고, 생각하고, 즐기고, 사랑할 수 있다는 것을. - 마르쿠스 아우렐리우스 (121년 - 180년)",
+    "id": "ko_KR_scholar_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_scholar_fall_of_rome.png?raw=true",
+    "name": "학자",
+    "otherNight": 2,
+    "otherNightReminder": "학자가 오늘 외지인을 지목했다면, '능력 없음' 토큰을 놓으세요. 지목된 참가자를 깨우고, 새로운 캐릭터 토큰을 보여주세요.",
+    "reminders": [
+      "전수",
+      "능력 없음"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "참가자 1명을 알고 시작합니다. 당신이나 그가 처형 당하면, 모든 마을 주민은 내일 해가 질 때까지 술에 취합니다.",
+    "edition": "rome",
+    "firstNight": 16,
+    "firstNightReminder": "한 참가자를 지목하세요. 해당 참가자 옆에 '레무스' 토큰을 놓으세요.",
+    "flavor": "레무스와 로물루스 사이에 일어난 다툼은 지상의 도시가 스스로를 향해 분열되었음을 보여주었다... - 히포의 아우구스티누스 (354년 - 430년)",
+    "id": "ko_KR_thetwins_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_thetwins_fall_of_rome.png?raw=true",
+    "name": "쌍둥이",
+    "otherNight": 10,
+    "otherNightReminder": "낮에 쌍둥이 중 하나가 처형되어 '마을 주민 취함' 토큰이 놓인 경우, 모든 마을 주민은 해가 질 때까지 술에 취합니다.",
+    "reminders": [
+      "레무스",
+      "마을 주민 취함"
+    ],
+    "remindersGlobal": [
+      "주정뱅이"
+    ],
+    "special": [
+      {
+        "name": "bag-disabled",
+        "type": "selection"
+      },
+      {
+        "name": "replace-character",
+        "type": "reveal"
+      }
+    ],
+    "team": "outsider"
+  },
+  {
+    "ability": "당신과 이웃한 2명의 마을 주민은 술에 취합니다. 그러나 격일 밤마다(홀수 또는 짝수 밤), 당신은 해가 질 때까지 술에 취합니다. 당신이 죽더라도 동일합니다.",
+    "edition": "rome",
+    "firstNight": 15,
+    "firstNightReminder": "'홀수' 또는 '짝수' 토큰을 놓으세요. 홀수라면, 와인제조자는 첫째 밤과 그 후 격일 밤마다 술에 취합니다. 짝수라면, 와인제조자는 둘째 밤과 그 후 격일 밤마다 술에 취합니다.",
+    "flavor": "와인 속에 진실이 있다. - 대 플리니우스 (23년 - 79년)",
+    "id": "ko_KR_winemaker_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_winemaker_fall_of_rome.png?raw=true",
+    "name": "와인 제조자",
+    "otherNight": 9,
+    "otherNightReminder": "어떤 '홀수' 또는 '짝수' 토큰이 놓여있는지 확인하세요. 홀수 밤이고 '홀수' 토큰이 놓여있다면, 와인제조자는 해가 질 때까지 술에 취합니다. 짝수 밤이고 '짝수' 토큰이 놓여있다면, 와인제조자는 해가 질 때까지 술에 취합니다. 그렇지 않다면 그들의 마을 주민 이웃들이 해가 질 때까지 술에 취합니다.",
+    "reminders": [
+      "짝수",
+      "홀수",
+      "취함"
+    ],
+    "team": "outsider"
+  },
+  {
+    "ability": "악한 참가자가 당신이 스파르타쿠스임을 공개적으로 추측하면(게임 당 한 번), 당신의 팀은 패배합니다. 당신은 마을주민으로 보일 수 있습니다. 매일 낮, 스파르타쿠스라고 공개 선언하지 않는다면, 마을주민으로 보일 수 없습니다.",
+    "edition": "rome",
+    "flavor": "사람은 자신의 운명을 받아들여서는 안 된다. 그렇지 않으면 그것에 의해 파멸될 것이다. - 스파르타쿠스 (기원전 약 103년 - 기원전 71년)",
+    "id": "ko_KR_spartacus_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_spartacus_fall_of_rome.png?raw=true",
+    "name": "스파르타쿠스",
+    "reminders": [
+      "추측함"
+    ],
+    "team": "outsider"
+  },
+  {
+    "ability": "자신이 마을 주민이라고 생각하지만 그렇지 않고, 잘못된 정보를 받습니다. 당신은 악으로 보일 수 있고, 죽더라도 동일합니다.",
+    "edition": "rome",
+    "flavor": "3월의 이드를 조심하라. - 가이우스 율리우스 카이사르 (기원전 100년 - 기원전 44년)",
+    "id": "ko_KR_badomen_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_badomen_fall_of_rome.png?raw=true",
+    "name": "불길한 징조",
+    "reminders": [
+      "불길한 징조임"
+    ],
+    "remindersGlobal": [
+      "Is a Bad Omen"
+    ],
+    "setup": true,
+    "team": "outsider"
+  },
+  {
+    "ability": "첫날 밤, 두 참가자를 선택합니다. 그들은 자신이 선택된 것을 알게 됩니다. 처음으로 그들 중 1명이 처형으로 죽을 때, 나머지 1명은 악이 됩니다.",
+    "edition": "rome",
+    "firstNight": 12,
+    "firstNightReminder": "유혹자는 두 참가자를 지목합니다. 두 참가자 옆에 '매혹' 토큰을 놓으세요. 두 참가자를 각각 따로 깨우세요. '이 캐릭터가 당신을 선택했습니다' 카드를 보여준 후, 유혹자 토큰을 보여주세요",
+    "flavor": "삶에서는 아무것도 우리를 갈라놓을 수 없었지만, 이제 죽음에서 우리는 아마도 자리를 바꾸게 될 것이다... - 클레오파트라 7세 테아 필로파토르 (기원전 69년 - 기원전 30년)",
+    "id": "ko_KR_temptress_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_temptress_fall_of_rome.png?raw=true",
+    "name": "요부",
+    "otherNight": 3,
+    "otherNightReminder": "'매혹' 토큰이 있는 참가자가 처형되어 죽으면, 그들의 '매혹' 토큰을 제거하세요. 남은 '매혹' 토큰이 있는 참가자는 악이 됩니다. 그들의 '매혹' 토큰을 제거하고 '악' 토큰으로 교체하세요. 악이 된 참가자를 깨워 '캐릭터' 토큰과 엄지 아래 악 신호를 보여주세요.",
+    "reminders": [
+      "매혹",
+      "악"
+    ],
+    "team": "minion"
+  },
+  {
+    "ability": "매일 밤, 1명을 선택합니다. 그 참가자의 캐릭터를 알게 됩니다. 이 방법으로, 당신이 처음으로 2번 선택하는 참가자는 죽습니다. [+1 스파르타쿠스]",
+    "edition": "rome",
+    "firstNight": 14,
+    "firstNightReminder": "내장 점술가는 한 참가자를 지목합니다. 해당 참가자의 캐릭터 토큰을 보여주세요. 그 참가자 옆에 '예언됨' 토큰을 놓으세요",
+    "flavor": "...하지만 경건함과 종교, 그리고 모든 것이 불멸의 신들의 신성한 힘에 의해 통치되고 관리된다는 것을 인식하는 이 특별한 지혜를 통해 우리는 다른 모든 나라와 민족보다 우월했고 지금도 우월하다. - 마르쿠스 툴리우스 키케로 (기원전 106년 - 기원전 46년)",
+    "id": "ko_KR_haruspex_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_haruspex_fall_of_rome.png?raw=true",
+    "name": "내장 점술가",
+    "otherNight": 16,
+    "otherNightReminder": "내장 점술가는 한 참가자를 지목합니다. 해당 참가자의 캐릭터 토큰을 보여주세요. 그 참가자 옆에 '예언됨' 토큰을 놓으세요: 해당 참가자가 이미 '예언됨' 토큰을 가지고 있다면, 그 참가자는 죽고 점장이 옆에 '살해 불가' 토큰도 놓으세요.",
+    "reminders": [
+      "예언됨",
+      "사망",
+      "살해 불가"
+    ],
+    "setup": true,
+    "team": "minion"
+  },
+  {
+    "ability": "당신은 선으로 보일 수 있습니다. 당신이 지명하는 참가자는 새벽까지 반대 진영으로 보이며, 그가 마을 주민일 경우 중독됩니다.",
+    "edition": "rome",
+    "flavor": "그들이 들어갔을 때, 물론 그것은 그들에게 기적처럼 보였다. 이전에 작았던 뱀이 며칠 만에 그렇게 큰 뱀이 되었고, 게다가 인간의 얼굴을 하고 있으며 온순했다는 것이! - 루키아노스 (기원전 125년 - 약 180년), 알렉산드로스 '거짓 예언자'에 대해",
+    "id": "ko_KR_glykon1_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_glykon1_fall_of_rome.png?raw=true",
+    "name": "글리콘",
+    "reminders": [
+      "뱀에 물림",
+      "중독"
+    ],
+    "team": "minion"
+  },
+  {
+    "ability": "마을 주민이 당신을 지명하면 그는 즉시 '불길한 징조'가 됩니다.",
+    "edition": "rome",
+    "flavor": "전쟁과 평화 시에, 국내외에서 모든 일이 점을 친 후에만 이루어졌다는 것을? - 티투스 '리비우스' 리비우스 (기원전 59년 - 17년)",
+    "id": "ko_KR_augur_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_augur_fall_of_rome.png?raw=true",
+    "name": "조점관",
+    "team": "minion"
+  },
+  {
+    "ability": "매일 밤, 두 명의 참가자를 선택합니다. 선택된 참가자들이 다음날 지명을 하면, 그날 밤에 사망합니다. 매일, 여행자를 제외한 선한 참가자가 한 명이라도 지명을 하지 않으면, 악한 진영이 승리합니다.",
+    "edition": "rome",
+    "firstNight": 13,
+    "firstNightReminder": "클레오파트라는 두 참가자를 지목합니다.",
+    "flavor": "바보! 당신 없이 살 수만 있었다면 난 벌써 백 번도 넘게 당신을 독살했을 거예요! - 클레오파트라 7세 테아 필로파토르 (기원전 69년 - 기원전 30년)",
+    "id": "ko_KR_cleopatra_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_cleopatra_fall_of_rome.png?raw=true",
+    "name": "클레오파트라",
+    "otherNight": 12,
+    "otherNightReminder": "이전에 선택된 참가자가 오늘 지목했다면 그들은 죽습니다. 모든 '선택됨' 토큰을 제거하세요. 클레오파트라는 두 참가자를 지목합니다. 두 참가자 옆에 '선택됨' 토큰을 놓으세요.",
+    "reminders": [
+      "선택됨",
+      "사망"
+    ],
+    "team": "demon"
+  },
+  {
+    "ability": "매일 밤*, 1명을 선택해 죽입니다. 첫 번째 크라수스가 공개적으로 자신이 스파르타쿠스라고 주장하고, 그날 낮이나 밤에 5명 이상 생존한 상태에서 사망하면, 악한 진영의 참가자 한 명이 크라수스가 됩니다.",
+    "edition": "rome",
+    "flavor": "위대한 일을 꿈꾸는 자들은 또한 크게 고통받아야 한다... - 루키우스 메스트리우스 '플루타르코스' 플루타르쿠스 (약 49년 - 119년)",
+    "id": "ko_KR_crassus_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_crassus_fall_of_rome.png?raw=true",
+    "name": "크라수스",
+    "otherNight": 13,
+    "otherNightReminder": "크라수스는 한 참가자를 지목합니다. 그 참가자는 죽습니다. 첫 번째 크라수스가 오늘 공개적으로 스파르타쿠스라고 주장하고 자신을 지목했다면(또는 처형되었다면), 5명 이상의 참가자가 살아있는 상태에서, 악 참가자 1명의 캐릭터를 여분의 크라수스 토큰으로 교체하세요. 해당 참가자에게 당신이 새로운 크라수스임을 알도록 토큰을 보여주세요.",
+    "reminders": [
+      "사망",
+      "첫 크라수스"
+    ],
+    "team": "demon"
+  },
+  {
+    "ability": "당신은 스스로를 선한 캐릭터라고 생각합니다. 하수인들은 플레이 중이지 않은 캐릭터 3개를 알게 됩니다. 매일 밤*, 1명이 죽을 수 있습니다. 첫 번째로 죽은 한니발은 선이 됩니다. [+1 한니발]",
+    "attribution": "Hannibal was awarded the 4th place trophy in the Unofficial's \"Custom Demon Contest\".",
+    "edition": "rome",
+    "firstNight": 11,
+    "firstNightReminder": "선한 참가자 2명을 선택하고 '한니발임' 알림 토큰을 놓으세요. 모든 하수인들을 함께 깨워, 한니발들을 보여주고 게임에 참여하지 않는 캐릭터 토큰 3개를 보여주세요(하수인들이 보는 토큰 3개는 동일해야 합니다).",
+    "flavor": "나는 길을 찾거나 만들 것이다. - 한니발 (기원전 247년 - 기원전 약 182년)",
+    "id": "ko_KR_hannibal_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_hannibal_fall_of_rome.png?raw=true",
+    "name": "한니발",
+    "otherNight": 14,
+    "otherNightReminder": "이야기꾼이 한 참가자를 선택하세요, 그 참가자는 죽습니다. 한니발이 오늘 죽었다면, 그 참가자를 깨워  한니발 토큰과 엄지 위 신호를 통해 선 진영임를 보여주세요.",
+    "reminders": [
+      "한니발임",
+      "사망"
+    ],
+    "remindersGlobal": [
+      "Is Hannibal",
+      "Dead"
+    ],
+    "setup": true,
+    "team": "demon"
+  },
+  {
+    "ability": "매일 밤*, 1명을 선택해 죽입니다. 악한 참가자가 처음 처형으로 죽으면, 그날 밤 추가로 1명을 더 죽일 수 있습니다.",
+    "edition": "rome",
+    "flavor": "왔노라, 보았노라, 이겼노라. - 가이우스 율리우스 카이사르 (기원전 100년 - 기원전 44년)",
+    "id": "ko_KR_caesar_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_caesar_fall_of_rome.png?raw=true",
+    "name": "카이사르",
+    "otherNight": 15,
+    "otherNightReminder": "오늘 악 참가자가 처형되었다면, 카이사르는 두 참가자를 지목합니다. 그렇지 않다면: 카이사르는 한 참가자를 지목합니다. 선택된 참가자들은 죽습니다.",
+    "reminders": [
+      "배신",
+      "사용됨",
+      "사망"
+    ],
+    "team": "demon"
+  },
+  {
+    "ability": "매일 밤*, 그날 스파르타쿠스라고 공개 선언한 참가자의 능력을 얻습니다. 용병이 추방되면, 당신도 함께 추방됩니다. [반대 진영의 용병 +1]",
+    "edition": "rome",
+    "flavor": "고용인은 주의하라... 그리고 나도 조심하라!",
+    "id": "ko_KR_mercenary_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mercenary_fall_of_rome.png?raw=true",
+    "name": "용병",
+    "otherNight": 4,
+    "otherNightReminder": "Show the Mercenary a character that publicly claimed to be Spartacus today, they have that ability tonight and tomorrow until dusk. ",
+    "reminders": [
+      "Good",
+      "Evil",
+      "Good Ability",
+      "Evil Ability"
+    ],
+    "team": "traveler"
+  },
+  {
+    "ability": "매일 밤*, 한 명의 참가자를 선택합니다: 1) 그들은 같은 유형의 게임에 없는 캐릭터가 되거나, 2) 같은 유형의 다른 참가자와 캐릭터를 교환합니다.",
+    "edition": "rome",
+    "flavor": "나는 로마를 벽돌로 된 도시로 발견했고 대리석의 도시로 남겼다.",
+    "id": "ko_KR_architect_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_architect_fall_of_rome.png?raw=true",
+    "name": "건축가",
+    "otherNight": 7,
+    "otherNightReminder": "The Architect points to a player. Choose which ability will effect the chosen player. Treat them accordingly (not-in-play character or character swap). Wake affected players individually. Show 'You are', then their new character token.",
+    "reminders": [
+      "Redesigned"
+    ],
+    "team": "traveler"
+  },
+  {
+    "ability": "매일, 첫 번째 처형 이후에 사망한 참가자 중 한 명을 공개적으로 선택할 수 있습니다: 그들은 지목할 수 있게 됩니다. 사망한 참가자들과 당신의 과반수가 동의하면, 그 참가자는 처형됩니다.",
+    "attribution": "Original Character concept by Kohav. Many thanks to them for giving the green light to bringing it to Fall of Rome!",
+    "edition": "rome",
+    "flavor": "나는 너무나 변해 아무에게도 보이지 않을 것이다. 하지만 내 목소리로 인식될 것이다. 그리고 내 목소리로, 당신에게 두 번째 기회를 준다.",
+    "id": "ko_KR_sibyl_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_sibyl_fall_of_rome.png?raw=true",
+    "name": "무녀",
+    "team": "traveler"
+  },
+  {
+    "ability": "매일, 생존한 참가자 중 한 명을 공개적으로 선택하여 축복할 수 있습니다: 과반수가 동의하면, 그 고위사제에게 좋은 일이 일어납니다.",
+    "edition": "rome",
+    "flavor": "죄인에 대한 첫 번째이자 가장 큰 벌은 죄의 양심이다.",
+    "id": "ko_KR_highpriest1_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_highpriest1_fall_of_rome.png?raw=true",
+    "name": "고위사제1",
+    "otherNight": 5,
+    "otherNightReminder": "If the High Priest successfully blessed a player today, something good happens to that player and/or their team.",
+    "reminders": [
+      "Blessed",
+      "Failed"
+    ],
+    "team": "traveler"
+  },
+  {
+    "ability": "매일, 생존한 참가자 중 한 명을 공개적으로 선택하여 축복할 수 있습니다: 과반수가 동의하면, 다음날 그들은 한 가지 진술을 알게 됩니다. 그날 밤, 그 진술이 진실인지 거짓인지 선택합니다.",
+    "edition": "rome",
+    "flavor": "죄인에 대한 첫 번째이자 가장 큰 벌은 죄의 양심이다.",
+    "id": "ko_KR_highpriest2_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_highpriest2_fall_of_rome.png?raw=true",
+    "name": "고위사제2",
+    "otherNight": 6,
+    "otherNightReminder": "If the High Priest successfully blessed a player today, wake the High Priest. The High Priest chooses whether the statement is true tomorrow with a hand signal (true \"thumbs up\", false \"thumbs down\").",
+    "reminders": [
+      "Blessed",
+      "Failed",
+      "True",
+      "False"
+    ],
+    "team": "traveler"
+  },
+  {
+    "ability": "매일, 첫 번째 처형의 결과를 선택합니다. 오늘의 처형을 막기로 선택하면: 그들은 생존합니다. 그렇지 않으면, 그날 밤 그들의 진영을 알게 됩니다.",
+    "edition": "rome",
+    "flavor": "어떤 죽음이 다른 모든 죽음보다 선호되는가? 예상치 못한 죽음이다.",
+    "id": "ko_KR_emperor_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_emperor_fall_of_rome.png?raw=true",
+    "name": "황제",
+    "otherNight": 8,
+    "otherNightReminder": "If a player was executed today and the outcome was not overturned by the Emperor: Show the hand signal (thumbs down 'evil', thumbs up 'good') for the players alignment.",
+    "reminders": [
+      "Executed"
+    ],
+    "team": "traveler"
+  },
+  {
+    "ability": "매일, 생존자의 절반까지(반올림, 여행자 제외) 공개적으로 자신이 스파르타쿠스라고 주장할 수 있습니다.",
+    "edition": "rome",
+    "flavor": "자아는 살을 베는 것보다 더 깊이 베인다. - 스파르타쿠스 (기원전 약 103년 - 기원전 71년)",
+    "id": "ko_KR_iamspartacus_fall_of_rome",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_iamspartacus_fall_of_rome.png?raw=true",
+    "name": "나는 스파르타쿠스다!",
+    "reminders": [
+      "I am Spartacus!"
+    ],
+    "team": "fabled"
+  }
+]

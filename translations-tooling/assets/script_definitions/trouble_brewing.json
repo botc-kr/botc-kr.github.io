@@ -1,0 +1,38 @@
+{
+    "meta":
+    {
+        "name": "불길한 조짐 (Trouble Brewing)",
+        "author": "steven medway",
+        "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/trouble_brewing_bg.webp"
+    },
+    "roles":
+    [
+        "washerwoman",
+        "librarian",
+        "investigator",
+        "chef",
+        "empath",
+        "fortuneteller",
+        "undertaker",
+        "monk",
+        "ravenkeeper",
+        "virgin",
+        "slayer",
+        "soldier",
+        "mayor",
+        "butler",
+        "drunk",
+        "recluse",
+        "saint",
+        "poisoner",
+        "spy",
+        "scarletwoman",
+        "baron",
+        "imp",
+        "beggar",
+        "bureaucrat",
+        "gunslinger",
+        "scapegoat",
+        "thief"
+    ]
+}

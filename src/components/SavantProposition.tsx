@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Header } from '@/components/HeaderFooter'
 import { type PageType } from '@/constants/pages'
 import { SAVANT_PROPOSITIONS } from '@/constants/savant'
+import { buildScriptImageUrl } from '@/constants/urls'
 
 
 interface SavantPropositionProps {
@@ -33,7 +34,7 @@ const SavantProposition: React.FC<SavantPropositionProps> = ({ currentPage, onPa
             </p>
 
             <img
-              src="https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/icons/Icon_savant.png"
+              src={buildScriptImageUrl('Icon_savant')}
               alt="서번트 아이콘"
               className="w-40 h-40 mx-auto mb-4 animate-spin-slow"
             />

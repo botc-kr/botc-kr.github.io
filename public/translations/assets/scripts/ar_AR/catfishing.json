@@ -1,0 +1,479 @@
+[
+  {
+    "ability": "أنت لاتعرف ماهي ميزتك وقدراتك. في كل يوم، تخمن ميزتك وتعرف مدى صحة هذا التخمين.",
+    "edition": "",
+    "firstNight": 12,
+    "firstNightReminder": "قرر ماهي ميزة وقدرة فاقد الذاكرة. وإذا احتجت أن توقظ فاقد الذاكرة في الليل، أوقظه وأخبره المعلومة حسب ميزته.",
+    "id": "ar_AR_amnesiac",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/amnesiac.png?raw=true",
+    "name": "فاقد الذاكرة",
+    "otherNight": 5,
+    "otherNightReminder": "If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
+    "reminders": [
+      "?"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في أول ليلة، تحصل على قدرة وميزة شخصية من سكان القرية، أو شخصية من الأشرار.",
+    "edition": "bmr",
+    "firstNight": 1,
+    "firstNightReminder": "اختار شخصية للمبتدئ إما من سكان القرية أو من الأشرار وأرسلها له.",
+    "id": "ar_AR_apprentice",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/apprentice.png?raw=true",
+    "name": "مبتدئ",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "هل المبتدئ"
+    ],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "في كل ليلة تختار لاعب وشخصية من الطيبين ، في اليوم التالي هذا اللاعب يجب أن يصبح غضبان بهذه الشخصية وإذا لم يظهر غضبه ربما يقتله المنظم",
+    "edition": "snv",
+    "firstNight": 25,
+    "firstNightReminder": "المنرفز يختار لاعب وشخصية من الطيبين، أخبر ذلك اللاعب بالشخصية وأنه اختير من المنرفز ليكون هذه الشخصية، في اليوم التالي إذا لم يظهر غضبه يقتل",
+    "id": "ar_AR_cerenovus",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/cerenovus.png?raw=true",
+    "name": "المنرفز",
+    "otherNight": 16,
+    "otherNightReminder": "المنرفز يختار لاعب وشخصية من الطيبين، أخبر ذلك اللاعب بالشخصية وأنه اختير من المنرفز ليكون هذه الشخصية، في اليوم التالي إذا لم يظهر غضبه يقتل",
+    "reminders": [
+      "غضبان"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "في كل ليلة، تعرف نوع شخصية لاعب واحد (سكان القرية، الغرباء، الأشرار، رئيس الأشرار، المسافرين)، حتى تنتهي جميع الأنواع. [+1 غريب]",
+    "edition": "",
+    "firstNight": 44,
+    "firstNightReminder": "اختار نوع شخصية، أخبره بإسم اللاعب الذي يحمل هذا النوع. ضع علامة تذكير عامل المنطاد بجانب ذبك اللاعب.",
+    "id": "ar_AR_balloonist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/balloonist.png?raw=true",
+    "name": "عامل المنطاد",
+    "otherNight": 63,
+    "otherNightReminder": "اختار نوع شخصية مختلفة عن علامات التذكير الموجودة على تلك الشخصيات، إذا لازال موجود أنواع أخرى، وأخبر عامل المنطاد بها ثم ضع علامة التذكير على ذلك اللاعب.",
+    "reminders": [
+      "شاهد سكان القرية، شاهد الغرباء، شاهد الأشرار، شاهد رئيس الأشرار، شاهد المسافرين."
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في كل ليلة حتى المساء التالي، 1) أحد اللاعبين يصبح سليم ومعافى، أو 2) أحد اللاعبين تصبح ميزته مضاعفة.  وهذا اللاعب يعرف هذه الميزة التي حصل عليها بسبب الباريستا",
+    "edition": "snv",
+    "firstNight": 1,
+    "firstNightReminder": "اختار لاعب وأخبره الميزة التي حصل عليها بسبب الباريستا. تعامل معه على أساس هذه الميزة (سليم/صحي/معلومة صحيحة أو تصبح ميزته مضاعفة)",
+    "id": "ar_AR_barista",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/barista.png?raw=true",
+    "name": "الباريستا",
+    "otherNight": 1,
+    "otherNightReminder": "اختار لاعب وأخبره الميزة التي حصل عليها بسبب الباريستا. تعامل معه على أساس هذه الميزة (سليم/صحي/معلومة صحيحة أو تصبح ميزته مضاعفة)",
+    "reminders": [
+      "سليم & صحي",
+      "ميزة مضاعفة"
+    ],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "You must use a vote token to vote. Dead players may choose to give you theirs. If so, you learn their alignment. You are sober & healthy.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_beggar",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/beggar.png?raw=true",
+    "name": "Beggar",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "Once per game, at night, choose a dead player: they regain their ability until dusk.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_bonecollector",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/bonecollector.png?raw=true",
+    "name": "Bone Collector",
+    "otherNight": 1,
+    "otherNightReminder": "The Bone Collector either shakes their head no or points at any dead player. If they pointed at any dead player, put the Bone Collector's 'Has Ability' reminder by the chosen player's character token. (They may need to be woken tonight to use it.)",
+    "reminders": [
+      "Has ability",
+      "No ability"
+    ],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "يصبح لديك ميزة آخر لاعب مُعدم، وإذا كان هذا اللاعب من الأشرار تصبح مسمم إلى أن يعدم لاعب من الطيبين",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_cannibal",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/cannibal.png?raw=true",
+    "name": "آكل لحوم البشر",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "مات اليوم",
+      "مسمم"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في أول ليلة فقط، المنظم يخبرك كم شرير يجلسان بجانب بعضهما.",
+    "edition": "tb",
+    "firstNight": 35,
+    "firstNightReminder": "أخبره عدد (0,1,2) زوج متجاورين من الأشرار يجلسان بجانب بعضهما.",
+    "id": "ar_AR_chef",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/chef.png?raw=true",
+    "name": "الطباخ",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في كل ليلة، اختار لاعب (غيرك وليس من المسافرين) فيخبرك المنظم شخصيتين له أحدهما شخصية من الطيبين والأخرى من الأشرار، أحد هذه الشخصيتين صحيح.",
+    "edition": "snv",
+    "firstNight": 41,
+    "firstNightReminder": "الحالم يختار لاعب فتخبره شخصية طيبة وشخصية شريرة، أحدهما صحيح.",
+    "id": "ar_AR_dreamer",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/dreamer.png?raw=true",
+    "name": "الحالم",
+    "otherNight": 57,
+    "otherNightReminder": "الحالم يختار لاعب فتخبره شخصية طيبة وشخصية شريرة، أحدهما صحيح.",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "المنظم يخبرك شخصية محددة من سكان القرية والحقيقة أنك مخمور، فإذا كان للشخصية ميزة يقرر المنظم هل تصلك المعلومة صحيحة أو لا.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_drunk",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/drunk.png?raw=true",
+    "name": "المخمور",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [
+      "مخمور"
+    ],
+    "setup": true,
+    "team": "outsider"
+  },
+  {
+    "ability": "في كل ليلة اختار لاعب تقتله، وإذا كان هذا اللاعب من الغرباء أنت تموت وهو يصبح فانغو [+1 غريب]",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_fanggu",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fanggu.png?raw=true",
+    "name": "فانغو",
+    "otherNight": 29,
+    "otherNightReminder": "الفانغو يختار لاعب لقتله كل ليلة، وإذا كان هذا اللاعب من الغرباء يقتل الفانغو ويصبح اللاعب الغريب هو الفانغو (رئيس الأشرار) الجديد. أخبر اللاعب بأنه أصبح فانغو (رئيس الأشرار) الجديد، علما أن التبديل هذا يحصل مرة واحدة فقط",
+    "reminders": [
+      "مرة",
+      "ميت"
+    ],
+    "setup": true,
+    "team": "demon"
+  },
+  {
+    "ability": "في كل ليلة، تختار لاعبين والمنظم يخبرك إذا كان أحدهما هو رئيس الأشرار. علما أنه يوجد لاعب من سكان القرية يختاره المنظم يظهر لك كأنه رئيس الأشرار.",
+    "edition": "tb",
+    "firstNight": 37,
+    "firstNightReminder": "يختار العرافة لاعبين فتخبره نعم إذا كان أحدهما رئيس الأشرار.",
+    "id": "ar_AR_fortuneteller",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fortuneteller.png?raw=true",
+    "name": "العرافة",
+    "otherNight": 54,
+    "otherNightReminder": "يختار العرافة لاعبين فتخبره نعم إذا كان أحدهما رئيس الأشرار.",
+    "reminders": [
+      "خدعة"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في كل ليلة، اختار لاعب وخمن شخصيته، إذا كان تخمينك خاطئ تموت",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_gambler",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/gambler.png?raw=true",
+    "name": "المقامر",
+    "otherNight": 11,
+    "otherNightReminder": "المقامر يختار لاعب ويخمن شخصيته، إذا كان تخمينه خاطئ يموت",
+    "reminders": [
+      "ميت"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في أول ليلة فقط، المنظم يخبرك من هم شخصيات الغرباء الموجودين في اللعبة، وإذا مات أحدهم بالنهار اختار لاعب بالليل فيموت [+1 أو -1 غرباء]",
+    "edition": "bmr",
+    "firstNight": 21,
+    "firstNightReminder": "أخبر العراب من هم شخصيات الغرباء الموجودون في اللعبة",
+    "id": "ar_AR_godfather",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/godfather.png?raw=true",
+    "name": "العراب",
+    "otherNight": 38,
+    "otherNightReminder": "إذا مات أحد اللاعبين الغرباء، أوقظ العراب ليختار أحد اللاعبين فيموت",
+    "reminders": [
+      "مات اليوم",
+      "ميت"
+    ],
+    "setup": true,
+    "team": "minion"
+  },
+  {
+    "ability": "المنظم يخبرك اسم لاعب من الطيبين (الحفيد) وشخصيته، إذا قتل هذا اللاعب ليلا بواسطة رئيس الأشرار تموت أنت كذلك",
+    "edition": "bmr",
+    "firstNight": 39,
+    "firstNightReminder": "اختار لاعب وضع علامة الحفيد عليه",
+    "id": "ar_AR_grandmother",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/grandmother.png?raw=true",
+    "name": "الجدة",
+    "otherNight": 50,
+    "otherNightReminder": "إذا قتل الحفيد ليلا بواسطة رئيس الأشرار تموت الجدة",
+    "reminders": [
+      "الحفيد"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Each night*, choose a living player: if they agree, you learn their character, but you both might die.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_harlot",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/harlot.png?raw=true",
+    "name": "Harlot",
+    "otherNight": 1,
+    "otherNightReminder": "The Harlot points at any player. Then, put the Harlot to sleep. Wake the chosen player, show them the 'This character selected you' token, then the Harlot token. That player either nods their head yes or shakes their head no. If they nodded their head yes, wake the Harlot and show them the chosen player's character token. Then, you may decide that both players die.",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": false,
+    "team": "traveler"
+  },
+  {
+    "ability": "أنت رئيس الأشرار، في كل ليلة اختار لاعب تقتله ، وإذا قتلت نفسك أحد الأشرار الآخرين يصبح هوا الرئيس.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_imp",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/imp.png?raw=true",
+    "name": "العفريت",
+    "otherNight": 24,
+    "otherNightReminder": "العفريت يقتل كل ليلة لاعب من اختياره. وإذا قتل نفسه اختار أحد الأشرار وأخبره أنه أصبح رئيس الأشرار.",
+    "reminders": [
+      "ميت"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "في أول ليلة فقط، المنظم يخبرك شخصية من الأشرار لأحد لاعبين.",
+    "edition": "tb",
+    "firstNight": 34,
+    "firstNightReminder": "أخبره باسم شخصية من الأشرار الموجودين في اللعبة، ثم أخبره باسم لاعبين أحدهما صاحب هذه الشخصية.",
+    "id": "ar_AR_investigator",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/investigator.png?raw=true",
+    "name": "المحقق",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "خطأ",
+      "شرير"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "أنت تعتقد أنك رئيس الأشرار، ولكنك لست كذلك. رئيس الأشرار يعرف من أنت ومن اخترت لقتله في الليل",
+    "edition": "bmr",
+    "firstNight": 7,
+    "firstNightReminder": "إذا كان هناك 7 لاعبين أو أكثر أخبر المعتوه من هم الأشرار في فريقه (سواء أشرار حقيقين أو غيرهم) بنفس عدد الأشرار الموجودين في اللعبة. ,وإذا اختار المعتوه لاعب في الليل لقتله ضع علامة على اللاعب المختار، وأخبر رئيس الأشرار الحقيقي باختيار المعتوه، ثم أزل العلامة من اللاعب المختار",
+    "id": "ar_AR_lunatic",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lunatic.png?raw=true",
+    "name": "المعتوه",
+    "otherNight": 21,
+    "otherNightReminder": "إذا اختار المعتوه لاعب في الليل لقتله ضع علامة على اللاعب المختار، وأخبر رئيس الأشرار الحقيقي باختيار المعتوه، ثم أزل العلامة من اللاعب المختار",
+    "reminders": [
+      "اعتداء 1",
+      "اعتداء 2",
+      "اعتداء 3"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "إذا كنت غضبان كونك من الغرباء، سيقتلك المنظم",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_mutant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/mutant.png?raw=true",
+    "name": "الصامت",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "مرة واحدة في اللعبة في الليل، اختار شخصية طيبة تلعبها، إذا اخترت شخصية موجودة ذلك اللاعب يصبح مخمور",
+    "edition": "snv",
+    "firstNight": 2,
+    "firstNightReminder": "الفيلسوف إما يؤجل اختيار شخصية أو يختار شخصية من الطيبين، فإذا كانت هذه الشخصية موجودة في اللعبة يصبح ذلك اللاعب مخمور",
+    "id": "ar_AR_philosopher",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/philosopher.png?raw=true",
+    "name": "الفيلسوف",
+    "otherNight": 2,
+    "otherNightReminder": "إذا لم يستخدم الفيلسوف ميزته، فهو إما يؤجل اختيار شخصية أو يختار شخصية من الطيبين، فإذا كانت هذه الشخصية موجودة في اللعبة يصبح ذلك اللاعب مخمور",
+    "remindersGlobal": [
+      "مخمور",
+      "هل هو الفيلسوف"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في كل ليلة، اختار لاعب وشخصية له من اختيارك، ستصبح شخصيته إذا لم تكن هذه الشخصية موجودة في اللعبة عند شخص آخر، وإذا اخترت شخصية رئيس الأشرار سيكون القتل في تلك الليلة حسب اختيار المنظم",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_pithag",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/pithag.png?raw=true",
+    "name": "وعاء الساحرة",
+    "otherNight": 17,
+    "otherNightReminder": "وعاء الساحرة يختار لاعب وشخصية له فإذا كانت هذه الشخصية غير موجودة في اللعب ستصبح شخصية اللاعب المختار وإذا كانت هذه الشخصية موجودة في اللعب لا شيء يحدث",
+    "reminders": [],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "إذا تم قتلك في الليل يوقظك المنظم لتختار لاعب فيخبرك شخصيته.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_ravenkeeper",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/ravenkeeper.png?raw=true",
+    "name": "حلاوة روح",
+    "otherNight": 42,
+    "otherNightReminder": "إذا تم قتل حلاوة روح في الليل، يختار لاعب فتخبره شخصيته.",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "المنظم يختار لك شخصية يخبرها أصحاب الميزات من سكان القرية أو من الغرباء أو من الأشرار أو رئيس الأشرار حتى لو أنت مقتول",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_recluse",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/recluse.png?raw=true",
+    "name": "المنعزل",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "في كل يوم، يخبرك المنظم سريا معلومتين أحدهما صحيح والأخرى خاطئة",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_savant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/savant.png?raw=true",
+    "name": "العالِم",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "في كل ليلة، اختار لاعب إذا كان هذا اللاعب رئيس الأشرار تصبح أنت رئيس الأشرار وهو يصبح الثعبان الساحر ولكن مسمم.",
+    "edition": "snv",
+    "firstNight": 20,
+    "firstNightReminder": "الثعبان الساحر يختار لاعب، إذا كان هذا اللاعب هو رئيس الأشرار يتبادلون الأدوار. أخبر كل لاعب بشخصيته الجديدة . علما أن الثعبان الساحر الجديد يكون مسمم",
+    "id": "ar_AR_snakecharmer",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/snakecharmer.png?raw=true",
+    "name": "الثعبان الساحر",
+    "otherNight": 12,
+    "otherNightReminder": "الثعبان الساحر يختار لاعب، إذا كان هذا اللاعب هو رئيس الأشرار يتبادلون الأدوار. أخبر كل لاعب بشخصيته الجديدة . علما أن الثعبان الساحر الجديد يكون مسمم",
+    "reminders": [
+      "مسمم"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "إذا تم قتلك، أحد اللاعبين يظل مخمور إلى نهاية اللعبة",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_sweetheart",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/sweetheart.png?raw=true",
+    "name": "الحبيبة",
+    "otherNight": 41,
+    "otherNightReminder": "اختار لاعب ليصبح مخمور",
+    "reminders": [
+      "مخمور"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "في كل ليلة اختار لاعب تقتله، عندما تقتل الأشرار الآخرين يحافظون على قواهم وميزاتهم بالإضافة إلى أنه يتم تسميم لاعب من سكان القرية مجاور للشرير المختار [+1 غريب]",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ar_AR_vigormortis",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/vigormortis.png?raw=true",
+    "name": "فيغومورتيس",
+    "otherNight": 32,
+    "otherNightReminder": "فيغومورتيس يختار لاعب لقتله. إذا كان ذلك اللاعب من الأشرار يحافظ على ميزته ويصبح أحد اللاعبين المجاورين له من سكان القرية مسمم",
+    "reminders": [
+      "ميت، لديه ميزة، مسمم"
+    ],
+    "setup": true,
+    "team": "demon"
+  },
+  {
+    "ability": "في أول ليلة، انظر إلى شاشة العرض الرئيسية واختار لاعب يتسمم. أحد اللاعبين الطيبين يعرف أنك موجود في اللعبة",
+    "edition": "",
+    "firstNight": 18,
+    "firstNightReminder": "أظهر شاشة العرض الرئيسية للأرملة. والأرملة يختار لاعب لكي يتسمم. أخبر أحد اللاعبين الطيبين بأن الأرملة موجود في اللعبة",
+    "id": "ar_AR_widow",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/widow.png?raw=true",
+    "name": "الأرملة",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "مسمم"
+    ],
+    "remindersGlobal": [
+      "يعرف"
+    ],
+    "setup": false,
+    "team": "minion"
+  }
+]

@@ -4,8 +4,8 @@
     "synopsis": "먹구름이 레이븐우드 블러프 상공에서 뒤틀리며, 깊이 잠든 마을과 미신을 믿는 주민들을 불길한 그림자로 뒤덮는다. 방금 널은 빨래가 오두막 사이를 잇는 줄에서 섬뜩하게 춤추고, 굴뚝에서는 연기가 자욱하게 피어오른다.\n\n숨겨진 가마솥이 보글보글 끓어오르며, 이국적인 향이 창틈과 문틈 사이로 새어나온다. 유난히 따뜻한 가을바람이 덩굴 뒤덮인 벽을 휘감고 돌아다니며, 자갈길을 걸을 만큼 용감한 이들에게 불길한 속삭임을 전한다.\n\n지평선에서 천둥소리가 울리자 불안한 어머니들이 놀이에 빠진 아이들을 집으로 부른다. 하지만 귀 기울여 들어보면, 이웃한 숲에서는 더욱 기이한 소리들이 메아리쳐 온다. 어슴푸레 솟은 수도원의 주시하는 눈길 아래, 어둑한 그림자들이 문에서 문으로 새어 다닌다.\n\n그 징조를 읽을 수 있는 자들만이 알고 있다. \n불길한 조짐이 시작되었음을...",
     "name": "불길한 조짐",
     "id": "trouble_brewing",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/trouble_brewing.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/trouble_brewing.json",
+    "pdf": "/translations/assets/pdf/ko_KR/trouble_brewing.pdf",
+    "json": "/translations/assets/scripts/ko_KR/trouble_brewing.json",
     "official": true,
     "logo": "tb",
     "note": "'불길한 조짐'으로 번역한 이유\n\n시나리오 전반에 드리운 불안과 예감의 분위기를 담고자 했습니다. 먹구름이 뒤틀리고, 빨래가 섬뜩하게 춤추며, 불길한 속삭임이 이어지는 이 음험한 서사에 '소란'이라는 단어보다는 '불길한'이라는 표현이, 단순한 '발생'보다는 무언가가 다가오고 있음을 암시하는 '조짐'이라는 단어가 더 어울린다고 생각했습니다"
@@ -15,8 +15,8 @@
     "synopsis": "겨울 해가 저물어가고, 톱날 같은 지평선이 태양을 삼켜간다. 주황빛 단풍은 점점 짙은 갈색으로 물들어가고, 숲은 곧 내릴 눈을 기다리며 침묵에 잠겨있다.\n\n마을 경계 너머 바위 틈새 깊숙한 곳에서 굶주린 늑대들의 울음소리가 울려 퍼지자, 까마귀 떼가 아늑한 보금자리를 버리고 흩어져간다. 여행자들은 점점 더해가는 한기를 피해 서둘러 여관으로 발걸음을 옮긴다. 그들은 따뜻한 차와 달콤한 음악, 진한 맥주로 몸을 녹이지만, 한때 웅장했던 이 도시의 폐허에서 기이하고 불길한 눈동자들이 자신들을 노려보고 있다는 사실은 전혀 알지 못한다.\n\n오늘 밤, 짐승들조차 알고 있다. \n어둠을 부르는 달이 떠오른다는 것을...",
     "name": "어둠을 부르는 달",
     "id": "bad_moon_rising",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/bad_moon_rising.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/bad_moon_rising.json",
+    "pdf": "/translations/assets/pdf/ko_KR/bad_moon_rising.pdf",
+    "json": "/translations/assets/scripts/ko_KR/bad_moon_rising.json",
     "official": true,
     "logo": "bmr",
     "note": "'어둠을 부르는 달'로 번역한 이유\n\n단순히 '악한 달 혹은 불길한 달이 뜨다'는 직역보다, 시나리오가 가진 능동적인 불길함을 전달하고자 했습니다. \n'달'이 단순히 떠오르는 것이 아니라 '어둠을 부른다'는 표현을 통해, 늑대의 울음소리, 흩어지는 까마귀, 기이한 눈동자들로 이어지는 시나리오의 점진적 긴장감을 더 잘 담아낼 수 있다고 생각했습니다. \n또한 Creedence Clearwater Revival의 Bad Moon Rising이라는 동명의 곡이 가진 묵시록적 예언의 뉘앙스도 자연스럽게 녹여내고자 했습니다."
@@ -26,8 +26,8 @@
     "synopsis": "생기 넘치던 봄이 따스한 여름의 품으로 스러져간다. 공원과 거리의 창가마다 정성스레 가꾼 화원이 만발하여 시선이 닿는 곳마다 향기로운 꽃무리가 피어오른다. 새들은 노래하고, 예술가들은 그림을 그리며, 철학자들은 북적이는 술집에서 삶의 비밀을 속삭인다. 그 사이 서커스단은 도시 변두리에 낡고 정겨운 천막을 펼쳐놓았다.\n\n황금빛 술잔과 달콤한 공연에 취해 흥청거리는 동안, 어둠의 세력이 은밀히 깨어난다. 마을 외곽의 웅장한 폐허 속에서 마녀들과 이단자들은 지하 동굴에 모여들어, 레이븐우드 블러프의 몰락을 위한 의식을 준비한다. 하지만 축제의 열기에 휩싸인 이들은 자신들을 둘러싸고 있는 불길한 기운을 알지 못한 채, 화원의 환상에 취해있을 뿐.\n\n꽃잎 사이로 환란이 피어나니...",
     "name": "환란의 화원",
     "id": "sects_and_violets",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/sects_and_violets.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/sects_and_violets.json",
+    "pdf": "/translations/assets/pdf/ko_KR/sects_and_violets.pdf",
+    "json": "/translations/assets/scripts/ko_KR/sects_and_violets.json",
     "official": true,
     "logo": "snv",
     "note": "'환란의 화원'으로 번역한 이유\n\n원제 'Sects & Violets'의 다층적 의미(불길한 결사, 아름다운 꽃, Sex and Violence의 언어유희)를 반영하고자 했습니다. \n'화원'은 평화로운 표면을, '환란'은 그 이면의 혼란을 상징하며, 이 대비가 게임의 본질이라 생각했습니다. \n또한 '환란'이 주는 문학적 뉘앙스와 '화원'이 주는 포괄적 이미지를 통해 한국어의 미감도 살리고자 했습니다."
@@ -37,9 +37,9 @@
     "synopsis": "월식은 미치광이가 게임 끝까지 자신의 역할과 진영을 확신하지 못한 채 버티도록 설계되었습니다. 꼭두각시와 마술사 같은 캐릭터들은 미치광이가 누가 아군인지 헷갈리게 만들고, 늑대인간이나 시장 같은 캐릭터들은 살해 패턴이 일정하지 않은 이유를 자연스럽게 설명해줍니다.\n\n선한 참가자들은 누구를 믿을 수 있을지 알아내기 위해 수많은 직간접적인 정보와 거짓 정보를 파헤쳐야 하며, 때로는 자신의 진영조차 의심하게 됩니다. 반면 악한 참가자들은 선한 팀의 복잡한 입증 과정에 침투하기 전에 먼저 다른 악한 참가자를 찾아내야 할 수도 있습니다.\n\n핵심 캐릭터\n미치광이, 좀부울, 늑대인간\n\n전설\n상아의 영혼",
     "name": "월식",
     "id": "lunar_eclipse",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/lunar_eclipse.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/lunar_eclipse.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/lunar_eclipse.png",
+    "pdf": "/translations/assets/pdf/ko_KR/lunar_eclipse.pdf",
+    "json": "/translations/assets/scripts/ko_KR/lunar_eclipse.json",
+    "logo": "/translations/assets/images/lunar_eclipse.png",
     "note": ""
   },
   {
@@ -47,9 +47,9 @@
     "synopsis": "천년에 걸쳐 지중해를 장악해온 제국, 로마. 제국의 심장인 로마를 버린 채 북쪽에서 쇠약해져가는 황제. 한때는 세계를 호령하던 그들의 패권이 이제는 사방에서 밀려드는 반란군들 앞에서 서서히 무너져가고 있다.\n\n콘스탄티노플에서 급격히 퍼져나가는 소문들. 트라키아 출신 검투사 스파르타쿠스가 이끄는 반란. 로마 군단의 의지를 시험할 전례 없는 규모의 야만족의 침략.\n\n하지만 가장 끔찍한 것은, 로마의 과거 황제들과 적들의 원혼이 원한에 사로잡혀 있다는 것. \n오래된 예언에 따르면, 로마가 가장 위태로울 때 그들 중 하나가 부활하여 도시를 폐허로 만들 것이라 한다.\n\n불길한 징조들이 넘쳐나는 가운데, 로마의 기반이 흔들리고 있다. \n지도자가 부재한 이때, 충직한 로마의 시민인 당신들의 손에 도시의 운명이 달렸다. \n그 영혼을, 그 악마를, 그 데모니움을 찾아내라. 어떤 대가를 치르더라도.\n\n실패한다면... 로마는 멸망할 것이다.",
     "name": "로마의 몰락",
     "id": "fall_of_rome",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/fall_of_rome.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/fall_of_rome.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/fall_of_rome.png",
+    "pdf": "/translations/assets/pdf/ko_KR/fall_of_rome.pdf",
+    "json": "/translations/assets/scripts/ko_KR/fall_of_rome.json",
+    "logo": "/translations/assets/images/fall_of_rome.png",
     "note": ""
   },
   {
@@ -57,9 +57,9 @@
     "synopsis": "차갑고 음울한 카리브해의 밤바다를 표류하던 중, 기이하리만치 잔잔한 파도를 가르며 비명이 울려 퍼진다. 놀란 선원들이 '저주받은 앵무' 호의 선창에서 달려 나와 확인해보니, 배의 사령관이 살해당한 채 까마귀 전망대에 꿰뚫려 있었고, 선갑판으로는 핏방울이 뚝뚝 떨어지고 있었다. 호기심은 곧 불신으로 바뀌었다. 악마가 밤에는 살인을 저지르고 낮에는 인간의 모습을 한 채 배회하는 저주받은 항해라는 사실이 곧 분명해졌기 때문이다.\n\n선원들, 즉 '마을주민'들은 각자 정보를 가지고 있었지만, 악마와 그의 사악한 하수인들은 거짓말을 퍼뜨리며 흉악한 범인의 정체에 대한 혼란과 공포를 부추기고 있었다. 선원들은 과연 시간 안에 수수께끼의 조각들을 맞출 수 있을까? 아니면 지평선에서 다가오는 격렬한 폭풍과 함께 사악한 기운이 배를 삼켜버릴 것인가.\n\n무엇이든 일어날 수 있는 이곳, 반란의 거친 바다에서...",
     "name": "반란의 거친 바다",
     "id": "high_seas_of_mutiny",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png",
+    "pdf": "/translations/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
+    "json": "/translations/assets/scripts/ko_KR/high_seas_of_mutiny.json",
+    "logo": "/translations/assets/images/high_seas_of_mutiny.png",
     "note": ""
   },
   {
@@ -67,9 +67,9 @@
     "synopsis": "볼드모트와 그의 죽음을 먹는 자들이 호그와트에 잠입했습니다. 용감한 마법사들이 그의 음모를 밝혀낼 수 있을까요? 아니면 마법 세계에 다시 한 번 어둠이 내려앉을까요?\n",
     "name": "해리포터와 비밀의 방",
     "id": "harry_potter",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/harry_potter.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/harry_potter.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/harry_potter.png",
+    "pdf": "/translations/assets/pdf/ko_KR/harry_potter.pdf",
+    "json": "/translations/assets/scripts/ko_KR/harry_potter.json",
+    "logo": "/translations/assets/images/harry_potter.png",
     "note": ""
   },
   {
@@ -77,9 +77,9 @@
     "synopsis": "선한 진영조차도 거짓말과 눈속임이 불가피한 스크립트입니다.\n\n세레노부스, 픽시, 그리고 정체를 밝힐 수 없거나 밝히고 싶지 않은 아웃사이더들로 인해 동일 역할 주장이 빈번히 발생합니다. \n이는 거짓 주장 없이도 악의 팀에게 완벽한 위장의 기회를 제공하죠. \n심지어 거짓말이 필요 없는 선한 참가자조차 정체가 드러나면 패배를 초래할 수 있는 아가씨를 보호하기 위해 거짓말을 해야 할 수도 있습니다. \n메제펠레스가 존재할 가능성이 있어 확실해 보이는 정보조차 의심해봐야 합니다.\n\n핵심 캐릭터\n아가씨, 메제펠리스, 픽시\n\n전설\n없음",
     "name": "숨바꼭질",
     "id": "hide_n_seek",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png",
+    "pdf": "/translations/assets/pdf/ko_KR/hide_n_seek.pdf",
+    "json": "/translations/assets/scripts/ko_KR/hide_n_seek.json",
+    "logo": "/translations/assets/images/hide_n_seek.png",
     "note": ""
   },
   {
@@ -87,9 +87,9 @@
     "synopsis": "여러분의 정착된 게임 그룹에 새로운 플레이어 두 명이 나타났는데, 베테랑들은 이미 불길한 조짐에 지쳤다면? \n이는 많은 스토리텔러들이 직면하는 흔한 문제입니다.\n\n이 스크립트는 바로 그런 상황을 위해 탄생했습니다. \n베테랑 플레이어들에게는 충분히 도전적인 퍼즐을 제공하면서도, 초보자들이 압도당하지 않고 즐거운 시간을 보낼 수 있도록 세심하게 설계되었습니다.\n\n설계 원칙\n친숙함: 대부분의 캐릭터가 불길한 조짐 출신\n적절한 복잡성: 불길한 조짐과 동일한 캐릭터 비율\n점진적 학습: 야간 추가 사망과 처형 생존 등 최소한의 새로운 메커니즘 도입\n접근성: 기본 3대 스크립트의 캐릭터만 사용\n직관성: 캐릭터 시트만 읽어도 쉽게 이해할 수 있는 역할들로 구성\n\n이 스크립트는 초보자들이 시계탑에 흐른 피의 매력에 빠져들 수 있도록 하면서도, 경험이 풍부한 플레이어들이 지루해하지 않을 만큼의 전략적 깊이를 제공합니다. \n여러분의 모임에서 모든 참가자가 함께 즐길 수 있는 완벽한 징검다리 역할을 할거에요.",
     "name": "모두를 위한 밤",
     "id": "everyone_can_play",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/everyone_can_play.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/everyone_can_play.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/everyone_can_play.png",
+    "pdf": "/translations/assets/pdf/ko_KR/everyone_can_play.pdf",
+    "json": "/translations/assets/scripts/ko_KR/everyone_can_play.json",
+    "logo": "/translations/assets/images/everyone_can_play.png",
     "note": ""
   },
   {
@@ -97,9 +97,9 @@
     "synopsis": "의문사는 세 가지 컨셉을 염두에 두고 설계되었습니다. 첫째는 Trouble Brewing과 다른 기본 스크립트들 사이 어딘가에 위치하는 스크립트를 만들어보려는 시도였습니다. 광기나 다중 처형 같은 개념들을 도입하되, 가벼운 방식으로 접근했죠. 둘째는 각 역할이 원래 스크립트에서와는 다른 핵심 플레이와 상호작용을 유도해보려는 것이었습니다. 셋째는 기본 3개 스크립트의 역할들만 사용하는 것이었습니다. (많은 논의 끝에 꼭두각시가 추가되었는데, 기본 하수인들 중 네 번째 자리에 딱 맞는 역할이 없었거든요)\n\n스크립트 내 중독 효과를 제한적으로 배치한 것은 의도적인 선택이었습니다. 선량한 팀이 악마의 중독 효과를 탐지하는 것을 게임 해결의 한 가지 경로로 만들되, 외지인들의 잘못된 정보(돌연변이/미치광이의 거짓말, 은둔자의 오탐지, 연인의 만취 효과)와 악의 블러프가 선량한 팀의 승리를 막는 핵심 요소가 되도록 했습니다.\n\n핵심 캐릭터\n푸카, 노다시, 꼭두각시",
     "name": "의문사 (Uncertain Death)",
     "id": "uncertain_death",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/uncertain_death.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/uncertain_death.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/uncertain_death.png",
+    "pdf": "/translations/assets/pdf/ko_KR/uncertain_death.pdf",
+    "json": "/translations/assets/scripts/ko_KR/uncertain_death.json",
+    "logo": "/translations/assets/images/uncertain_death.png",
     "note": ""
   },
   {
@@ -107,8 +107,8 @@
     "synopsis": "이 스크립트는 'Strings Pulling'의 변형으로, 악한 참가자의 토큰을 확인하는 캐릭터들을 교체했습니다. '불길한 조짐'을 기반으로 다음과 같이 변경되었습니다.\n\n꼭두각시 추가\n장의사 대신 식인종 추가\n수사관 대신 귀족 추가\n\n이 변경은 꼭두각시의 토큰을 확인하여 악마를 즉시 위험에 빠뜨릴 수 있는 선한 캐릭터들을 제거하기 위한 것입니다.",
     "name": "익어가는 파이 (Pies Baking)",
     "id": "pies_baking",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pies_baking.json",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pies_baking.pdf",
+    "json": "/translations/assets/scripts/ko_KR/pies_baking.json",
+    "pdf": "/translations/assets/pdf/ko_KR/pies_baking.pdf",
     "note": ""
   },
   {
@@ -116,10 +116,10 @@
     "synopsis": "'극한의 즐거움'은 빠르고, 재미있고, 활기차며, 이해하기 쉬운 게임을 위해 설계된 스크립트입니다. 20분 정도의 게임을 원하거나, 여러 번의 짧은 게임을 진행하고 싶다면 이 스크립트가 제격일 것입니다.\n\n만약 여러분의 그룹이 '불길한 조짐'을 해본 적이 있다면, 대부분의 캐릭터들이 이미 익숙할 것입니다. 다른 에디션에서 가져온 몇 가지 추가 캐릭터들이 있지만, 전혀 새로운 것을 배울 필요 없이 게임의 대부분을 이해할 수 있을 것입니다.\n\n선한 팀이 받는 정보는 꽤 단순하지만, 다른 플레이어들의 정보와 결합되면 오히려 너무 강력할 수도 있습니다! 그래서 악한 팀은 최대한 빨리 나서서 허위 정보를 퍼뜨려 선한 팀을 혼란스럽게 만들어야 합니다. 악한 팀이 침묵을 지키면 예상치 못하게 패배할 수 있습니다. 하지만 설득력 있게 이야기한다면, 선한 팀의 누가 누구인지에 대한 믿음을 크게 뒤흔들 수 있는 여러 선한 캐릭터들로 위장할 수 있습니다.\n\n참고로, 일반적으로 아웃사이더 2명을 추가하는 남작(Baron)은 이 스크립트에 아웃사이더가 2명밖에 없기 때문에, 이미 아웃사이더가 1명 있는 경우 추가로 1명만 더할 수 있습니다.\n\n핵심 캐릭터\n시계공, 하녀, 진홍의 여인",
     "name": "극한의 즐거움",
     "id": "no_greater_joy",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/no_greater_joy.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/no_greater_joy.json",
+    "pdf": "/translations/assets/pdf/ko_KR/no_greater_joy.pdf",
+    "json": "/translations/assets/scripts/ko_KR/no_greater_joy.json",
     "teensyville": true,
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/no_greater_joy.png",
+    "logo": "/translations/assets/images/no_greater_joy.png",
     "note": ""
   },
   {
@@ -127,10 +127,10 @@
     "synopsis": "'자유방임불평등주의'는 속임수와 예측할 수 없는 전개로 가득한, 긴 호흡의 흥미진진한 게임입니다. \n\n일반적인 틴시빌 게임보다 훨씬 오래 걸리는 편으로, 보통 7-9인용 게임과 비슷하거나 더 길수도 있습니다. 덕분에 참가자들은 정보를 수집하고 완벽한 거짓말을 준비할 시간을 충분히 가질 수 있죠. 이런 특징을 조율하기 위해, 게임에서 얻을 수 있는 정보는 평소보다 훨씬 모호하게 설계되어 있습니다. 많은 캐릭터들이 처음엔 희미하다가 시간이 지날수록 뚜렷해지는 정보를 가지고 있거나, 가장 효과적인 타이밍에 써야 하는 능력을 지니고 있습니다. \n\n풍부한 정보로 인해 열띤 토론이 이어지는 게임이며, 게임 중후반부에는 극적인 반전도 자주 일어납니다. 미치광이가 자신의 정체를 깨닫거나 기구조종사, 자폐증 천재, 기억상실자가 4-5일차에 퍼즐을 완성하는 식이죠. \n\n이는 추리가 핵심인 게임을 마지막 날 손에 땀을 쥐게 하는 결말로 이끕니다. 스토리텔러의 높은 수준의 창의력이 필요한 만큼, 매 게임마다 완전히 다른 이야기가 펼쳐집니다.\n\n핵심 캐릭터\n리바이어던, 과부, 미치광이",
     "name": "자유방임불평등주의",
     "id": "laissez_un_faire",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/laissez_un_faire.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/laissez_un_faire.json",
+    "pdf": "/translations/assets/pdf/ko_KR/laissez_un_faire.pdf",
+    "json": "/translations/assets/scripts/ko_KR/laissez_un_faire.json",
     "teensyville": true,
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/laissez_un_faire.png",
+    "logo": "/translations/assets/images/laissez_un_faire.png",
     "note": ""
   },
   {
@@ -138,10 +138,10 @@
     "synopsis": "할머니를 중심으로 한 기본 3대 스크립트 기반의 틴시빌 스크립트로 오등록이 중요한 역할을 합니다. \n\n처단자가 은둔자를 처치하거나, 교수가 스파이를 부활시키는 상황을 두려워 마세요!\n\n핵심 캐릭터\n할머니, 스파이, 은둔자",
     "name": "할머니댁으로",
     "id": "over_the_river",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/over_the_river.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/over_the_river.json",
+    "pdf": "/translations/assets/pdf/ko_KR/over_the_river.pdf",
+    "json": "/translations/assets/scripts/ko_KR/over_the_river.json",
     "teensyville": true,
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/over_the_river.png",
+    "logo": "/translations/assets/images/over_the_river.png",
     "note": ""
   },
   {
@@ -149,10 +149,10 @@
     "synopsis": "모임 장소가 문 닫을 시간에 임박했을 때 많은 인원으로 이뤄진 '트러블 브루잉'을 예언자(Doom Sayer)를 추가해서 쏜살같이 진행하는 게 정말 좋아요. 연달아 터지는 반전, 순간의 판단, 그리고 폭소가 넘치죠.\n\n'속전속결'은 바로 그 느낌을 작은 규모로 재현한 게임입니다. 전설 역할 중 예언자와 수호자(Sentinel)를 넣고, 장난감 제작자(Toy Maker)는 빼고 플레이하세요. 대부분 첫날에 게임이 끝나버립니다. 짧고 강렬하면서도 즐거운 시간, 갑작스러운 죽음과 대담한 움직임, 그리고 더 크고 웃긴 실수들로 가득 찬 세션이죠. 리바이어던 게임과는 완전히 반대되는 콘셉트입니다.\n\n선과 악을 가리지 않고 모든 플레이어는 누가 언제 예언자 능력을 쓰는지, 그리고 살인자와 희생자가 어떤 역할을 주장하는지 주의 깊게 살펴봐야 합니다.\n\n'속전속결'은 빠른 게임을 연속으로 즐기기에 딱이며, 플레이어들이 위험한 플레이와 즉흥적인 결정을 마음껏 할 수 있는 자유를 줍니다.\n\n예언자와 함께 짜릿한 게임을 즐겨보세요!\n\n핵심 캐릭터\n볼톡스, 궁정귀족, 미치광이\n\n전설\n예언자, 수호자",
     "name": "속전속결",
     "id": "race_to_the_bottom",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/race_to_the_bottom.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/race_to_the_bottom.json",
+    "pdf": "/translations/assets/pdf/ko_KR/race_to_the_bottom.pdf",
+    "json": "/translations/assets/scripts/ko_KR/race_to_the_bottom.json",
     "teensyville": true,
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/race_to_the_bottom.png",
+    "logo": "/translations/assets/images/race_to_the_bottom.png",
     "note": ""
   },
   {
@@ -160,9 +160,9 @@
     "synopsis": "",
     "name": "Catfishing",
     "id": "catfishing",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/catfishing.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/catfishing.json",
-    "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/bad_moon_rising_bg.webp",
+    "pdf": "/translations/assets/pdf/ko_KR/catfishing.pdf",
+    "json": "/translations/assets/scripts/ko_KR/catfishing.json",
+    "background": "/translations/assets/images/bad_moon_rising_bg.webp",
     "note": ""
   },
   {
@@ -170,8 +170,8 @@
     "synopsis": "Pies Baking의 추가 변형 스크립트입니다. \n집사 대신 오우거를 추가했습니다. \n그리고 픽시를 추가했습니다. \n스크립트에 마을 주민을 추가로 넣는 것은 스토리텔러에게 더 많은 선택권을 주는 데 도움이 됩니다. 꼭두각시와 주정뱅이가 포함될 경우 마을 주민 캐릭터를 두 명 더 추가해야 하는데요, 인원이 많은 게임에서는 마을주민이 부족할 수 있기 때문입니다.",
     "name": "Onion Pies",
     "id": "onion_pies",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/onion_pies.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/onion_pies.json",
+    "pdf": "/translations/assets/pdf/ko_KR/onion_pies.pdf",
+    "json": "/translations/assets/scripts/ko_KR/onion_pies.json",
     "note": ""
   }
 ]

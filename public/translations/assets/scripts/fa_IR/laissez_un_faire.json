@@ -1,0 +1,189 @@
+[
+  {
+    "ability": "شما قابلیت خود را نمی‌دانید. هر روز، خصوصی آن را حدس بزنید. شما می‌فهمید چه‌قدر نزدیک هستید.",
+    "edition": "",
+    "firstNight": 12,
+    "firstNightReminder": "قابلیت فراموشگر را انتخاب کنید. اگر قابلیت او باعث می‌شود که امشب بیدار شود، او را بیدار کنید و قابلیتش رو اجرا کنید.",
+    "id": "fa_IR_amnesiac",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/amnesiac.png?raw=true",
+    "name": "فراموشگر",
+    "otherNight": 5,
+    "otherNightReminder": "گر قابلیت او باعث می‌شود که امشب بیدار شود، او را بیدار کنید و قابلیتش رو اجرا کنید.",
+    "reminders": [
+      "؟"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "یکبار در بازی، از قصه‌گو به صورت خصوصی یک سوال بله/خیر بپرسید.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "fa_IR_artist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/artist.png?raw=true",
+    "name": "هنرمند",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "بدون قابلیت"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "هر شب، یک بازیکن از هر نوع شخصیت به شما معرفی می‌شود تا نوعی باقی نماند. [+۱ بیگانه]",
+    "edition": "",
+    "firstNight": 44,
+    "firstNightReminder": "Choose a character type. Point to a player whose character is of that type. Place the Balloonist's Seen reminder next to that character.",
+    "id": "fa_IR_balloonist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/balloonist.png?raw=true",
+    "name": "بالن‌سوار",
+    "otherNight": 63,
+    "otherNightReminder": "Choose a character type that does not yet have a Seen reminder next to a character of that type. Point to a player whose character is of that type, if there are any. Place the Balloonist's Seen reminder next to that character.",
+    "reminders": [
+      "خارجی دیده‌شده",
+      "شهروند دیده‌شده",
+      "شیطان دیده‌شده",
+      "مرید دیده‌شده",
+      "مسافر دیده‌شده"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "شما قابلیت فرد تازه اعدام شده را دارید. اگر او شر باشد، شما تا وقتی بازیکن خیری اعدام شود مسموم هستید.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "fa_IR_cannibal",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/cannibal.png?raw=true",
+    "name": "آدمخوار",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "امروز مرد",
+      "مسموم"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "یکبار در بازی، در طول روز، پیش قصه‌گو بروید تا توصیه‌ای برای بردن بازی به شما داده شود.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "fa_IR_fisherman",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fisherman.png?raw=true",
+    "name": "ماهیگیر",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "بدون قابلیت"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "اگر در هنگام کاندیدا شدن به صورت عمومی ادعای گابلین بود بکنید و اعدام شوید، تیم شما برنده می‌شود.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "fa_IR_goblin",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/goblin.png?raw=true",
+    "name": "گابلین",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "مدعی"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "اگر بیشتر از ۱ بازیکن خیر اعدام شود، شما برنده می‌شوید. همه بازیکنان می‌دانند شما در بازی هستید. بعد از ۵ روز تیم شر برنده می‌شود.",
+    "edition": "",
+    "firstNight": 53,
+    "firstNightReminder": "Place the Leviathan 'Day 1' marker. Announce 'The Leviathan is in play; this is Day 1.'",
+    "id": "fa_IR_leviathan",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/leviathan.png?raw=true",
+    "name": "لِویاتان",
+    "otherNight": 73,
+    "otherNightReminder": "Change the Leviathan Day reminder for the next day.",
+    "reminders": [
+      "بازیکن خیر اعدام شد",
+      "روز ۱",
+      "روز ۲",
+      "روز ۳",
+      "روز ۴",
+      "روز ۵"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "شما فکر می‌کنید شیطان هستید، ولی نیستید. شیطان می‌داند شما چه‌کسی هستید و هرشب چه‌کسی را انتخاب می‌کنید.",
+    "edition": "bmr",
+    "firstNight": 7,
+    "firstNightReminder": "If 7 or more players: Show the Lunatic a number of arbitrary 'Minions', players equal to the number of Minions in play. Show 3 character tokens of arbitrary good characters. If the token received by the Lunatic is a Demon that would wake tonight: Allow the Lunatic to do the Demon actions. Place their 'attack' markers. Wake the Demon. Show the Demon’s real character token. Show them the Lunatic player. If the Lunatic attacked players: Show the real demon each marked player. Remove any Lunatic 'attack' markers.",
+    "id": "fa_IR_lunatic",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lunatic.png?raw=true",
+    "name": "مجنون",
+    "otherNight": 21,
+    "otherNightReminder": "Allow the Lunatic to do the actions of the Demon. Place their 'attack' markers. If the Lunatic selected players: Wake the Demon. Show the 'attack' marker, then point to each marked player. Remove any Lunatic 'attack' markers.",
+    "reminders": [
+      "Attack 1",
+      "Attack 2",
+      "Attack 3"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "If you are “mad” about being an Outsider, you might be executed.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "fa_IR_mutant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/mutant.png?raw=true",
+    "name": "جهش‌یافته",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "هر روز، شما می‌توانید به صورت خصوصی از قصه‌گو دو مطلب بیاموزید: ۱ حقیقت و ۱ دروغ.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "fa_IR_savant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/savant.png?raw=true",
+    "name": "عالم",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "در شب اولتان، کتاب جادو را نگاه کنید و یک بازیکن را انتخاب کنید: او مسموم می‌شود. ۱ بازیکن خیر می‌داند که بیوه در بازی است.",
+    "edition": "",
+    "firstNight": 18,
+    "firstNightReminder": "Show the Grimoire to the Widow for as long as they need. The Widow points to a player. That player is poisoned. Wake a good player. Show the 'These characters are in play' card, then the Widow character token.",
+    "id": "fa_IR_widow",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/widow.png?raw=true",
+    "name": "بیوه",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "مسموم"
+    ],
+    "remindersGlobal": [
+      "Knows"
+    ],
+    "setup": false,
+    "team": "minion"
+  }
+]

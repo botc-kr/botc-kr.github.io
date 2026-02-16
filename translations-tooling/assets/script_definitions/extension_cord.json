@@ -1,0 +1,35 @@
+{
+    "meta":
+    {
+        "name": "Extension Cord",
+        "author": "Viva La Sam",
+        "isOfficial": false
+    },
+    "roles":
+    [
+        "investigator",
+        "pixie",
+        "empath",
+        "dreamer",
+        "mathematician",
+        "oracle",
+        "monk",
+        "artist",
+        "fisherman",
+        "huntsman",
+        "soldier",
+        "ravenkeeper",
+        "cannibal",
+        "puzzlemaster",
+        "recluse",
+        "mutant",
+        "damsel",
+        "barber",
+        "poisoner",
+        "spy",
+        "scarletwoman",
+        "boomdandy",
+        "marionette",
+        "nodashii"
+    ]
+}

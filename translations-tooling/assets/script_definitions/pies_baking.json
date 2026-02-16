@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "name": "익어가는 파이 (Pies Baking)",
+    "author": "Ryback"
+  },
+  "roles": [
+    "noble",
+    "chef",
+    "washerwoman",
+    "librarian",
+    "empath",
+    "fortuneteller",
+    "monk",
+    "slayer",
+    "soldier",
+    "ravenkeeper",
+    "virgin",
+    "mayor",
+    "cannibal",
+    "butler",
+    "saint",
+    "recluse",
+    "drunk",
+    "poisoner",
+    "spy",
+    "baron",
+    "scarletwoman",
+    "marionette",
+    "imp"
+  ]
+}

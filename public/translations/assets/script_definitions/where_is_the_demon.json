@@ -1,0 +1,36 @@
+{
+    "meta":
+    {
+        "name": "Where is the demon?",
+        "author": "Kkull",
+        "isOfficial": false
+    },
+    "roles":
+    [
+        "clockmaker",
+        "noble",
+        "courtier",
+        "artist",
+        "philosopher",
+        "chambermaid",
+        "preacher",
+        "villageidiot",
+        "fortuneteller",
+        "virgin",
+        "minstrel",
+        "magician",
+        "cannibal",
+        "drunk",
+        "recluse",
+        "golem",
+        "goon",
+        "boomdandy",
+        "marionette",
+        "pithag",
+        "witch",
+        "kazali",
+        "lordoftyphon",
+        "ojo",
+        "fanggu"
+    ]
+}

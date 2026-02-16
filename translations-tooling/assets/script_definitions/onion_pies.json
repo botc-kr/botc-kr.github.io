@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "name": "Onion Pies",
+    "author": "Ryback",
+    "isOfficial": false
+  },
+  "roles": [
+    "chef",
+    "noble",
+    "washerwoman",
+    "librarian",
+    "pixie",
+    "empath",
+    "fortuneteller",
+    "monk",
+    "slayer",
+    "soldier",
+    "cannibal",
+    "ravenkeeper",
+    "mayor",
+    "virgin",
+    "ogre",
+    "drunk",
+    "recluse",
+    "saint",
+    "poisoner",
+    "spy",
+    "marionette",
+    "scarletwoman",
+    "baron",
+    "imp"
+  ]
+}

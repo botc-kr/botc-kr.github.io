@@ -1,0 +1,41 @@
+{
+    "meta":
+    {
+        "name": "어둠을 부르는 달 (Bad Moon Rising)",
+        "author": "steven medway",
+        "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/bad_moon_rising_bg.webp"
+    },
+    "roles":
+    [
+        "grandmother",
+        "sailor",
+        "chambermaid",
+        "exorcist",
+        "innkeeper",
+        "gambler",
+        "gossip",
+        "courtier",
+        "professor",
+        "minstrel",
+        "tealady",
+        "pacifist",
+        "fool",
+        "goon",
+        "lunatic",
+        "tinker",
+        "moonchild",
+        "godfather",
+        "devilsadvocate",
+        "assassin",
+        "mastermind",
+        "pukka",
+        "shabaloth",
+        "po",
+        "apprentice",
+        "bishop",
+        "judge",
+        "matron",
+        "voudon",
+        "zombuul"
+    ]
+}

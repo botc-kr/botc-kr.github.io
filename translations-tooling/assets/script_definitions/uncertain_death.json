@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "name": "Uncertain Death",
+    "author": "Matt",
+    "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/trouble_brewing_bg.webp"
+  },
+  "roles": [
+    "clockmaker",
+    "grandmother",
+    "librarian",
+    "empath",
+    "fortuneteller",
+    "exorcist",
+    "flowergirl",
+    "oracle",
+    "undertaker",
+    "artist",
+    "slayer",
+    "seamstress",
+    "monk",
+    "lunatic",
+    "mutant",
+    "sweetheart",
+    "recluse",
+    "godfather",
+    "assassin",
+    "scarletwoman",
+    "marionette",
+    "nodashii",
+    "pukka"
+  ]
+}

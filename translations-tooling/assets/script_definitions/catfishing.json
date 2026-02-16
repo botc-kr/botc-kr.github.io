@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "name": "Catfishing",
+    "author": "Emily",
+    "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/bad_moon_rising_bg.webp"
+  },
+  "roles": [
+    "chef",
+    "investigator",
+    "grandmother",
+    "balloonist",
+    "snakecharmer",
+    "dreamer",
+    "fortuneteller",
+    "gambler",
+    "savant",
+    "philosopher",
+    "cannibal",
+    "amnesiac",
+    "ravenkeeper",
+    "lunatic",
+    "drunk",
+    "recluse",
+    "sweetheart",
+    "mutant",
+    "godfather",
+    "cerenovus",
+    "pithag",
+    "widow",
+    "imp",
+    "vigormortis",
+    "fanggu",
+    "barista",
+    "harlot",
+    "bonecollector",
+    "apprentice",
+    "beggar"
+  ]
+}

@@ -1,0 +1,284 @@
+[
+  {
+    "id": "_meta",
+    "name": "중국 등불 축제",
+    "logo": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/almanac.html"
+  },
+  {
+    "id": "_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "첫날 밤, 2개의 선한 캐릭터, 2개의 사악한 캐릭터를 알게됩니다. 4개 중 2개의 캐릭터는 게임에서 참여중입니다.",
+    "name": "음양사",
+    "team": "townsfolk",
+    "ability": "첫날 밤, 2개의 선한 캐릭터, 2개의 사악한 캐릭터를 알게됩니다. 4개 중 2개의 캐릭터는 게임에서 참여중입니다.",
+    "firstNight": 23
+  },
+  {
+    "id": "1_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/1_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "가게주인에게 2명의 선한 참가자를 알려주고 1명은 만취 토큰을 놓으세요. :reminder: :reminder:",
+    "reminders": ["만취", "고객"],
+    "name": "가게 주인",
+    "team": "townsfolk",
+    "ability": "첫날 밤, 2명의 선한 참가자를 알고 시작 합니다. 그들 중 1명은 '만취'합니다. 가게주인이 죽어도 '만취'는 지속됩니다.",
+    "firstNight": 18
+  },
+  {
+    "id": "2_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/2_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "왼쪽과 오른쪽을 알려주세요. 같다면 정보는 임의로 제공합니다, 사악한 참가자가 이웃이라면 잘못된 정보를 알려줍니다.",
+    "name": "천문학자",
+    "team": "townsfolk",
+    "ability": "첫날 밤, 가장 가까운 사악한 참가자의 방향을 알게 됩니다.(가까운 거리가 같다면, 임의) 사악한 참가자가 이웃이라면 잘못된 정보를 알게 됩니다.",
+    "firstNight": 19
+  },
+  {
+    "id": "3_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/3_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "매일 밤, 참가자를 선택합니다. 참가자에 대한 연관된 단어를 알게 됩니다.",
+    "otherNightReminder": "매일 밤, 참가자를 선택합니다. 참가자에 대한 연관된 단어를 알게 됩니다.",
+    "name": "의사",
+    "team": "townsfolk",
+    "ability": "매일 밤, 참가자를 선택합니다. 참가자에 대한 연관된 단어를 알게 됩니다.",
+    "firstNight": 20,
+    "otherNight": 16
+  },
+  {
+    "id": "24_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/24_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "매일 밤, 플레이 중인 캐릭터를 알게 됩니다. 게임 중 한번, 악마의 블러프 중 하나를 배우게 됩니다.",
+    "otherNightReminder": "매일 밤, 플레이 중인 캐릭터를 알게 됩니다. 게임 중 한번, 악마의 블러프 중 하나를 배우게 됩니다.",
+    "reminders": ["능력 사용함"],
+    "name": "사자 춤꾼",
+    "team": "townsfolk",
+    "ability": "매일 밤, 플레이 중인 캐릭터를 알게 됩니다. 게임 중 한번, 악마의 블러프 중 하나를 배웁니다.",
+    "firstNight": 21,
+    "otherNight": 17
+  },
+  {
+    "id": "4_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/4_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "비밀 경찰이 참가자를 고르게 해주세요. 고른 참가자가 다음날 황혼 전에 '사망'한다면 대신 죽습니다. :reminder:",
+    "reminders": ["보호"],
+    "name": "비밀 경찰",
+    "team": "townsfolk",
+    "ability": "매일밤(첫날 제외) 참가자를 선택하세요. 해당 참가자가 다음날 황혼 전에 '사망'한다면, 대신 '사망'합니다.",
+    "otherNight": 7
+  },
+  {
+    "id": "5_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/5_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "게임당 한 번, 밤에 참가자를 선택합니다. 현재 해당 참가자에게 적용된 모든 토큰을 알게 됩니다. :reminder:",
+    "otherNightReminder": "게임당 한 번, 밤에 참가자를 선택합니다. 현재 해당 참가자에게 적용된 모든 토큰을 알게 됩니다. :reminder:",
+    "reminders": ["능력없음"],
+    "name": "보부상",
+    "team": "townsfolk",
+    "ability": "게임 중 한 번, 밤에 참가자를 선택합니다. 현재 해당 참가자에게 적용된 모든 토큰을 알게 됩니다.",
+    "firstNight": 22,
+    "otherNight": 18
+  },
+  {
+    "id": "6_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/6_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "2명 고르게 하세요. :reminder: :reminder: 누가 더 악마에 가까운지 알려주세요",
+    "reminders": ["능력 없음"],
+    "name": "풍수지리사",
+    "team": "townsfolk",
+    "ability": "게임 중 한 번, 밤(첫날 제외)에 2명의 참가자(본인 제외)를 선택하세요: 둘 중 누가 악마에 더 가까운 자리인지 알게 됩니다. 두 참가자의 성향이 다르다면, 다른 정보를 알게 됩니다.",
+    "otherNight": 14
+  },
+  {
+    "id": "7_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/7_kor_chinese_lantern_festival.png",
+    "name": "변검 배우",
+    "team": "townsfolk",
+    "ability": "매일 낮, 선한 캐릭터로 '광기'하면 내일 황혼까지 그 캐릭터의 능력을 얻게 됩니다."
+  },
+  {
+    "id": "8_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/8_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "악마가 가수의 공연을 봤다면, 가수를 사망시킵니다.",
+    "reminders": ["공연봄", "사망", "능력 없음"],
+    "name": "가수",
+    "team": "townsfolk",
+    "ability": "게임 중 한번, 낮에 공연을 개최합니다. 공연을 볼 참가자들은 손을 들고, 손을 든 참가자 중 1명을 가수가 정합니다. 악마라면, 오늘 밤, 가수는 '사망'합니다.",
+    "otherNight": 13
+  },
+  {
+    "id": "9_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/9_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "판사가 지명한 참가자에게 오늘 지명됨 토큰을 놓으세요. 해당 참가자의 유형을 알려줍니다. :reminder: :reminder:",
+    "reminders": ["오늘 지명 됨"],
+    "name": "판사",
+    "team": "townsfolk",
+    "ability": "참가자를 처음 지명하면, 오늘 밤, 참가자의 캐릭터 유형을 알게 됩니다. 외지인은 하수인 또는 악마로 보여 질 수 있습니다.",
+    "otherNight": 15
+  },
+  {
+    "id": "10_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/10_kor_chinese_lantern_festival.png",
+    "remindersGlobal": ["깨달은 자"],
+    "setup": true,
+    "name": "깨달은 자",
+    "team": "townsfolk",
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-disabled"
+      },
+      {
+        "type": "reveal",
+        "name": "replace-character"
+      }
+    ],
+    "ability": "당신은 자신이 외지인이라고 생각하지만 아닙니다. 사악한 참가자의 능력이 영향을 미치면 참가중이지 않은 마을주민이 됩니다."
+  },
+  {
+    "id": "11_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/11_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "배우를 모두 깨워서 서로 알게 해주세요.",
+    "setup": true,
+    "name": "배우",
+    "team": "townsfolk",
+    "ability": "모든 배우들은 서로를 알고 시작합니다. 승리가 반전 됩니다. [모든 선한 참가자는 배우입니다.]",
+    "firstNight": 11,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  {
+    "id": "12_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/12_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "참가자를 고르게 하세요. :reminder:",
+    "otherNightReminder": "선택된 참가자와 반역자 중 처형이 발생하면, 다른 사람을 깨워 사악한 참가자가 되었음을 알려주세요",
+    "reminders": ["반역자", "사악해짐"],
+    "name": "반역자",
+    "team": "outsider",
+    "ability": "첫날 밤, 참가자를 선택합니다. 해당 참가자가 먼저 처형 당하면, 반역자는 사악한 팀이 됩니다. 당신이 먼저 '처형'당하면, 선택된 참가자는 사악한 팀이 됩니다.",
+    "firstNight": 12,
+    "otherNight": 3
+  },
+  {
+    "id": "13_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/13_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "매일 밤, 2명의 좋은 캐릭터를 고르세요. 그들은 잘못 된 정보를 받습니다. :reminder: :reminder:",
+    "otherNightReminder": "매일 밤, 2명의 좋은 캐릭터를 고르세요. 그들은 잘못 된 정보를 받습니다. :reminder: :reminder:",
+    "reminders": ["장난꾸러기"],
+    "name": "장난 꾸러기",
+    "team": "outsider",
+    "ability": "매일 밤, 2명의 좋은 캐릭터를 고르세요. 그들은 잘못 된 정보를 받습니다.",
+    "firstNight": 13,
+    "otherNight": 4
+  },
+  {
+    "id": "14_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/14_kor_chinese_lantern_festival.png",
+    "reminders": ["만취"],
+    "name": "술집 점원",
+    "team": "outsider",
+    "ability": "당신의 이웃 중 선한 참가자 1명은 '만취'합니다. 당신이 죽더라도 유지됩니다."
+  },
+  {
+    "id": "15_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/15_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "악마에게 학자 토큰을 보여주세요.",
+    "otherNightReminder": "맞춘다면, 추가적인 '사망'을 진행하세요.",
+    "reminders": ["추측 했음", "추가킬"],
+    "name": "학자",
+    "team": "outsider",
+    "ability": "악마는 학자의 존재를 알고 있습니다.게임 중 한 번, 악마는 이야기꾼을 찾아가 학자가 누구인지 추측 할 수 있습니다. 맞다면 오늘 밤, 악마는 밤에 참가자를 선택해 '사망'시킵니다.",
+    "firstNight": 14,
+    "otherNight": 2
+  },
+  {
+    "id": "17_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/17_kor_chinese_lantern_festival.png",
+    "reminders": ["능력 없음"],
+    "name": "사법관",
+    "team": "minion",
+    "ability": "첫날 밤, 비밀 단어 하나를 배웁니다. 사악한 참가자가 해당 비밀 단어를 말한다면, 밤이 됩니다."
+  },
+  {
+    "id": "16_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/16_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "매일 밤, 방향을 선택하세요. 해당 방향에 살아있는 선한 참가자는 '중독'되고 하수인으로 보여 질 수 있습니다. 그들의 캐릭터를 알게 됩니다.",
+    "otherNightReminder": "매일 밤, 방향을 선택하세요. 해당 방향에 살아있는 선한 참가자는 '중독'되고 하수인으로 보여 질 수 있습니다. 그들의 캐릭터를 알게 됩니다.",
+    "reminders": ["'중독'"],
+    "name": "중독수리",
+    "team": "minion",
+    "ability": "매일 밤, 방향을 선택하세요. 해당 방향에 살아있는 선한 참가자는 '중독'되고 하수인으로 보여 질 수 있습니다. 그들의 캐릭터를 알게 됩니다.",
+    "firstNight": 15,
+    "otherNight": 5
+  },
+  {
+    "id": "18_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/18_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "캐릭터를 선택하고, 원하는 정보를 말합니다 :reminder:",
+    "otherNightReminder": "캐릭터를 선택하고, 원하는 정보를 말합니다 :reminder:",
+    "reminders": ["중독"],
+    "setup": true,
+    "name": "양조사",
+    "team": "minion",
+    "ability": "매일밤, 캐릭터를 선택하고, 원하는 정보를 말합니다. 해당 캐릭터가 정보를 받게 된다면, 양조사가 설정한 정보를 알게 됩니다. [-1 외지인]",
+    "firstNight": 16,
+    "otherNight": 6
+  },
+  {
+    "id": "19_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/19_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "지명한 참가자에게 지명함 토큰을 올리고, 사망 시키세요",
+    "reminders": ["지명함", "사망"],
+    "name": "충술사",
+    "team": "minion",
+    "ability": "당신을 첫번째로 지명한 참가자는 오늘밤, 사망합니다. 당신이 '사망'하더라도 발동합니다.",
+    "otherNight": 12
+  },
+  {
+    "id": "20_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/20_kor_chinese_lantern_festival.png",
+    "firstNightReminder": "3명 고르게 하세요. 처형자가 나왔다면 나머지 둘을 처형 시켜야합니다. :reminder: :reminder: :reminder:",
+    "otherNightReminder": "3명 고르게 하세요. 처형자가 나왔다면 나머지 둘을 처형 시켜야합니다. 아니라면, 마지막으로 선택한 사람을 처형시킵니다. :reminder: :reminder: :reminder:",
+    "reminders": ["감시", "감시", "감시", "사망", "사망", "사망"],
+    "name": "감시자",
+    "team": "demon",
+    "ability": "매일 밤, 3명의 참가자를 선택합니다. 3명의 참가자 중 1명이 처형당하면, 오늘 밤, 남은 2명도 사망합니다. 그렇지 않다면, 3명 중 마지막으로 선택 된 1명이 오늘 밤, '사망'합니다.",
+    "firstNight": 17,
+    "otherNight": 11
+  },
+  {
+    "id": "21_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/21_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "사망 시 하수인 능력이 있는지 체크하세요. 있다면, 무력화 시키고 죽지 않습니다.",
+    "reminders": ["하수인 능력"],
+    "setup": true,
+    "name": "타오 우",
+    "team": "demon",
+    "ability": "매일 밤(첫날 제외) 선택한 참가자를 '사망'시킵니다. 당신이 '사망'해야할 때, 살아있는 하수인의 능력이 있다면, 능력이 무력화되고, 당신은 '사망' 하지 않습니다. 악마 블러프 및 하수인을 알지 못합니다.",
+    "otherNight": 10
+  },
+  {
+    "id": "22_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/22_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "선택한 참가자를 사망시키고, 능력의 대상을 본인으로 한정합니다. :reminder:",
+    "reminders": ["사망"],
+    "setup": true,
+    "name": "몽식 맥",
+    "team": "demon",
+    "ability": "매일 밤(첫날 제외) 선택한 참가자를  '사망'시킵니다. 밤에 누군가를 선택하는 선한 참가자들의 능력은 모두 자기 자신을 선택한 결과를 알려줍니다.[-1 외지인]",
+    "otherNight": 8
+  },
+  {
+    "id": "23_kor_chinese_lantern_festival",
+    "image": "https://www.bloodstar.xyz/p/starocean19/KOR_Chinese_Lantern_Festival/23_kor_chinese_lantern_festival.png",
+    "otherNightReminder": "낮에 외지인이 처형당하면, 사망 시킨걸로 보이게 하세요.",
+    "reminders": ["사망", "사망(살아있음)"],
+    "name": "곤기",
+    "team": "demon",
+    "ability": "매일밤(첫날 제외) 선택한 참가자를 '사망'시킵니다. 낮에 외지인이 처형 당하면, 오늘 밤, 선택한 참가자를 '사망'시키지만, 살아있는것처럼 보이게 합니다.[ +1 외지인]",
+    "otherNight": 9
+  }
+]

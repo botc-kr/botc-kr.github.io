@@ -1,0 +1,448 @@
+[
+  {
+    "author": "Castle Q",
+    "id": "_meta",
+    "isOfficial": false,
+    "name": "포켓몬스터: 위대한 1세대"
+  },
+  {
+    "ability": "첫날밤, 본인 외 원하는 참가자를 선택합니다. \n\r\n사회자는 해당 참가자에게 엔젤링을 줄 수 있습니다.\n\r\n정확히 세번째 밤에 라이츄로 진화합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "피카츄가 선택한 참가자에게 '엔젤링' 리마인더를 놓습니다.",
+    "flavor": "",
+    "id": "ko_KR_pikachu",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_pikachu.png?raw=true",
+    "name": "피카츄",
+    "otherNightReminder": "",
+    "reminders": [
+      "엔젤링"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "2명의 참가자 중 이상해씨를 알고 시작합니다.\n\r\n정확히 세번째 밤에 리자몽으로 진화합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "이상해씨 토큰을 보여주고 두 명의 참가자를 가리킵니다. 둘 중 한명은 이상해씨여야 합니다.",
+    "flavor": "",
+    "id": "ko_KR_charmander",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_charmander.png?raw=true",
+    "name": "파이리",
+    "otherNightReminder": "",
+    "reminders": [
+      "이상해씨",
+      "틀림"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "2명의 참가자 중 파이리를 알고 시작합니다.\n\r\n정확히 세번째 밤에 거북왕으로 진화합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "파이리 토큰을 보여주고 두 명의 참가자를 가리킵니다. 둘 중 한명은 파이리여야 합니다.",
+    "flavor": "",
+    "id": "ko_KR_squirtle",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_squirtle.png?raw=true",
+    "name": "꼬부기",
+    "otherNightReminder": "",
+    "reminders": [
+      "파이리",
+      "틀림"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "2명의 참가자 중 꼬부기를 알고 시작합니다.\n\r\n정확히 세번째 밤에 이상해꽃으로 진화합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "꼬부기 토큰을 보여주고 두 명의 참가자를 가리킵니다. 둘 중 한명은 꼬부기여야 합니다.",
+    "flavor": "",
+    "id": "ko_KR_bulbasaur",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_bulbasaur.png?raw=true",
+    "name": "이상해씨",
+    "otherNightReminder": "",
+    "reminders": [
+      "꼬부기",
+      "틀림"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "악마에게 공격받으면 이를 다른 참가자에게 튕겨낼 수도 있으며, 동시에 그날 밤 딱충이로 진화합니다. [-1 딱충이]",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_weedle",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_weedle.png?raw=true",
+    "name": "뿔충이",
+    "otherNightReminder": "악마에게 공격받으면 다른 참가자를 사망처리합니다. 이후 '딱충이'로 토큰을 변경하고 깨워서 알려줍니다.",
+    "reminders": "",
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "첫날밤, 참가중이지 않은 포켓몬 3개를 알게 됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "참가중이지 않은 포켓몬 3개를 알려줍니다.",
+    "flavor": "",
+    "id": "ko_KR_zubat",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_zubat.png?raw=true",
+    "name": "주뱃",
+    "otherNightReminder": "",
+    "reminders": "",
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임 중 1번, 낮에 참가자를 1명 선택해 10만볼트를 갈깁니다.\n\r\n선택한 참가자가(가) 하수인이라면 효과는 굉장했다!! 해당 참가자는 처형되고 자연으로 돌아갑니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_raichu",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_raichu.png?raw=true",
+    "name": "라이츄",
+    "otherNightReminder": "",
+    "reminders": [
+      "능력 없음"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤*, 어제와 다른 참가자를 1명 선택해 불대문자를 갈깁니다.\n\r\n악마가 선택되면 효과는 뛰어났다!! 그날 밤 악마는 활동하지 않지만, 리자몽이 누군지 알게 됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_charizard",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_charizard.png?raw=true",
+    "name": "리자몽",
+    "otherNightReminder": "어제와 다른 참가자 1명을 선택합니다. 악마를 지명했다면 악마를 깨워 리자몽이 누군지 알려줍니다. 악마는 오늘 밤 활동하지 않습니다.",
+    "reminders": [
+      "불대문자"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤, 숫자를 선택합니다. 그 거리만큼 떨어진 참가자 2명에게 물대포를 갈깁니다. 그 참가자들은 낮까지 중독, 취함이 씻깁니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "거북왕이 선택한 숫자만큼 떨어진 참가자 2명에게 '물대포' 리마인더를 놓습니다.",
+    "flavor": "",
+    "id": "ko_KR_blastoise",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_blastoise.png?raw=true",
+    "name": "거북왕",
+    "otherNightReminder": "거북왕이 선택한 숫자만큼 떨어진 참가자 2명에게 '물대포' 리마인더를 놓습니다.",
+    "reminders": [
+      "물대포",
+      "물대포"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤, 당신의 살아있는 이웃 중 악팀이 몇 명인지 알게 됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "이상해꽃의 살아있는 이웃 중 악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
+    "flavor": "",
+    "id": "ko_KR_venusaur",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_venusaur.png?raw=true",
+    "name": "이상해꽃",
+    "otherNightReminder": "이상해꽃의 살아있는 이웃 중 악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
+    "reminders": "",
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤, 공중날기를 할 수 있습니다. 공중날기를 하면 밤 동안 피죤을 대상으로 한 모든 능력을 피합니다. 공중날기를 한 다음날은 반드시 쉬어야 합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "휴식' 리마인더가 없다면 '공중날기' 사용 여부를 확인합니다. 사용한다면 '공중날기' 리마인더를 놓습니다. 밤이 끝나면 '휴식' 리마인더로 변경합니다.",
+    "flavor": "",
+    "id": "ko_KR_pidgeotto",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_pidgeotto.png?raw=true",
+    "name": "피죤",
+    "otherNightReminder": "피죤에게 '휴식' 리마인더가 있다면 제거 후 아무것도 하지 않습니다. '휴식' 리마인더가 없다면 '공중날기' 사용 여부를 확인합니다. 사용한다면 '공중날기' 리마인더를 놓습니다. 밤이 끝날 때 '휴식' 리마인더로 변경합니다.",
+    "reminders": [
+      "공중날기",
+      "휴식"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "자신의 능력이 무엇인지 모릅니다. 자신이 메타몽이라고 주장하면 처형될 수 있습니다. 자연으로 돌아가면 자신의 능력이 무엇이었는지 낮에 비밀스럽게 사회자에게 들을 수 있습니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "메타몽의 전체 능력을 결정하세요. 만약 메타몽의 능력으로 인해 오늘 밤 깨어나야 한다면 메타몽을 깨우고 능력을 실행하세요. (반드시 마지막에 깨우세요)",
+    "flavor": "",
+    "id": "ko_KR_ditto",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_ditto.png?raw=true",
+    "name": "메타몽",
+    "otherNightReminder": "만약 메타몽의 능력으로 인해 오늘 밤 깨어나야 한다면 메타몽을 깨우고 능력을 실행하세요. (반드시 마지막에 깨우세요)",
+    "reminders": [
+      "?"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "자신이 외지인이라고 착각하고 있습니다. 악마에게 공격 받으면\n\r\n자연으로 돌아가지 않고, 야도란 혹은 야도킹으로 진화합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_slowpoke",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_slowpoke.png?raw=true",
+    "name": "야돈",
+    "otherNightReminder": "악마에게 공격받으면 야도란 혹은 야도킹으로 토큰 변경 후 깨워서 알려줍니다. 야도란이라면 바로 능력을 사용합니다.",
+    "reminders": "",
+    "remindersGlobal": [
+      "야돈임"
+    ],
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤, 참가자를 1명 선택해 낮까지 중독 시키지만 악마에겐 효과가 없습니다. 개굴닌자는 누구에게나 악팀으로 보입니다.(악마와 하수인에게도)",
+    "edition": "pokemon1",
+    "firstNightReminder": "개굴닌자가 가리킨 참가자가 악마가 아닌 경우에만 '중독됨' 리마인더를 놓습니다.",
+    "flavor": "",
+    "id": "ko_KR_greninja",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_greninja.png?raw=true",
+    "name": "개굴닌자",
+    "otherNightReminder": "개굴닌자가 가리킨 참가자가 악마가 아닌 경우에만 '중독됨' 리마인더를 놓습니다.",
+    "reminders": [
+      "중독됨"
+    ],
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤*, 사망한 참가자 1명을 선택합니다. 선택된 참가자가 어떤 포켓몬인지 알게 됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_slowbro",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_slowbro.png?raw=true",
+    "name": "야도란",
+    "otherNightReminder": "야도란이 죽은 참가자를 선택하고, 해당 참가자의 캐릭터를 알려줍니다.",
+    "reminders": "",
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "야도킹의 투표는 언제나 2표로 집계됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_slowking",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_slowking.png?raw=true",
+    "name": "야도킹",
+    "otherNightReminder": "",
+    "reminders": "",
+    "remindersGlobal": "",
+    "team": "townsfolk"
+  },
+  {
+    "ability": "딱충이가 살아서 두번의 밤을 보내면, 그 다음 밤에 독침붕으로 진화하고 악팀이 됩니다. 이때 기존 악마는 모두 자연으로 돌아가며, 하수인들은 당신을 알게 됩니다. [-1 뿔충이]",
+    "edition": "pokemon1",
+    "firstNightReminder": "딱충이에게 '밤1' 리마인더를 놓습니다.",
+    "flavor": "",
+    "id": "ko_KR_kakuna",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_kakuna.png?raw=true",
+    "name": "딱충이",
+    "otherNightReminder": "딱충이에게 '밤1' 리마인더가 있다면 '밤2' 리마인더를 놓습니다. '밤2' 리마인더가 있다면 '진화' 리마인더를 놓습니다. '진화' 리마인더가 있다면 독침붕 토큰으로 교체하고 깨워서 알려줍니다. 원래 악마는 사망합니다.",
+    "reminders": [
+      "밤1",
+      "밤2",
+      "진화"
+    ],
+    "remindersGlobal": "",
+    "team": "outsider"
+  },
+  {
+    "ability": "자신이 마을주민이라고 알 수도 있습니다. 하수인과 악마는 서로 모르며 하수인들만 블러핑 포켓몬을 받습니다. 살아 있다면, 정확히 세번째 밤이 끝날 때 팬텀으로 진화하고 악팀이 됩니다.[+ 팬텀]",
+    "edition": "pokemon1",
+    "firstNightReminder": "고오스에게 '밤1' 리마인더를 놓습니다.",
+    "flavor": "",
+    "id": "ko_KR_gastly",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_gastly.png?raw=true",
+    "name": "고오스",
+    "otherNightReminder": "고오스에게 '밤1' 리마인더가 있다면 '밤2' 리마인더를, '밤2' 리마인더가 있다면 '진화' 리마인더를 놓습니다. '진화' 리마인더가 있다면 팬텀으로 토큰을 교체합니다. 하수인과 악마를 모두 깨워 서로를 확인시킵니다.",
+    "reminders": [
+      "밤1",
+      "밤2",
+      "진화"
+    ],
+    "remindersGlobal": [
+      "고오스임"
+    ],
+    "team": "outsider"
+  },
+  {
+    "ability": "능력이 없으며, 심지어 잉어킹은 투표할 수 없습니다. [-1 갸라도스]\n\r\n잉어킹이 지명 당한 날 밤에 갸라도스로 진화하고, 진화할 때 임의의 참가자 1명을 자연으로 돌려 보냅니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_magikarp",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_magikarp.png?raw=true",
+    "name": "잉어킹",
+    "otherNightReminder": "잉어킹에게 '지명됨' 토큰이 있을 경우 갸라도스로 토큰을 변경한 뒤 깨워서 알려줍니다. 임의의 참가자 1명이 사망합니다.",
+    "reminders": [
+      "지명됨"
+    ],
+    "remindersGlobal": "",
+    "team": "outsider"
+  },
+  {
+    "ability": "능력이 없습니다. 잉어킹으로부터 진화를 통해서만 존재합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_gyarados",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_gyarados.png?raw=true",
+    "name": "갸라도스",
+    "otherNightReminder": "",
+    "reminders": "",
+    "remindersGlobal": "",
+    "team": "outsider"
+  },
+  {
+    "ability": "뮤가 처형되면 선팀과 악팀의 승리조건이 반대가 됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_mew",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mew.png?raw=true",
+    "name": "뮤",
+    "otherNightReminder": "뮤가 처형되었고 악마가 모두 죽었다면 악팀의 승리입니다",
+    "reminders": [
+      "승리조건반대"
+    ],
+    "remindersGlobal": "",
+    "team": "outsider"
+  },
+  {
+    "ability": "매일 밤, 어제와 다른 살아있는 참가자를 1명 선택합니다. 선택된 참가자가 그날 낮에 “마자용” 이라고만 해야하며 지키지 않으면 처형될 수 있습니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "마자용이 참가자를 가리킵니다. 그 참가자를 깨웁니다. '이 캐릭터가 당신을 선택했습니다' 카드를 보여준 다음, 마자용 토큰을 보여줍니다. 참가자가 내일 \"마자용\" 이외의 대화를 할 경우 처형될 수 있습니다.",
+    "flavor": "",
+    "id": "ko_KR_wobbuffet",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_wobbuffet.png?raw=true",
+    "name": "마자용",
+    "otherNightReminder": "마자용이 어제와 다른 살아있는 참가자를 가리킵니다. 그 참가자를 깨웁니다. '이 캐릭터가 당신을 선택했습니다' 카드를 보여준 다음, 마자용 토큰을 보여줍니다. 참가자가 내일 \"마자용\" 이외의 대화를 할 경우 처형될 수 있습니다.",
+    "reminders": [
+      "마자~용!"
+    ],
+    "remindersGlobal": "",
+    "team": "minion"
+  },
+  {
+    "ability": "매일 밤, 참가자을(를) 1명 선택해 낮까지 중독 시킵니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "질뻐기가 가리킨 참가자에게 '중독됨' 리마인더를 놓습니다.",
+    "flavor": "",
+    "id": "ko_KR_muk",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_muk.png?raw=true",
+    "name": "질뻐기",
+    "otherNightReminder": "질뻐기가 가리킨 참가자에게 '중독됨' 리마인더를 놓습니다.",
+    "reminders": [
+      "중독됨"
+    ],
+    "remindersGlobal": "",
+    "team": "minion"
+  },
+  {
+    "ability": "매일 밤, 자신을 제외한 참가자를 1명 선택합니다. 선택된 참가자의 투표는 마이너스로 집계됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "나옹이 자신을 제외한 참가자를 가리킵니다. 그 참가자 옆에 '마이너스투표' 리마인더를 놓습니다.",
+    "flavor": "",
+    "id": "ko_KR_meowth",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_meowth.png?raw=true",
+    "name": "나옹",
+    "otherNightReminder": "나옹이 자신을 제외한 참가자를 가리킵니다. 그 참가자 옆에 '마이너스투표' 리마인더를 놓습니다.",
+    "reminders": [
+      "마이너스투표"
+    ],
+    "remindersGlobal": "",
+    "team": "minion"
+  },
+  {
+    "ability": "붐볼이 처형되면 그날 밤 선한 참가자 2명까지 자연으로 돌아 갈 수도 있습니다",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_electrode",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_electrode.png?raw=true",
+    "name": "붐볼",
+    "otherNightReminder": "낮에 처형되었다면, 살아있는 선한 참가자 2명이 죽을 수 있습니다.",
+    "reminders": [
+      "처형됨"
+    ],
+    "remindersGlobal": "",
+    "team": "minion"
+  },
+  {
+    "ability": "매일 밤*, 참가자 1명을 선택해 자연으로 돌려보냅니다.\n\r\n선택된 참가자와 이웃한 선한 참가자 1명은 그날 낮까지 중독됩니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_beedrill",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_beedrill.png?raw=true",
+    "name": "독침붕",
+    "otherNightReminder": "독침붕이 참가자 1명을 선택합니다. 그 참가자는 사망합니다. 사망자와 이웃한 선한 참가자들에게 '중독됨' 리마인더를 놓습니다.",
+    "reminders": [
+      "중독됨1",
+      "중독됨2"
+    ],
+    "remindersGlobal": "",
+    "team": "demon"
+  },
+  {
+    "ability": "매일 밤*, 참가자 1명을 선택해 자연으로 돌려보냅니다.\n\r\n[+0~1 외지인]",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_gengar",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_gengar.png?raw=true",
+    "name": "팬텀",
+    "otherNightReminder": "팬텀이 참가자 1명을 선택합니다. 그 참가자는 사망합니다.",
+    "reminders": "",
+    "remindersGlobal": "",
+    "team": "demon"
+  },
+  {
+    "ability": "매일 밤*, 참가자 1명을 선택해 자연으로 돌려보냅니다.\n\r\n파괴광선을 쏠 수 있습니다. 파괴광선을 쏘면 3명의 참가자를 자연으로 돌려보냅니다. 파괴광선을 쓴 다음날은 반드시 쉬어야 합니다.",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_mewtwo",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mewtwo.png?raw=true",
+    "name": "뮤츠",
+    "otherNightReminder": "뮤츠에게 '휴식' 토큰이 있다면 깨우지 않고 '휴식' 토큰만 제거합니다. '휴식' 토큰이 없다면 뮤츠를 깨웁니다. 뮤츠는 참가자를 1명 또는 3명 선택합니다. 3명을 선택하면 뮤츠에게 '휴식' 리마인더를 놓습니다.",
+    "reminders": [
+      "휴식"
+    ],
+    "remindersGlobal": "",
+    "team": "demon"
+  },
+  {
+    "ability": "게임 시작 시 하수인과 악마는 서로 모릅니다. \n\r\n매일 밤*, 1명의 참가자를 선택할 수 있습니다. 선택한 참가자는 자연으로 돌아갑니다.\n\r\n로켓단 2명이 같은 참가자를 선택하면, 선택된 참가자는 자연으로 돌아가지 않고 악팀이 됩니다. [+1 로켓단]",
+    "edition": "pokemon1",
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "ko_KR_teamrocket",
+    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_teamrocket.png?raw=true",
+    "name": "로켓단",
+    "otherNightReminder": "로켓단을 차례로 깨웁니다. 각각 선택한 참가자에게 '선택' 리마인더를 놓습니다. 리마인더가 겹칠 경우 해당 참가자를 깨워 악팀이 되었음을 알립니다. 겹치지 않으면 두 명 모두 사망합니다.",
+    "reminders": [
+      "선택1",
+      "선택2"
+    ],
+    "remindersGlobal": "",
+    "special": [
+      {
+        "name": "bag-duplicate",
+        "type": "selection"
+      }
+    ],
+    "team": "demon"
+  }
+]

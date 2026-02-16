@@ -1,6 +1,7 @@
 import { Script } from '@/types/types'
 import { notify } from '@/lib/utils'
 import { fetchWithRetry } from '@/utils/fetchRetry'
+import { normalizeTranslationUrl } from '@/constants/urls'
 
 type SetStateFunction<T> = React.Dispatch<React.SetStateAction<T>>
 
@@ -11,7 +12,14 @@ export const fetchScripts = async (
   try {
     const response = await fetchWithRetry('/scripts.json')
     const data: Script[] = await response.json()
-    setScripts(data)
+    setScripts(
+      data.map(script => ({
+        ...script,
+        json: normalizeTranslationUrl(script.json),
+        pdf: normalizeTranslationUrl(script.pdf),
+        logo: normalizeTranslationUrl(script.logo),
+      })),
+    )
     setLoading(false)
   } catch (error) {
     console.error('Error loading scripts:', error)

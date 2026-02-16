@@ -1,0 +1,39 @@
+{
+    "meta":
+    {
+        "name": "The Chamber of Secrets",
+        "author": "JJ and Mas",
+        "logo": "https://www.bloodstar.xyz/p/sc911/HP2_1/_meta.png"
+    },
+    "roles":
+    [
+        "harrypotter_hp2_1",
+        "ronweasley_hp2_1",
+        "hermione_hp2_1",
+        "neville_hp2_1",
+        "dumbledore_hp2_1",
+        "snape_hp2_1",
+        "hagrid_hp2_1",
+        "lunalovegood_hp2_1",
+        "siriusblack_hp2_1",
+        "mcgonagall_hp2_1",
+        "remuslupin_hp2_1",
+        "madeyemoody_hp2_1",
+        "fawkes_hp2_1",
+        "dobby_hp2_1",
+        "dracomalfoy_hp2_1",
+        "lockhart_hp2_1",
+        "scabbers_hp2_1",
+        "luciusmalfoy_hp2_1",
+        "basilisk_hp2_1",
+        "bellatrix_hp2_1",
+        "nagini_hp2_1",
+        "grindelwald_hp2_1",
+        "lordvoldemort_hp2_1",
+        "thedeatheaters_hp2_1",
+        "tomriddle_hp2_1",
+        "youknowwho_hp2_1",
+        "newtscamander_hp2_1",
+        "dobbybellatrix_hp2_1"
+    ]
+}

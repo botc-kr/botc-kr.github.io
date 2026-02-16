@@ -1,0 +1,229 @@
+[
+  {
+    "id": "_meta",
+    "name": "Naughty or Nice",
+    "author": "Tiramisu",
+    "almanac": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/almanac.html"
+  },
+  {
+    "id": "johnmcclane_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/johnmcclane_krampus.png",
+    "reminders": ["No ability"],
+    "name": "존 맥클레인",
+    "team": "townsfolk",
+    "ability": "게임에서 한 번, 낮 동안 \"이피 카이 예이\"를 외치고 공개적으로 플레이어를 선택합니다: 선택한 플레이어가 악마라면 즉시 사망합니다",
+    "flavor": "Yipee Kayak Other Buckets"
+  },
+  {
+    "id": "rudolph_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/rudolph_krampus.png",
+    "otherNightReminder": "The previously protected player is no longer protected. Rudolph points to a player not themself. Mark that player 'Protected'.",
+    "reminders": ["Protected"],
+    "name": "루돌프",
+    "team": "townsfolk",
+    "ability": "매일 밤*, 자신을 제외한 플레이어를 선택합니다: 당신이 오늘 밤 그들의 썰매를 인도하여, 악마로부터 보호받습니다.",
+    "flavor": "All of the other reindeer Used to laugh and call him names.",
+    "otherNight": 3
+  },
+  {
+    "id": "nutcracker_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/nutcracker_krampus.png",
+    "name": "호두까기 인형",
+    "team": "townsfolk",
+    "ability": "당신은 악마로부터 안전합니다."
+  },
+  {
+    "id": "tinytim_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/tinytim_krampus.png",
+    "reminders": ["No ability"],
+    "name": "작은 팀",
+    "team": "townsfolk",
+    "ability": "당신이 처음으로 지목될 때, 지목한 사람이 마을 주민이라면 그 사람이 즉시 처형됩니다.",
+    "flavor": "God bless us everyone!"
+  },
+  {
+    "id": "papaelf_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/papaelf_krampus.png",
+    "firstNightReminder": "Show the marked character token. Point to the marked player.",
+    "reminders": ["Known"],
+    "name": "아빠 엘프",
+    "team": "townsfolk",
+    "ability": "게임 시작 시 착한 명단(선한)에 있는 플레이어 한 명을 알고 시작합니다.",
+    "flavor": "As you can imagine, it's dangerous having an oven in an oak tree during the dry season",
+    "firstNight": 11
+  },
+  {
+    "id": "buddy_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/buddy_krampus.png",
+    "firstNightReminder": "Show the finger signal (0, 1, 2) for the number of alive neighbours of the Empath that are on the naughty list.",
+    "otherNightReminder": "Show the finger signal (0, 1, 2) for the number of neighbours that are on the naughty list.",
+    "name": "단짝",
+    "team": "townsfolk",
+    "ability": "매일 밤, 당신의 양옆 두 명 중 몇 명이 나쁜 명단(악한)에 있는지 알 수 있습니다.",
+    "flavor": "Smiling's my favourite",
+    "firstNight": 12,
+    "otherNight": 4
+  },
+  {
+    "id": "santa_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/santa_krampus.png",
+    "firstNightReminder": "Santa points to two players. Give the head signal (nod yes, shake no) for whether one of those players is the Demon. ",
+    "otherNightReminder": "Santa points to two players. Show the head signal (nod 'yes', shake 'no') for whether one of those players is the Demon.",
+    "reminders": ["Tinsel Trap"],
+    "name": "산타",
+    "team": "townsfolk",
+    "ability": "매일 밤, 두 명의 플레이어를 선택합니다: 그 중 한 명이 악마인지 알 수 있습니다. 착한 명단에 있는 플레이어 한 명이 당신에게 악마로 보입니다.",
+    "flavor": "You better watch out, you better not cry",
+    "firstNight": 13,
+    "otherNight": 5
+  },
+  {
+    "id": "christmasspirit_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/christmasspirit_krampus.png",
+    "name": "크리스마스 분위기",
+    "team": "townsfolk",
+    "ability": "3명만 생존해있고 처형이 없다면, 모두가 크리스마스 분위기를 받아들여 당신 팀이 승리합니다. 당신이 밤에 죽으면, 다른 플레이어가 대신 죽을 수 있습니다.",
+    "flavor": "If Christmas isn't found in your heart, It won't be found under your tree"
+  },
+  {
+    "id": "listkeeper_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/listkeeper_krampus.png",
+    "firstNightReminder": "Point to 3 players including one evil player, in no particular order.",
+    "reminders": ["Seen", "Seen", "Seen"],
+    "name": "명단 관리인",
+    "team": "townsfolk",
+    "ability": "게임 시작 시 세 명의 플레이어를 알게 되는데, 그 중 정확히 한 명만이 나쁜 명단에 있습니다.",
+    "flavor": "I'm going to find out whose Naughty or Nice",
+    "firstNight": 14
+  },
+  {
+    "id": "mistletoemonitor_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/mistletoemonitor_krampus.png",
+    "firstNightReminder": "Show the finger signal (0, 1, 2, …) for the number of pairs of neighbouring evil players.",
+    "name": "미슬토 감시자",
+    "team": "townsfolk",
+    "ability": "게임 시작 시 악한 플레이어들이 몇 쌍이나 서로 이웃해있는지 알 수 있습니다.",
+    "flavor": "A sprig of mistletoe reveals more than love—it shows who’s plotting a not-so-silent night.",
+    "firstNight": 15
+  },
+  {
+    "id": "giftwrapper_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/giftwrapper_krampus.png",
+    "otherNightReminder": "If a player was executed today: Show that player’s character token.",
+    "reminders": ["Executed"],
+    "name": "선물 포장지",
+    "team": "townsfolk",
+    "ability": "매일 밤*, 그날 처형된 플레이어의 선물을 열어볼 수 있습니다. 그 플레이어의 역할을 알게 됩니다.",
+    "flavor": "Sometimes, it’s not what’s inside the box—but who the box belonged to.",
+    "otherNight": 6
+  },
+  {
+    "id": "kevin_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/kevin_krampus.png",
+    "otherNightReminder": "If the Ravenkeeper died tonight: The Ravenkeeper points to a player. Show that player’s character token.",
+    "name": "케빈!",
+    "team": "townsfolk",
+    "ability": "당신이 밤에 죽으면, 한 명의 플레이어를 함정에 빠뜨릴 수 있습니다. 그 플레이어의 캐릭터를 알게 됩니다.",
+    "flavor": "Merry Christmas, Ya filthy animal!",
+    "otherNight": 7
+  },
+  {
+    "id": "mrsclaus_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/mrsclaus_krampus.png",
+    "firstNightReminder": "Show the character token of a Townsfolk in play. Point to two players, one of which is that character.",
+    "reminders": ["Townsfolk", "Wrong"],
+    "name": "산타 부인",
+    "team": "townsfolk",
+    "ability": "게임 시작 시 두 명의 플레이어 중 한 명이 특정 마을 주민이라는 것을 알고 시작합니다.",
+    "flavor": "Behind every great Santa is a warm kitchen, a cup of cocoa, and a little holiday magic.",
+    "firstNight": 16
+  },
+  {
+    "id": "festivefool_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/festivefool_krampus.png",
+    "remindersGlobal": ["Drunk"],
+    "setup": true,
+    "name": "축제의 바보",
+    "team": "outsider",
+    "ability": "당신은 자신이 축제의 바보라는 것을 모릅니다. 당신은 자신을 마을 주민이라고 생각하지만, 크리스마스 분위기에 너무 취했습니다.",
+    "flavor": "\"One more cup can’t hurt… Wait, what were we talking about?\""
+  },
+  {
+    "id": "christmasangel_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/christmasangel_krampus.png",
+    "name": "크리스마스 천사",
+    "team": "outsider",
+    "ability": "당신이 처형으로 죽으면, 당신의 팀이 패배합니다."
+  },
+  {
+    "id": "jackskellington_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/jackskellington_krampus.png",
+    "name": "잭 스켈링턴",
+    "team": "outsider",
+    "ability": "당신은 죽어있을 때조차도 나쁜 명단에 있는 것처럼 보이거나 하수인 또는 악마로 보일 수 있습니다.",
+    "flavor": "Just because I cannot see it, doesn't mean I can't believe it!"
+  },
+  {
+    "id": "ninnymuggins_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/ninnymuggins_krampus.png",
+    "name": "니니 머긴스",
+    "team": "outsider",
+    "ability": "당신이 죽었다는 것을 알게 되면, 살아있는 플레이어 한 명을 공개적으로 선택합니다: 그 플레이어가 나쁜 명단에 있다면 당신의 팀이 패배합니다.",
+    "flavor": "Why don't you just say it? I'm the worst toy-maker in the world. I'm a Cotton-Headed Ninnymuggins!"
+  },
+  {
+    "id": "jackfrost_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/jackfrost_krampus.png",
+    "firstNightReminder": "Jack Frost points to a player. That player is frozen.",
+    "otherNightReminder": "The previously frozen player is no longer frozen . Jack Frost points to a player. That player is frozen.",
+    "reminders": ["Poisoned"],
+    "name": "잭 프로스트",
+    "team": "minion",
+    "ability": "매일 밤, 플레이어 한 명을 선택합니다: 그들은 오늘 밤과 내일 낮 동안 얼어붙습니다(중독됨).",
+    "flavor": "I am the Wizard of Blizzard!",
+    "firstNight": 17,
+    "otherNight": 8
+  },
+  {
+    "id": "thegrinch_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/thegrinch_krampus.png",
+    "firstNightReminder": "Show the Grimoire to the Widow for as long as they need. The Widow points to a player. That player is poisoned. Wake a good player. Show the 'These characters are in play' card, then the Widow character token.",
+    "reminders": ["Poisoned"],
+    "remindersGlobal": ["Knows"],
+    "name": "그린치",
+    "team": "minion",
+    "ability": "첫 날 밤에 그리모어를 보고 플레이어 한 명을 선택합니다: 그들은 중독됩니다. 선한 플레이어 한 명이 그린치가 게임에 있다는 것을 알고 있습니다.",
+    "flavor": "Hate, hate, hate. Hate, hate, hate. Double hate. Loathe entirely!",
+    "firstNight": 18
+  },
+  {
+    "id": "scrooge_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/scrooge_krampus.png",
+    "setup": true,
+    "name": "스크루지",
+    "team": "minion",
+    "ability": "게임에 추가 외지인이 있습니다. [+2 외지인]",
+    "flavor": "Bah! Humbug!"
+  },
+  {
+    "id": "badsanta_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/badsanta_krampus.png",
+    "otherNightReminder": "If Bad Santa became the Demon today: Show the 'You are' card, then the demon token.",
+    "reminders": ["Demon"],
+    "name": "나쁜 산타",
+    "team": "minion",
+    "ability": "5명 이상의 플레이어가 살아있고 악마가 죽으면, 당신이 악마가 됩니다. (여행자는 계산하지 않습니다)",
+    "flavor": "I wear this fucking thing as a fashion statement, alright?",
+    "otherNight": 9
+  },
+  {
+    "id": "krampus_krampus",
+    "image": "https://www.bloodstar.xyz/p/TheBeardedDan/Krampus/krampus_krampus.png",
+    "otherNightReminder": "Krampus chooses 3 players. Announce the first player, wake them to nod yes to live or shake head no to die, kill or resurrect accordingly, then put to sleep and announce the next player. If all 3 are alive after this, all 3 die.",
+    "reminders": ["1", "2", "3", "Chose death", "Chose life"],
+    "name": "크램푸스",
+    "team": "demon",
+    "ability": "매일 밤*, 3명의 플레이어를 선택해 선물을 받게 합니다(모든 플레이어가 누군지 알게 됨): 각자 조용히 선물을 열지(생존) 거절할지(사망) 선택하지만, 모두가 선물을 열면 전원 사망합니다.",
+    "otherNight": 2
+  }
+]
