@@ -75,6 +75,9 @@ python3 validate_google_sheet_csv.py --skip-characters
 
 # Fail build on warnings too
 python3 validate_google_sheet_csv.py --strict-warnings
+
+# Strict mode (warnings + control chars + header normalization all fail)
+python3 validate_google_sheet_csv.py --strict
 ```
 
 #### Scripts metadata JSON for web app
@@ -102,6 +105,7 @@ yarn translations:sync-scripts
 ```
 
 This runs download -> validate -> `public/scripts.json` generation in order.
+Validation in this pipeline uses strict mode for `scripts.csv` (`--skip-characters --strict`).
 
 #### Full roles JSON
 

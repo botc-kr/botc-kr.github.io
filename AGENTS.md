@@ -17,8 +17,10 @@
 - **Deploy**: `yarn deploy`
 - **Translations CSV Download**: `yarn translations:csv:download`
 - **Translations CSV Validate**: `yarn translations:csv:validate`
+- **Translations CSV Validate (Strict)**: `yarn translations:csv:validate:strict`
+- **Scripts CSV Validate (Strict)**: `yarn translations:csv:validate:scripts-strict`
 - **Scripts JSON Generate**: `yarn translations:scripts:generate`
-- **Scripts Sync Pipeline**: `yarn translations:sync-scripts` (download -> validate -> generate `public/scripts.json`)
+- **Scripts Sync Pipeline**: `yarn translations:sync-scripts` (download -> strict-validate scripts -> generate `public/scripts.json`)
 
 ## 3. Core Architecture
 - **Entry**: `index.html` → `src/main.tsx` → `src/App.tsx`

@@ -11,6 +11,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 CONTROL_CHARS_RE = re.compile(r"[\x00-\x08\x0B-\x1F\x7F]")
+SCRIPT_ID_RE = re.compile(r"^[a-z0-9_]+$")
 
 REQUIRED_CHARACTER_HEADERS = {
     "id",
@@ -27,7 +28,22 @@ REQUIRED_SCRIPT_HEADERS = {
     "json",
     "pdf",
 }
+OPTIONAL_CHARACTER_HEADERS = {
+    "image",
+    "firstNightReminder",
+    "otherNightReminder",
+    "reminders",
+    "remindersGlobal",
+    "firstNight",
+    "otherNight",
+    "flavor",
+    "note",
+}
 OPTIONAL_SCRIPT_BOOL_HEADERS = {"official", "teensyville"}
+OPTIONAL_SCRIPT_HEADERS = {"logo", "note", "official", "teensyville"}
+KNOWN_CHARACTER_HEADERS = REQUIRED_CHARACTER_HEADERS | OPTIONAL_CHARACTER_HEADERS
+KNOWN_SCRIPT_HEADERS = REQUIRED_SCRIPT_HEADERS | OPTIONAL_SCRIPT_HEADERS
+ALLOWED_URL_PREFIXES = ("/translations/assets/", "https://", "http://", "/")
 ALLOWED_TEAMS = {"townsfolk", "outsider", "minion", "demon", "traveler", "fabled", "jinxes"}
 
 
@@ -75,7 +91,19 @@ def parse_optional_bool(raw: str | None) -> bool | None:
     return None
 
 
-def read_csv(csv_path: Path) -> tuple[list[str], list[tuple[int, dict[str, str]]], ValidationResult]:
+def add_issue(result: ValidationResult, message: str, as_error: bool) -> None:
+    if as_error:
+        result.errors.append(message)
+        return
+    result.warnings.append(message)
+
+
+def read_csv(
+    csv_path: Path,
+    *,
+    fail_on_control_chars: bool,
+    fail_on_header_normalization: bool,
+) -> tuple[list[str], list[tuple[int, dict[str, str]]], ValidationResult]:
     result = ValidationResult()
     if not csv_path.exists():
         result.errors.append(f"{csv_path}: file does not exist")
@@ -95,8 +123,10 @@ def read_csv(csv_path: Path) -> tuple[list[str], list[tuple[int, dict[str, str]]
                 result.errors.append(f"{csv_path}: header column {index} is empty after sanitization")
                 continue
             if raw_header != normalized_header:
-                result.warnings.append(
-                    f"{csv_path}: header '{raw_header}' normalized to '{normalized_header}'"
+                add_issue(
+                    result,
+                    f"{csv_path}: header '{raw_header}' normalized to '{normalized_header}'",
+                    as_error=fail_on_header_normalization,
                 )
 
         duplicates = [header for header, count in count_duplicates(headers).items() if count > 1]
@@ -113,8 +143,10 @@ def read_csv(csv_path: Path) -> tuple[list[str], list[tuple[int, dict[str, str]]
                     continue
                 value = raw_value or ""
                 if CONTROL_CHARS_RE.search(value):
-                    result.warnings.append(
-                        f"{csv_path}:{line_number} field '{key}' contains control characters"
+                    add_issue(
+                        result,
+                        f"{csv_path}:{line_number} field '{key}' contains control characters",
+                        as_error=fail_on_control_chars,
                     )
                 row[key] = value
             rows.append((line_number, row))
@@ -137,6 +169,16 @@ def ensure_required_headers(
     missing = sorted(required_headers - set(headers))
     for header in missing:
         result.errors.append(f"{csv_path}: missing required header '{header}'")
+    return result
+
+
+def validate_known_headers(
+    csv_path: Path, headers: list[str], known_headers: set[str]
+) -> ValidationResult:
+    result = ValidationResult()
+    unknown = sorted(set(headers) - known_headers)
+    for header in unknown:
+        result.errors.append(f"{csv_path}: unknown header '{header}'")
     return result
 
 
@@ -191,21 +233,41 @@ def validate_script_rows(csv_path: Path, rows: list[tuple[int, dict[str, str]]])
         row_id = clean_text(row.get("id"))
         if row_id == "":
             continue
+        if not SCRIPT_ID_RE.fullmatch(row_id):
+            result.errors.append(
+                f"{csv_path}:{line_number} id='{row_id}' must match regex '{SCRIPT_ID_RE.pattern}'"
+            )
 
         for key in ("name", "author", "synopsis", "json", "pdf"):
             if clean_text(row.get(key)) == "":
                 result.errors.append(f"{csv_path}:{line_number} id='{row_id}' has empty '{key}'")
 
         json_url = clean_text(row.get("json"))
+        if any(char.isspace() for char in json_url):
+            result.errors.append(
+                f"{csv_path}:{line_number} id='{row_id}' has whitespace in json path"
+            )
         if json_url != "" and not json_url.endswith(".json"):
             result.warnings.append(
                 f"{csv_path}:{line_number} id='{row_id}' has json path not ending with .json"
             )
+        if json_url != "" and not json_url.startswith(ALLOWED_URL_PREFIXES):
+            result.errors.append(
+                f"{csv_path}:{line_number} id='{row_id}' has unsupported json path '{json_url}'"
+            )
 
         pdf_url = clean_text(row.get("pdf"))
+        if any(char.isspace() for char in pdf_url):
+            result.errors.append(
+                f"{csv_path}:{line_number} id='{row_id}' has whitespace in pdf path"
+            )
         if pdf_url != "" and not pdf_url.endswith(".pdf"):
             result.warnings.append(
                 f"{csv_path}:{line_number} id='{row_id}' has pdf path not ending with .pdf"
+            )
+        if pdf_url != "" and not pdf_url.startswith(ALLOWED_URL_PREFIXES):
+            result.errors.append(
+                f"{csv_path}:{line_number} id='{row_id}' has unsupported pdf path '{pdf_url}'"
             )
 
         for key in OPTIONAL_SCRIPT_BOOL_HEADERS:
@@ -268,7 +330,28 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Treat warnings as errors (exit code 1 when warnings exist)",
     )
-    return parser.parse_args()
+    parser.add_argument(
+        "--fail-on-control-chars",
+        action="store_true",
+        help="Treat control characters in CSV values as errors",
+    )
+    parser.add_argument(
+        "--fail-on-header-normalization",
+        action="store_true",
+        help="Treat header normalization (BOM/control-char cleanup) as errors",
+    )
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Enable strict mode (strict warnings + fail on control chars + fail on header normalization)",
+    )
+
+    args = parser.parse_args()
+    if args.strict:
+        args.strict_warnings = True
+        args.fail_on_control_chars = True
+        args.fail_on_header_normalization = True
+    return args
 
 
 def main() -> int:
@@ -281,19 +364,29 @@ def main() -> int:
 
     if not args.skip_characters:
         characters_csv = args.characters.resolve()
-        headers, rows, load_result = read_csv(characters_csv)
+        headers, rows, load_result = read_csv(
+            characters_csv,
+            fail_on_control_chars=args.fail_on_control_chars,
+            fail_on_header_normalization=args.fail_on_header_normalization,
+        )
         result.merge(load_result)
         if headers:
             result.merge(ensure_required_headers(characters_csv, headers, REQUIRED_CHARACTER_HEADERS))
+            result.merge(validate_known_headers(characters_csv, headers, KNOWN_CHARACTER_HEADERS))
             result.merge(validate_unique_ids(characters_csv, rows))
             result.merge(validate_character_rows(characters_csv, rows))
 
     if not args.skip_scripts:
         scripts_csv = args.scripts.resolve()
-        headers, rows, load_result = read_csv(scripts_csv)
+        headers, rows, load_result = read_csv(
+            scripts_csv,
+            fail_on_control_chars=args.fail_on_control_chars,
+            fail_on_header_normalization=args.fail_on_header_normalization,
+        )
         result.merge(load_result)
         if headers:
             result.merge(ensure_required_headers(scripts_csv, headers, REQUIRED_SCRIPT_HEADERS))
+            result.merge(validate_known_headers(scripts_csv, headers, KNOWN_SCRIPT_HEADERS))
             result.merge(validate_unique_ids(scripts_csv, rows))
             result.merge(validate_script_rows(scripts_csv, rows))
 

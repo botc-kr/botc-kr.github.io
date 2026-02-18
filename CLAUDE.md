@@ -28,8 +28,10 @@
    - 포맷: `yarn format`
    - 번역 CSV 다운로드: `yarn translations:csv:download`
    - 번역 CSV 검증: `yarn translations:csv:validate`
+   - 번역 CSV 검증(엄격): `yarn translations:csv:validate:strict`
+   - 스크립트 CSV 검증(엄격): `yarn translations:csv:validate:scripts-strict`
    - 스크립트 메타 생성: `yarn translations:scripts:generate`
-   - 원클릭 동기화: `yarn translations:sync-scripts` (`download -> validate -> generate`)
+   - 원클릭 동기화: `yarn translations:sync-scripts` (`download -> strict validate scripts -> generate`)
 5. 빌드/프리뷰
    - 빌드: `yarn build`
    - 프리뷰: `yarn preview`
@@ -215,7 +217,8 @@
   - 품질 게이트 스크립트 추가(`typecheck`, `verify`) 및 Prettier 옵션 최신화
 - 2026-02-18: 번역 CSV 파이프라인 보강
   - 구글 시트 CSV 검증 스크립트 추가(`translations-tooling/validate_google_sheet_csv.py`)
-  - 루트 실행 커맨드 추가(`translations:csv:download`, `translations:csv:validate`, `translations:scripts:generate`, `translations:sync-scripts`)
+  - 루트 실행 커맨드 추가(`translations:csv:download`, `translations:csv:validate`, `translations:csv:validate:strict`, `translations:csv:validate:scripts-strict`, `translations:scripts:generate`, `translations:sync-scripts`)
+  - strict 모드 검증 추가(경고 실패, 제어문자/헤더 정규화 실패, scripts.csv 헤더/ID/경로 규칙 강화)
   - `translations-tooling/README.md`, `AGENTS.md` 명령 가이드 갱신
 
 ### 13) 라이선스/크레딧
