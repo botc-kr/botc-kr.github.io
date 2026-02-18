@@ -1,16 +1,11 @@
-import { Script } from '@/features/scripts/types'
+import { Script, ScriptActionHandlers } from '@/features/scripts/types'
 import { BookOpen, ChevronDown, ChevronUp, FileText, LucideIcon } from 'lucide-react'
 import React, { useState } from 'react'
 import ActionButtons from '@/features/scripts/components/ActionButtons'
 import ScriptImage from '@/features/scripts/components/ScriptImage'
 
-interface ScriptCardProps {
+interface ScriptCardProps extends ScriptActionHandlers {
   script: Script
-  onCopyJson: (json: string, id: string) => void
-  onDownloadJson: (json: string, id: string) => void
-  onDownloadPdf: (pdf: string, id: string) => void
-  copiedId: string | null
-  downloadingId: string | null
 }
 
 interface ExpandableSectionProps {

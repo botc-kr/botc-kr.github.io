@@ -11,9 +11,7 @@ export interface Script {
   pdf: string
 }
 
-export interface ScriptCategoryProps {
-  title: string
-  scripts: Script[]
+export interface ScriptActionHandlers {
   onCopyJson: (jsonUrl: string, scriptId: string) => void
   onDownloadJson: (jsonUrl: string, scriptId: string) => void
   onDownloadPdf: (pdfUrl: string, scriptId: string) => void
@@ -21,11 +19,11 @@ export interface ScriptCategoryProps {
   downloadingId: string | null
 }
 
-export interface ActionButtonsProps {
+export interface ScriptCategoryProps extends ScriptActionHandlers {
+  title: string
+  scripts: Script[]
+}
+
+export interface ActionButtonsProps extends ScriptActionHandlers {
   script: Script
-  onCopyJson: (jsonUrl: string, scriptId: string) => void
-  onDownloadJson: (jsonUrl: string, scriptId: string) => void
-  onDownloadPdf: (pdfUrl: string, scriptId: string) => void
-  copiedId: string | null
-  downloadingId: string | null
 }
