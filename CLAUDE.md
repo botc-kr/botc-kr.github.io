@@ -23,6 +23,8 @@
    - 로컬에서 해시 라우팅으로 페이지 전환: `/#savant-generator`, `/#helper`, `/#tracker`
 4. 품질 점검
    - 린트: `yarn lint` / 자동수정: `yarn lint:fix`
+   - 타입체크: `yarn typecheck`
+   - 통합 검증: `yarn verify` (`lint + typecheck + build`)
    - 포맷: `yarn format`
 5. 빌드/프리뷰
    - 빌드: `yarn build`
@@ -40,6 +42,7 @@
   - `#helper`: 밤 순서/캐릭터 헬퍼
   - `#tracker`: 게임 로그 대시보드
 - `src/hooks/useHashPageRoute.ts`: 해시 변경 감지/페이지 전환 공통 훅
+- `src/constants/pageConfig.ts`: 페이지 해시/네비게이션 라벨 중앙화 메타데이터
 - `src/components/layout/`: 전역 레이아웃
   - `Header.tsx`, `Footer.tsx`
 - `public/scripts.json`: 노출 스크립트 메타 소스
@@ -60,6 +63,7 @@
   - `components/HelperTabs.tsx`, `components/HelperScriptSelect.tsx`: 탭/스크립트 선택 UI 분리
   - `components/CharacterDialog.tsx`, `components/CharacterRow.tsx`: 캐릭터 상세/선택 UI
   - `hooks/useHelperEntries.ts`: 선택된 스크립트 엔트리 로딩/에러 처리
+  - `hooks/useHelperCharacters.ts`: 엔트리 기반 캐릭터/밤 순서 파생 데이터 계산
   - `hooks/useHelperScriptSelection.ts`: 스크립트 선택 상태 + localStorage 동기화
   - `services/helperMessageFormatter.ts`: 캐릭터/진영 플레이스홀더 메시지 포매팅
   - `services/helperScriptService.ts`: 아이콘 매핑/스크립트 로딩 서비스
@@ -199,6 +203,12 @@
   - `helper` 캐릭터 다이얼로그 하위 컴포넌트 분해 및 메시지 포매터 도입
   - `scripts`/`helper`/`tracker` 데이터 로딩 흐름을 전용 훅(`useScripts`, `useHelperEntries`, `useGameLogs`)으로 분리
   - 역할 ID 정규화 재사용 및 캐릭터 정보 조회 정확 매칭 우선 처리
+- 2026-02-18: 리팩토링 6차
+  - 런타임 타입 가드 강화(`isHelperEntry`)로 helper 스크립트 파싱 안전성 강화 및 일부 unsafe cast 제거
+  - `helper` 파생 데이터 훅(`useHelperCharacters`) 및 `tracker` 대시보드 파생 데이터 훅(`useDashboardMetrics`) 분리
+  - 페이지 메타데이터 중앙화(`pageConfig`)로 라우팅/헤더 중복 제거
+  - 클립보드 기능 지원 여부 기반 액션 처리 및 라우팅 해시 location 유틸 일원화
+  - 품질 게이트 스크립트 추가(`typecheck`, `verify`) 및 Prettier 옵션 최신화
 
 ### 13) 라이선스/크레딧
 
