@@ -5,8 +5,8 @@ import { triggerBlobDownload } from '@/utils/download'
 import { fetchJsonWithRetry } from '@/utils/fetchJson'
 import { fetchWithRetry } from '@/utils/fetchRetry'
 
-export const fetchScripts = async (): Promise<Script[]> => {
-  const scripts = await fetchJsonWithRetry<Script[]>('/scripts.json')
+export const fetchScripts = async (signal?: AbortSignal): Promise<Script[]> => {
+  const scripts = await fetchJsonWithRetry<Script[]>('/scripts.json', { signal })
   return scripts.map(script => ({
     ...script,
     json: normalizeTranslationUrl(script.json),

@@ -10,8 +10,8 @@ interface UseHelperEntriesReturn {
 }
 
 export const useHelperEntries = (scriptUrl: string): UseHelperEntriesReturn => {
-  const loadSelectedScriptEntries = useCallback(async (): Promise<HelperEntry[]> => {
-    return fetchHelperScriptEntries(scriptUrl)
+  const loadSelectedScriptEntries = useCallback(async (signal?: AbortSignal): Promise<HelperEntry[]> => {
+    return fetchHelperScriptEntries(scriptUrl, signal)
   }, [scriptUrl])
 
   const getLoadErrorMessage = useCallback(

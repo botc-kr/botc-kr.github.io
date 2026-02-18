@@ -19,8 +19,8 @@ const applyLocalIconFallback = (entries: HelperEntry[]): HelperEntry[] =>
     }
   })
 
-export const fetchHelperScriptEntries = async (scriptUrl: string): Promise<HelperEntry[]> => {
-  const data = await fetchJsonWithRetry<unknown>(scriptUrl)
+export const fetchHelperScriptEntries = async (scriptUrl: string, signal?: AbortSignal): Promise<HelperEntry[]> => {
+  const data = await fetchJsonWithRetry<unknown>(scriptUrl, { signal })
 
   if (!Array.isArray(data)) {
     throw new Error('스크립트 데이터 형식이 올바르지 않습니다')

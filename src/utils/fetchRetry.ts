@@ -1,25 +1,53 @@
+import { isAbortError, throwIfAborted } from '@/utils/errors'
+
+const wait = async (delayMs: number, signal?: AbortSignal): Promise<void> => {
+  if (!signal) {
+    await new Promise(resolve => setTimeout(resolve, delayMs))
+    return
+  }
+
+  await new Promise<void>((resolve, reject) => {
+    const timeoutId = setTimeout(() => {
+      signal.removeEventListener('abort', handleAbort)
+      resolve()
+    }, delayMs)
+
+    const handleAbort = (): void => {
+      clearTimeout(timeoutId)
+      signal.removeEventListener('abort', handleAbort)
+      reject(new DOMException('The operation was aborted.', 'AbortError'))
+    }
+
+    signal.addEventListener('abort', handleAbort, { once: true })
+  })
+}
+
 export async function fetchWithRetry(
   input: RequestInfo | URL,
   init: RequestInit = {},
   options: { retries?: number; backoffMs?: number } = {}
 ): Promise<Response> {
   const { retries = 2, backoffMs = 300 } = options
+  const signal = init.signal ?? undefined
   let attempt = 0
   let lastError: unknown = null
 
   while (attempt <= retries) {
     try {
+      throwIfAborted(signal)
       const res = await fetch(input, init)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       return res
     } catch (err) {
+      if (isAbortError(err)) {
+        throw err
+      }
+
       lastError = err
       if (attempt === retries) break
-      await new Promise(r => setTimeout(r, backoffMs * Math.pow(2, attempt)))
+      await wait(backoffMs * Math.pow(2, attempt), signal)
     }
     attempt += 1
   }
   throw lastError instanceof Error ? lastError : new Error('fetchWithRetry failed')
 }
-
-
