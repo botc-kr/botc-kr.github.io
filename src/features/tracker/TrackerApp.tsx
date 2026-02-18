@@ -1,16 +1,9 @@
-import { useCallback } from 'react'
 import { LoadingState } from '@/components/AsyncState'
 import Dashboard from '@/features/tracker/Dashboard'
-import { fetchGameLogs } from '@/features/tracker/api'
-import { GameLog } from '@/features/tracker/types'
-import { useAsyncData } from '@/hooks/useAsyncData'
-
-const sortLogsByIdDesc = (logs: GameLog[]): GameLog[] =>
-  [...logs].sort((left, right) => right.id.localeCompare(left.id))
+import { useGameLogs } from '@/features/tracker/hooks/useGameLogs'
 
 const TrackerApp = () => {
-  const loadGameLogs = useCallback(async (): Promise<GameLog[]> => sortLogsByIdDesc(await fetchGameLogs()), [])
-  const { data: gameLogs, isLoading } = useAsyncData<GameLog[]>(loadGameLogs, [])
+  const { gameLogs, isLoading } = useGameLogs()
 
   if (isLoading) {
     return <LoadingState className="min-h-screen" message="" showSpinner />
