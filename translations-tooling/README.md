@@ -37,8 +37,8 @@ mix run download_csv_from_google_sheet.exs
 ```
 
 By default, this downloads:
-- `Characters` -> `assets/csv/ko_KR.csv` (compatible with `generate_json_from_csv.exs`)
-- `Scripts` -> `assets/csv/scripts.csv`
+- `gid=1289885206` (Characters) -> `assets/csv/ko_KR.csv` (compatible with `generate_json_from_csv.exs`)
+- `Scripts` tab -> `assets/csv/scripts.csv`
 
 Useful options:
 
@@ -46,8 +46,11 @@ Useful options:
 # Override spreadsheet id (also supported via BOTC_TRANSLATIONS_SPREADSHEET_ID env var)
 mix run download_csv_from_google_sheet.exs --spreadsheet-id <GOOGLE_SHEET_ID>
 
-# Custom tab -> file mappings (repeat --target)
-mix run download_csv_from_google_sheet.exs --target "Characters:ko_KR.csv" --target "Scripts:scripts.csv"
+# Custom gid -> file mappings (repeat --target-gid)
+mix run download_csv_from_google_sheet.exs --target-gid "1289885206:ko_KR.csv"
+
+# Custom tab-name -> file mappings (repeat --target)
+mix run download_csv_from_google_sheet.exs --target "Scripts:scripts.csv"
 
 # You can also run it without Mix (useful when Mix/Hex environment is unstable)
 elixir download_csv_from_google_sheet.exs
