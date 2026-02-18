@@ -17,6 +17,43 @@ interface ExpandableSectionProps {
   defaultExpanded?: boolean
 }
 
+interface DesktopSynopsisProps {
+  synopsis: string
+}
+
+const SCRIPT_SYNOPSIS_FALLBACK = '이 스크립트에 대한 설명이 곧 추가될 예정입니다.'
+
+const ExpandableSection: React.FC<ExpandableSectionProps> = ({
+  isExpanded,
+  onToggle,
+  icon: Icon,
+  title,
+  content,
+  defaultExpanded = false,
+}) => (
+  <div className={`w-full ${defaultExpanded ? 'sm:hidden' : ''}`}>
+    <button
+      type="button"
+      onClick={onToggle}
+      className="w-full mt-2 p-2 bg-gray-50 rounded-md flex items-center justify-between text-gray-600 hover:bg-gray-100 transition-colors">
+      <div className="flex items-center gap-2">
+        <Icon size={16} />
+        <span className="text-sm">{title}</span>
+      </div>
+      {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+    </button>
+    {isExpanded ? (
+      <div className="mt-2 p-3 bg-gray-50 rounded-md">
+        <div className="whitespace-pre-line text-sm text-gray-600">{content}</div>
+      </div>
+    ) : null}
+  </div>
+)
+
+const DesktopSynopsis: React.FC<DesktopSynopsisProps> = ({ synopsis }) => (
+  <div className="hidden sm:block text-gray-600 text-sm sm:text-base whitespace-pre-line">{synopsis}</div>
+)
+
 const ScriptCard: React.FC<ScriptCardProps> = ({
   script,
   onCopyJson,
@@ -27,38 +64,7 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
 }) => {
   const [isNoteExpanded, setIsNoteExpanded] = useState<boolean>(false)
   const [isSynopsisExpanded, setIsSynopsisExpanded] = useState<boolean>(false)
-
-  const ExpandableSection: React.FC<ExpandableSectionProps> = ({
-    isExpanded,
-    onToggle,
-    icon: Icon,
-    title,
-    content,
-    defaultExpanded = false,
-  }) => (
-    <div className={`w-full ${defaultExpanded ? 'sm:hidden' : ''}`}>
-      <button
-        onClick={onToggle}
-        className="w-full mt-2 p-2 bg-gray-50 rounded-md flex items-center justify-between text-gray-600 hover:bg-gray-100 transition-colors">
-        <div className="flex items-center gap-2">
-          <Icon size={16} />
-          <span className="text-sm">{title}</span>
-        </div>
-        {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-      </button>
-      {isExpanded && (
-        <div className="mt-2 p-3 bg-gray-50 rounded-md">
-          <div className="whitespace-pre-line text-sm text-gray-600">{content}</div>
-        </div>
-      )}
-    </div>
-  )
-
-  const DesktopSynopsis: React.FC = () => (
-    <div className="hidden sm:block text-gray-600 text-sm sm:text-base whitespace-pre-line">
-      {script.synopsis || '이 스크립트에 대한 설명이 곧 추가될 예정입니다.'}
-    </div>
-  )
+  const synopsis = script.synopsis || SCRIPT_SYNOPSIS_FALLBACK
 
   return (
     <div id={script.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -78,22 +84,22 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
               </div>
             </div>
 
-            <DesktopSynopsis />
+            <DesktopSynopsis synopsis={synopsis} />
 
             <div className="flex flex-col gap-2">
               <ExpandableSection
                 isExpanded={isSynopsisExpanded}
-                onToggle={() => setIsSynopsisExpanded(!isSynopsisExpanded)}
+                onToggle={() => setIsSynopsisExpanded(previousValue => !previousValue)}
                 icon={FileText}
                 title="개요"
-                content={script.synopsis || '이 스크립트에 대한 설명이 곧 추가될 예정입니다.'}
+                content={synopsis}
                 defaultExpanded={true}
               />
 
               {script.note && (
                 <ExpandableSection
                   isExpanded={isNoteExpanded}
-                  onToggle={() => setIsNoteExpanded(!isNoteExpanded)}
+                  onToggle={() => setIsNoteExpanded(previousValue => !previousValue)}
                   icon={BookOpen}
                   title="번역 노트"
                   content={script.note}
