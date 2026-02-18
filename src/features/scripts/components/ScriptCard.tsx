@@ -1,4 +1,4 @@
-import { Script } from '@/types/types'
+import { Script } from '@/features/scripts/types'
 import { BookOpen, ChevronDown, ChevronUp, FileText, LucideIcon } from 'lucide-react'
 import React, { useState } from 'react'
 import ActionButtons from '@/features/scripts/components/ActionButtons'

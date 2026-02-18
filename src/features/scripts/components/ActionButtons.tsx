@@ -1,4 +1,4 @@
-import { ActionButtonsProps } from '@/types/types'
+import { ActionButtonsProps } from '@/features/scripts/types'
 import { Check, Copy, Download, Share2 } from 'lucide-react'
 import React, { useState } from 'react'
 

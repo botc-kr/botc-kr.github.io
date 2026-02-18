@@ -2,7 +2,7 @@ import minion_info from '@/assets/images/minion_info.webp'
 import demon_info from '@/assets/images/demon_info.webp'
 import dusk from '@/assets/images/dusk.webp'
 import dawn from '@/assets/images/dawn.webp'
-import { Character, HelperInfo, Team } from '@/types/types'
+import { Character, HelperInfo, Team } from '@/features/helper/types'
 
 export const NIGHT_INFO: Character[] = [
   {

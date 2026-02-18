@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Character, HelperTab } from '@/types/types'
+import { Character, HelperTab } from '@/features/helper/types'
 
 type CharacterRowProps = {
   type: HelperTab

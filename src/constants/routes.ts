@@ -1,29 +1,22 @@
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
 
-export const hashFromPageType = (page: PageType): string => {
-  switch (page) {
-    case PAGE_TYPES.SAVANT:
-      return 'savant-generator'
-    case PAGE_TYPES.HELPER:
-      return 'helper'
-    case PAGE_TYPES.TRACKER:
-      return 'tracker'
-    case PAGE_TYPES.SCRIPTS:
-    default:
-      return ''
-  }
+const HASH_BY_PAGE: Record<PageType, string> = {
+  [PAGE_TYPES.SCRIPTS]: '',
+  [PAGE_TYPES.SAVANT]: 'savant-generator',
+  [PAGE_TYPES.HELPER]: 'helper',
+  [PAGE_TYPES.TRACKER]: 'tracker',
 }
 
-export const pageTypeFromHash = (hash: string): PageType => {
-  switch (hash) {
-    case '#savant-generator':
-      return PAGE_TYPES.SAVANT
-    case '#helper':
-      return PAGE_TYPES.HELPER
-    case '#tracker':
-      return PAGE_TYPES.TRACKER
-    default:
-      return PAGE_TYPES.SCRIPTS
-  }
-}
+const PAGE_BY_HASH: Record<string, PageType> = Object.entries(HASH_BY_PAGE).reduce(
+  (acc, [pageType, hash]) => {
+    if (hash.length > 0) {
+      acc[`#${hash}`] = pageType as PageType
+    }
+    return acc
+  },
+  {} as Record<string, PageType>,
+)
 
+export const hashFromPageType = (page: PageType): string => HASH_BY_PAGE[page]
+
+export const pageTypeFromHash = (hash: string): PageType => PAGE_BY_HASH[hash] ?? PAGE_TYPES.SCRIPTS

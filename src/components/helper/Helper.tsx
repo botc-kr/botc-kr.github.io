@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs'
 import * as Dialog from '@radix-ui/react-dialog'
 import * as Select from '@radix-ui/react-select'
-import { Character, ScriptData, Team, HelperTab } from '@/types/types'
+import { Character, HelperScriptMeta, Team, HelperTab } from '@/features/helper/types'
 import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
 import { CharacterRow } from '@/components/helper/CharacterRow'
 import { CharacterDialog } from '@/components/helper/CharacterDialog'
@@ -16,7 +16,7 @@ const localIcons = import.meta.glob<string>('../../assets/icons/*.png', {
   query: '?url',
   import: 'default',
 })
-type HelperEntry = ScriptData | Character
+type HelperEntry = HelperScriptMeta | Character
 const isCharacterEntry = (item: HelperEntry): item is Character =>
   item.id !== '_meta' && typeof (item as Character).firstNight === 'number'
 const isHelperScriptId = (scriptId: string): scriptId is HelperScriptId =>

@@ -1,5 +1,5 @@
 // ScriptCategory.tsx
-import { ScriptCategoryProps } from '@/types/types'
+import { ScriptCategoryProps } from '@/features/scripts/types'
 import React from 'react'
 import ScriptCard from '@/features/scripts/components/ScriptCard'
 

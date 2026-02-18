@@ -1,5 +1,5 @@
 import { ALL_GENERIC_INFO } from '@/constants/nightInfo'
-import { ALL_TEAM, HelperInfo, Team } from '@/types/types'
+import { ALL_TEAM, HelperInfo, Team } from '@/features/helper/types'
 
 export const CHARACTER_INFO_MAP: Record<string, HelperInfo[]> = {
   minion_info: [ALL_GENERIC_INFO.thisisyourdemon],

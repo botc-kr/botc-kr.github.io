@@ -1,7 +1,8 @@
 import { Github } from 'lucide-react'
-import { type PageType } from '@/constants/pages'
+import { PAGE_TYPES, type PageType } from '@/constants/pages'
 import { SECTIONS } from '@/constants/sections'
 import { HEADER_OFFSET_PX } from '@/constants/ui'
+import { scrollToElementById } from '@/utils/scroll'
 
 interface HeaderProps {
   currentPage: PageType
@@ -10,18 +11,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   const scrollToElement = (id: string) => {
-    const element = document.getElementById(id)
-    const headerOffset = HEADER_OFFSET_PX
-
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      })
-    }
+    scrollToElementById(id, HEADER_OFFSET_PX)
   }
 
   return (
@@ -37,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
               </a>
 
               <div className="hidden sm:flex space-x-4">
-                {currentPage === 'scripts' ? (
+                {currentPage === PAGE_TYPES.SCRIPTS ? (
                   <>
                     <a
                       href={`#${SECTIONS.OFFICIAL}`}
@@ -73,16 +63,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
 
             <div className="flex items-center space-x-6">
               <button
-                 onClick={() => onPageChange('scripts')}
+                onClick={() => onPageChange(PAGE_TYPES.SCRIPTS)}
                 className={`hover:text-gray-300 transition duration-200 ${
-                  currentPage === 'scripts' ? 'text-white' : 'text-gray-400'
+                  currentPage === PAGE_TYPES.SCRIPTS ? 'text-white' : 'text-gray-400'
                 }`}>
                 스크립트
               </button>
               <button
-                 onClick={() => onPageChange('savant')}
+                onClick={() => onPageChange(PAGE_TYPES.SAVANT)}
                 className={`hover:text-gray-300 transition duration-200 ${
-                  currentPage === 'savant' ? 'text-white' : 'text-gray-400'
+                  currentPage === PAGE_TYPES.SAVANT ? 'text-white' : 'text-gray-400'
                 }`}>
                 서번트
               </button>

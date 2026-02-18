@@ -1,11 +1,18 @@
-import { Script } from '@/types/types'
-import React, { useEffect, useState } from 'react'
-import { fetchScripts, handleCopyJson, handleDownloadJson, handleDownloadPdf } from '@/features/scripts/services/ScriptUtils'
+import React, { useEffect, useMemo, useState } from 'react'
+import { Script } from '@/features/scripts/types'
+import {
+  copyScriptJsonToClipboard,
+  downloadScriptJson,
+  downloadScriptPdf,
+  fetchScripts,
+} from '@/features/scripts/services/scriptService'
 import { Footer, Header } from '@/components/HeaderFooter'
 import ScriptCategory from '@/features/scripts/components/ScriptCategory'
 import { type PageType } from '@/constants/pages'
 import { SECTIONS } from '@/constants/sections'
 import { HEADER_OFFSET_PX } from '@/constants/ui'
+import { notify } from '@/lib/utils'
+import { scrollToElementById } from '@/utils/scroll'
 
 interface ScriptListProps {
   currentPage: PageType
@@ -14,12 +21,25 @@ interface ScriptListProps {
 
 const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) => {
   const [scripts, setScripts] = useState<Script[]>([])
-  const [loading, setLoading] = useState<boolean>(true)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
   const [copiedId, setCopiedId] = useState<string | null>(null)
   const [downloadingId, setDownloadingId] = useState<string | null>(null)
 
   useEffect(() => {
-    fetchScripts(setScripts, setLoading)
+    const loadScripts = async () => {
+      setIsLoading(true)
+      try {
+        const loadedScripts = await fetchScripts()
+        setScripts(loadedScripts)
+      } catch (error) {
+        console.error('Error loading scripts:', error)
+        notify('스크립트 데이터를 불러오지 못했습니다.')
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    void loadScripts()
   }, [])
 
   useEffect(() => {
@@ -27,18 +47,8 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
       const hash = window.location.hash.slice(1)
       if (!hash) return
 
-      if (!loading && scripts.length > 0) {
-        const element = document.getElementById(hash)
-        if (element) {
-          const headerOffset = HEADER_OFFSET_PX
-          const elementPosition = element.getBoundingClientRect().top
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth',
-          })
-        }
+      if (!isLoading && scripts.length > 0) {
+        scrollToElementById(hash, HEADER_OFFSET_PX)
       }
     }
 
@@ -46,31 +56,56 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
     window.addEventListener('hashchange', scrollToScript)
 
     return () => window.removeEventListener('hashchange', scrollToScript)
-  }, [loading, scripts])
+  }, [isLoading, scripts])
 
-  const officialScripts = scripts.filter(script => script.official)
-  const teensyvilleScripts = scripts.filter(script => !script.official && script.teensyville)
-  const communityScripts = scripts.filter(script => !script.official && !script.teensyville)
-  const scriptCategories = [
-    { id: SECTIONS.OFFICIAL, title: '공식 스크립트', scripts: officialScripts },
-    { id: SECTIONS.COMMUNITY, title: '커스텀 스크립트', scripts: communityScripts },
-    { id: SECTIONS.TEENSYVILLE, title: '틴시빌 스크립트', scripts: teensyvilleScripts },
-  ]
+  const scriptCategories = useMemo(() => {
+    const officialScripts = scripts.filter(script => script.official)
+    const teensyvilleScripts = scripts.filter(script => !script.official && script.teensyville)
+    const communityScripts = scripts.filter(script => !script.official && !script.teensyville)
 
-  if (loading) {
+    return [
+      { id: SECTIONS.OFFICIAL, title: '공식 스크립트', scripts: officialScripts },
+      { id: SECTIONS.COMMUNITY, title: '커스텀 스크립트', scripts: communityScripts },
+      { id: SECTIONS.TEENSYVILLE, title: '틴시빌 스크립트', scripts: teensyvilleScripts },
+    ]
+  }, [scripts])
+
+  if (isLoading) {
     return <div className="flex justify-center items-center min-h-screen">Loading...</div>
   }
 
   const onCopyJson = async (jsonUrl: string, scriptId: string): Promise<void> => {
-    await handleCopyJson(jsonUrl, scriptId, setCopiedId)
+    try {
+      await copyScriptJsonToClipboard(jsonUrl)
+      setCopiedId(scriptId)
+      window.setTimeout(() => {
+        setCopiedId(null)
+      }, 1000)
+    } catch (error) {
+      console.error('Error copying JSON:', error)
+      notify('JSON 복사 중 오류가 발생했습니다.')
+    }
   }
 
   const onDownloadJson = async (jsonUrl: string, scriptId: string): Promise<void> => {
-    await handleDownloadJson(jsonUrl, scriptId)
+    try {
+      await downloadScriptJson(jsonUrl, scriptId)
+    } catch (error) {
+      console.error('Error downloading JSON:', error)
+      notify('JSON 다운로드 중 오류가 발생했습니다.')
+    }
   }
 
   const onDownloadSheet = async (pdfUrl: string, scriptId: string): Promise<void> => {
-    await handleDownloadPdf(pdfUrl, scriptId, setDownloadingId)
+    try {
+      setDownloadingId(scriptId)
+      await downloadScriptPdf(pdfUrl)
+    } catch (error) {
+      console.error('Error downloading PDF:', error)
+      notify('PDF 다운로드 중 오류가 발생했습니다.')
+    } finally {
+      setDownloadingId(null)
+    }
   }
 
   return (

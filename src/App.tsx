@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import { Footer } from '@/components/HeaderFooter'
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
 import { pageTypeFromHash, hashFromPageType } from '@/constants/routes'
+import { scrollToTop } from '@/utils/scroll'
 
 const SavantProposition = lazy(() => import('@/components/SavantProposition'))
 const ScriptList = lazy(() => import('@/features/scripts/components/ScriptList'))
@@ -12,7 +13,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState<PageType>(() => pageTypeFromHash(window.location.hash))
 
   const handlePageChange = (page: PageType) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    scrollToTop()
     setCurrentPage(page)
     window.location.hash = hashFromPageType(page)
   }
@@ -22,7 +23,7 @@ function App() {
       const hash = window.location.hash
       const page = pageTypeFromHash(hash)
       setCurrentPage(page)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      scrollToTop()
     }
 
     window.addEventListener('hashchange', handleHashChange)

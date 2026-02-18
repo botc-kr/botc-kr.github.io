@@ -1,7 +1,7 @@
 import { FC, useMemo, useRef, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ChevronLeft, X } from 'lucide-react'
-import { Alignment, Character, HelperInfo } from '@/types/types'
+import { Alignment, Character, HelperInfo } from '@/features/helper/types'
 import { getCharacterInfos } from '@/components/helper/characterInfoMap'
 
 type CharacterDialogProps = {
