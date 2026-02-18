@@ -11,7 +11,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
-import { GameLog } from '@/features/tracker/types'
+import { Alignment, GameLog, Player } from '@/features/tracker/types'
 
 interface DashboardProps {
   logs: GameLog[]
@@ -27,11 +27,23 @@ const WINNER_BADGE_CLASSES = {
   evil: 'bg-orange-100 text-orange-800',
 } as const
 
+const winnerLabel = (winner: Alignment): string => winner.toUpperCase()
+
+const playerCardKey = (logId: string, player: Player): string => `${logId}-${player.id}-${player.role}`
+
+const EmptyChartState = () => <div className="h-full flex items-center justify-center text-gray-400">No data</div>
+
 const StatCard = ({ label, value, valueClassName }: { label: string; value: number; valueClassName: string }) => (
   <div className="text-center">
     <span className={`block text-4xl font-bold ${valueClassName}`}>{value}</span>
     <span className="text-sm text-gray-500">{label}</span>
   </div>
+)
+
+const WinnerBadge = ({ winner }: { winner: Alignment }) => (
+  <span className={`px-2 py-1 rounded text-xs font-semibold ${WINNER_BADGE_CLASSES[winner]}`}>
+    {winnerLabel(winner)}
+  </span>
 )
 
 const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
@@ -60,7 +72,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
     }
   }, [logs])
 
-  const recentGamesData = useMemo(
+  const recentGameWinners = useMemo(
     () =>
       logs
         .slice(0, 10)
@@ -106,7 +118,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                 </PieChart>
               </ResponsiveContainer>
             ) : (
-              <div className="h-full flex items-center justify-center text-gray-400">No data</div>
+              <EmptyChartState />
             )}
           </div>
         </div>
@@ -116,7 +128,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
           <div className="h-64 flex-1">
             {hasLogs ? (
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={recentGamesData}>
+                <BarChart data={recentGameWinners}>
                   <XAxis dataKey="name" />
                   <YAxis allowDecimals={false} />
                   <Tooltip
@@ -136,20 +148,20 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                       return (
                         <div className="bg-white p-2 border shadow-sm rounded">
                           <p className="font-bold">{label}</p>
-                          <p style={{ color: WINNER_COLORS[winner] }}>Winner: {winner.toUpperCase()}</p>
+                          <p style={{ color: WINNER_COLORS[winner] }}>Winner: {winnerLabel(winner)}</p>
                         </div>
                       )
                     }}
                   />
                   <Bar dataKey="value" name="Game">
-                    {recentGamesData.map((entry, index) => (
+                    {recentGameWinners.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={WINNER_COLORS[entry.winner]} />
                     ))}
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
             ) : (
-              <div className="h-full flex items-center justify-center text-gray-400">No data</div>
+              <EmptyChartState />
             )}
           </div>
         </div>
@@ -182,10 +194,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                     <td className="px-6 py-4 font-medium text-gray-900">{log.date}</td>
                     <td className="px-6 py-4">{log.edition.name}</td>
                     <td className="px-6 py-4">
-                      <span
-                        className={`px-2 py-1 rounded text-xs font-semibold ${WINNER_BADGE_CLASSES[log.winner]}`}>
-                        {log.winner.toUpperCase()}
-                      </span>
+                      <WinnerBadge winner={log.winner} />
                     </td>
                     <td className="px-6 py-4 text-right">
                       <span className="text-blue-600 hover:text-blue-800">
@@ -198,9 +207,9 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                     <tr>
                       <td colSpan={4} className="px-6 py-4 bg-gray-50">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                          {log.players.map((player, index) => (
+                          {log.players.map(player => (
                             <div
-                              key={index}
+                              key={playerCardKey(log.id, player)}
                               className={`p-3 rounded-lg border flex items-center gap-3 ${
                                 player.isDead
                                   ? 'bg-gray-100 border-gray-200 opacity-70 grayscale'
