@@ -17,7 +17,7 @@ function App() {
       case PAGE_TYPES.SCRIPTS:
         return <ScriptList currentPage={currentPage} onPageChange={handlePageChange} />
       case PAGE_TYPES.HELPER:
-        return <Helper />
+        return <Helper currentPage={currentPage} onPageChange={handlePageChange} />
       case PAGE_TYPES.TRACKER:
         return <TrackerApp />
       case PAGE_TYPES.SAVANT:

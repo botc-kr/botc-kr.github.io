@@ -18,7 +18,10 @@ export const HelperScriptSelect: FC<HelperScriptSelectProps> = ({ selectedScript
       </Select.Icon>
     </Select.Trigger>
     <Select.Portal>
-      <Select.Content className="overflow-hidden bg-white rounded-md shadow-lg border border-gray-200">
+      <Select.Content
+        position="popper"
+        sideOffset={6}
+        className="z-[60] overflow-hidden bg-white rounded-md shadow-lg border border-gray-200">
         <Select.Viewport className="p-1">
           {HELPER_SCRIPTS.map(script => (
             <Select.Item
