@@ -44,14 +44,15 @@ export type HelperInfo = {
 }
 
 export type HelperScriptMeta = {
+  id: '_meta'
   author: string
-  background: null
-  id: string
+  background: string | null
   isOfficial: boolean
   name: string
 }
 
 export type HelperEntry = HelperScriptMeta | Character
 
-export const isCharacterEntry = (item: HelperEntry): item is Character =>
-  item.id !== '_meta' && typeof (item as Character).firstNight === 'number'
+export const isHelperScriptMeta = (item: HelperEntry): item is HelperScriptMeta => item.id === '_meta'
+
+export const isCharacterEntry = (item: HelperEntry): item is Character => !isHelperScriptMeta(item)
