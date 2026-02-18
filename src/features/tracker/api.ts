@@ -11,6 +11,9 @@ import {
 
 const rawLogModulesByPath = import.meta.glob<RawLogModule>('../../logs/*.json', { eager: true })
 
+const sortLogsByIdDesc = (logs: GameLog[]): GameLog[] =>
+  [...logs].sort((leftLog, rightLog) => rightLog.id.localeCompare(leftLog.id))
+
 export const fetchGameLogs = async (): Promise<GameLog[]> => {
   try {
     const gameLogs = Object.entries(rawLogModulesByPath).map(([path, moduleValue]) => {
@@ -29,7 +32,7 @@ export const fetchGameLogs = async (): Promise<GameLog[]> => {
       }
     })
 
-    return gameLogs
+    return sortLogsByIdDesc(gameLogs)
   } catch (error) {
     console.error('Error loading local logs', error)
     return []
