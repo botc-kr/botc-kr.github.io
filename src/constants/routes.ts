@@ -20,3 +20,5 @@ const PAGE_BY_HASH: Record<string, PageType> = Object.entries(HASH_BY_PAGE).redu
 export const hashFromPageType = (page: PageType): string => HASH_BY_PAGE[page]
 
 export const pageTypeFromHash = (hash: string): PageType => PAGE_BY_HASH[hash] ?? PAGE_TYPES.SCRIPTS
+
+export const isPageRouteHash = (hash: string): boolean => hash.length === 0 || hash in PAGE_BY_HASH
