@@ -80,6 +80,23 @@ python3 validate_google_sheet_csv.py --strict-warnings
 python3 validate_google_sheet_csv.py --strict
 ```
 
+#### CSV control-character sanitization
+
+Remove control characters before strict validation:
+
+```bash
+python3 sanitize_csv_control_chars.py --file assets/csv/ko_KR.csv
+```
+
+Multiple files:
+
+```bash
+python3 sanitize_csv_control_chars.py \
+  --file assets/csv/ko_KR.csv \
+  --file assets/csv/scripts.csv \
+  --ignore-missing
+```
+
 #### Scripts metadata JSON for web app
 
 Generate root `public/scripts.json` from `assets/csv/scripts.csv`:
@@ -105,7 +122,7 @@ yarn translations:sync-scripts
 ```
 
 This runs download -> validate -> `public/scripts.json` generation in order.
-Validation in this pipeline uses strict mode for `scripts.csv` (`--skip-characters --strict`).
+This runs `download -> sanitize downloaded csv -> strict validate scripts.csv -> generate`.
 
 #### Full roles JSON
 

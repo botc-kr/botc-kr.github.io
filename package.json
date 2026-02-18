@@ -17,8 +17,10 @@
     "translations:csv:validate": "python3 translations-tooling/validate_google_sheet_csv.py",
     "translations:csv:validate:strict": "python3 translations-tooling/validate_google_sheet_csv.py --strict",
     "translations:csv:validate:scripts-strict": "python3 translations-tooling/validate_google_sheet_csv.py --skip-characters --strict",
+    "translations:csv:sanitize": "python3 translations-tooling/sanitize_csv_control_chars.py",
+    "translations:csv:sanitize:downloaded": "python3 translations-tooling/sanitize_csv_control_chars.py --file translations-tooling/assets/csv/ko_KR.csv --file translations-tooling/assets/csv/scripts.csv --ignore-missing",
     "translations:scripts:generate": "python3 translations-tooling/generate_public_scripts_json_from_csv.py",
-    "translations:sync-scripts": "yarn translations:csv:download && yarn translations:csv:validate:scripts-strict && yarn translations:scripts:generate"
+    "translations:sync-scripts": "yarn translations:csv:download && yarn translations:csv:sanitize:downloaded && yarn translations:csv:validate:scripts-strict && yarn translations:scripts:generate"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
