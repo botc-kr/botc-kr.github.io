@@ -9,6 +9,17 @@ interface HeaderProps {
   onPageChange: (page: PageType) => void
 }
 
+const scriptSectionLinks = [
+  { id: SECTIONS.OFFICIAL, label: '공식' },
+  { id: SECTIONS.COMMUNITY, label: '커스텀' },
+  { id: SECTIONS.TEENSYVILLE, label: '틴시빌' },
+] as const
+
+const topNavItems = [
+  { page: PAGE_TYPES.SCRIPTS, label: '스크립트' },
+  { page: PAGE_TYPES.SAVANT, label: '서번트' },
+] as const
+
 export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   const scrollToElement = (id: string) => {
     scrollToElementById(id, HEADER_OFFSET_PX)
@@ -28,54 +39,34 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
 
               <div className="hidden sm:flex space-x-4">
                 {currentPage === PAGE_TYPES.SCRIPTS ? (
-                  <>
+                  scriptSectionLinks.map(link => (
                     <a
-                      href={`#${SECTIONS.OFFICIAL}`}
+                      key={link.id}
+                      href={`#${link.id}`}
                       className="hover:text-gray-300 transition duration-200"
-                      onClick={e => {
-                        e.preventDefault()
-                        scrollToElement(SECTIONS.OFFICIAL)
+                      onClick={event => {
+                        event.preventDefault()
+                        scrollToElement(link.id)
                       }}>
-                      공식
+                      {link.label}
                     </a>
-                    <a
-                      href={`#${SECTIONS.COMMUNITY}`}
-                      className="hover:text-gray-300 transition duration-200"
-                      onClick={e => {
-                        e.preventDefault()
-                        scrollToElement(SECTIONS.COMMUNITY)
-                      }}>
-                      커스텀
-                    </a>
-                    <a
-                      href={`#${SECTIONS.TEENSYVILLE}`}
-                      className="hover:text-gray-300 transition duration-200"
-                      onClick={e => {
-                        e.preventDefault()
-                        scrollToElement(SECTIONS.TEENSYVILLE)
-                      }}>
-                      틴시빌
-                    </a>
-                  </>
+                  ))
                 ) : null}
               </div>
             </div>
 
             <div className="flex items-center space-x-6">
-              <button
-                onClick={() => onPageChange(PAGE_TYPES.SCRIPTS)}
-                className={`hover:text-gray-300 transition duration-200 ${
-                  currentPage === PAGE_TYPES.SCRIPTS ? 'text-white' : 'text-gray-400'
-                }`}>
-                스크립트
-              </button>
-              <button
-                onClick={() => onPageChange(PAGE_TYPES.SAVANT)}
-                className={`hover:text-gray-300 transition duration-200 ${
-                  currentPage === PAGE_TYPES.SAVANT ? 'text-white' : 'text-gray-400'
-                }`}>
-                서번트
-              </button>
+              {topNavItems.map(navItem => (
+                <button
+                  key={navItem.page}
+                  type="button"
+                  onClick={() => onPageChange(navItem.page)}
+                  className={`hover:text-gray-300 transition duration-200 ${
+                    currentPage === navItem.page ? 'text-white' : 'text-gray-400'
+                  }`}>
+                  {navItem.label}
+                </button>
+              ))}
               <a
                 href="https://github.com/botc-kr/botc-kr.github.io/tree/gh-pages"
                 target="_blank"

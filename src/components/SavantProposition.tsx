@@ -1,10 +1,9 @@
 import { RefreshCwIcon } from 'lucide-react'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Header } from '@/components/HeaderFooter'
 import { type PageType } from '@/constants/pages'
 import { SAVANT_PROPOSITIONS } from '@/constants/savant'
 import { buildScriptImageUrl } from '@/constants/urls'
-
 
 interface SavantPropositionProps {
   currentPage: PageType
@@ -14,10 +13,16 @@ interface SavantPropositionProps {
 const SavantProposition: React.FC<SavantPropositionProps> = ({ currentPage, onPageChange }) => {
   const [currentProposition, setCurrentProposition] = useState(SAVANT_PROPOSITIONS[0])
 
-  const generateNewProposition = () => {
-    const newIndex = Math.floor(Math.random() * SAVANT_PROPOSITIONS.length)
-    setCurrentProposition(SAVANT_PROPOSITIONS[newIndex])
-  }
+  const generateNewProposition = useCallback(() => {
+    if (SAVANT_PROPOSITIONS.length <= 1) {
+      return
+    }
+
+    const currentIndex = SAVANT_PROPOSITIONS.indexOf(currentProposition)
+    const baseRandomIndex = Math.floor(Math.random() * (SAVANT_PROPOSITIONS.length - 1))
+    const nextIndex = currentIndex < 0 || baseRandomIndex < currentIndex ? baseRandomIndex : baseRandomIndex + 1
+    setCurrentProposition(SAVANT_PROPOSITIONS[nextIndex])
+  }, [currentProposition])
 
   return (
     <>
@@ -39,12 +44,13 @@ const SavantProposition: React.FC<SavantPropositionProps> = ({ currentPage, onPa
               className="w-40 h-40 mx-auto mb-4 animate-spin-slow"
             />
 
-            <div
-              className="p-3 bg-gray-100 rounded-lg cursor-pointer hover:bg-gray-200 transition-colors"
+            <button
+              type="button"
+              className="w-full p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
               onClick={generateNewProposition}>
               <p className="text-lg font-medium text-gray-800 mb-2">{currentProposition}</p>
               <RefreshCwIcon className="w-4 h-4 mx-auto text-gray-600" />
-            </div>
+            </button>
           </div>
 
           <div className="text-sm text-gray-400">
