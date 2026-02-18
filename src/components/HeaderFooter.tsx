@@ -22,9 +22,9 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
-              <a href="/" className="text-xl font-bold">
+              <button type="button" onClick={() => onPageChange(PAGE_TYPES.SCRIPTS)} className="text-xl font-bold">
                 시계탑에 흐른 피
-              </a>
+              </button>
 
               <div className="hidden sm:flex space-x-4">
                 {currentPage === PAGE_TYPES.SCRIPTS ? (
