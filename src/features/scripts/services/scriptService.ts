@@ -1,8 +1,9 @@
 import { Script } from '@/features/scripts/types'
 import { normalizeTranslationUrl } from '@/constants/urls'
-import { fetchWithRetry } from '@/utils/fetchRetry'
-import { fetchJsonWithRetry } from '@/utils/fetchJson'
 import { copyTextToClipboard } from '@/utils/clipboard'
+import { triggerBlobDownload } from '@/utils/download'
+import { fetchJsonWithRetry } from '@/utils/fetchJson'
+import { fetchWithRetry } from '@/utils/fetchRetry'
 
 export const fetchScripts = async (): Promise<Script[]> => {
   const scripts = await fetchJsonWithRetry<Script[]>('/scripts.json')
@@ -15,30 +16,22 @@ export const fetchScripts = async (): Promise<Script[]> => {
 }
 
 export const copyScriptJsonToClipboard = async (jsonUrl: string): Promise<void> => {
-  const jsonData = await fetchJsonWithRetry<unknown>(jsonUrl)
-  await copyTextToClipboard(JSON.stringify(jsonData, null, 2))
+  await copyTextToClipboard(await getPrettyScriptJson(jsonUrl))
 }
 
 export const downloadScriptJson = async (jsonUrl: string, fileName: string): Promise<void> => {
-  const jsonData = await fetchJsonWithRetry<unknown>(jsonUrl)
-  const jsonBlob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' })
-  downloadBlob(jsonBlob, `${fileName}.json`)
+  const jsonBlob = new Blob([await getPrettyScriptJson(jsonUrl)], { type: 'application/json' })
+  triggerBlobDownload(jsonBlob, `${fileName}.json`)
 }
 
 export const downloadScriptPdf = async (pdfUrl: string): Promise<void> => {
   const response = await fetchWithRetry(pdfUrl)
   const pdfBlob = await response.blob()
   const fileName = pdfUrl.split('/').pop() ?? 'script.pdf'
-  downloadBlob(pdfBlob, fileName)
+  triggerBlobDownload(pdfBlob, fileName)
 }
 
-const downloadBlob = (blob: Blob, fileName: string): void => {
-  const blobUrl = URL.createObjectURL(blob)
-  const anchor = document.createElement('a')
-  anchor.href = blobUrl
-  anchor.download = fileName
-  document.body.appendChild(anchor)
-  anchor.click()
-  document.body.removeChild(anchor)
-  URL.revokeObjectURL(blobUrl)
+const getPrettyScriptJson = async (jsonUrl: string): Promise<string> => {
+  const jsonData = await fetchJsonWithRetry<unknown>(jsonUrl)
+  return JSON.stringify(jsonData, null, 2)
 }
