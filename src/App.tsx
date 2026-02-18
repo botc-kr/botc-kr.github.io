@@ -1,9 +1,8 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense } from 'react'
 import { LoadingState } from '@/components/AsyncState'
 import { Footer } from '@/components/layout/Footer'
-import { PAGE_TYPES, type PageType } from '@/constants/pages'
-import { hashFromPageType, isPageRouteHash, pageTypeFromHash } from '@/constants/routes'
-import { scrollToTop } from '@/utils/scroll'
+import { PAGE_TYPES } from '@/constants/pages'
+import { useHashPageRoute } from '@/hooks/useHashPageRoute'
 
 const SavantProposition = lazy(() => import('@/components/SavantProposition'))
 const ScriptList = lazy(() => import('@/features/scripts/components/ScriptList'))
@@ -11,45 +10,7 @@ const Helper = lazy(() => import('@/features/helper/components/Helper'))
 const TrackerApp = lazy(() => import('@/features/tracker/TrackerApp'))
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<PageType>(() => {
-    const currentHash = typeof window === 'undefined' ? '' : window.location.hash
-    return pageTypeFromHash(currentHash)
-  })
-
-  const handlePageChange = (page: PageType) => {
-    if (typeof window === 'undefined') {
-      setCurrentPage(page)
-      return
-    }
-
-    scrollToTop()
-    setCurrentPage(page)
-    const nextHash = hashFromPageType(page)
-    if (nextHash.length > 0) {
-      window.location.hash = nextHash
-      return
-    }
-
-    if (window.location.hash.length > 0) {
-      window.history.pushState('', document.title, window.location.pathname + window.location.search)
-    }
-  }
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash
-      if (!isPageRouteHash(hash)) {
-        return
-      }
-
-      const page = pageTypeFromHash(hash)
-      setCurrentPage(page)
-      scrollToTop()
-    }
-
-    window.addEventListener('hashchange', handleHashChange)
-    return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [])
+  const { currentPage, handlePageChange } = useHashPageRoute()
 
   const renderCurrentPage = () => {
     switch (currentPage) {
