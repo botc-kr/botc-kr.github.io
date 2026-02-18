@@ -47,7 +47,6 @@ export enum Alignment {
 }
 
 export const ALL_TEAM: Team[] = [Team.Townsfolk, Team.Outsider, Team.Minion, Team.Demon]
-export const ALL_TEAM_TRAVELER: Team[] = [Team.Townsfolk, Team.Outsider, Team.Minion, Team.Demon, Team.Traveler]
 
 export type Character = {
   id: string
@@ -85,5 +84,3 @@ export type ScriptData = {
   isOfficial: boolean
   name: string
 }
-
-export type HelperProps = never

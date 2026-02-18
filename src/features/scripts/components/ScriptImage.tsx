@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import bmr from '@assets/images/bad_moon_rising.png'
-import defaultImage from '@assets/images/blood_on_the_clocktower.png'
+import bmr from '@/assets/images/bad_moon_rising.png'
+import defaultImage from '@/assets/images/blood_on_the_clocktower.png'
 import snv from '@/assets/images/sects_and_violets.png'
 import tb from '@/assets/images/trouble_brewing.png'
 

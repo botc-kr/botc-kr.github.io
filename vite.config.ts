@@ -1,25 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  plugins: [
-    react({
-      include: '**/*.{jsx,tsx,html}',
-    }),
-  ],
+  plugins: [react()],
   base: '/',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@assets': path.resolve(__dirname, './src/assets'),
-    },
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: './index.html',
-      },
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 })

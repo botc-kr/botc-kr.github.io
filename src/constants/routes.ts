@@ -4,8 +4,6 @@ export const hashFromPageType = (page: PageType): string => {
   switch (page) {
     case PAGE_TYPES.SAVANT:
       return 'savant-generator'
-    case PAGE_TYPES.PDF:
-      return 'pdfgen'
     case PAGE_TYPES.HELPER:
       return 'helper'
     case PAGE_TYPES.TRACKER:
@@ -20,8 +18,6 @@ export const pageTypeFromHash = (hash: string): PageType => {
   switch (hash) {
     case '#savant-generator':
       return PAGE_TYPES.SAVANT
-    case '#pdfgen':
-      return PAGE_TYPES.PDF
     case '#helper':
       return PAGE_TYPES.HELPER
     case '#tracker':
@@ -30,5 +26,4 @@ export const pageTypeFromHash = (hash: string): PageType => {
       return PAGE_TYPES.SCRIPTS
   }
 }
-
 
