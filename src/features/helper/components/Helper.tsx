@@ -5,24 +5,11 @@ import { CharacterDialog } from '@/features/helper/components/CharacterDialog'
 import { HelperScriptSelect } from '@/features/helper/components/HelperScriptSelect'
 import HelperTabs from '@/features/helper/components/HelperTabs'
 import { useHelperScriptSelection } from '@/features/helper/hooks/useHelperScriptSelection'
+import { buildNightOrderCharacters } from '@/features/helper/services/nightOrderService'
 import { fetchHelperScriptEntries } from '@/features/helper/services/helperScriptService'
-import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
+import { ALL_GENERIC_INFO } from '@/constants/nightInfo'
 import { Character, HelperEntry, HelperTab, Team, isCharacterEntry } from '@/features/helper/types'
 import { useAsyncData } from '@/hooks/useAsyncData'
-
-const buildNightOrderCharacters = (
-  characters: Character[],
-  tab: HelperTab.FirstNight | HelperTab.OtherNight,
-): Character[] => {
-  const isFirstNight = tab === HelperTab.FirstNight
-  const orderKey = isFirstNight ? 'firstNight' : 'otherNight'
-  const reminderKey = isFirstNight ? 'firstNightReminder' : 'otherNightReminder'
-
-  const prebuiltNightEntries = NIGHT_INFO.filter(entry => entry[reminderKey] !== '')
-  const playableCharacters = characters.filter(character => character[orderKey] > 0)
-
-  return [...prebuiltNightEntries, ...playableCharacters].sort((a, b) => a[orderKey] - b[orderKey])
-}
 
 const Helper: FC = () => {
   const { selectedScriptId, selectedScript, handleScriptChange } = useHelperScriptSelection()
