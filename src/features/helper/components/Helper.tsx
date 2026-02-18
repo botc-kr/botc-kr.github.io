@@ -185,7 +185,11 @@ const Helper: FC = () => {
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 bg-black/50" />
           {selectedCharacter && (
-            <CharacterDialog character={selectedCharacter} script={characters} genericInfos={ALL_GENERIC_INFO} />
+            <CharacterDialog
+              character={selectedCharacter}
+              scriptCharacters={characters}
+              genericInfos={ALL_GENERIC_INFO}
+            />
           )}
         </Dialog.Portal>
       </Dialog.Root>

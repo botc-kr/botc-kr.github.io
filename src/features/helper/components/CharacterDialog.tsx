@@ -6,11 +6,25 @@ import { getCharacterInfos } from '@/features/helper/components/characterInfoMap
 
 type CharacterDialogProps = {
   character: Character
-  script: Character[]
+  scriptCharacters: Character[]
   genericInfos: Record<string, HelperInfo>
 }
 
-export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, genericInfos }) => {
+type InfoCardButtonProps = {
+  info: HelperInfo
+  onSelect: (info: HelperInfo) => void
+}
+
+const InfoCardButton: FC<InfoCardButtonProps> = ({ info, onSelect }) => (
+  <button
+    type="button"
+    onClick={() => onSelect(info)}
+    className="w-full p-4 border rounded-lg text-left hover:bg-gray-50">
+    <h3 className="font-semibold">{info.title}</h3>
+  </button>
+)
+
+export const CharacterDialog: FC<CharacterDialogProps> = ({ character, scriptCharacters, genericInfos }) => {
   const contentRef = useRef<HTMLDivElement>(null)
 
   const [selectedInfo, setSelectedInfo] = useState<HelperInfo | null>(null)
@@ -20,20 +34,20 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
   const characterInfos = useMemo(() => getCharacterInfos(character.id), [character.id])
   const selectedCharactersList = useMemo(() => Array.from(selectedCharacters), [selectedCharacters])
   const selectedScriptCharacters = useMemo(
-    () => script.filter(char => selectedCharacters.has(char.id)),
-    [script, selectedCharacters],
+    () => scriptCharacters.filter(char => selectedCharacters.has(char.id)),
+    [scriptCharacters, selectedCharacters],
   )
   const eligibleCharacters = useMemo(() => {
     if (!selectedInfo?.teams) return []
-    return script.filter(char => char.team !== undefined && selectedInfo.teams?.includes(char.team))
-  }, [script, selectedInfo])
+    return scriptCharacters.filter(char => char.team !== undefined && selectedInfo.teams?.includes(char.team))
+  }, [scriptCharacters, selectedInfo])
   const firstSelectedCharacterName = useMemo(() => {
     if (selectedCharactersList.length === 0) {
       return ''
     }
-    const firstCharacter = script.find(char => char.id === selectedCharactersList[0])
+    const firstCharacter = scriptCharacters.find(char => char.id === selectedCharactersList[0])
     return firstCharacter ? `'${firstCharacter.name}'` : ''
-  }, [script, selectedCharactersList])
+  }, [scriptCharacters, selectedCharactersList])
 
   const handleBackClick = () => {
     setSelectedInfo(null)
@@ -85,6 +99,7 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
             {selectedScriptCharacters.map(char => (
               <button
                 key={char.id}
+                type="button"
                 onClick={() => handleCharacterSelect(char.id)}
                 className="group relative flex flex-col items-center">
                 <img src={char.image} alt={char.name} className="w-40 h-40 object-contain mb-2" />
@@ -103,6 +118,7 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
         {eligibleCharacters.map(char => (
           <button
             key={char.id}
+            type="button"
             onClick={() => handleCharacterSelect(char.id)}
             className={`p-2 rounded-lg border flex flex-col items-center ${
               selectedCharacters.has(char.id) ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
@@ -122,6 +138,7 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
         <h3 className="text-sm font-semibold text-gray-900">진영 선택</h3>
         <div className="grid grid-cols-2 gap-2">
           <button
+            type="button"
             onClick={() => setSelectedAlignment(Alignment.Good)}
             className={`p-4 rounded-lg border flex justify-center items-center ${
               selectedAlignment === Alignment.Good ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
@@ -129,6 +146,7 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
             <span className="text-sm font-medium">선</span>
           </button>
           <button
+            type="button"
             onClick={() => setSelectedAlignment(Alignment.Evil)}
             className={`p-4 rounded-lg border flex justify-center items-center ${
               selectedAlignment === Alignment.Evil ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
@@ -161,7 +179,10 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
       <div ref={contentRef} className="flex-1 overflow-y-auto px-6 pb-6">
         {selectedInfo ? (
           <div className="space-y-4">
-            <button onClick={handleBackClick} className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+            <button
+              type="button"
+              onClick={handleBackClick}
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
               <ChevronLeft className="h-4 w-4" />
               뒤로 가기
             </button>
@@ -179,27 +200,17 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, script, g
             </div>
           </div>
         ) : (
-          <div className="space-y-2">
-            {characterInfos.length > 0 && <h2 className="text-l font-bold text-gray-900">{character.name} 정보</h2>}
-            {characterInfos.map((info, index) => (
-              <div
-                key={index}
-                onClick={() => handleInfoClick(info)}
-                className="p-4 border rounded-lg cursor-pointer hover:bg-gray-50">
-                <h3 className="font-semibold">{info.title}</h3>
-              </div>
-            ))}
-            <h2 className="text-l font-bold text-gray-900">일반 정보</h2>
-            {Object.entries(genericInfos).map(([key, info]) => (
-              <div
-                key={key}
-                onClick={() => handleInfoClick(info)}
-                className="p-4 border rounded-lg cursor-pointer hover:bg-gray-50">
-                <h3 className="font-semibold">{info.title}</h3>
-              </div>
-            ))}
-          </div>
-        )}
+            <div className="space-y-2">
+              {characterInfos.length > 0 && <h2 className="text-l font-bold text-gray-900">{character.name} 정보</h2>}
+              {characterInfos.map((info, index) => (
+                <InfoCardButton key={`${info.title}-${index}`} info={info} onSelect={handleInfoClick} />
+              ))}
+              <h2 className="text-l font-bold text-gray-900">일반 정보</h2>
+              {Object.entries(genericInfos).map(([key, info]) => (
+                <InfoCardButton key={key} info={info} onSelect={handleInfoClick} />
+              ))}
+            </div>
+          )}
       </div>
 
       <Dialog.Close className="absolute top-4 right-4">
