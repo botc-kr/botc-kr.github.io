@@ -34,33 +34,43 @@
 
 - `index.html`: 엔트리 HTML (SEO 메타, 루트 `#root`)
 - `src/main.tsx`: React 엔트리
-- `src/App.tsx`: 해시 기반 경량 라우팅
+- `src/App.tsx`: 페이지 라우팅 훅(`useHashPageRoute`) 기반 엔트리
   - 기본: 스크립트 목록
   - `#savant-generator`: 서번트 명제 생성기
   - `#helper`: 밤 순서/캐릭터 헬퍼
   - `#tracker`: 게임 로그 대시보드
+- `src/hooks/useHashPageRoute.ts`: 해시 변경 감지/페이지 전환 공통 훅
+- `src/components/layout/`: 전역 레이아웃
+  - `Header.tsx`, `Footer.tsx`
 - `public/scripts.json`: 노출 스크립트 메타 소스
 - `src/features/scripts/components/ScriptList.tsx`: 스크립트 목록 페이지 루트
   - `src/features/scripts/components/ScriptCategory.tsx`
   - `src/features/scripts/components/ScriptCard.tsx`
   - `src/features/scripts/components/ScriptImage.tsx`
   - `src/features/scripts/components/ActionButtons.tsx`
+  - `src/features/scripts/hooks/useScriptActions.ts`
+  - `src/features/scripts/hooks/useScrollToScriptHash.ts`
+  - `src/features/scripts/services/scriptCategoryService.ts`
   - 데이터 로딩/다운로드 유틸: `src/features/scripts/services/scriptService.ts`
 - `src/components/SavantProposition.tsx`: 서번트 명제 생성기 (문구 배열 유지)
 - `src/features/helper/`:
-  - `Helper.tsx`: 원격 JSON 스크립트 로드(ko_KR 경로), 라디ックス UI(Tabs/Select/Dialog)
-  - `CharacterDialog.tsx`, `CharacterRow.tsx`: 캐릭터 상세/선택 UI
+  - `components/Helper.tsx`: 원격 JSON 스크립트 로드(ko_KR 경로), 캐릭터 상세 다이얼로그 관리
+  - `components/HelperTabs.tsx`, `components/HelperScriptSelect.tsx`: 탭/스크립트 선택 UI 분리
+  - `components/CharacterDialog.tsx`, `components/CharacterRow.tsx`: 캐릭터 상세/선택 UI
+  - `hooks/useHelperScriptSelection.ts`: 스크립트 선택 상태 + localStorage 동기화
   - `services/helperScriptService.ts`: 아이콘 매핑/스크립트 로딩 서비스
   - 도우미 상수: `src/constants/nightInfo.tsx`
 - `src/features/tracker/`:
   - `TrackerApp.tsx`, `Dashboard.tsx`, `api.ts`, `types.ts`
+  - `components/ChartsPanel.tsx`, `components/StatsSummary.tsx`, `components/GameLogTable.tsx`, `components/WinnerBadge.tsx`
+  - `constants.ts`: 승리 진영 색상/배지 공통 상수
 - `src/assets/`: 이미지/폰트 등 정적 리소스
 - 스타일: `src/index.css` (TailwindCSS v4 CSS-first 설정)
 - 번들 설정: `vite.config.ts`
 
 ### 4) 실행 흐름(요약)
 
-- 초기 진입 시 `App.tsx`에서 `window.location.hash`를 읽어 페이지 결정
+- 초기 진입 시 `useHashPageRoute`가 `window.location.hash`를 읽어 페이지를 결정하고 해시 변경을 구독
 - 스크립트 페이지
   - `scriptService.fetchScripts()` → `/scripts.json`을 fetch하여 카드 목록 렌더
   - 카드 내 액션: JSON 복사, JSON/PDF 다운로드, 공유 URL 복사(`https://botc-kr.github.io/#<scriptId>`)
@@ -137,7 +147,7 @@
 일반 수정 시
 
 1. 변경 의도 요약 후 대상 파일 열람
-2. 관련 모듈/유틸 영향 범위 확인(`scriptService`, `HeaderFooter`, 헬퍼 상수 등)
+2. 관련 모듈/유틸 영향 범위 확인(`scriptService`, `components/layout`, 헬퍼 상수 등)
 3. 최소 단위의 안전한 수정 → 빌드 → 수동 점검(로컬)
 4. 린트/포맷 → 커밋 메시지 규칙(`type: subject`, 예: `feat: add new script entry`)
 5. `CLAUDE.md`의 관련 섹션 업데이트(스키마/흐름 변경 시)
@@ -175,6 +185,10 @@
   - 미사용 레거시 코드/의존성 정리(`PDFGenerator`, CRA 테스트/리포트 파일, 미사용 패키지)
   - 타입 분리(`src/features/scripts/types.ts`, `src/features/helper/types.ts`) 및 공통 스크롤 유틸(`src/utils/scroll.ts`) 추가
   - `helper`/`tracker` 기능을 `src/features/`로 재배치하고 로딩 서비스 분리(`helperScriptService`, `scriptService`)
+- 2026-02-18: 리팩토링 4차
+  - TailwindCSS v4 마이그레이션(`@tailwindcss/vite`, CSS-first `@theme`) 및 eslint 10 업그레이드
+  - 공통 비동기 상태 컴포넌트(`src/components/AsyncState.tsx`) 도입
+  - 레이아웃/헬퍼/트래커/스크립트 기능을 훅·서브컴포넌트·서비스로 추가 분해
 
 ### 13) 라이선스/크레딧
 
