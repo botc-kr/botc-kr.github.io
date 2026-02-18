@@ -1,5 +1,15 @@
 import { isAbortError, throwIfAborted } from '@/utils/errors'
 
+class NonRetriableHttpError extends Error {
+  constructor(status: number) {
+    super(`HTTP ${status}`)
+    this.name = 'NonRetriableHttpError'
+  }
+}
+
+const isRetriableStatusCode = (status: number): boolean =>
+  status === 408 || status === 425 || status === 429 || status >= 500
+
 const wait = async (delayMs: number, signal?: AbortSignal): Promise<void> => {
   if (!signal) {
     await new Promise(resolve => setTimeout(resolve, delayMs))
@@ -36,10 +46,21 @@ export async function fetchWithRetry(
     try {
       throwIfAborted(signal)
       const res = await fetch(input, init)
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      if (!res.ok) {
+        if (!isRetriableStatusCode(res.status)) {
+          throw new NonRetriableHttpError(res.status)
+        }
+
+        throw new Error(`HTTP ${res.status}`)
+      }
+
       return res
     } catch (err) {
       if (isAbortError(err)) {
+        throw err
+      }
+
+      if (err instanceof NonRetriableHttpError) {
         throw err
       }
 
