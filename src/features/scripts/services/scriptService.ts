@@ -1,14 +1,10 @@
 import { Script } from '@/features/scripts/types'
 import { normalizeTranslationUrl } from '@/constants/urls'
 import { fetchWithRetry } from '@/utils/fetchRetry'
-
-const fetchJson = async <T>(url: string): Promise<T> => {
-  const response = await fetchWithRetry(url)
-  return (await response.json()) as T
-}
+import { fetchJsonWithRetry } from '@/utils/fetchJson'
 
 export const fetchScripts = async (): Promise<Script[]> => {
-  const scripts = await fetchJson<Script[]>('/scripts.json')
+  const scripts = await fetchJsonWithRetry<Script[]>('/scripts.json')
   return scripts.map(script => ({
     ...script,
     json: normalizeTranslationUrl(script.json),
@@ -18,12 +14,12 @@ export const fetchScripts = async (): Promise<Script[]> => {
 }
 
 export const copyScriptJsonToClipboard = async (jsonUrl: string): Promise<void> => {
-  const jsonData = await fetchJson<unknown>(jsonUrl)
+  const jsonData = await fetchJsonWithRetry<unknown>(jsonUrl)
   await navigator.clipboard.writeText(JSON.stringify(jsonData, null, 2))
 }
 
 export const downloadScriptJson = async (jsonUrl: string, fileName: string): Promise<void> => {
-  const jsonData = await fetchJson<unknown>(jsonUrl)
+  const jsonData = await fetchJsonWithRetry<unknown>(jsonUrl)
   const jsonBlob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' })
   downloadBlob(jsonBlob, `${fileName}.json`)
 }

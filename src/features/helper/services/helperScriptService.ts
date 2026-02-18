@@ -1,5 +1,5 @@
 import { HelperEntry, isCharacterEntry } from '@/features/helper/types'
-import { fetchWithRetry } from '@/utils/fetchRetry'
+import { fetchJsonWithRetry } from '@/utils/fetchJson'
 import { getRoleIconUrl } from '@/utils/roleIcon'
 
 const applyLocalIconFallback = (entries: HelperEntry[]): HelperEntry[] =>
@@ -20,8 +20,7 @@ const applyLocalIconFallback = (entries: HelperEntry[]): HelperEntry[] =>
   })
 
 export const fetchHelperScriptEntries = async (scriptUrl: string): Promise<HelperEntry[]> => {
-  const response = await fetchWithRetry(scriptUrl)
-  const data = (await response.json()) as unknown
+  const data = await fetchJsonWithRetry<unknown>(scriptUrl)
 
   if (!Array.isArray(data)) {
     throw new Error('스크립트 데이터 형식이 올바르지 않습니다')
