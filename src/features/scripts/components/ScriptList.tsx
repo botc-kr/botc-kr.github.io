@@ -1,13 +1,9 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import { Script } from '@/features/scripts/types'
-import {
-  copyScriptJsonToClipboard,
-  downloadScriptJson,
-  downloadScriptPdf,
-  fetchScripts,
-} from '@/features/scripts/services/scriptService'
+import React, { useCallback, useEffect, useMemo } from 'react'
+import type { Script } from '@/features/scripts/types'
+import { fetchScripts } from '@/features/scripts/services/scriptService'
 import { Footer, Header } from '@/components/HeaderFooter'
 import ScriptCategory from '@/features/scripts/components/ScriptCategory'
+import { useScriptActions } from '@/features/scripts/hooks/useScriptActions'
 import { type PageType } from '@/constants/pages'
 import { SECTIONS } from '@/constants/sections'
 import { HEADER_OFFSET_PX } from '@/constants/ui'
@@ -29,9 +25,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
   const { data: scripts, isLoading } = useAsyncData<Script[]>(fetchScripts, [], {
     onError: handleLoadScriptsError,
   })
-
-  const [copiedId, setCopiedId] = useState<string | null>(null)
-  const [downloadingId, setDownloadingId] = useState<string | null>(null)
+  const { copiedId, downloadingId, onCopyJson, onDownloadJson, onDownloadPdf } = useScriptActions()
 
   useEffect(() => {
     const scrollToScript = () => {
@@ -63,40 +57,6 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
 
   if (isLoading) {
     return <div className="flex justify-center items-center min-h-screen">Loading...</div>
-  }
-
-  const onCopyJson = async (jsonUrl: string, scriptId: string): Promise<void> => {
-    try {
-      await copyScriptJsonToClipboard(jsonUrl)
-      setCopiedId(scriptId)
-      window.setTimeout(() => {
-        setCopiedId(null)
-      }, 1000)
-    } catch (error) {
-      console.error('Error copying JSON:', error)
-      notify('JSON 복사 중 오류가 발생했습니다.')
-    }
-  }
-
-  const onDownloadJson = async (jsonUrl: string, scriptId: string): Promise<void> => {
-    try {
-      await downloadScriptJson(jsonUrl, scriptId)
-    } catch (error) {
-      console.error('Error downloading JSON:', error)
-      notify('JSON 다운로드 중 오류가 발생했습니다.')
-    }
-  }
-
-  const onDownloadPdf = async (pdfUrl: string, scriptId: string): Promise<void> => {
-    try {
-      setDownloadingId(scriptId)
-      await downloadScriptPdf(pdfUrl)
-    } catch (error) {
-      console.error('Error downloading PDF:', error)
-      notify('PDF 다운로드 중 오류가 발생했습니다.')
-    } finally {
-      setDownloadingId(null)
-    }
   }
 
   return (
