@@ -19,7 +19,7 @@ function App() {
       case PAGE_TYPES.HELPER:
         return <Helper currentPage={currentPage} onPageChange={handlePageChange} />
       case PAGE_TYPES.TRACKER:
-        return <TrackerApp />
+        return <TrackerApp currentPage={currentPage} onPageChange={handlePageChange} />
       case PAGE_TYPES.SAVANT:
       default:
         return (
