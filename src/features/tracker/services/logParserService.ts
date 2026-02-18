@@ -5,7 +5,10 @@ export type RawLogModule = RawGameLog | { default: RawGameLog }
 
 type RoleMetadata = { name: string; image: string; team?: Team }
 
-const TRACKER_TEAM_SET = new Set<Team>(['townsfolk', 'outsider', 'minion', 'demon', 'traveler'])
+const TRACKER_TEAMS: Team[] = ['townsfolk', 'outsider', 'minion', 'demon', 'traveler']
+const TRACKER_TEAM_SET = new Set<string>(TRACKER_TEAMS)
+
+const isTrackerTeam = (value: string): value is Team => TRACKER_TEAM_SET.has(value)
 
 const readRoleField = (
   role: RoleDefinition,
@@ -17,11 +20,11 @@ const readRoleField = (
 }
 
 const parseRoleTeam = (value: string | undefined): Team | undefined => {
-  if (!value || !TRACKER_TEAM_SET.has(value as Team)) {
+  if (!value || !isTrackerTeam(value)) {
     return undefined
   }
 
-  return value as Team
+  return value
 }
 
 export const resolveRawLog = (moduleValue: RawLogModule): RawGameLog =>

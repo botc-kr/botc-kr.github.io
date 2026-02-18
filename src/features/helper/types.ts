@@ -53,6 +53,43 @@ export type HelperScriptMeta = {
 
 export type HelperEntry = HelperScriptMeta | Character
 
-export const isHelperScriptMeta = (item: HelperEntry): item is HelperScriptMeta => item.id === '_meta'
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null
 
-export const isCharacterEntry = (item: HelperEntry): item is Character => !isHelperScriptMeta(item)
+const TEAM_VALUES: string[] = Object.values(Team)
+const isTeam = (value: unknown): value is Team => typeof value === 'string' && TEAM_VALUES.includes(value)
+
+export const isHelperScriptMeta = (item: unknown): item is HelperScriptMeta => {
+  if (!isRecord(item)) {
+    return false
+  }
+
+  return (
+    item.id === '_meta' &&
+    typeof item.author === 'string' &&
+    (typeof item.background === 'string' || item.background === null) &&
+    typeof item.isOfficial === 'boolean' &&
+    typeof item.name === 'string'
+  )
+}
+
+export const isCharacterEntry = (item: unknown): item is Character => {
+  if (!isRecord(item)) {
+    return false
+  }
+
+  return (
+    typeof item.id === 'string' &&
+    item.id !== '_meta' &&
+    typeof item.name === 'string' &&
+    typeof item.image === 'string' &&
+    typeof item.firstNight === 'number' &&
+    typeof item.firstNightReminder === 'string' &&
+    typeof item.otherNight === 'number' &&
+    typeof item.otherNightReminder === 'string' &&
+    typeof item.ability === 'string' &&
+    (item.team === undefined || isTeam(item.team))
+  )
+}
+
+export const isHelperEntry = (item: unknown): item is HelperEntry => isHelperScriptMeta(item) || isCharacterEntry(item)

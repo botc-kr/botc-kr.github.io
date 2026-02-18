@@ -60,13 +60,13 @@ export const HELPER_SCRIPTS = [
 ] as const
 
 export type HelperScriptId = (typeof HELPER_SCRIPTS)[number]['id']
+type HelperScript = (typeof HELPER_SCRIPTS)[number]
 
 export const HELPER_SELECTED_SCRIPT_STORAGE_KEY = 'helper_selected_script'
 const DEFAULT_HELPER_SCRIPT = HELPER_SCRIPTS[0]
-const HELPER_SCRIPTS_BY_ID = new Map(HELPER_SCRIPTS.map(script => [script.id, script]))
+const HELPER_SCRIPTS_BY_ID = new Map<string, HelperScript>(HELPER_SCRIPTS.map(script => [script.id, script]))
 
-export const isHelperScriptId = (scriptId: string): scriptId is HelperScriptId =>
-  HELPER_SCRIPTS_BY_ID.has(scriptId as HelperScriptId)
+export const isHelperScriptId = (scriptId: string): scriptId is HelperScriptId => HELPER_SCRIPTS_BY_ID.has(scriptId)
 
 export const getHelperScriptById = (scriptId: HelperScriptId) =>
   HELPER_SCRIPTS_BY_ID.get(scriptId) ?? DEFAULT_HELPER_SCRIPT
