@@ -46,7 +46,7 @@ export type HelperInfo = {
 export type HelperScriptMeta = {
   id: '_meta'
   author: string
-  background: string | null
+  background?: string | null
   isOfficial: boolean
   name: string
 }
@@ -67,7 +67,7 @@ export const isHelperScriptMeta = (item: unknown): item is HelperScriptMeta => {
   return (
     item.id === '_meta' &&
     typeof item.author === 'string' &&
-    (typeof item.background === 'string' || item.background === null) &&
+    (item.background === undefined || typeof item.background === 'string' || item.background === null) &&
     typeof item.isOfficial === 'boolean' &&
     typeof item.name === 'string'
   )

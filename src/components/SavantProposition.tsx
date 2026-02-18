@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header'
 import { type PageType } from '@/constants/pages'
 import { SAVANT_PROPOSITIONS } from '@/constants/savant'
 import { buildScriptImageUrl } from '@/constants/urls'
+import { getRoleIconUrl } from '@/utils/roleIcon'
 
 interface SavantPropositionProps {
   currentPage: PageType
@@ -12,6 +13,7 @@ interface SavantPropositionProps {
 
 const SavantProposition: FC<SavantPropositionProps> = ({ currentPage, onPageChange }) => {
   const [currentProposition, setCurrentProposition] = useState(SAVANT_PROPOSITIONS[0])
+  const savantIconUrl = getRoleIconUrl('savant') ?? buildScriptImageUrl('Icon_savant')
 
   const generateNewProposition = useCallback(() => {
     if (SAVANT_PROPOSITIONS.length <= 1) {
@@ -39,7 +41,7 @@ const SavantProposition: FC<SavantPropositionProps> = ({ currentPage, onPageChan
             </p>
 
             <img
-              src={buildScriptImageUrl('Icon_savant')}
+              src={savantIconUrl}
               alt="서번트 아이콘"
               className="w-40 h-40 mx-auto mb-4 animate-spin-slow"
             />
