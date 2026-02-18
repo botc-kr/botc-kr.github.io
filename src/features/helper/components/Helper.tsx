@@ -1,32 +1,20 @@
-import { FC, useMemo, useState } from 'react'
+import { FC, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ErrorState, LoadingState } from '@/components/AsyncState'
 import { CharacterDialog } from '@/features/helper/components/CharacterDialog'
 import { HelperScriptSelect } from '@/features/helper/components/HelperScriptSelect'
 import HelperTabs from '@/features/helper/components/HelperTabs'
+import { useHelperCharacters } from '@/features/helper/hooks/useHelperCharacters'
 import { useHelperEntries } from '@/features/helper/hooks/useHelperEntries'
 import { useHelperScriptSelection } from '@/features/helper/hooks/useHelperScriptSelection'
-import { buildNightOrderCharacters } from '@/features/helper/services/nightOrderService'
 import { ALL_GENERIC_INFO } from '@/constants/nightInfo'
-import { Character, HelperTab, Team, isCharacterEntry } from '@/features/helper/types'
+import { Character } from '@/features/helper/types'
 
 const Helper: FC = () => {
   const { selectedScriptId, selectedScript, handleScriptChange } = useHelperScriptSelection()
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
   const { entries, isLoading, loadError } = useHelperEntries(selectedScript.url)
-
-  const characters = useMemo(
-    () => entries.filter(isCharacterEntry).filter(character => character.team !== Team.Traveler),
-    [entries],
-  )
-  const firstNightCharacters = useMemo(
-    () => buildNightOrderCharacters(characters, HelperTab.FirstNight),
-    [characters],
-  )
-  const otherNightCharacters = useMemo(
-    () => buildNightOrderCharacters(characters, HelperTab.OtherNight),
-    [characters],
-  )
+  const { characters, firstNightCharacters, otherNightCharacters } = useHelperCharacters(entries)
   const selectedScriptName = selectedScript.name
 
   if (loadError) {
