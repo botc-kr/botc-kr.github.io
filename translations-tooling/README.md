@@ -59,6 +59,22 @@ elixir download_csv_from_google_sheet.exs
 
 ### From CSV to JSON
 
+#### Scripts metadata JSON for web app
+
+Generate root `public/scripts.json` from `assets/csv/scripts.csv`:
+
+```bash
+python3 generate_public_scripts_json_from_csv.py
+```
+
+Custom paths:
+
+```bash
+python3 generate_public_scripts_json_from_csv.py \
+  --csv /path/to/scripts.csv \
+  --out /path/to/public/scripts.json
+```
+
 #### Full roles JSON
 
 Once we have the CSV file for our language, we can run a script that will generate a JSON file in the clocktower.online format.
