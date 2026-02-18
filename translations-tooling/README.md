@@ -4,7 +4,7 @@ TL;DR: If you want to find translated scripts to play on [clocktower.online](htt
 
 This repo contains scripts to generate JSON files for use on [clocktower.online](https://clocktower.online/) or [Nara](https://nara.fly.dev/) as well as CSV files for the google sheet in which we keep translations for abilities, names, and various reminders.
 
-You can find already generated script JSON files in [assets/scripts](assets/scripts) and the google sheet is [here](https://docs.google.com/spreadsheets/d/183HMp4ZgslxA4NtFVTXhY3xAbg7FIXZdmVnh9-4A_14/edit#gid=923580658).
+You can find already generated script JSON files in [assets/scripts](assets/scripts) and the working google sheet is [here](https://docs.google.com/spreadsheets/d/1vpUdjIl2PK25YMTSEItw6JN6gHGfEU67yMWnGMc7LC0/edit).
 
 The language we use is Elixir (see how to [install](https://elixir-lang.org/install.html#macos) it).
 
@@ -18,11 +18,40 @@ Then either genereate your CSV from a JSON file or the other way around. You'll 
 
 We use a google sheet to edit, discuss, and maintain translations of the game, mainly for digital use on [clocktower.online](https://clocktower.online/) or [Nara](https://nara.fly.dev/). This format should also be usable to generate translations for the physical copy of the game one day.
 
-Take a look at the english tab which you will need to duplicate for your own language: [EN](https://docs.google.com/spreadsheets/d/183HMp4ZgslxA4NtFVTXhY3xAbg7FIXZdmVnh9-4A_14/edit#gid=1546765235). We download these tabs in CSV format and run our script on them to generate JSON files.
+Current workflow in this repo uses:
+- `Characters` tab for role translation data
+- `Scripts` tab for script metadata
+
+We export those tabs as CSV and run generation scripts on top of them.
 
 ![](assets/images/download_tab_csv.png)
 
 ## Running the scripts
+
+### From Google Sheet to CSV (automated)
+
+Instead of downloading each tab manually, you can fetch CSV files directly from Google Sheets:
+
+```bash
+mix run download_csv_from_google_sheet.exs
+```
+
+By default, this downloads:
+- `Characters` -> `assets/csv/ko_KR.csv` (compatible with `generate_json_from_csv.exs`)
+- `Scripts` -> `assets/csv/scripts.csv`
+
+Useful options:
+
+```bash
+# Override spreadsheet id (also supported via BOTC_TRANSLATIONS_SPREADSHEET_ID env var)
+mix run download_csv_from_google_sheet.exs --spreadsheet-id <GOOGLE_SHEET_ID>
+
+# Custom tab -> file mappings (repeat --target)
+mix run download_csv_from_google_sheet.exs --target "Characters:ko_KR.csv" --target "Scripts:scripts.csv"
+
+# You can also run it without Mix (useful when Mix/Hex environment is unstable)
+elixir download_csv_from_google_sheet.exs
+```
 
 ### From CSV to JSON
 
