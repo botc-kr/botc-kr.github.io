@@ -38,7 +38,7 @@ mix run download_csv_from_google_sheet.exs
 
 By default, this downloads:
 - `gid=1289885206` (Characters) -> `assets/csv/ko_KR.csv` (compatible with `generate_json_from_csv.exs`)
-- `Scripts` tab -> `assets/csv/scripts.csv`
+- `gid=123908000` (Scripts) -> `assets/csv/scripts.csv`
 
 Useful options:
 
@@ -48,6 +48,7 @@ mix run download_csv_from_google_sheet.exs --spreadsheet-id <GOOGLE_SHEET_ID>
 
 # Custom gid -> file mappings (repeat --target-gid)
 mix run download_csv_from_google_sheet.exs --target-gid "1289885206:ko_KR.csv"
+mix run download_csv_from_google_sheet.exs --target-gid "123908000:scripts.csv"
 
 # Custom tab-name -> file mappings (repeat --target)
 mix run download_csv_from_google_sheet.exs --target "Scripts:scripts.csv"

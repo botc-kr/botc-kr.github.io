@@ -5,7 +5,7 @@ defmodule DownloadCsvFromGoogleSheet do
   @default_out_dir "assets/csv"
   @default_targets [
     {:gid, "1289885206", "ko_KR.csv"},
-    {:sheet, "Scripts", "scripts.csv"}
+    {:gid, "123908000", "scripts.csv"}
   ]
 
   def run(argv) do
