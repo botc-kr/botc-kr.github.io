@@ -49,21 +49,26 @@
   - `src/features/scripts/components/ScriptImage.tsx`
   - `src/features/scripts/components/ActionButtons.tsx`
   - `src/features/scripts/hooks/useScriptActions.ts`
+  - `src/features/scripts/hooks/useScripts.ts`
   - `src/features/scripts/hooks/useScrollToScriptHash.ts`
   - `src/features/scripts/services/scriptCategoryService.ts`
   - 데이터 로딩/다운로드 유틸: `src/features/scripts/services/scriptService.ts`
 - `src/components/SavantProposition.tsx`: 서번트 명제 생성기 (문구 배열 유지)
 - `src/features/helper/`:
   - `components/Helper.tsx`: 원격 JSON 스크립트 로드(ko_KR 경로), 캐릭터 상세 다이얼로그 관리
+  - `components/dialog/`: 캐릭터 다이얼로그 하위 UI(`InfoCardButton`, `CharacterSelectionPanel`, `AlignmentSelector`)
   - `components/HelperTabs.tsx`, `components/HelperScriptSelect.tsx`: 탭/스크립트 선택 UI 분리
   - `components/CharacterDialog.tsx`, `components/CharacterRow.tsx`: 캐릭터 상세/선택 UI
+  - `hooks/useHelperEntries.ts`: 선택된 스크립트 엔트리 로딩/에러 처리
   - `hooks/useHelperScriptSelection.ts`: 스크립트 선택 상태 + localStorage 동기화
+  - `services/helperMessageFormatter.ts`: 캐릭터/진영 플레이스홀더 메시지 포매팅
   - `services/helperScriptService.ts`: 아이콘 매핑/스크립트 로딩 서비스
   - 도우미 상수: `src/constants/nightInfo.tsx`
 - `src/features/tracker/`:
   - `TrackerApp.tsx`, `Dashboard.tsx`, `api.ts`, `types.ts`
   - `components/ChartsPanel.tsx`, `components/StatsSummary.tsx`, `components/GameLogTable.tsx`, `components/WinnerBadge.tsx`
   - `constants.ts`: 승리 진영 색상/배지 공통 상수
+  - `hooks/useGameLogs.ts`: 로그 로딩/정렬 로직 분리
 - `src/assets/`: 이미지/폰트 등 정적 리소스
 - 스타일: `src/index.css` (TailwindCSS v4 CSS-first 설정)
 - 번들 설정: `vite.config.ts`
@@ -189,6 +194,11 @@
   - TailwindCSS v4 마이그레이션(`@tailwindcss/vite`, CSS-first `@theme`) 및 eslint 10 업그레이드
   - 공통 비동기 상태 컴포넌트(`src/components/AsyncState.tsx`) 도입
   - 레이아웃/헬퍼/트래커/스크립트 기능을 훅·서브컴포넌트·서비스로 추가 분해
+- 2026-02-18: 리팩토링 5차
+  - 타이머 기반 임시 UI 상태 공통화(`src/hooks/useTransientValue.ts`)
+  - `helper` 캐릭터 다이얼로그 하위 컴포넌트 분해 및 메시지 포매터 도입
+  - `scripts`/`helper`/`tracker` 데이터 로딩 흐름을 전용 훅(`useScripts`, `useHelperEntries`, `useGameLogs`)으로 분리
+  - 역할 ID 정규화 재사용 및 캐릭터 정보 조회 정확 매칭 우선 처리
 
 ### 13) 라이선스/크레딧
 
