@@ -1,5 +1,6 @@
 import { ALL_GENERIC_INFO } from '@/constants/nightInfo'
 import { ALL_TEAM, HelperInfo, Team } from '@/features/helper/types'
+import { normalizeRoleId } from '@/utils/normalizeRoleId'
 
 export const CHARACTER_INFO_MAP: Record<string, HelperInfo[]> = {
   minion_info: [ALL_GENERIC_INFO.thisisyourdemon],
@@ -214,10 +215,18 @@ export const CHARACTER_INFO_MAP: Record<string, HelperInfo[]> = {
 }
 
 export const getCharacterInfos = (characterId: string): HelperInfo[] => {
+  const normalizedCharacterId = normalizeRoleId(characterId)
+
+  const exactMatchInfos = CHARACTER_INFO_MAP[normalizedCharacterId]
+  if (exactMatchInfos) {
+    return exactMatchInfos
+  }
+
   for (const [roleId, infos] of Object.entries(CHARACTER_INFO_MAP)) {
-    if (characterId.includes(roleId)) {
+    if (normalizedCharacterId.includes(roleId)) {
       return infos
     }
   }
+
   return []
 }
