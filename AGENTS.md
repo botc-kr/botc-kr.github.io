@@ -15,6 +15,10 @@
 - **Lint**: `yarn lint` / `yarn lint:fix`
 - **Format**: `yarn format`
 - **Deploy**: `yarn deploy`
+- **Translations CSV Download**: `yarn translations:csv:download`
+- **Translations CSV Validate**: `yarn translations:csv:validate`
+- **Scripts JSON Generate**: `yarn translations:scripts:generate`
+- **Scripts Sync Pipeline**: `yarn translations:sync-scripts` (download -> validate -> generate `public/scripts.json`)
 
 ## 3. Core Architecture
 - **Entry**: `index.html` → `src/main.tsx` → `src/App.tsx`

@@ -12,7 +12,11 @@
     "verify": "yarn lint && yarn typecheck && yarn build",
     "preview": "vite preview",
     "deploy": "yarn build && gh-pages -d dist",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "translations:csv:download": "cd translations-tooling && elixir download_csv_from_google_sheet.exs",
+    "translations:csv:validate": "python3 translations-tooling/validate_google_sheet_csv.py",
+    "translations:scripts:generate": "python3 translations-tooling/generate_public_scripts_json_from_csv.py",
+    "translations:sync-scripts": "yarn translations:csv:download && yarn translations:csv:validate && yarn translations:scripts:generate"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

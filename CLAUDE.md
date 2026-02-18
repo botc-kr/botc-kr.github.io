@@ -26,6 +26,10 @@
    - 타입체크: `yarn typecheck`
    - 통합 검증: `yarn verify` (`lint + typecheck + build`)
    - 포맷: `yarn format`
+   - 번역 CSV 다운로드: `yarn translations:csv:download`
+   - 번역 CSV 검증: `yarn translations:csv:validate`
+   - 스크립트 메타 생성: `yarn translations:scripts:generate`
+   - 원클릭 동기화: `yarn translations:sync-scripts` (`download -> validate -> generate`)
 5. 빌드/프리뷰
    - 빌드: `yarn build`
    - 프리뷰: `yarn preview`
@@ -209,6 +213,10 @@
   - 페이지 메타데이터 중앙화(`pageConfig`)로 라우팅/헤더 중복 제거
   - 클립보드 기능 지원 여부 기반 액션 처리 및 라우팅 해시 location 유틸 일원화
   - 품질 게이트 스크립트 추가(`typecheck`, `verify`) 및 Prettier 옵션 최신화
+- 2026-02-18: 번역 CSV 파이프라인 보강
+  - 구글 시트 CSV 검증 스크립트 추가(`translations-tooling/validate_google_sheet_csv.py`)
+  - 루트 실행 커맨드 추가(`translations:csv:download`, `translations:csv:validate`, `translations:scripts:generate`, `translations:sync-scripts`)
+  - `translations-tooling/README.md`, `AGENTS.md` 명령 가이드 갱신
 
 ### 13) 라이선스/크레딧
 

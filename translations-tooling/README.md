@@ -59,6 +59,24 @@ elixir download_csv_from_google_sheet.exs
 
 ### From CSV to JSON
 
+#### CSV validation (recommended before generation)
+
+Validate exported CSV files before generating JSON:
+
+```bash
+python3 validate_google_sheet_csv.py
+```
+
+Options:
+
+```bash
+# Validate only scripts.csv
+python3 validate_google_sheet_csv.py --skip-characters
+
+# Fail build on warnings too
+python3 validate_google_sheet_csv.py --strict-warnings
+```
+
 #### Scripts metadata JSON for web app
 
 Generate root `public/scripts.json` from `assets/csv/scripts.csv`:
@@ -74,6 +92,16 @@ python3 generate_public_scripts_json_from_csv.py \
   --csv /path/to/scripts.csv \
   --out /path/to/public/scripts.json
 ```
+
+#### One-command sync from project root
+
+From repository root (`botc-kr.github.io`):
+
+```bash
+yarn translations:sync-scripts
+```
+
+This runs download -> validate -> `public/scripts.json` generation in order.
 
 #### Full roles JSON
 
