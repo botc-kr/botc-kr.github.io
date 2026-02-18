@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "typecheck": "tsc -b --pretty false",
     "build": "tsc -b && vite build",
     "lint": "eslint \"src/**/*.{ts,tsx,html}\" --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint \"src/**/*.{ts,tsx,html}\" --report-unused-disable-directives --max-warnings 0 --fix",
+    "verify": "yarn lint && yarn typecheck && yarn build",
     "preview": "vite preview",
     "deploy": "yarn build && gh-pages -d dist",
-    "format": "prettier --write ./src"
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\""
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
