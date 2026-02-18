@@ -70,4 +70,5 @@
 
 ## 7. CI & Required Env
 - Workflow: `/.github/workflows/ci.yml`
+- CI checks: `yarn lint`, `yarn typecheck`, `yarn build`, `yarn translations:csv:validate:strict`, `yarn translations:scripts:generate` + `public/scripts.json` diff check
 - `VITE_TRANSLATIONS_BASE` defaults to local assets (`/translations/assets`), but can be overridden in CI or local env if needed.

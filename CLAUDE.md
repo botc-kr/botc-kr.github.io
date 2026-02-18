@@ -147,19 +147,29 @@
 - 배포: `yarn deploy` → `dist`를 `gh-pages` 브랜치로 푸시
 - 정적 자원: `public/` 경로는 루트(`/`) 기준 제공. 런타임 fetch는 절대경로(`/scripts.json`) 사용
 
-### 9) 외부 의존/통신
+### 9) CI
+
+- 워크플로우: `/.github/workflows/ci.yml`
+- PR/`main` push 시 다음을 검증:
+  - `yarn lint`
+  - `yarn typecheck`
+  - `yarn build`
+  - `yarn translations:csv:validate:strict`
+  - `yarn translations:scripts:generate` 후 `public/scripts.json` 무변경 확인
+
+### 10) 외부 의존/통신
 
 - 기본 번역 리소스: `public/translations/assets` (로컬 정적 경로 `/translations/assets`)
 - `normalizeTranslationUrl`은 과거 `https://raw.githubusercontent.com/wonhyo-e/botc-translations/...` URL을 상응하는 로컬 경로로 변환해 하위 호환을 지원합니다.
 - 네트워크 장애 대비: JSON/PDF fetch 실패 시 경고 노출(`scriptService`, `helperScriptService`)
 
-### 10) 알려진 사항/향후 작업
+### 11) 알려진 사항/향후 작업
 
 - 해시 기반 수동 라우팅 사용 중(필요 시 정식 라우팅 검토 가능)
 - 오프라인 캐시/서비스워커(PWA) 검토 여지
 - `scripts.json` 검증 스키마 도입 고려(JSON Schema)
 
-### 11) 작업 플레이북(에이전트용)
+### 12) 작업 플레이북(에이전트용)
 
 일반 수정 시
 
@@ -186,7 +196,7 @@
 - [ ] 외부 리소스 링크 200 확인
 - [ ] `yarn deploy`
 
-### 12) 변경이력(수기 업데이트)
+### 13) 변경이력(수기 업데이트)
 
 - 2025-08-12: 최초 작성. 프로젝트 구조/데이터 흐름/작업 플레이북 정리.
 - 2025-08-12: 리팩토링 1차
@@ -223,13 +233,16 @@
   - 루트 실행 커맨드 추가(`translations:csv:download`, `translations:csv:sanitize`, `translations:csv:sanitize:downloaded`, `translations:csv:validate`, `translations:csv:validate:strict`, `translations:csv:validate:scripts-strict`, `translations:scripts:generate`, `translations:sync-scripts`)
   - strict 모드 검증 추가(경고 실패, 제어문자/헤더 정규화 실패, scripts.csv 헤더/ID/경로 규칙 강화)
   - `translations-tooling/README.md`, `AGENTS.md` 명령 가이드 갱신
+- 2026-02-18: CI 강화
+  - GitHub Actions CI 워크플로우 추가(`/.github/workflows/ci.yml`)
+  - 정적 품질 게이트 + 번역 CSV strict 검증 + `public/scripts.json` 생성 정합성 검증 자동화
 
-### 13) 라이선스/크레딧
+### 14) 라이선스/크레딧
 
 - 번역물 라이선스: CC BY-NC 4.0 (README 참고)
 - 원작: The Pandemonium Institute (Blood on the Clocktower)
 
-### 14) 문의/피드백
+### 15) 문의/피드백
 
 - GitHub Issues 활용 권장
 - 배포 페이지/저장소 링크: 헤더의 GitHub 아이콘 참조
