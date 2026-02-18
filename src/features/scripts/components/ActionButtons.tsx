@@ -3,6 +3,7 @@ import { useTransientValue } from '@/hooks/useTransientValue'
 import { Check, Copy, Download, Share2 } from 'lucide-react'
 import { type FC, type ReactNode } from 'react'
 import { copyTextToClipboard } from '@/utils/clipboard'
+import { buildCurrentPathUrlWithHash } from '@/utils/location'
 
 interface GradientButtonProps {
   className: string
@@ -36,7 +37,7 @@ const ActionButtons: FC<ActionButtonsProps> = ({
 
   const handleShare = async (): Promise<void> => {
     try {
-      const shareUrl = `${window.location.origin}${window.location.pathname}#${script.id}`
+      const shareUrl = buildCurrentPathUrlWithHash(script.id)
       await copyTextToClipboard(shareUrl)
       showShared(true)
     } catch (err) {

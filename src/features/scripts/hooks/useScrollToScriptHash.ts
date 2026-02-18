@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
 import { HEADER_OFFSET_PX } from '@/constants/ui'
+import { getCurrentHashValue } from '@/utils/location'
 import { scrollToElementById } from '@/utils/scroll'
 
 export const useScrollToScriptHash = (isEnabled: boolean): void => {
   useEffect(() => {
     const scrollToScript = (): void => {
-      const hash = window.location.hash.slice(1)
+      const hash = getCurrentHashValue()
       if (!hash || !isEnabled) {
         return
       }
