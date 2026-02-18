@@ -63,7 +63,7 @@
   - `hooks/useHelperScriptSelection.ts`: 스크립트 선택 상태 + localStorage 동기화
   - `services/helperMessageFormatter.ts`: 캐릭터/진영 플레이스홀더 메시지 포매팅
   - `services/helperScriptService.ts`: 아이콘 매핑/스크립트 로딩 서비스
-  - 도우미 상수: `src/constants/nightInfo.tsx`
+  - 도우미 상수: `src/constants/nightInfo.ts`
 - `src/features/tracker/`:
   - `TrackerApp.tsx`, `Dashboard.tsx`, `api.ts`, `types.ts`
   - `components/ChartsPanel.tsx`, `components/StatsSummary.tsx`, `components/GameLogTable.tsx`, `components/WinnerBadge.tsx`
@@ -119,7 +119,7 @@
 
 - 서번트 명제: `src/components/SavantProposition.tsx`의 `propositions` 배열 수정
 - 헬퍼 스크립트 목록: `src/features/helper/scripts.ts` 수정(ko_KR JSON URL 사용)
-- 일반/밤 정보 프리셋: `src/constants/nightInfo.tsx` (필요 시 메시지/팀/선택수 조정)
+- 일반/밤 정보 프리셋: `src/constants/nightInfo.ts` (필요 시 메시지/팀/선택수 조정)
 
 ### 7) 품질/컨벤션
 
