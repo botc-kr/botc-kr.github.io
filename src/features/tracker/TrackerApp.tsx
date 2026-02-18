@@ -1,4 +1,5 @@
 import { useCallback } from 'react'
+import { LoadingState } from '@/components/AsyncState'
 import Dashboard from '@/features/tracker/Dashboard'
 import { fetchGameLogs } from '@/features/tracker/api'
 import { GameLog } from '@/features/tracker/types'
@@ -12,11 +13,7 @@ const TrackerApp = () => {
   const { data: gameLogs, isLoading } = useAsyncData<GameLog[]>(loadGameLogs, [])
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
-      </div>
-    )
+    return <LoadingState className="min-h-screen" message="" showSpinner />
   }
 
   return (

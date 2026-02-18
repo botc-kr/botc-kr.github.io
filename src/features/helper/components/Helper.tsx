@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
 import * as Dialog from '@radix-ui/react-dialog'
 import * as Select from '@radix-ui/react-select'
 import { ChevronDownIcon } from 'lucide-react'
+import { ErrorState, LoadingState } from '@/components/AsyncState'
 import { CharacterDialog } from '@/features/helper/components/CharacterDialog'
 import { CharacterRow } from '@/features/helper/components/CharacterRow'
 import {
@@ -74,7 +75,7 @@ const Helper: FC = () => {
   }
 
   if (loadError) {
-    return <div className="flex justify-center items-center h-screen text-red-500">{loadError}</div>
+    return <ErrorState className="h-screen" message={loadError} />
   }
 
   return (
@@ -116,7 +117,7 @@ const Helper: FC = () => {
       <h1 className="text-3xl font-bold">{selectedScriptName}</h1>
 
       {isLoading ? (
-        <div className="flex justify-center items-center h-[200px]">불러오는 중...</div>
+        <LoadingState className="h-[200px]" message="불러오는 중..." />
       ) : (
         <Tabs defaultValue={HelperTab.FirstNight}>
           <TabsList className="flex space-x-2 border-b border-gray-200 mb-4">

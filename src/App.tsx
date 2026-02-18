@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
+import { LoadingState } from '@/components/AsyncState'
 import { Footer } from '@/components/HeaderFooter'
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
 import { hashFromPageType, isPageRouteHash, pageTypeFromHash } from '@/constants/routes'
@@ -71,7 +72,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Suspense fallback={<div className="flex justify-center items-center min-h-screen">Loading...</div>}>
+      <Suspense fallback={<LoadingState className="min-h-screen" />}>
         {renderCurrentPage()}
       </Suspense>
     </div>

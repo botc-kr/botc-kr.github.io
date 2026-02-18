@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo } from 'react'
+import { LoadingState } from '@/components/AsyncState'
 import type { Script } from '@/features/scripts/types'
 import { fetchScripts } from '@/features/scripts/services/scriptService'
 import { Footer, Header } from '@/components/HeaderFooter'
@@ -56,7 +57,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
   }, [scripts])
 
   if (isLoading) {
-    return <div className="flex justify-center items-center min-h-screen">Loading...</div>
+    return <LoadingState className="min-h-screen" />
   }
 
   return (
