@@ -1,32 +1,19 @@
-import { FC, useCallback, useMemo, useState } from 'react'
+import { FC, useMemo, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ErrorState, LoadingState } from '@/components/AsyncState'
 import { CharacterDialog } from '@/features/helper/components/CharacterDialog'
 import { HelperScriptSelect } from '@/features/helper/components/HelperScriptSelect'
 import HelperTabs from '@/features/helper/components/HelperTabs'
+import { useHelperEntries } from '@/features/helper/hooks/useHelperEntries'
 import { useHelperScriptSelection } from '@/features/helper/hooks/useHelperScriptSelection'
 import { buildNightOrderCharacters } from '@/features/helper/services/nightOrderService'
-import { fetchHelperScriptEntries } from '@/features/helper/services/helperScriptService'
 import { ALL_GENERIC_INFO } from '@/constants/nightInfo'
-import { Character, HelperEntry, HelperTab, Team, isCharacterEntry } from '@/features/helper/types'
-import { useAsyncData } from '@/hooks/useAsyncData'
+import { Character, HelperTab, Team, isCharacterEntry } from '@/features/helper/types'
 
 const Helper: FC = () => {
   const { selectedScriptId, selectedScript, handleScriptChange } = useHelperScriptSelection()
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
-
-  const loadSelectedScriptEntries = useCallback(async (): Promise<HelperEntry[]> => {
-    return fetchHelperScriptEntries(selectedScript.url)
-  }, [selectedScript])
-
-  const getLoadErrorMessage = useCallback(
-    (error: unknown): string => (error instanceof Error ? error.message : '스크립트를 불러오는데 실패했습니다'),
-    [],
-  )
-
-  const { data: entries, isLoading, error: loadError } = useAsyncData<HelperEntry[]>(loadSelectedScriptEntries, [], {
-    getErrorMessage: getLoadErrorMessage,
-  })
+  const { entries, isLoading, loadError } = useHelperEntries(selectedScript.url)
 
   const characters = useMemo(
     () => entries.filter(isCharacterEntry).filter(character => character.team !== Team.Traveler),
