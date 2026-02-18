@@ -1,62 +1,24 @@
 import { buildScriptJsonUrl } from '@/constants/urls'
 import { getLocalStorageItem } from '@/utils/browserStorage'
 
+const createHelperScript = <ScriptId extends string>(id: ScriptId, name: string) => ({
+  id,
+  name,
+  url: buildScriptJsonUrl(id),
+})
+
 export const HELPER_SCRIPTS = [
-  {
-    id: 'trouble_brewing',
-    name: '불길한 조짐',
-    url: buildScriptJsonUrl('trouble_brewing'),
-  },
-  {
-    id: 'bad_moon_rising',
-    name: '어둠을 부르는 달',
-    url: buildScriptJsonUrl('bad_moon_rising'),
-  },
-  {
-    id: 'sects_and_violets',
-    name: '환란의 화원',
-    url: buildScriptJsonUrl('sects_and_violets'),
-  },
-  {
-    id: 'everyone_can_play',
-    name: '모두를 위한 밤',
-    url: buildScriptJsonUrl('everyone_can_play'),
-  },
-  {
-    id: 'uncertain_death',
-    name: '의문사 (Uncertain Death)',
-    url: buildScriptJsonUrl('uncertain_death'),
-  },
-  {
-    id: 'no_greater_joy',
-    name: '극한의 즐거움',
-    url: buildScriptJsonUrl('no_greater_joy'),
-  },
-  {
-    id: 'laissez_un_faire',
-    name: '자유방임불평등주의',
-    url: buildScriptJsonUrl('laissez_un_faire'),
-  },
-  {
-    id: 'over_the_river',
-    name: '할머니댁으로',
-    url: buildScriptJsonUrl('over_the_river'),
-  },
-  {
-    id: 'pies_baking',
-    name: '익어가는 파이 (Pies Baking)',
-    url: buildScriptJsonUrl('pies_baking'),
-  },
-  {
-    id: 'catfishing',
-    name: 'Catfishing',
-    url: buildScriptJsonUrl('catfishing'),
-  },
-  {
-    id: 'onion_pies',
-    name: 'Onion Pies',
-    url: buildScriptJsonUrl('onion_pies'),
-  },
+  createHelperScript('trouble_brewing', '불길한 조짐'),
+  createHelperScript('bad_moon_rising', '어둠을 부르는 달'),
+  createHelperScript('sects_and_violets', '환란의 화원'),
+  createHelperScript('everyone_can_play', '모두를 위한 밤'),
+  createHelperScript('uncertain_death', '의문사 (Uncertain Death)'),
+  createHelperScript('no_greater_joy', '극한의 즐거움'),
+  createHelperScript('laissez_un_faire', '자유방임불평등주의'),
+  createHelperScript('over_the_river', '할머니댁으로'),
+  createHelperScript('pies_baking', '익어가는 파이 (Pies Baking)'),
+  createHelperScript('catfishing', 'Catfishing'),
+  createHelperScript('onion_pies', 'Onion Pies'),
 ] as const
 
 export type HelperScriptId = (typeof HELPER_SCRIPTS)[number]['id']
