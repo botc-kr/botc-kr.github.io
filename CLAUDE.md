@@ -20,7 +20,7 @@
    - 또는 NPM: `npm ci`
 3. 개발 서버
    - `yarn dev` 혹은 `npm run dev`
-   - 로컬에서 해시 라우팅으로 페이지 전환: `/#savant-generator`, `/#helper`, `/#pdfgen`(현재 비활성)
+   - 로컬에서 해시 라우팅으로 페이지 전환: `/#savant-generator`, `/#helper`, `/#tracker`
 4. 품질 점검
    - 린트: `yarn lint` / 자동수정: `yarn lint:fix`
    - 포맷: `yarn format`
@@ -38,19 +38,22 @@
   - 기본: 스크립트 목록
   - `#savant-generator`: 서번트 명제 생성기
   - `#helper`: 밤 순서/캐릭터 헬퍼
-  - `#pdfgen`: PDF 생성기(현재 UI 연결 비활성)
+  - `#tracker`: 게임 로그 대시보드
 - `public/scripts.json`: 노출 스크립트 메타 소스
 - `src/features/scripts/components/ScriptList.tsx`: 스크립트 목록 페이지 루트
   - `src/features/scripts/components/ScriptCategory.tsx`
   - `src/features/scripts/components/ScriptCard.tsx`
   - `src/features/scripts/components/ScriptImage.tsx`
   - `src/features/scripts/components/ActionButtons.tsx`
-  - 데이터 로딩/다운로드 유틸: `src/features/scripts/services/ScriptUtils.tsx`
+  - 데이터 로딩/다운로드 유틸: `src/features/scripts/services/scriptService.ts`
 - `src/components/SavantProposition.tsx`: 서번트 명제 생성기 (문구 배열 유지)
-- `src/components/helper/`:
+- `src/features/helper/`:
   - `Helper.tsx`: 원격 JSON 스크립트 로드(ko_KR 경로), 라디ックス UI(Tabs/Select/Dialog)
   - `CharacterDialog.tsx`, `CharacterRow.tsx`: 캐릭터 상세/선택 UI
+  - `services/helperScriptService.ts`: 아이콘 매핑/스크립트 로딩 서비스
   - 도우미 상수: `src/constants/nightInfo.tsx`
+- `src/features/tracker/`:
+  - `TrackerApp.tsx`, `Dashboard.tsx`, `api.ts`, `types.ts`
 - `src/assets/`: 이미지/폰트 등 정적 리소스
 - 스타일: `src/index.css`, `tailwind.config.js`
 - 번들 설정: `vite.config.ts`
@@ -59,13 +62,13 @@
 
 - 초기 진입 시 `App.tsx`에서 `window.location.hash`를 읽어 페이지 결정
 - 스크립트 페이지
-  - `ScriptUtils.fetchScripts()` → `/scripts.json`을 fetch하여 카드 목록 렌더
+  - `scriptService.fetchScripts()` → `/scripts.json`을 fetch하여 카드 목록 렌더
   - 카드 내 액션: JSON 복사, JSON/PDF 다운로드, 공유 URL 복사(`https://botc-kr.github.io/#<scriptId>`)
   - 해시 `#<scriptId>`로 직접 진입 시 해당 카드까지 스무스 스크롤
 - 서번트 페이지
   - 고정 문구 배열에서 무작위 선택, 아이콘 회전 애니메이션(`spin-slow`)
 - 헬퍼 페이지
-  - `Helper.tsx`의 `SCRIPTS` 상수 목록에서 선택 → 각 스크립트 원격 JSON 로드
+  - `src/features/helper/scripts.ts` 목록에서 선택 → 각 스크립트 원격 JSON 로드
   - 첫날밤/그 외 밤/캐릭터 탭으로 분리 표시, 캐릭터 다이얼로그로 조합형 안내 메시지 제공
 
 ### 5) 스크립트 데이터 추가/수정 가이드
@@ -100,50 +103,41 @@
 ### 6) 서번트 명제/헬퍼 데이터 편집
 
 - 서번트 명제: `src/components/SavantProposition.tsx`의 `propositions` 배열 수정
-- 헬퍼 스크립트 목록: `src/components/helper/Helper.tsx`의 `SCRIPTS` 상수 수정(ko_KR JSON URL 사용)
+- 헬퍼 스크립트 목록: `src/features/helper/scripts.ts` 수정(ko_KR JSON URL 사용)
 - 일반/밤 정보 프리셋: `src/constants/nightInfo.tsx` (필요 시 메시지/팀/선택수 조정)
 
-### 7) PDF 생성기 상태
+### 7) 품질/컨벤션
 
-- `src/components/PDFGenerator.tsx`는 현재 주석 처리(비활성)
-- 연결 재활성화 방법
-  - `App.tsx`에서 `PDFGenerator` 주석 해제 및 `#pdfgen` 라우트 표시
-  - jsPDF 폰트(`src/assets/fonts/*`) 및 이미지 리소스 경로 확인
-
-### 8) 품질/컨벤션
-
-- 린트: ESLint 9 + TypeScript ESLint, HTML ESLint
+- 린트: ESLint 9 + TypeScript ESLint
 - 포맷: Prettier (`yarn format`)
 - 타입: 가급적 `any` 지양, 명시적 함수 시그니처
 - 네이밍: 의미 있는 전체 단어 사용(약어 지양)
 - 제어 흐름: 가드 클로즈, 에러/엣지 우선 처리
 
-### 9) 배포/정적 경로 주의
+### 8) 배포/정적 경로 주의
 
 - Vite `base: '/'` 설정(루트 도메인 `botc-kr.github.io` 기준)
 - 배포: `yarn deploy` → `dist`를 `gh-pages` 브랜치로 푸시
 - 정적 자원: `public/` 경로는 루트(`/`) 기준 제공. 런타임 fetch는 절대경로(`/scripts.json`) 사용
 
-### 10) 외부 의존/통신
+### 9) 외부 의존/통신
 
 - 기본 번역 리소스: `public/translations/assets` (로컬 정적 경로 `/translations/assets`)
 - `normalizeTranslationUrl`은 과거 `https://raw.githubusercontent.com/wonhyo-e/botc-translations/...` URL을 상응하는 로컬 경로로 변환해 하위 호환을 지원합니다.
-- 네트워크 장애 대비: JSON/PDF fetch 실패 시 경고 노출(`ScriptUtils`)
-- 현재 Firebase 등 추가 백엔드는 사용하지 않음(의존은 있으나 미사용)
+- 네트워크 장애 대비: JSON/PDF fetch 실패 시 경고 노출(`scriptService`, `helperScriptService`)
 
-### 11) 알려진 사항/향후 작업
+### 10) 알려진 사항/향후 작업
 
-- 리액트 라우터 의존성은 있으나 해시 기반 수동 라우팅 사용 중(정식 라우팅 검토 가능)
-- PDF 생성기 비활성 → UI/UX 확정 후 연결
+- 해시 기반 수동 라우팅 사용 중(필요 시 정식 라우팅 검토 가능)
 - 오프라인 캐시/서비스워커(PWA) 검토 여지
 - `scripts.json` 검증 스키마 도입 고려(JSON Schema)
 
-### 12) 작업 플레이북(에이전트용)
+### 11) 작업 플레이북(에이전트용)
 
 일반 수정 시
 
 1. 변경 의도 요약 후 대상 파일 열람
-2. 관련 모듈/유틸 영향 범위 확인(`ScriptUtils`, `HeaderFooter`, 헬퍼 상수 등)
+2. 관련 모듈/유틸 영향 범위 확인(`scriptService`, `HeaderFooter`, 헬퍼 상수 등)
 3. 최소 단위의 안전한 수정 → 빌드 → 수동 점검(로컬)
 4. 린트/포맷 → 커밋 메시지 규칙(`type: subject`, 예: `feat: add new script entry`)
 5. `CLAUDE.md`의 관련 섹션 업데이트(스키마/흐름 변경 시)
@@ -165,26 +159,29 @@
 - [ ] 외부 리소스 링크 200 확인
 - [ ] `yarn deploy`
 
-### 13) 변경이력(수기 업데이트)
+### 12) 변경이력(수기 업데이트)
 
 - 2025-08-12: 최초 작성. 프로젝트 구조/데이터 흐름/작업 플레이북 정리.
 - 2025-08-12: 리팩토링 1차
   - PageType 중앙화(`src/constants/pages.ts`), 해시 라우팅 유틸 추가(`src/constants/routes.ts`)
   - 컴포넌트 prop 타입 통일, alias import 표준화
   - 섹션 id 상수화(`src/constants/sections.ts`), 번역 리소스 URL 헬퍼 추가(`src/constants/urls.ts`)
-  - `alert()` → `notify()`로 공통화(`src/lib/utils.js`), `ScriptUtils` 전반 적용
-  - 중복 타입/미사용 props 제거(`src/types/types.tsx`)
+  - `alert()` → `notify()`로 공통화(`src/lib/utils.ts`), 스크립트 로직 전반 적용
 - 2025-08-12: 리팩토링 2차
   - UI 상수 분리: `HEADER_OFFSET_PX`(`src/constants/ui.ts`)
   - 서번트 명제 상수 분리: `SAVANT_PROPOSITIONS`(`src/constants/savant.ts`)
-  - 네트워크 안정성: `fetchWithRetry` 도입(`src/utils/fetchRetry.ts`) 및 `ScriptUtils` 적용
+  - 네트워크 안정성: `fetchWithRetry` 도입(`src/utils/fetchRetry.ts`) 및 스크립트 서비스 적용
+- 2026-02-18: 리팩토링 3차
+  - 미사용 레거시 코드/의존성 정리(`PDFGenerator`, CRA 테스트/리포트 파일, 미사용 패키지)
+  - 타입 분리(`src/features/scripts/types.ts`, `src/features/helper/types.ts`) 및 공통 스크롤 유틸(`src/utils/scroll.ts`) 추가
+  - `helper`/`tracker` 기능을 `src/features/`로 재배치하고 로딩 서비스 분리(`helperScriptService`, `scriptService`)
 
-### 14) 라이선스/크레딧
+### 13) 라이선스/크레딧
 
 - 번역물 라이선스: CC BY-NC 4.0 (README 참고)
 - 원작: The Pandemonium Institute (Blood on the Clocktower)
 
-### 15) 문의/피드백
+### 14) 문의/피드백
 
 - GitHub Issues 활용 권장
 - 배포 페이지/저장소 링크: 헤더의 GitHub 아이콘 참조

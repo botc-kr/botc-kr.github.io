@@ -6,8 +6,8 @@ import { scrollToTop } from '@/utils/scroll'
 
 const SavantProposition = lazy(() => import('@/components/SavantProposition'))
 const ScriptList = lazy(() => import('@/features/scripts/components/ScriptList'))
-const Helper = lazy(() => import('@/components/helper/Helper'))
-const TrackerApp = lazy(() => import('@/components/tracker/TrackerApp'))
+const Helper = lazy(() => import('@/features/helper/components/Helper'))
+const TrackerApp = lazy(() => import('@/features/tracker/TrackerApp'))
 
 function App() {
   const [currentPage, setCurrentPage] = useState<PageType>(() => pageTypeFromHash(window.location.hash))

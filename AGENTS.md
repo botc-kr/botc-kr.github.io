@@ -29,7 +29,7 @@
   - `src/features/scripts/components/ScriptCategory.tsx`
   - `src/features/scripts/components/ScriptImage.tsx`
   - `src/features/scripts/components/ActionButtons.tsx`
-  - `src/features/scripts/services/ScriptUtils.tsx`
+  - `src/features/scripts/services/scriptService.ts`
 
 ## 4. Agent Guidelines
 - **Read First**: Always check `CLAUDE.md` for the latest conventions, directory structure, and "Playbook".

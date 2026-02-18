@@ -50,3 +50,8 @@ export type HelperScriptMeta = {
   isOfficial: boolean
   name: string
 }
+
+export type HelperEntry = HelperScriptMeta | Character
+
+export const isCharacterEntry = (item: HelperEntry): item is Character =>
+  item.id !== '_meta' && typeof (item as Character).firstNight === 'number'
