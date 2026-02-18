@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import { Github } from 'lucide-react'
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
+import { TOP_NAV_ITEMS } from '@/constants/pageConfig'
 import { SECTIONS } from '@/constants/sections'
 import { HEADER_OFFSET_PX } from '@/constants/ui'
 import { scrollToElementById } from '@/utils/scroll'
@@ -14,13 +15,6 @@ const scriptSectionLinks = [
   { id: SECTIONS.OFFICIAL, label: '공식' },
   { id: SECTIONS.COMMUNITY, label: '커스텀' },
   { id: SECTIONS.TEENSYVILLE, label: '틴시빌' },
-] as const
-
-const topNavItems = [
-  { page: PAGE_TYPES.SCRIPTS, label: '스크립트' },
-  { page: PAGE_TYPES.SAVANT, label: '서번트' },
-  { page: PAGE_TYPES.HELPER, label: '헬퍼' },
-  { page: PAGE_TYPES.TRACKER, label: '트래커' },
 ] as const
 
 export const Header: FC<HeaderProps> = ({ currentPage, onPageChange }) => {
@@ -59,7 +53,7 @@ export const Header: FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             </div>
 
             <div className="flex items-center space-x-6">
-              {topNavItems.map(navItem => (
+              {TOP_NAV_ITEMS.map(navItem => (
                 <button
                   key={navItem.page}
                   type="button"
