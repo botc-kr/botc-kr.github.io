@@ -41,7 +41,7 @@ const StatCard = ({ label, value, valueClassName }: { label: string; value: numb
 )
 
 const WinnerBadge = ({ winner }: { winner: Alignment }) => (
-  <span className={`px-2 py-1 rounded text-xs font-semibold ${WINNER_BADGE_CLASSES[winner]}`}>
+  <span className={`px-2 py-1 rounded-sm text-xs font-semibold ${WINNER_BADGE_CLASSES[winner]}`}>
     {winnerLabel(winner)}
   </span>
 )
@@ -94,7 +94,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col">
+        <div className="bg-white p-6 rounded-xl shadow-xs border border-gray-100 flex flex-col">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">Win Rate</h3>
           <div className="h-64 flex-1">
             {hasLogs ? (
@@ -123,7 +123,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col">
+        <div className="bg-white p-6 rounded-xl shadow-xs border border-gray-100 flex flex-col">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">Recent Games (Winner)</h3>
           <div className="h-64 flex-1">
             {hasLogs ? (
@@ -146,7 +146,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
 
                       const winner = payload[0].payload.winner
                       return (
-                        <div className="bg-white p-2 border shadow-sm rounded">
+                        <div className="bg-white p-2 border shadow-xs rounded-sm">
                           <p className="font-bold">{label}</p>
                           <p style={{ color: WINNER_COLORS[winner] }}>Winner: {winnerLabel(winner)}</p>
                         </div>
@@ -167,13 +167,13 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
         </div>
       </div>
 
-      <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex justify-around">
+      <div className="bg-white p-6 rounded-xl shadow-xs border border-gray-100 flex justify-around">
         <StatCard label="Total Games" value={logs.length} valueClassName="text-gray-900" />
         <StatCard label="Good Wins" value={goodWins} valueClassName="text-blue-500" />
         <StatCard label="Evil Wins" value={evilWins} valueClassName="text-orange-500" />
       </div>
 
-      <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+      <div className="bg-white p-6 rounded-xl shadow-xs border border-gray-100">
         <h3 className="text-lg font-semibold mb-4 text-gray-800">Recent Games Log</h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
@@ -213,7 +213,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                               className={`p-3 rounded-lg border flex items-center gap-3 ${
                                 player.isDead
                                   ? 'bg-gray-100 border-gray-200 opacity-70 grayscale'
-                                  : 'bg-white border-gray-200 shadow-sm'
+                                  : 'bg-white border-gray-200 shadow-xs'
                               }`}>
                               <div className="w-10 h-10 flex-shrink-0 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
                                 {player.roleImage ? (

@@ -90,7 +90,7 @@ const Helper: FC = () => {
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-6">
         <Select.Root value={selectedScriptId} onValueChange={handleScriptChange}>
-          <Select.Trigger className="inline-flex items-center justify-between rounded px-4 py-2 text-sm gap-2 bg-white border border-gray-300 hover:bg-gray-50 focus:outline-none min-w-[200px]">
+          <Select.Trigger className="inline-flex items-center justify-between rounded-sm px-4 py-2 text-sm gap-2 bg-white border border-gray-300 hover:bg-gray-50 focus:outline-hidden min-w-[200px]">
             <Select.Value placeholder="스크립트 선택" />
             <Select.Icon>
               <ChevronDownIcon className="w-4 h-4" />
@@ -103,7 +103,7 @@ const Helper: FC = () => {
                   <Select.Item
                     key={script.id}
                     value={script.id}
-                    className="relative flex items-center px-8 py-2 text-sm text-gray-700 rounded-sm hover:bg-gray-100 focus:bg-gray-100 cursor-pointer outline-none select-none">
+                    className="relative flex items-center px-8 py-2 text-sm text-gray-700 rounded-xs hover:bg-gray-100 focus:bg-gray-100 cursor-pointer outline-hidden select-none">
                     <Select.ItemText>{script.name}</Select.ItemText>
                     <Select.ItemIndicator className="absolute left-2 inline-flex items-center">
                       <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,22 +131,22 @@ const Helper: FC = () => {
           <TabsList className="flex space-x-2 border-b border-gray-200 mb-4">
             <TabsTrigger
               value={HelperTab.FirstNight}
-              className="px-4 py-2 focus:outline-none aria-selected:border-b-2 aria-selected:border-blue-500">
+              className="px-4 py-2 focus:outline-hidden aria-selected:border-b-2 aria-selected:border-blue-500">
               첫날밤
             </TabsTrigger>
             <TabsTrigger
               value={HelperTab.OtherNight}
-              className="px-4 py-2 focus:outline-none aria-selected:border-b-2 aria-selected:border-blue-500">
+              className="px-4 py-2 focus:outline-hidden aria-selected:border-b-2 aria-selected:border-blue-500">
               다른 밤
             </TabsTrigger>
             <TabsTrigger
               value={HelperTab.Characters}
-              className="px-4 py-2 focus:outline-none aria-selected:border-b-2 aria-selected:border-blue-500">
+              className="px-4 py-2 focus:outline-hidden aria-selected:border-b-2 aria-selected:border-blue-500">
               캐릭터
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value={HelperTab.FirstNight} className="bg-white rounded-lg shadow">
+          <TabsContent value={HelperTab.FirstNight} className="bg-white rounded-lg shadow-sm">
             {firstNightCharacters.map(character => (
               <CharacterRow
                 key={character.id}
@@ -157,7 +157,7 @@ const Helper: FC = () => {
             ))}
           </TabsContent>
 
-          <TabsContent value={HelperTab.OtherNight} className="bg-white rounded-lg shadow">
+          <TabsContent value={HelperTab.OtherNight} className="bg-white rounded-lg shadow-sm">
             {otherNightCharacters.map(character => (
               <CharacterRow
                 key={character.id}
@@ -168,7 +168,7 @@ const Helper: FC = () => {
             ))}
           </TabsContent>
 
-          <TabsContent value={HelperTab.Characters} className="bg-white rounded-lg shadow">
+          <TabsContent value={HelperTab.Characters} className="bg-white rounded-lg shadow-sm">
             {characters.map(character => (
               <CharacterRow
                 key={character.id}

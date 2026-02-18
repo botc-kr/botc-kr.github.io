@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --animate-spin-slow: spin 10s linear infinite;
+}
 
 body {
   margin: 0;

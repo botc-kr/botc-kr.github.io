@@ -14,7 +14,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
   const [isShared, setIsShared] = useState<boolean>(false)
 
   const buttonBaseStyle =
-    'inline-flex items-center justify-center gap-1 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg shadow-sm transition-all duration-200 font-medium'
+    'inline-flex items-center justify-center gap-1 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg shadow-xs transition-all duration-200 font-medium'
 
   const handleShare = async (): Promise<void> => {
     try {

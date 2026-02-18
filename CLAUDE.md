@@ -55,7 +55,7 @@
 - `src/features/tracker/`:
   - `TrackerApp.tsx`, `Dashboard.tsx`, `api.ts`, `types.ts`
 - `src/assets/`: 이미지/폰트 등 정적 리소스
-- 스타일: `src/index.css`, `tailwind.config.js`
+- 스타일: `src/index.css` (TailwindCSS v4 CSS-first 설정)
 - 번들 설정: `vite.config.ts`
 
 ### 4) 실행 흐름(요약)
