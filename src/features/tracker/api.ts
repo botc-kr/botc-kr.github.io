@@ -1,14 +1,9 @@
-import { normalizeRoleIdForIcon } from '@/utils/normalizeRoleId'
 import { Alignment, GameLog, RawGameLog, RoleDefinition, Team } from '@/features/tracker/types'
+import { getRoleIconUrl } from '@/utils/roleIcon'
 
 type RawLogModule = RawGameLog | { default: RawGameLog }
 
 const localLogMap = import.meta.glob<RawLogModule>('../../logs/*.json', { eager: true })
-const localIconMap = import.meta.glob<string>('../../assets/icons/*.png', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-})
 
 const readRoleField = (
   role: RoleDefinition,
@@ -69,9 +64,7 @@ export const fetchGameLogs = async (): Promise<GameLog[]> => {
 
         const roleName = readRoleField(role, 'name', '1') ?? roleId
         const roleTeam = readRoleField(role, 'team', '12') as Team | undefined
-        const normalizedRoleId = normalizeRoleIdForIcon(roleId)
-        const iconPath = `../../assets/icons/Icon_${normalizedRoleId}.png`
-        const localIconUrl = localIconMap[iconPath] ?? ''
+        const localIconUrl = getRoleIconUrl(roleId) ?? ''
 
         roleMap.set(roleId, { name: roleName, image: localIconUrl, team: roleTeam })
 

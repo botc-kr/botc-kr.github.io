@@ -1,18 +1,6 @@
 import { HelperEntry, isCharacterEntry } from '@/features/helper/types'
 import { fetchWithRetry } from '@/utils/fetchRetry'
-import { normalizeRoleIdForIcon } from '@/utils/normalizeRoleId'
-
-const localIconUrlMap = import.meta.glob<string>('../../../assets/icons/*.png', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-})
-
-const findLocalIcon = (characterId: string): string | undefined => {
-  const normalizedRoleId = normalizeRoleIdForIcon(characterId)
-  const iconPath = `../../../assets/icons/Icon_${normalizedRoleId}.png`
-  return localIconUrlMap[iconPath]
-}
+import { getRoleIconUrl } from '@/utils/roleIcon'
 
 const applyLocalIconFallback = (entries: HelperEntry[]): HelperEntry[] =>
   entries.map(entry => {
@@ -20,7 +8,7 @@ const applyLocalIconFallback = (entries: HelperEntry[]): HelperEntry[] =>
       return entry
     }
 
-    const localIconUrl = findLocalIcon(entry.id)
+    const localIconUrl = getRoleIconUrl(entry.id)
     if (!localIconUrl) {
       return entry
     }
