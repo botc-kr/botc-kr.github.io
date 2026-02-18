@@ -1,10 +1,9 @@
 import { FC, useCallback, useMemo, useState } from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ErrorState, LoadingState } from '@/components/AsyncState'
 import { CharacterDialog } from '@/features/helper/components/CharacterDialog'
-import { CharacterRow } from '@/features/helper/components/CharacterRow'
 import { HelperScriptSelect } from '@/features/helper/components/HelperScriptSelect'
+import HelperTabs from '@/features/helper/components/HelperTabs'
 import {
   HELPER_SELECTED_SCRIPT_STORAGE_KEY,
   getHelperScriptById,
@@ -87,58 +86,12 @@ const Helper: FC = () => {
       {isLoading ? (
         <LoadingState className="h-[200px]" message="불러오는 중..." />
       ) : (
-        <Tabs defaultValue={HelperTab.FirstNight}>
-          <TabsList className="flex space-x-2 border-b border-gray-200 mb-4">
-            <TabsTrigger
-              value={HelperTab.FirstNight}
-              className="px-4 py-2 focus:outline-hidden aria-selected:border-b-2 aria-selected:border-blue-500">
-              첫날밤
-            </TabsTrigger>
-            <TabsTrigger
-              value={HelperTab.OtherNight}
-              className="px-4 py-2 focus:outline-hidden aria-selected:border-b-2 aria-selected:border-blue-500">
-              다른 밤
-            </TabsTrigger>
-            <TabsTrigger
-              value={HelperTab.Characters}
-              className="px-4 py-2 focus:outline-hidden aria-selected:border-b-2 aria-selected:border-blue-500">
-              캐릭터
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value={HelperTab.FirstNight} className="bg-white rounded-lg shadow-sm">
-            {firstNightCharacters.map(character => (
-              <CharacterRow
-                key={character.id}
-                type={HelperTab.FirstNight}
-                character={character}
-                onClick={setSelectedCharacter}
-              />
-            ))}
-          </TabsContent>
-
-          <TabsContent value={HelperTab.OtherNight} className="bg-white rounded-lg shadow-sm">
-            {otherNightCharacters.map(character => (
-              <CharacterRow
-                key={character.id}
-                type={HelperTab.OtherNight}
-                character={character}
-                onClick={setSelectedCharacter}
-              />
-            ))}
-          </TabsContent>
-
-          <TabsContent value={HelperTab.Characters} className="bg-white rounded-lg shadow-sm">
-            {characters.map(character => (
-              <CharacterRow
-                key={character.id}
-                type={HelperTab.Characters}
-                character={character}
-                onClick={setSelectedCharacter}
-              />
-            ))}
-          </TabsContent>
-        </Tabs>
+        <HelperTabs
+          firstNightCharacters={firstNightCharacters}
+          otherNightCharacters={otherNightCharacters}
+          characters={characters}
+          onCharacterSelect={setSelectedCharacter}
+        />
       )}
 
       <Dialog.Root open={selectedCharacter !== null} onOpenChange={open => !open && setSelectedCharacter(null)}>
