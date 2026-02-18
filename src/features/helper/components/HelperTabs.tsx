@@ -33,7 +33,7 @@ const HelperTabs: FC<HelperTabsProps> = ({ firstNightCharacters, otherNightChara
   ]
 
   return (
-    <Tabs defaultValue={HelperTab.FirstNight}>
+    <Tabs defaultValue={HelperTab.FirstNight} className="w-full">
       <TabsList className="flex space-x-2 border-b border-gray-200 mb-4">
         {TAB_DEFINITIONS.map(tab => (
           <TabsTrigger key={tab.value} value={tab.value} className={tabTriggerClassName}>
@@ -43,7 +43,7 @@ const HelperTabs: FC<HelperTabsProps> = ({ firstNightCharacters, otherNightChara
       </TabsList>
 
       {tabDefinitions.map(tab => (
-        <TabsContent key={tab.value} value={tab.value} className="bg-white rounded-lg shadow-sm">
+        <TabsContent key={tab.value} value={tab.value} className="w-full bg-white rounded-lg shadow-sm">
           {tab.rows.map(character => (
             <CharacterRow key={character.id} type={tab.value} character={character} onClick={onCharacterSelect} />
           ))}
