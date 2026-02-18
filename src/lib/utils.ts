@@ -5,26 +5,43 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+const showFallbackMessage = (message: string, useAlert: boolean): void => {
+  console.warn(message)
+
+  if (useAlert && typeof window !== 'undefined') {
+    window.alert(message)
+  }
+}
+
 export function notify(message: string, fallbackAlert: boolean = true): void {
   try {
-    // Browser Notification API가 없다면 단순 콘솔로 폴백
-    if (!('Notification' in window)) {
-      console.warn(message)
-      if (fallbackAlert) alert(message)
+    if (typeof window === 'undefined') {
+      showFallbackMessage(message, false)
       return
     }
+
+    // Browser Notification API가 없다면 단순 콘솔로 폴백
+    if (!('Notification' in window)) {
+      showFallbackMessage(message, fallbackAlert)
+      return
+    }
+
     if (Notification.permission === 'granted') {
       new Notification(message)
     } else if (Notification.permission !== 'denied') {
       Notification.requestPermission().then(permission => {
-        if (permission === 'granted') new Notification(message)
-        else if (fallbackAlert) alert(message)
+        if (permission === 'granted') {
+          new Notification(message)
+          return
+        }
+
+        showFallbackMessage(message, fallbackAlert)
       })
-    } else if (fallbackAlert) {
-      alert(message)
+    } else {
+      showFallbackMessage(message, fallbackAlert)
     }
-  } catch (e) {
-    console.warn('notify fallback:', e)
-    if (fallbackAlert) alert(message)
+  } catch (error) {
+    console.warn('notify fallback:', error)
+    showFallbackMessage(message, fallbackAlert)
   }
 }
