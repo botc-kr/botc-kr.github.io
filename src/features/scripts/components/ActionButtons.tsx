@@ -2,7 +2,7 @@ import { ActionButtonsProps } from '@/features/scripts/types'
 import { useTransientValue } from '@/hooks/useTransientValue'
 import { Check, Copy, Download, Share2 } from 'lucide-react'
 import { type FC, type ReactNode } from 'react'
-import { copyTextToClipboard } from '@/utils/clipboard'
+import { copyTextToClipboard, isClipboardAvailable } from '@/utils/clipboard'
 import { buildCurrentPathUrlWithHash } from '@/utils/location'
 
 interface GradientButtonProps {
@@ -32,7 +32,7 @@ const ActionButtons: FC<ActionButtonsProps> = ({
   copiedId,
   downloadingId,
 }) => {
-  const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  const canUseClipboard = isClipboardAvailable()
   const { value: sharedState, show: showShared } = useTransientValue<boolean>(SHARED_LABEL_DURATION_MS)
 
   const handleShare = async (): Promise<void> => {
@@ -51,7 +51,7 @@ const ActionButtons: FC<ActionButtonsProps> = ({
 
   return (
     <div className="flex gap-2 sm:gap-3">
-      {isMobile ? null : (
+      {canUseClipboard && (
         <GradientButton
           onClick={() => onCopyJson(script.json, script.id)}
           className={`${
@@ -78,9 +78,10 @@ const ActionButtons: FC<ActionButtonsProps> = ({
         onClick={() => {
           void handleShare()
         }}
+        disabled={!canUseClipboard}
         className={`${
           isSharedCopied ? 'bg-gradient-to-r from-emerald-500 to-teal-500' : 'bg-gradient-to-r from-violet-500 to-purple-500'
-        } text-white hover:from-violet-600 hover:to-purple-600 hover:shadow-md active:scale-95`}
+        } text-white hover:from-violet-600 hover:to-purple-600 hover:shadow-md active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-none disabled:active:scale-100`}
         icon={isSharedCopied ? <Check size={16} className="shrink-0" /> : <Share2 size={16} className="shrink-0" />}
         label={isSharedCopied ? '복사됨' : '공유'}
       />
