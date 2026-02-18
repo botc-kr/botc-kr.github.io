@@ -1,9 +1,9 @@
 // ScriptCategory.tsx
 import { ScriptCategoryProps } from '@/features/scripts/types'
-import React from 'react'
+import type { FC } from 'react'
 import ScriptCard from '@/features/scripts/components/ScriptCard'
 
-const ScriptCategory: React.FC<ScriptCategoryProps> = ({
+const ScriptCategory: FC<ScriptCategoryProps> = ({
   title,
   scripts,
   onCopyJson,

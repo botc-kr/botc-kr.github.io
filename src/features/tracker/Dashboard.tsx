@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import { Fragment, type FC, useMemo, useState } from 'react'
 import {
   Bar,
   BarChart,
@@ -46,7 +46,7 @@ const WinnerBadge = ({ winner }: { winner: Alignment }) => (
   </span>
 )
 
-const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
+const Dashboard: FC<DashboardProps> = ({ logs }) => {
   const [expandedGameId, setExpandedGameId] = useState<string | null>(null)
 
   const { goodWins, evilWins, winRateData } = useMemo(() => {
@@ -187,7 +187,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
             </thead>
             <tbody>
               {logs.map(log => (
-                <React.Fragment key={log.id}>
+                <Fragment key={log.id}>
                   <tr
                     className={`bg-white border-b hover:bg-gray-50 cursor-pointer ${expandedGameId === log.id ? 'bg-gray-50' : ''}`}
                     onClick={() => toggleGameDetail(log.id)}>
@@ -236,7 +236,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logs }) => {
                       </td>
                     </tr>
                   )}
-                </React.Fragment>
+                </Fragment>
               ))}
             </tbody>
           </table>

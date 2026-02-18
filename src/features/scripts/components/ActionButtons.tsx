@@ -1,26 +1,26 @@
 import { ActionButtonsProps } from '@/features/scripts/types'
 import { Check, Copy, Download, Share2 } from 'lucide-react'
-import React, { useState } from 'react'
+import { type FC, type ReactNode, useState } from 'react'
 
 interface GradientButtonProps {
   className: string
   onClick: () => void
   disabled?: boolean
-  icon?: React.ReactNode
+  icon?: ReactNode
   label: string
 }
 
 const buttonBaseStyle =
   'inline-flex items-center justify-center gap-1 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg shadow-xs transition-all duration-200 font-medium'
 
-const GradientButton: React.FC<GradientButtonProps> = ({ className, onClick, disabled = false, icon, label }) => (
+const GradientButton: FC<GradientButtonProps> = ({ className, onClick, disabled = false, icon, label }) => (
   <button type="button" onClick={onClick} disabled={disabled} className={`${buttonBaseStyle} ${className}`}>
     {icon}
     <span className="whitespace-nowrap">{label}</span>
   </button>
 )
 
-const ActionButtons: React.FC<ActionButtonsProps> = ({
+const ActionButtons: FC<ActionButtonsProps> = ({
   script,
   onCopyJson,
   onDownloadJson,

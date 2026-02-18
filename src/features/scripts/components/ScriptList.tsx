@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo } from 'react'
+import { type FC, useCallback, useEffect, useMemo } from 'react'
 import { LoadingState } from '@/components/AsyncState'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
@@ -18,7 +18,7 @@ interface ScriptListProps {
   onPageChange: (page: PageType) => void
 }
 
-const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) => {
+const ScriptList: FC<ScriptListProps> = ({ currentPage, onPageChange }) => {
   const handleLoadScriptsError = useCallback((error: unknown): void => {
     console.error('Error loading scripts:', error)
     notify('스크립트 데이터를 불러오지 못했습니다.')

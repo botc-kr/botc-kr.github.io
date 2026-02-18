@@ -1,6 +1,6 @@
 import { Script, ScriptActionHandlers } from '@/features/scripts/types'
 import { BookOpen, ChevronDown, ChevronUp, FileText, LucideIcon } from 'lucide-react'
-import React, { useState } from 'react'
+import { type FC, useState } from 'react'
 import ActionButtons from '@/features/scripts/components/ActionButtons'
 import ScriptImage from '@/features/scripts/components/ScriptImage'
 
@@ -23,7 +23,7 @@ interface DesktopSynopsisProps {
 
 const SCRIPT_SYNOPSIS_FALLBACK = '이 스크립트에 대한 설명이 곧 추가될 예정입니다.'
 
-const ExpandableSection: React.FC<ExpandableSectionProps> = ({
+const ExpandableSection: FC<ExpandableSectionProps> = ({
   isExpanded,
   onToggle,
   icon: Icon,
@@ -50,11 +50,11 @@ const ExpandableSection: React.FC<ExpandableSectionProps> = ({
   </div>
 )
 
-const DesktopSynopsis: React.FC<DesktopSynopsisProps> = ({ synopsis }) => (
+const DesktopSynopsis: FC<DesktopSynopsisProps> = ({ synopsis }) => (
   <div className="hidden sm:block text-gray-600 text-sm sm:text-base whitespace-pre-line">{synopsis}</div>
 )
 
-const ScriptCard: React.FC<ScriptCardProps> = ({
+const ScriptCard: FC<ScriptCardProps> = ({
   script,
   onCopyJson,
   onDownloadJson,

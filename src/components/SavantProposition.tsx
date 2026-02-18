@@ -1,5 +1,5 @@
 import { RefreshCwIcon } from 'lucide-react'
-import { useCallback, useState } from 'react'
+import { type FC, useCallback, useState } from 'react'
 import { Header } from '@/components/layout/Header'
 import { type PageType } from '@/constants/pages'
 import { SAVANT_PROPOSITIONS } from '@/constants/savant'
@@ -10,7 +10,7 @@ interface SavantPropositionProps {
   onPageChange: (page: PageType) => void
 }
 
-const SavantProposition: React.FC<SavantPropositionProps> = ({ currentPage, onPageChange }) => {
+const SavantProposition: FC<SavantPropositionProps> = ({ currentPage, onPageChange }) => {
   const [currentProposition, setCurrentProposition] = useState(SAVANT_PROPOSITIONS[0])
 
   const generateNewProposition = useCallback(() => {
