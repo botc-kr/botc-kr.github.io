@@ -2,6 +2,7 @@ import { ActionButtonsProps } from '@/features/scripts/types'
 import { useTransientValue } from '@/hooks/useTransientValue'
 import { Check, Copy, Download, Share2 } from 'lucide-react'
 import { type FC, type ReactNode } from 'react'
+import { notify } from '@/lib/utils'
 import { copyTextToClipboard, isClipboardAvailable } from '@/utils/clipboard'
 import { buildCurrentPathUrlWithHash } from '@/utils/location'
 
@@ -42,6 +43,7 @@ const ActionButtons: FC<ActionButtonsProps> = ({
       showShared(true)
     } catch (err) {
       console.error('Failed to copy URL:', err)
+      notify('공유 링크 복사 중 오류가 발생했습니다.', false)
     }
   }
 
