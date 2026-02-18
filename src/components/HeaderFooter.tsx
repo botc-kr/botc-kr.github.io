@@ -18,6 +18,8 @@ const scriptSectionLinks = [
 const topNavItems = [
   { page: PAGE_TYPES.SCRIPTS, label: '스크립트' },
   { page: PAGE_TYPES.SAVANT, label: '서번트' },
+  { page: PAGE_TYPES.HELPER, label: '헬퍼' },
+  { page: PAGE_TYPES.TRACKER, label: '트래커' },
 ] as const
 
 export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
