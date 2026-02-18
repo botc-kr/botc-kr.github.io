@@ -1,6 +1,7 @@
 import { ActionButtonsProps } from '@/features/scripts/types'
 import { Check, Copy, Download, Share2 } from 'lucide-react'
 import { type FC, type ReactNode, useState } from 'react'
+import { copyTextToClipboard } from '@/utils/clipboard'
 
 interface GradientButtonProps {
   className: string
@@ -34,7 +35,7 @@ const ActionButtons: FC<ActionButtonsProps> = ({
   const handleShare = async (): Promise<void> => {
     try {
       const shareUrl = `${window.location.origin}${window.location.pathname}#${script.id}`
-      await navigator.clipboard.writeText(shareUrl)
+      await copyTextToClipboard(shareUrl)
       setIsShared(true)
       setTimeout(() => setIsShared(false), 2000)
     } catch (err) {

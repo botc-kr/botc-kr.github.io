@@ -2,6 +2,7 @@ import { Script } from '@/features/scripts/types'
 import { normalizeTranslationUrl } from '@/constants/urls'
 import { fetchWithRetry } from '@/utils/fetchRetry'
 import { fetchJsonWithRetry } from '@/utils/fetchJson'
+import { copyTextToClipboard } from '@/utils/clipboard'
 
 export const fetchScripts = async (): Promise<Script[]> => {
   const scripts = await fetchJsonWithRetry<Script[]>('/scripts.json')
@@ -15,7 +16,7 @@ export const fetchScripts = async (): Promise<Script[]> => {
 
 export const copyScriptJsonToClipboard = async (jsonUrl: string): Promise<void> => {
   const jsonData = await fetchJsonWithRetry<unknown>(jsonUrl)
-  await navigator.clipboard.writeText(JSON.stringify(jsonData, null, 2))
+  await copyTextToClipboard(JSON.stringify(jsonData, null, 2))
 }
 
 export const downloadScriptJson = async (jsonUrl: string, fileName: string): Promise<void> => {
