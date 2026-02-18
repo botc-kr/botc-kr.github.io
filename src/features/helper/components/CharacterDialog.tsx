@@ -1,12 +1,12 @@
-import { type FC, useMemo, useRef, useState } from 'react'
+import { type FC, useRef } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ChevronLeft, X } from 'lucide-react'
 import { AlignmentSelector } from '@/features/helper/components/dialog/AlignmentSelector'
 import { CharacterSelectionPanel } from '@/features/helper/components/dialog/CharacterSelectionPanel'
 import { InfoCardButton } from '@/features/helper/components/dialog/InfoCardButton'
-import { getCharacterInfos } from '@/features/helper/components/characterInfoMap'
+import { useCharacterDialogState } from '@/features/helper/hooks/useCharacterDialogState'
 import { formatHelperMessage } from '@/features/helper/services/helperMessageFormatter'
-import { Alignment, type Character, type HelperInfo } from '@/features/helper/types'
+import { type Character, type HelperInfo } from '@/features/helper/types'
 
 type CharacterDialogProps = {
   character: Character
@@ -17,71 +17,25 @@ type CharacterDialogProps = {
 export const CharacterDialog: FC<CharacterDialogProps> = ({ character, scriptCharacters, genericInfos }) => {
   const contentRef = useRef<HTMLDivElement>(null)
 
-  const [selectedInfo, setSelectedInfo] = useState<HelperInfo | null>(null)
-  const [selectedCharacterIds, setSelectedCharacterIds] = useState<Set<string>>(new Set())
-  const [selectedAlignment, setSelectedAlignment] = useState<Alignment>(Alignment.Good)
-
-  const characterInfos = useMemo(() => getCharacterInfos(character.id), [character.id])
-  const selectedCharacterIdList = useMemo(() => Array.from(selectedCharacterIds), [selectedCharacterIds])
-  const selectedScriptCharacters = useMemo(
-    () => scriptCharacters.filter(scriptCharacter => selectedCharacterIds.has(scriptCharacter.id)),
-    [scriptCharacters, selectedCharacterIds],
-  )
-  const eligibleCharacters = useMemo(() => {
-    if (!selectedInfo?.teams) {
-      return []
-    }
-
-    return scriptCharacters.filter(
-      scriptCharacter => scriptCharacter.team !== undefined && selectedInfo.teams?.includes(scriptCharacter.team),
-    )
-  }, [scriptCharacters, selectedInfo])
-  const firstSelectedCharacterName = useMemo(() => {
-    if (selectedCharacterIdList.length === 0) {
-      return ''
-    }
-
-    const firstCharacter = scriptCharacters.find(scriptCharacter => scriptCharacter.id === selectedCharacterIdList[0])
-    return firstCharacter ? `'${firstCharacter.name}'` : ''
-  }, [scriptCharacters, selectedCharacterIdList])
-
-  const handleBackClick = (): void => {
-    setSelectedInfo(null)
-    setSelectedCharacterIds(new Set())
-  }
-
-  const handleInfoClick = (info: HelperInfo): void => {
-    setSelectedInfo(info)
-    setSelectedCharacterIds(new Set())
-  }
-
-  const handleCharacterSelect = (characterId: string): void => {
-    setSelectedCharacterIds(previousSelectedCharacterIds => {
-      const nextSelectedCharacterIds = Array.from(previousSelectedCharacterIds)
-      const isAlreadySelected = nextSelectedCharacterIds.includes(characterId)
-      const maxCount = selectedInfo?.count ?? Number.POSITIVE_INFINITY
-
-      if (isAlreadySelected) {
-        return new Set(nextSelectedCharacterIds.filter(selectedId => selectedId !== characterId))
-      }
-
-      if (maxCount <= 0) {
-        return previousSelectedCharacterIds
-      }
-
-      if (nextSelectedCharacterIds.length >= maxCount) {
-        nextSelectedCharacterIds.shift()
-      }
-
-      nextSelectedCharacterIds.push(characterId)
-
-      if (contentRef.current) {
-        contentRef.current.scrollTo({ top: 0 })
-      }
-
-      return new Set(nextSelectedCharacterIds)
-    })
-  }
+  const {
+    characterInfos,
+    selectedInfo,
+    selectedCharacterIds,
+    selectedScriptCharacters,
+    eligibleCharacters,
+    firstSelectedCharacterName,
+    selectedAlignment,
+    setSelectedAlignment,
+    handleBackClick,
+    handleInfoClick,
+    handleCharacterSelect,
+  } = useCharacterDialogState({
+    characterId: character.id,
+    scriptCharacters,
+    onCharacterSelectionChange: () => {
+      contentRef.current?.scrollTo({ top: 0 })
+    },
+  })
 
   return (
     <Dialog.Content className="fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[90vw] max-w-md bg-white rounded-lg flex flex-col max-h-[80vh]">
