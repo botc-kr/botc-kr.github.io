@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { copyScriptJsonToClipboard, downloadScriptJson, downloadScriptPdf } from '@/features/scripts/services/scriptService'
+import { useTransientValue } from '@/hooks/useTransientValue'
 import { notify } from '@/lib/utils'
 
 const COPIED_LABEL_DURATION_MS = 1000
@@ -22,30 +23,12 @@ const runScriptAction = async (
 }
 
 export const useScriptActions = () => {
-  const [copiedId, setCopiedId] = useState<string | null>(null)
+  const { value: copiedId, show: showCopiedId, clear: clearCopiedId } = useTransientValue<string>(COPIED_LABEL_DURATION_MS)
   const [downloadingId, setDownloadingId] = useState<string | null>(null)
-  const clearCopiedLabelTimeoutRef = useRef<number | null>(null)
-
-  useEffect(
-    () => () => {
-      if (clearCopiedLabelTimeoutRef.current !== null) {
-        window.clearTimeout(clearCopiedLabelTimeoutRef.current)
-      }
-    },
-    [],
-  )
 
   const setCopiedLabel = useCallback((scriptId: string) => {
-    setCopiedId(scriptId)
-
-    if (clearCopiedLabelTimeoutRef.current !== null) {
-      window.clearTimeout(clearCopiedLabelTimeoutRef.current)
-    }
-
-    clearCopiedLabelTimeoutRef.current = window.setTimeout(() => {
-      setCopiedId(currentCopiedId => (currentCopiedId === scriptId ? null : currentCopiedId))
-    }, COPIED_LABEL_DURATION_MS)
-  }, [])
+    showCopiedId(scriptId)
+  }, [showCopiedId])
 
   const onCopyJson = useCallback(
     async (jsonUrl: string, scriptId: string): Promise<void> => {
@@ -59,10 +42,10 @@ export const useScriptActions = () => {
       )
 
       if (!success) {
-        setCopiedId(null)
+        clearCopiedId()
       }
     },
-    [setCopiedLabel],
+    [clearCopiedId, setCopiedLabel],
   )
 
   const onDownloadJson = useCallback(async (jsonUrl: string, scriptId: string): Promise<void> => {

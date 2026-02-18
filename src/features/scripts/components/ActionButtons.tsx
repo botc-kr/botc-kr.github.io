@@ -1,6 +1,7 @@
 import { ActionButtonsProps } from '@/features/scripts/types'
+import { useTransientValue } from '@/hooks/useTransientValue'
 import { Check, Copy, Download, Share2 } from 'lucide-react'
-import { type FC, type ReactNode, useState } from 'react'
+import { type FC, type ReactNode } from 'react'
 import { copyTextToClipboard } from '@/utils/clipboard'
 
 interface GradientButtonProps {
@@ -13,6 +14,7 @@ interface GradientButtonProps {
 
 const buttonBaseStyle =
   'inline-flex items-center justify-center gap-1 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg shadow-xs transition-all duration-200 font-medium'
+const SHARED_LABEL_DURATION_MS = 2000
 
 const GradientButton: FC<GradientButtonProps> = ({ className, onClick, disabled = false, icon, label }) => (
   <button type="button" onClick={onClick} disabled={disabled} className={`${buttonBaseStyle} ${className}`}>
@@ -30,14 +32,13 @@ const ActionButtons: FC<ActionButtonsProps> = ({
   downloadingId,
 }) => {
   const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-  const [isShared, setIsShared] = useState<boolean>(false)
+  const { value: sharedState, show: showShared } = useTransientValue<boolean>(SHARED_LABEL_DURATION_MS)
 
   const handleShare = async (): Promise<void> => {
     try {
       const shareUrl = `${window.location.origin}${window.location.pathname}#${script.id}`
       await copyTextToClipboard(shareUrl)
-      setIsShared(true)
-      setTimeout(() => setIsShared(false), 2000)
+      showShared(true)
     } catch (err) {
       console.error('Failed to copy URL:', err)
     }
@@ -45,7 +46,7 @@ const ActionButtons: FC<ActionButtonsProps> = ({
 
   const isCopied = copiedId === script.id
   const isDownloadingPdf = downloadingId === script.id
-  const isSharedCopied = isShared
+  const isSharedCopied = sharedState === true
 
   return (
     <div className="flex gap-2 sm:gap-3">
