@@ -11,7 +11,7 @@ export const fetchScripts = async (signal?: AbortSignal): Promise<Script[]> => {
     ...script,
     json: normalizeTranslationUrl(script.json),
     pdf: normalizeTranslationUrl(script.pdf),
-    logo: normalizeTranslationUrl(script.logo),
+    logo: typeof script.logo === 'string' ? normalizeTranslationUrl(script.logo) : '',
   }))
 }
 
