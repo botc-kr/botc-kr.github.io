@@ -1,8 +1,12 @@
-import { FC, useMemo, useRef, useState } from 'react'
+import { type FC, useMemo, useRef, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ChevronLeft, X } from 'lucide-react'
-import { Alignment, Character, HelperInfo } from '@/features/helper/types'
+import { AlignmentSelector } from '@/features/helper/components/dialog/AlignmentSelector'
+import { CharacterSelectionPanel } from '@/features/helper/components/dialog/CharacterSelectionPanel'
+import { InfoCardButton } from '@/features/helper/components/dialog/InfoCardButton'
 import { getCharacterInfos } from '@/features/helper/components/characterInfoMap'
+import { formatHelperMessage } from '@/features/helper/services/helperMessageFormatter'
+import { Alignment, type Character, type HelperInfo } from '@/features/helper/types'
 
 type CharacterDialogProps = {
   character: Character
@@ -10,158 +14,73 @@ type CharacterDialogProps = {
   genericInfos: Record<string, HelperInfo>
 }
 
-type InfoCardButtonProps = {
-  info: HelperInfo
-  onSelect: (info: HelperInfo) => void
-}
-
-const InfoCardButton: FC<InfoCardButtonProps> = ({ info, onSelect }) => (
-  <button
-    type="button"
-    onClick={() => onSelect(info)}
-    className="w-full p-4 border rounded-lg text-left hover:bg-gray-50">
-    <h3 className="font-semibold">{info.title}</h3>
-  </button>
-)
-
 export const CharacterDialog: FC<CharacterDialogProps> = ({ character, scriptCharacters, genericInfos }) => {
   const contentRef = useRef<HTMLDivElement>(null)
 
   const [selectedInfo, setSelectedInfo] = useState<HelperInfo | null>(null)
-  const [selectedCharacters, setSelectedCharacters] = useState<Set<string>>(new Set())
+  const [selectedCharacterIds, setSelectedCharacterIds] = useState<Set<string>>(new Set())
   const [selectedAlignment, setSelectedAlignment] = useState<Alignment>(Alignment.Good)
 
   const characterInfos = useMemo(() => getCharacterInfos(character.id), [character.id])
-  const selectedCharactersList = useMemo(() => Array.from(selectedCharacters), [selectedCharacters])
+  const selectedCharacterIdList = useMemo(() => Array.from(selectedCharacterIds), [selectedCharacterIds])
   const selectedScriptCharacters = useMemo(
-    () => scriptCharacters.filter(char => selectedCharacters.has(char.id)),
-    [scriptCharacters, selectedCharacters],
+    () => scriptCharacters.filter(scriptCharacter => selectedCharacterIds.has(scriptCharacter.id)),
+    [scriptCharacters, selectedCharacterIds],
   )
   const eligibleCharacters = useMemo(() => {
-    if (!selectedInfo?.teams) return []
-    return scriptCharacters.filter(char => char.team !== undefined && selectedInfo.teams?.includes(char.team))
+    if (!selectedInfo?.teams) {
+      return []
+    }
+
+    return scriptCharacters.filter(
+      scriptCharacter => scriptCharacter.team !== undefined && selectedInfo.teams?.includes(scriptCharacter.team),
+    )
   }, [scriptCharacters, selectedInfo])
   const firstSelectedCharacterName = useMemo(() => {
-    if (selectedCharactersList.length === 0) {
+    if (selectedCharacterIdList.length === 0) {
       return ''
     }
-    const firstCharacter = scriptCharacters.find(char => char.id === selectedCharactersList[0])
+
+    const firstCharacter = scriptCharacters.find(scriptCharacter => scriptCharacter.id === selectedCharacterIdList[0])
     return firstCharacter ? `'${firstCharacter.name}'` : ''
-  }, [scriptCharacters, selectedCharactersList])
+  }, [scriptCharacters, selectedCharacterIdList])
 
-  const handleBackClick = () => {
+  const handleBackClick = (): void => {
     setSelectedInfo(null)
-    setSelectedCharacters(new Set())
+    setSelectedCharacterIds(new Set())
   }
 
-  const handleInfoClick = (info: HelperInfo) => {
+  const handleInfoClick = (info: HelperInfo): void => {
     setSelectedInfo(info)
-    setSelectedCharacters(new Set())
+    setSelectedCharacterIds(new Set())
   }
 
-  const handleCharacterSelect = (characterId: string) => {
-    setSelectedCharacters(prev => {
-      const nextSelection = Array.from(prev)
-      const isAlreadySelected = nextSelection.includes(characterId)
+  const handleCharacterSelect = (characterId: string): void => {
+    setSelectedCharacterIds(previousSelectedCharacterIds => {
+      const nextSelectedCharacterIds = Array.from(previousSelectedCharacterIds)
+      const isAlreadySelected = nextSelectedCharacterIds.includes(characterId)
       const maxCount = selectedInfo?.count ?? Number.POSITIVE_INFINITY
 
       if (isAlreadySelected) {
-        return new Set(nextSelection.filter(id => id !== characterId))
+        return new Set(nextSelectedCharacterIds.filter(selectedId => selectedId !== characterId))
       }
 
       if (maxCount <= 0) {
-        return prev
+        return previousSelectedCharacterIds
       }
 
-      if (nextSelection.length >= maxCount) {
-        nextSelection.shift()
+      if (nextSelectedCharacterIds.length >= maxCount) {
+        nextSelectedCharacterIds.shift()
       }
 
-      nextSelection.push(characterId)
+      nextSelectedCharacterIds.push(characterId)
 
       if (contentRef.current) {
         contentRef.current.scrollTo({ top: 0 })
       }
 
-      return new Set(nextSelection)
+      return new Set(nextSelectedCharacterIds)
     })
-  }
-
-  const renderSelectedCharacters = () => {
-    return (
-      <div className="mx-auto">
-        {selectedScriptCharacters.length === 0 ? (
-          <div className="p-6 border-2 border-dashed rounded-lg bg-gray-50">
-            <p className="text-gray-500 text-center text-base">{selectedInfo?.count}명의 캐릭터를 선택하세요</p>
-          </div>
-        ) : (
-          <div className="flex justify-center gap-4">
-            {selectedScriptCharacters.map(char => (
-              <button
-                key={char.id}
-                type="button"
-                onClick={() => handleCharacterSelect(char.id)}
-                className="group relative flex flex-col items-center">
-                <img src={char.image} alt={char.name} className="w-40 h-40 object-contain mb-2" />
-                <span className="text-m text-center font-medium">{char.name}</span>
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-    )
-  }
-
-  const renderCharacterGrid = () => {
-    return (
-      <div className="grid grid-cols-3 gap-2">
-        {eligibleCharacters.map(char => (
-          <button
-            key={char.id}
-            type="button"
-            onClick={() => handleCharacterSelect(char.id)}
-            className={`p-2 rounded-lg border flex flex-col items-center ${
-              selectedCharacters.has(char.id) ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
-            }`}
-            disabled={Boolean(selectedInfo?.count !== undefined && selectedInfo.count <= 0)}>
-            <img src={char.image} alt={char.name} className="w-12 h-12 object-contain mb-1" />
-            <span className="text-xs text-center font-medium">{char.name}</span>
-          </button>
-        ))}
-      </div>
-    )
-  }
-
-  const renderAlignmentButton = () => {
-    return (
-      <div className="space-y-2">
-        <h3 className="text-sm font-semibold text-gray-900">진영 선택</h3>
-        <div className="grid grid-cols-2 gap-2">
-          <button
-            type="button"
-            onClick={() => setSelectedAlignment(Alignment.Good)}
-            className={`p-4 rounded-lg border flex justify-center items-center ${
-              selectedAlignment === Alignment.Good ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
-            }`}>
-            <span className="text-sm font-medium">선</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => setSelectedAlignment(Alignment.Evil)}
-            className={`p-4 rounded-lg border flex justify-center items-center ${
-              selectedAlignment === Alignment.Evil ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'
-            }`}>
-            <span className="text-sm font-medium">악</span>
-          </button>
-        </div>
-      </div>
-    )
-  }
-
-  const formatMessage = (message: string) => {
-    return message
-      .replace(/{character}/g, firstSelectedCharacterName)
-      .replace(/{alignment}/g, selectedAlignment === Alignment.Good ? '선한 진영' : '악한 진영')
   }
 
   return (
@@ -187,30 +106,35 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, scriptCha
               뒤로 가기
             </button>
             <div>
-              <p className="text-4xl leading-normal font-bold text-center">{formatMessage(selectedInfo.message)}</p>
+              <p className="text-4xl leading-normal font-bold text-center">
+                {formatHelperMessage(selectedInfo.message, firstSelectedCharacterName, selectedAlignment)}
+              </p>
               {selectedInfo.teams && (
-                <div className="space-y-4">
-                  {renderSelectedCharacters()}
-                  <div className="h-px bg-gray-200" />
-                  {renderCharacterGrid()}
-                  <div className="h-px bg-gray-200" />
-                </div>
+                <CharacterSelectionPanel
+                  selectedCharacters={selectedScriptCharacters}
+                  selectedCharacterIds={selectedCharacterIds}
+                  eligibleCharacters={eligibleCharacters}
+                  selectionLimit={selectedInfo.count}
+                  onCharacterSelect={handleCharacterSelect}
+                />
               )}
-              {selectedInfo.isAlignment && renderAlignmentButton()}
+              {selectedInfo.isAlignment && (
+                <AlignmentSelector selectedAlignment={selectedAlignment} onSelectAlignment={setSelectedAlignment} />
+              )}
             </div>
           </div>
         ) : (
-            <div className="space-y-2">
-              {characterInfos.length > 0 && <h2 className="text-l font-bold text-gray-900">{character.name} 정보</h2>}
-              {characterInfos.map((info, index) => (
-                <InfoCardButton key={`${info.title}-${index}`} info={info} onSelect={handleInfoClick} />
-              ))}
-              <h2 className="text-l font-bold text-gray-900">일반 정보</h2>
-              {Object.entries(genericInfos).map(([key, info]) => (
-                <InfoCardButton key={key} info={info} onSelect={handleInfoClick} />
-              ))}
-            </div>
-          )}
+          <div className="space-y-2">
+            {characterInfos.length > 0 && <h2 className="text-l font-bold text-gray-900">{character.name} 정보</h2>}
+            {characterInfos.map((info, index) => (
+              <InfoCardButton key={`${info.title}-${index}`} info={info} onSelect={handleInfoClick} />
+            ))}
+            <h2 className="text-l font-bold text-gray-900">일반 정보</h2>
+            {Object.entries(genericInfos).map(([key, info]) => (
+              <InfoCardButton key={key} info={info} onSelect={handleInfoClick} />
+            ))}
+          </div>
+        )}
       </div>
 
       <Dialog.Close className="absolute top-4 right-4">
