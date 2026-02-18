@@ -96,7 +96,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
     }
   }
 
-  const onDownloadSheet = async (pdfUrl: string, scriptId: string): Promise<void> => {
+  const onDownloadPdf = async (pdfUrl: string, scriptId: string): Promise<void> => {
     try {
       setDownloadingId(scriptId)
       await downloadScriptPdf(pdfUrl)
@@ -121,7 +121,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
                 scripts={category.scripts}
                 onCopyJson={onCopyJson}
                 onDownloadJson={onDownloadJson}
-                onDownloadSheet={onDownloadSheet}
+                onDownloadPdf={onDownloadPdf}
                 copiedId={copiedId}
                 downloadingId={downloadingId}
               />

@@ -8,7 +8,7 @@ interface ScriptCardProps {
   script: Script
   onCopyJson: (json: string, id: string) => void
   onDownloadJson: (json: string, id: string) => void
-  onDownloadSheet: (pdf: string, id: string) => void
+  onDownloadPdf: (pdf: string, id: string) => void
   copiedId: string | null
   downloadingId: string | null
 }
@@ -26,7 +26,7 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
   script,
   onCopyJson,
   onDownloadJson,
-  onDownloadSheet,
+  onDownloadPdf,
   copiedId,
   downloadingId,
 }) => {
@@ -111,7 +111,7 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
                 script={script}
                 onCopyJson={onCopyJson}
                 onDownloadJson={onDownloadJson}
-                onDownloadSheet={onDownloadSheet}
+                onDownloadPdf={onDownloadPdf}
                 copiedId={copiedId}
                 downloadingId={downloadingId}
               />

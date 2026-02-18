@@ -8,7 +8,7 @@ const ScriptCategory: React.FC<ScriptCategoryProps> = ({
   scripts,
   onCopyJson,
   onDownloadJson,
-  onDownloadSheet,
+  onDownloadPdf,
   copiedId,
   downloadingId,
 }) => (
@@ -21,7 +21,7 @@ const ScriptCategory: React.FC<ScriptCategoryProps> = ({
           script={script}
           onCopyJson={onCopyJson}
           onDownloadJson={onDownloadJson}
-          onDownloadSheet={onDownloadSheet}
+          onDownloadPdf={onDownloadPdf}
           copiedId={copiedId}
           downloadingId={downloadingId}
         />

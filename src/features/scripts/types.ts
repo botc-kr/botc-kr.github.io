@@ -16,7 +16,7 @@ export interface ScriptCategoryProps {
   scripts: Script[]
   onCopyJson: (jsonUrl: string, scriptId: string) => void
   onDownloadJson: (jsonUrl: string, scriptId: string) => void
-  onDownloadSheet: (pdfUrl: string, scriptId: string) => void
+  onDownloadPdf: (pdfUrl: string, scriptId: string) => void
   copiedId: string | null
   downloadingId: string | null
 }
@@ -25,7 +25,7 @@ export interface ActionButtonsProps {
   script: Script
   onCopyJson: (jsonUrl: string, scriptId: string) => void
   onDownloadJson: (jsonUrl: string, scriptId: string) => void
-  onDownloadSheet: (pdfUrl: string, scriptId: string) => void
+  onDownloadPdf: (pdfUrl: string, scriptId: string) => void
   copiedId: string | null
   downloadingId: string | null
 }

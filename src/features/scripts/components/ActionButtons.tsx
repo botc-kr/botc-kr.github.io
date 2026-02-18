@@ -6,11 +6,11 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
   script,
   onCopyJson,
   onDownloadJson,
-  onDownloadSheet,
+  onDownloadPdf,
   copiedId,
   downloadingId,
 }) => {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
   const [isShared, setIsShared] = useState<boolean>(false)
 
   const buttonBaseStyle =
@@ -18,7 +18,8 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
 
   const handleShare = async (): Promise<void> => {
     try {
-      await navigator.clipboard.writeText(`https://botc-kr.github.io/#${script.id}`)
+      const shareUrl = `${window.location.origin}${window.location.pathname}#${script.id}`
+      await navigator.clipboard.writeText(shareUrl)
       setIsShared(true)
       setTimeout(() => setIsShared(false), 2000)
     } catch (err) {
@@ -83,7 +84,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
 
   const renderSheetButton = () => (
     <button
-      onClick={() => onDownloadSheet(script.pdf, script.id)}
+      onClick={() => onDownloadPdf(script.pdf, script.id)}
       disabled={downloadingId === script.id}
       className={`${buttonBaseStyle} bg-gradient-to-r from-rose-500 to-pink-500 text-white hover:from-rose-600 hover:to-pink-600 hover:shadow-md active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-none disabled:active:scale-100`}>
       {downloadingId === script.id ? (
