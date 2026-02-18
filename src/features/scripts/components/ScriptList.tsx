@@ -3,11 +3,11 @@ import { LoadingState } from '@/components/AsyncState'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import type { Script } from '@/features/scripts/types'
+import { buildScriptCategories } from '@/features/scripts/services/scriptCategoryService'
 import { fetchScripts } from '@/features/scripts/services/scriptService'
 import ScriptCategory from '@/features/scripts/components/ScriptCategory'
 import { useScriptActions } from '@/features/scripts/hooks/useScriptActions'
 import { type PageType } from '@/constants/pages'
-import { SECTIONS } from '@/constants/sections'
 import { HEADER_OFFSET_PX } from '@/constants/ui'
 import { useAsyncData } from '@/hooks/useAsyncData'
 import { notify } from '@/lib/utils'
@@ -45,17 +45,7 @@ const ScriptList: React.FC<ScriptListProps> = ({ currentPage, onPageChange }) =>
     return () => window.removeEventListener('hashchange', scrollToScript)
   }, [isLoading, scripts])
 
-  const scriptCategories = useMemo(() => {
-    const officialScripts = scripts.filter(script => script.official)
-    const teensyvilleScripts = scripts.filter(script => !script.official && script.teensyville)
-    const communityScripts = scripts.filter(script => !script.official && !script.teensyville)
-
-    return [
-      { id: SECTIONS.OFFICIAL, title: '공식 스크립트', scripts: officialScripts },
-      { id: SECTIONS.COMMUNITY, title: '커스텀 스크립트', scripts: communityScripts },
-      { id: SECTIONS.TEENSYVILLE, title: '틴시빌 스크립트', scripts: teensyvilleScripts },
-    ]
-  }, [scripts])
+  const scriptCategories = useMemo(() => buildScriptCategories(scripts), [scripts])
 
   if (isLoading) {
     return <LoadingState className="min-h-screen" />
