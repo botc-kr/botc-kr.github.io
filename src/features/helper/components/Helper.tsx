@@ -5,20 +5,18 @@ import * as Select from '@radix-ui/react-select'
 import { ChevronDownIcon } from 'lucide-react'
 import { CharacterDialog } from '@/features/helper/components/CharacterDialog'
 import { CharacterRow } from '@/features/helper/components/CharacterRow'
-import { HELPER_SCRIPTS, HELPER_SELECTED_SCRIPT_STORAGE_KEY } from '@/features/helper/scripts'
+import {
+  HELPER_SCRIPTS,
+  HELPER_SELECTED_SCRIPT_STORAGE_KEY,
+  getHelperScriptById,
+  getInitialHelperScriptId,
+  isHelperScriptId,
+} from '@/features/helper/scripts'
 import { fetchHelperScriptEntries } from '@/features/helper/services/helperScriptService'
 import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
 import { Character, HelperEntry, HelperTab, Team, isCharacterEntry } from '@/features/helper/types'
 import type { HelperScriptId } from '@/features/helper/scripts'
 import { useAsyncData } from '@/hooks/useAsyncData'
-
-const isHelperScriptId = (scriptId: string): scriptId is HelperScriptId =>
-  HELPER_SCRIPTS.some(script => script.id === scriptId)
-
-const getStoredScriptId = (): HelperScriptId => {
-  const savedScriptId = localStorage.getItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY)
-  return savedScriptId && isHelperScriptId(savedScriptId) ? savedScriptId : HELPER_SCRIPTS[0].id
-}
 
 const buildNightOrderCharacters = (
   characters: Character[],
@@ -35,15 +33,11 @@ const buildNightOrderCharacters = (
 }
 
 const Helper: FC = () => {
-  const [selectedScriptId, setSelectedScriptId] = useState<HelperScriptId>(getStoredScriptId)
+  const [selectedScriptId, setSelectedScriptId] = useState<HelperScriptId>(getInitialHelperScriptId)
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
-  const selectedScript = useMemo(() => HELPER_SCRIPTS.find(script => script.id === selectedScriptId), [selectedScriptId])
+  const selectedScript = useMemo(() => getHelperScriptById(selectedScriptId), [selectedScriptId])
 
   const loadSelectedScriptEntries = useCallback(async (): Promise<HelperEntry[]> => {
-    if (!selectedScript) {
-      throw new Error('스크립트를 찾을 수 없습니다')
-    }
-
     return fetchHelperScriptEntries(selectedScript.url)
   }, [selectedScript])
 
@@ -68,10 +62,7 @@ const Helper: FC = () => {
     () => buildNightOrderCharacters(characters, HelperTab.OtherNight),
     [characters],
   )
-  const selectedScriptName = useMemo(
-    () => HELPER_SCRIPTS.find(script => script.id === selectedScriptId)?.name ?? '',
-    [selectedScriptId],
-  )
+  const selectedScriptName = selectedScript.name
 
   const handleScriptChange = (scriptId: string): void => {
     if (!isHelperScriptId(scriptId)) {

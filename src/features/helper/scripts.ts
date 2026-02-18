@@ -61,3 +61,20 @@ export const HELPER_SCRIPTS = [
 export type HelperScriptId = (typeof HELPER_SCRIPTS)[number]['id']
 
 export const HELPER_SELECTED_SCRIPT_STORAGE_KEY = 'helper_selected_script'
+const DEFAULT_HELPER_SCRIPT = HELPER_SCRIPTS[0]
+const HELPER_SCRIPTS_BY_ID = new Map(HELPER_SCRIPTS.map(script => [script.id, script]))
+
+export const isHelperScriptId = (scriptId: string): scriptId is HelperScriptId =>
+  HELPER_SCRIPTS_BY_ID.has(scriptId as HelperScriptId)
+
+export const getHelperScriptById = (scriptId: HelperScriptId) =>
+  HELPER_SCRIPTS_BY_ID.get(scriptId) ?? DEFAULT_HELPER_SCRIPT
+
+export const getInitialHelperScriptId = (): HelperScriptId => {
+  if (typeof window === 'undefined') {
+    return DEFAULT_HELPER_SCRIPT.id
+  }
+
+  const savedScriptId = localStorage.getItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY)
+  return savedScriptId && isHelperScriptId(savedScriptId) ? savedScriptId : DEFAULT_HELPER_SCRIPT.id
+}
