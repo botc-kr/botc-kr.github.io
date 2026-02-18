@@ -6,6 +6,7 @@ import {
   isHelperScriptId,
 } from '@/features/helper/scripts'
 import type { HelperScriptId } from '@/features/helper/scripts'
+import { setLocalStorageItem } from '@/utils/browserStorage'
 
 export const useHelperScriptSelection = () => {
   const [selectedScriptId, setSelectedScriptId] = useState<HelperScriptId>(getInitialHelperScriptId)
@@ -17,9 +18,7 @@ export const useHelperScriptSelection = () => {
     }
 
     setSelectedScriptId(scriptId)
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY, scriptId)
-    }
+    setLocalStorageItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY, scriptId)
   }, [])
 
   return {

@@ -1,4 +1,5 @@
 import { buildScriptJsonUrl } from '@/constants/urls'
+import { getLocalStorageItem } from '@/utils/browserStorage'
 
 export const HELPER_SCRIPTS = [
   {
@@ -71,10 +72,6 @@ export const getHelperScriptById = (scriptId: HelperScriptId) =>
   HELPER_SCRIPTS_BY_ID.get(scriptId) ?? DEFAULT_HELPER_SCRIPT
 
 export const getInitialHelperScriptId = (): HelperScriptId => {
-  if (typeof window === 'undefined') {
-    return DEFAULT_HELPER_SCRIPT.id
-  }
-
-  const savedScriptId = localStorage.getItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY)
+  const savedScriptId = getLocalStorageItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY)
   return savedScriptId && isHelperScriptId(savedScriptId) ? savedScriptId : DEFAULT_HELPER_SCRIPT.id
 }
