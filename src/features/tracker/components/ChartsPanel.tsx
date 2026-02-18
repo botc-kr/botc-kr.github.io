@@ -1,18 +1,7 @@
 import type { FC } from 'react'
 import { Bar, BarChart, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import type { Alignment } from '@/features/tracker/types'
+import type { Alignment, RecentGameWinnerData, WinRateDataItem } from '@/features/tracker/types'
 import { WINNER_COLORS, winnerLabel } from '@/features/tracker/constants'
-
-interface WinRateDataItem {
-  name: string
-  value: number
-}
-
-interface RecentGameWinnerData {
-  name: string
-  value: number
-  winner: Alignment
-}
 
 interface ChartsPanelProps {
   hasLogs: boolean

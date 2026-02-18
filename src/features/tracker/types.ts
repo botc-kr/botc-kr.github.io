@@ -58,3 +58,14 @@ export interface GameLog extends RawGameLog {
   winner: Alignment
   id: string
 }
+
+export interface WinRateDataItem {
+  name: string
+  value: number
+}
+
+export interface RecentGameWinnerData {
+  name: string
+  value: number
+  winner: Alignment
+}

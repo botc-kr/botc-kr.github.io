@@ -1,16 +1,5 @@
 import { useMemo } from 'react'
-import type { Alignment, GameLog } from '@/features/tracker/types'
-
-interface WinRateDataItem {
-  name: string
-  value: number
-}
-
-interface RecentGameWinnerData {
-  name: string
-  value: number
-  winner: Alignment
-}
+import type { GameLog, RecentGameWinnerData, WinRateDataItem } from '@/features/tracker/types'
 
 interface UseDashboardMetricsReturn {
   hasLogs: boolean
