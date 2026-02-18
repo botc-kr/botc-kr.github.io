@@ -1,6 +1,6 @@
 import { RefreshCwIcon } from 'lucide-react'
 import { useCallback, useState } from 'react'
-import { Header } from '@/components/HeaderFooter'
+import { Header } from '@/components/layout/Header'
 import { type PageType } from '@/constants/pages'
 import { SAVANT_PROPOSITIONS } from '@/constants/savant'
 import { buildScriptImageUrl } from '@/constants/urls'

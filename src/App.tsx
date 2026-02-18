@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { LoadingState } from '@/components/AsyncState'
-import { Footer } from '@/components/HeaderFooter'
+import { Footer } from '@/components/layout/Footer'
 import { PAGE_TYPES, type PageType } from '@/constants/pages'
 import { hashFromPageType, isPageRouteHash, pageTypeFromHash } from '@/constants/routes'
 import { scrollToTop } from '@/utils/scroll'
