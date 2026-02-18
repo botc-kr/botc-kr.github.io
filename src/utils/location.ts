@@ -26,7 +26,7 @@ export const setCurrentLocationHash = (hashValue: string): void => {
   window.location.hash = hashValue
 }
 
-export const getCurrentHashValue = (): string => {
+export const getCurrentLocationHashValue = (): string => {
   return getCurrentLocationHash().replace(/^#/, '')
 }
 
