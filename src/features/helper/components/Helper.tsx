@@ -4,16 +4,10 @@ import { ErrorState, LoadingState } from '@/components/AsyncState'
 import { CharacterDialog } from '@/features/helper/components/CharacterDialog'
 import { HelperScriptSelect } from '@/features/helper/components/HelperScriptSelect'
 import HelperTabs from '@/features/helper/components/HelperTabs'
-import {
-  HELPER_SELECTED_SCRIPT_STORAGE_KEY,
-  getHelperScriptById,
-  getInitialHelperScriptId,
-  isHelperScriptId,
-} from '@/features/helper/scripts'
+import { useHelperScriptSelection } from '@/features/helper/hooks/useHelperScriptSelection'
 import { fetchHelperScriptEntries } from '@/features/helper/services/helperScriptService'
 import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
 import { Character, HelperEntry, HelperTab, Team, isCharacterEntry } from '@/features/helper/types'
-import type { HelperScriptId } from '@/features/helper/scripts'
 import { useAsyncData } from '@/hooks/useAsyncData'
 
 const buildNightOrderCharacters = (
@@ -31,9 +25,8 @@ const buildNightOrderCharacters = (
 }
 
 const Helper: FC = () => {
-  const [selectedScriptId, setSelectedScriptId] = useState<HelperScriptId>(getInitialHelperScriptId)
+  const { selectedScriptId, selectedScript, handleScriptChange } = useHelperScriptSelection()
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
-  const selectedScript = useMemo(() => getHelperScriptById(selectedScriptId), [selectedScriptId])
 
   const loadSelectedScriptEntries = useCallback(async (): Promise<HelperEntry[]> => {
     return fetchHelperScriptEntries(selectedScript.url)
@@ -61,15 +54,6 @@ const Helper: FC = () => {
     [characters],
   )
   const selectedScriptName = selectedScript.name
-
-  const handleScriptChange = (scriptId: string): void => {
-    if (!isHelperScriptId(scriptId)) {
-      return
-    }
-
-    setSelectedScriptId(scriptId)
-    localStorage.setItem(HELPER_SELECTED_SCRIPT_STORAGE_KEY, scriptId)
-  }
 
   if (loadError) {
     return <ErrorState className="h-screen" message={loadError} />
