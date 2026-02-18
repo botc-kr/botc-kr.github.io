@@ -1,4 +1,4 @@
-import { type FC, useCallback, useEffect, useMemo } from 'react'
+import { type FC, useCallback, useMemo } from 'react'
 import { LoadingState } from '@/components/AsyncState'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
@@ -6,12 +6,11 @@ import type { Script } from '@/features/scripts/types'
 import { buildScriptCategories } from '@/features/scripts/services/scriptCategoryService'
 import { fetchScripts } from '@/features/scripts/services/scriptService'
 import ScriptCategory from '@/features/scripts/components/ScriptCategory'
+import { useScrollToScriptHash } from '@/features/scripts/hooks/useScrollToScriptHash'
 import { useScriptActions } from '@/features/scripts/hooks/useScriptActions'
 import { type PageType } from '@/constants/pages'
-import { HEADER_OFFSET_PX } from '@/constants/ui'
 import { useAsyncData } from '@/hooks/useAsyncData'
 import { notify } from '@/lib/utils'
-import { scrollToElementById } from '@/utils/scroll'
 
 interface ScriptListProps {
   currentPage: PageType
@@ -28,22 +27,7 @@ const ScriptList: FC<ScriptListProps> = ({ currentPage, onPageChange }) => {
     onError: handleLoadScriptsError,
   })
   const { copiedId, downloadingId, onCopyJson, onDownloadJson, onDownloadPdf } = useScriptActions()
-
-  useEffect(() => {
-    const scrollToScript = () => {
-      const hash = window.location.hash.slice(1)
-      if (!hash) return
-
-      if (!isLoading && scripts.length > 0) {
-        scrollToElementById(hash, HEADER_OFFSET_PX)
-      }
-    }
-
-    scrollToScript()
-    window.addEventListener('hashchange', scrollToScript)
-
-    return () => window.removeEventListener('hashchange', scrollToScript)
-  }, [isLoading, scripts])
+  useScrollToScriptHash(!isLoading && scripts.length > 0)
 
   const scriptCategories = useMemo(() => buildScriptCategories(scripts), [scripts])
 
