@@ -50,21 +50,29 @@ function App() {
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Suspense fallback={<div className="flex justify-center items-center min-h-screen">Loading...</div>}>
-        {currentPage === PAGE_TYPES.SCRIPTS ? (
-          <ScriptList currentPage={currentPage} onPageChange={handlePageChange} />
-        ) : currentPage === PAGE_TYPES.HELPER ? (
-          <Helper />
-        ) : currentPage === PAGE_TYPES.TRACKER ? (
-          <TrackerApp />
-        ) : (
+  const renderCurrentPage = () => {
+    switch (currentPage) {
+      case PAGE_TYPES.SCRIPTS:
+        return <ScriptList currentPage={currentPage} onPageChange={handlePageChange} />
+      case PAGE_TYPES.HELPER:
+        return <Helper />
+      case PAGE_TYPES.TRACKER:
+        return <TrackerApp />
+      case PAGE_TYPES.SAVANT:
+      default:
+        return (
           <>
             <SavantProposition currentPage={currentPage} onPageChange={handlePageChange} />
             <Footer />
           </>
-        )}
+        )
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Suspense fallback={<div className="flex justify-center items-center min-h-screen">Loading...</div>}>
+        {renderCurrentPage()}
       </Suspense>
     </div>
   )
