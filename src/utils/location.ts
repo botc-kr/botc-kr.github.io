@@ -10,12 +10,24 @@ export const clearCurrentLocationHash = (): void => {
   window.history.pushState('', document.title, window.location.pathname + window.location.search)
 }
 
-export const getCurrentHashValue = (): string => {
+export const getCurrentLocationHash = (): string => {
   if (typeof window === 'undefined') {
     return ''
   }
 
-  return window.location.hash.replace(/^#/, '')
+  return window.location.hash
+}
+
+export const setCurrentLocationHash = (hashValue: string): void => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  window.location.hash = hashValue
+}
+
+export const getCurrentHashValue = (): string => {
+  return getCurrentLocationHash().replace(/^#/, '')
 }
 
 export const buildCurrentPathUrlWithHash = (hashValue: string): string => {

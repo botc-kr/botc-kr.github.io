@@ -1,16 +1,10 @@
 import { useCallback, useEffect, useState } from 'react'
 import { type PageType } from '@/constants/pages'
 import { hashFromPageType, isPageRouteHash, pageTypeFromHash } from '@/constants/routes'
-import { clearCurrentLocationHash } from '@/utils/location'
+import { clearCurrentLocationHash, getCurrentLocationHash, setCurrentLocationHash } from '@/utils/location'
 import { scrollToTop } from '@/utils/scroll'
 
-const initialPageType = (): PageType => {
-  if (typeof window === 'undefined') {
-    return pageTypeFromHash('')
-  }
-
-  return pageTypeFromHash(window.location.hash)
-}
+const initialPageType = (): PageType => pageTypeFromHash(getCurrentLocationHash())
 
 export const useHashPageRoute = () => {
   const [currentPage, setCurrentPage] = useState<PageType>(initialPageType)
@@ -25,7 +19,7 @@ export const useHashPageRoute = () => {
     setCurrentPage(page)
     const nextHash = hashFromPageType(page)
     if (nextHash.length > 0) {
-      window.location.hash = nextHash
+      setCurrentLocationHash(nextHash)
       return
     }
 
@@ -34,7 +28,7 @@ export const useHashPageRoute = () => {
 
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash
+      const hash = getCurrentLocationHash()
       if (!isPageRouteHash(hash)) {
         return
       }
