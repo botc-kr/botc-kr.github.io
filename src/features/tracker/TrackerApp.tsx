@@ -1,36 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useCallback } from 'react'
 import Dashboard from '@/features/tracker/Dashboard'
 import { fetchGameLogs } from '@/features/tracker/api'
 import { GameLog } from '@/features/tracker/types'
+import { useAsyncData } from '@/hooks/useAsyncData'
 
 const sortLogsByIdDesc = (logs: GameLog[]): GameLog[] =>
   [...logs].sort((left, right) => right.id.localeCompare(left.id))
 
 const TrackerApp = () => {
-  const [gameLogs, setGameLogs] = useState<GameLog[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    let isMounted = true
-
-    const loadGameLogs = async () => {
-      setIsLoading(true)
-      const logs = await fetchGameLogs()
-
-      if (!isMounted) {
-        return
-      }
-
-      setGameLogs(sortLogsByIdDesc(logs))
-      setIsLoading(false)
-    }
-
-    void loadGameLogs()
-
-    return () => {
-      isMounted = false
-    }
-  }, [])
+  const loadGameLogs = useCallback(async (): Promise<GameLog[]> => sortLogsByIdDesc(await fetchGameLogs()), [])
+  const { data: gameLogs, isLoading } = useAsyncData<GameLog[]>(loadGameLogs, [])
 
   if (isLoading) {
     return (

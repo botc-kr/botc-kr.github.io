@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useState } from 'react'
+import { FC, useCallback, useMemo, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
 import * as Dialog from '@radix-ui/react-dialog'
 import * as Select from '@radix-ui/react-select'
@@ -10,6 +10,7 @@ import { fetchHelperScriptEntries } from '@/features/helper/services/helperScrip
 import { ALL_GENERIC_INFO, NIGHT_INFO } from '@/constants/nightInfo'
 import { Character, HelperEntry, HelperTab, Team, isCharacterEntry } from '@/features/helper/types'
 import type { HelperScriptId } from '@/features/helper/scripts'
+import { useAsyncData } from '@/hooks/useAsyncData'
 
 const isHelperScriptId = (scriptId: string): scriptId is HelperScriptId =>
   HELPER_SCRIPTS.some(script => script.id === scriptId)
@@ -35,33 +36,25 @@ const buildNightOrderCharacters = (
 
 const Helper: FC = () => {
   const [selectedScriptId, setSelectedScriptId] = useState<HelperScriptId>(getStoredScriptId)
-  const [entries, setEntries] = useState<HelperEntry[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [loadError, setLoadError] = useState<string | null>(null)
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null)
+  const selectedScript = useMemo(() => HELPER_SCRIPTS.find(script => script.id === selectedScriptId), [selectedScriptId])
 
-  useEffect(() => {
-    const loadSelectedScript = async () => {
-      setIsLoading(true)
-      setLoadError(null)
-
-      try {
-        const selectedScript = HELPER_SCRIPTS.find(script => script.id === selectedScriptId)
-        if (!selectedScript) {
-          throw new Error('스크립트를 찾을 수 없습니다')
-        }
-
-        const nextEntries = await fetchHelperScriptEntries(selectedScript.url)
-        setEntries(nextEntries)
-      } catch (error) {
-        setLoadError(error instanceof Error ? error.message : '스크립트를 불러오는데 실패했습니다')
-      } finally {
-        setIsLoading(false)
-      }
+  const loadSelectedScriptEntries = useCallback(async (): Promise<HelperEntry[]> => {
+    if (!selectedScript) {
+      throw new Error('스크립트를 찾을 수 없습니다')
     }
 
-    void loadSelectedScript()
-  }, [selectedScriptId])
+    return fetchHelperScriptEntries(selectedScript.url)
+  }, [selectedScript])
+
+  const getLoadErrorMessage = useCallback(
+    (error: unknown): string => (error instanceof Error ? error.message : '스크립트를 불러오는데 실패했습니다'),
+    [],
+  )
+
+  const { data: entries, isLoading, error: loadError } = useAsyncData<HelperEntry[]>(loadSelectedScriptEntries, [], {
+    getErrorMessage: getLoadErrorMessage,
+  })
 
   const characters = useMemo(
     () => entries.filter(isCharacterEntry).filter(character => character.team !== Team.Traveler),
