@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "name": "모두를 위한 밤 (Everyone Can Play)",
+    "author": "Ben Burns",
+    "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/trouble_brewing_bg.webp"
+  },
+  "roles": [
+    "librarian",
+    "clockmaker",
+    "grandmother",
+    "fortuneteller",
+    "empath",
+    "monk",
+    "undertaker",
+    "gambler",
+    "artist",
+    "slayer",
+    "fool",
+    "ravenkeeper",
+    "mayor",
+    "drunk",
+    "recluse",
+    "saint",
+    "moonchild",
+    "baron",
+    "poisoner",
+    "assassin",
+    "devilsadvocate",
+    "spy",
+    "scarletwoman",
+    "imp"
+  ]
+}

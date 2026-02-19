@@ -1,0 +1,36 @@
+{
+    "meta":
+    {
+        "name": "For Newbie",
+        "author": "Dongchan",
+        "isOfficial": false
+    },
+    "roles":
+    [
+        "chef",
+        "noble",
+        "bountyhunter",
+        "balloonist",
+        "preacher",
+        "oracle",
+        "gambler",
+        "artist",
+        "seamstress",
+        "virgin",
+        "alchemist",
+        "drunk",
+        "barber",
+        "plaguedoctor",
+        "recluse",
+        "saint",
+        "assassin",
+        "psychopath",
+        "poisoner",
+        "goblin",
+        "godfather",
+        "fanggu",
+        "kazali",
+        "lordoftyphon",
+        "imp"
+    ]
+}

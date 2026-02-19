@@ -1,0 +1,41 @@
+{
+    "meta":
+    {
+        "name": "환란의 화원 (Sects and Violets)",
+        "author": "steven medway",
+        "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/sects_and_violets_bg.webp"
+    },
+    "roles":
+    [
+        "clockmaker",
+        "dreamer",
+        "snakecharmer",
+        "mathematician",
+        "flowergirl",
+        "towncrier",
+        "oracle",
+        "savant",
+        "seamstress",
+        "philosopher",
+        "artist",
+        "juggler",
+        "sage",
+        "mutant",
+        "sweetheart",
+        "barber",
+        "klutz",
+        "eviltwin",
+        "witch",
+        "cerenovus",
+        "pithag",
+        "fanggu",
+        "vigormortis",
+        "nodashii",
+        "vortox",
+        "barista",
+        "bonecollector",
+        "butcher",
+        "deviant",
+        "harlot"
+    ]
+}

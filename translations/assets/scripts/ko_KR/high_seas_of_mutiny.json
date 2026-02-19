@@ -1,0 +1,521 @@
+[
+  {
+    "author": "Gordon Edward Fitzgerald",
+    "background": "https://i.imgur.com/44Ilwt2.jpg",
+    "id": "_meta",
+    "isOfficial": false,
+    "name": "반란의 거친 바다 (High seas of Mutiny)"
+  },
+  {
+    "ability": "게임 시작 시 5개의 캐릭터를 알게 됩니다. 2개는 게임에 참가중인 캐릭터, 3개는 게임에 참가중이지 않은 캐릭터입니다.",
+    "edition": "HSoM",
+    "firstNight": 25,
+    "firstNightReminder": "노련한 선원을 깨워 캐릭터 토큰 5개를 (참가 2개, 미참가 3개) 보여주세요.",
+    "id": "ko_KR_oldseadog",
+    "image": [
+      "https://i.imgur.com/k39Xmch.png",
+      "https://i.imgur.com/l0Khig7.png"
+    ],
+    "name": "노련한 선원",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임 시작 시 3명의 참가자를 알게 됩니다. 마을주민 1명, 외부인 1명, 하수인 1명입니다. (순서 임의) [외부인 -1 또는 +1]",
+    "edition": "HSoM",
+    "firstNight": 26,
+    "firstNightReminder": "마을주민, 외부인, 하수인 3명을 각각 지명하세요.(순서 임의)",
+    "id": "ko_KR_navigator",
+    "image": [
+      "https://i.imgur.com/XpuIxJ8.png",
+      "https://i.imgur.com/OiXAFl0.png"
+    ],
+    "name": "항해사",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "알려줌",
+      "알려줌",
+      "알려줌"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임 시작 시 연달아 앉아있는 선한 진영 참가자들 중 가장 큰 그룹의 인원 수를 알게 됩니다.",
+    "edition": "HSoM",
+    "firstNight": 27,
+    "firstNightReminder": "몇명인지 알려주세요.",
+    "id": "ko_KR_boatswain",
+    "image": [
+      "https://i.imgur.com/1usGD0a.png",
+      "https://i.imgur.com/GUNDBF7.png"
+    ],
+    "name": "갑판장",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임 시작 시 게임 중인 캐릭터 하나를 알게 됩니다. 만약 오늘 당신이 알게 된 캐릭터가 처형되어 죽었다면, 오늘 밤 다른 진영의 게임 중인 캐릭터 하나를 알게 됩니다.",
+    "edition": "HSoM",
+    "firstNight": 28,
+    "firstNightReminder": "플레이중인 캐릭터 하나를 알려주세요. :reminder:",
+    "id": "ko_KR_deckhand",
+    "image": [
+      "https://i.imgur.com/nwlUvWo.png",
+      "https://i.imgur.com/15zDhIy.png"
+    ],
+    "name": "갑판원",
+    "otherNight": 12,
+    "otherNightReminder": "알려준 캐릭터가 죽는다면, 다른 진영(선,악)의 캐릭터를 알려줍니다. :reminder:",
+    "reminders": [
+      "알게됨",
+      "오늘 죽음"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤*, 자신을 제외한 2명의 참가자를 선택합니다. 첫 번째 참가자가 오늘 밤 죽는다면, 대신 두 번째 참가자가 죽습니다. 만약 악마가 이 능력으로 죽게 된다면, 오늘 밤의 죽음은 이야기꾼이 정합니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_captain",
+    "image": [
+      "https://i.imgur.com/5m0eAeo.png",
+      "https://i.imgur.com/38nxM17.png"
+    ],
+    "name": "선장",
+    "otherNight": 4,
+    "otherNightReminder": "선장이 2명을 고르게 하세요. 첫번째는 '보호'토큰을 두번째는 '표적 '토큰을 놓으세요. :reminder: :reminder:",
+    "reminders": [
+      "보호",
+      "표적",
+      "사망"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤*, 자신을 제외한 두명의 참가자를 선택합니다. 만약 둘의 진영이 서로 다르다면, 당신은 죽습니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_buccaneer",
+    "image": [
+      "https://i.imgur.com/g6UfiGF.png",
+      "https://i.imgur.com/dSTwUou.png"
+    ],
+    "name": "카리브 해적",
+    "otherNight": 5,
+    "otherNightReminder": "두명의 참가자(본인제외)를 선택하게 하세요, 선택한 참가자들의 팀(선,악)이 다르다면, 해적을 사망 시키세요. :reminder:",
+    "reminders": [
+      "생존",
+      "사망"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 밤*, 만약 당신이 오늘 하수인을 지명했다면, 당신은 죽습니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_landlubber",
+    "image": [
+      "https://i.imgur.com/mf8iTiR.png",
+      "https://i.imgur.com/FNGcwT0.png"
+    ],
+    "name": "풋내기 선원",
+    "otherNight": 13,
+    "otherNightReminder": "그가 지명한 참가자가 하수인이라면 '사망'시키세요. :reminder:",
+    "reminders": [
+      "사망"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 낮 이야기꾼으로부터 비밀리에 살아있는 이웃 참가자들에 대한 진실된 정보를 하나 얻을 수 있습니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_wench",
+    "image": [
+      "https://i.imgur.com/enGPWJ8.png",
+      "https://i.imgur.com/BpNt3BG.png"
+    ],
+    "name": "여급",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 낮 이야기꾼으로부터 과제를 받을 수 있습니다. 매일 밤*, 이전 과제를 완료했다면 게임 중인 캐릭터 하나를 알게 됩니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_privateer",
+    "image": [
+      "https://i.imgur.com/ykfyVbK.png",
+      "https://i.imgur.com/UJpSybI.png"
+    ],
+    "name": "사략선 해적",
+    "otherNight": 14,
+    "otherNightReminder": "과제를 달성하면 캐릭터 하나를 알려주세요.",
+    "reminders": [
+      "과제 성공"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임에서 한 번, 밤에 (ㄴ), (ㅅ),(ㅣ)를 선택하면 게임 중인 캐릭터들의 이름에 해당 글자가 포함된 수를 알게 됩니다.",
+    "edition": "HSoM",
+    "firstNight": 29,
+    "firstNightReminder": "능력을 쓸지 물어보세요. 쓴다면 숫자로 알려주세요 :reminder:",
+    "id": "ko_KR_firstmate",
+    "image": [
+      "https://i.imgur.com/hsOWoTm.png",
+      "https://i.imgur.com/SN65swP.png"
+    ],
+    "name": "1등 항해사",
+    "otherNight": 15,
+    "otherNightReminder": "능력을 쓸지 물어보세요. 쓴다면 숫자로 알려주세요 :reminder:",
+    "reminders": [
+      "능력 없음"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "첫째 날, 공개적으로 2명의 참가자를 선택합니다. 둘 중 하나가 하수인이라면, 당신과 선택된 하수인은 오늘 밤 죽습니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_powdermonkey",
+    "image": [
+      "https://i.imgur.com/bMIE7Sk.png",
+      "https://i.imgur.com/tVztqgk.png"
+    ],
+    "name": "화약 운반수",
+    "otherNight": 11,
+    "otherNightReminder": "선택한 참가자 중에 하수인이 있다면 화약운반수와 하수인 둘다 죽이세요. :reminder: :reminder:",
+    "reminders": [
+      "사망",
+      "사망"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "밤에 죽으면 참가자 한 명과 마을주민 직업 하나를 선택합니다. 선택된 참가자가 악마가 아니라면 그 마을주민으로 변경됩니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_corsair",
+    "image": [
+      "https://i.imgur.com/p8YsrZS.png",
+      "https://i.imgur.com/cTa53Rm.png"
+    ],
+    "name": "지중해 해적",
+    "otherNight": 16,
+    "otherNightReminder": "지중해 해적이 밤에 '사망'하면, 참가자와 마을주민을 고르게 하고, 악마가 아니라면 그 참가자의 캐릭터를 바꾸세요.",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "생존자가 3명만 남았을 때 당신이 한 번도 참가자를 지명한 적이 없다면: 소라게 팀이 승리하게 [외부인 +1]",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "flavor": "인격이란 가면 뒤에는 그 가면을 다루는 영혼이 존재한다. 때로는 그 영혼이 가면을 벗고 심연과 마주할 때가 오느니...",
+    "id": "ko_KR_hermitcrab",
+    "image": [
+      "https://i.imgur.com/SLRZcx2.png",
+      "https://i.imgur.com/gkC5J3B.png"
+    ],
+    "name": "소라게",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "지명했음"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "첫날 밤, 참가자 한 명을 선택하며 선택한 참가자가 투표할 때만 투표할 수 있습니다. 당신이 죽더라도, 선택한 참가자가 이기는 경우 승리합니다.",
+    "edition": "HSoM",
+    "firstNight": 30,
+    "firstNightReminder": "참가자를 선택하게 하세요. :reminder:",
+    "id": "ko_KR_barnacle",
+    "image": [
+      "https://i.imgur.com/p0sFBR2.png",
+      "https://i.imgur.com/nVUNVuV.png"
+    ],
+    "name": "따개비",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "달라붙음"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "당신은 마을주민이라고 생각하지만, 사실은 딸기코입니다. 당신은 악한 진영으로 간주되며 하수인 또는 외부인으로 보일 수 있습니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_grogblossom",
+    "image": [
+      "https://i.imgur.com/wlWW00z.png",
+      "https://i.imgur.com/51XoW7o.png"
+    ],
+    "name": "딸기코",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [
+      "딸기코"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "name": "bag-disabled",
+        "type": "selection"
+      },
+      {
+        "name": "replace-character",
+        "type": "reveal"
+      }
+    ],
+    "team": "outsider"
+  },
+  {
+    "ability": "인어와 악마를 제외하고 인어를 지명한 사람은 인어가 다시 지명될 때까지 만취 상태가 됩니다. 이는 인어가 죽은 후에도 유지됩니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_mermaid",
+    "image": [
+      "https://i.imgur.com/WeGkkuk.png",
+      "https://i.imgur.com/HzBhOAW.png"
+    ],
+    "name": "인어",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "만취"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "게임에 참가중인 마을주민 중 하나라고 광적으로 설득한다면 당신은 밤에 죽지 않습니다. 당신이 죽으면, 모든 하수인들은 매일 밤 그리모어를 봅니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_stowaway",
+    "image": [
+      "https://i.imgur.com/X2IebgS.png",
+      "https://i.imgur.com/sIk4lJH.png"
+    ],
+    "name": "밀항자",
+    "otherNight": 2,
+    "otherNightReminder": "밀항자가 '사망'했다면 하수인들을 깨워 그리모어를 보여주세요.",
+    "reminders": [
+      "그리모어 보여줌"
+    ],
+    "setup": false,
+    "special": [
+      {
+        "global": "minion",
+        "name": "grimoire",
+        "time": "night",
+        "type": "signal"
+      }
+    ],
+    "team": "outsider"
+  },
+  {
+    "ability": "악한 참가자가 낮에 악마를 지명하면, 지명된 악마는 당신과 캐릭터를 교체하고 다음날 아침까지 '중독'됩니다. 생존자가 4명 이하라면 이 능력을 잃습니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_mysticpriestess",
+    "image": [
+      "https://i.imgur.com/snOBOyh.png",
+      "https://i.imgur.com/OHw4Zkw.png"
+    ],
+    "name": "비밀 여사제",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "능력 없음",
+      "오늘밤 바꿈",
+      "오늘밤 바꿈"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "처형되어 죽은 날 밤, 살아있는 선한 이웃 중 한 명을 선택해서 죽일 수 있습니다.",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_undeadpirate",
+    "image": [
+      "https://i.imgur.com/jFejeUW.png",
+      "https://i.imgur.com/Hb070Ra.png"
+    ],
+    "name": "언데드 해적",
+    "otherNight": 6,
+    "otherNightReminder": "처형으로 '사망'하면, 오늘 밤 살아있는 선한 이웃을 선택하게 하세요. 그는 '사망'합니다. :reminder:",
+    "reminders": [
+      "능력 없음",
+      "사망"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "첫날 밤 선한 참가자 한 명을 선택하여 중독시킵니다. 중독된 선한 참가자를 포함 3명만 살아남은 경우, 당신이 이미 죽었더라도 당신의 팀이 승리합니다. 선한 참가자 1명은 바다 정령이 게임에 참가중임을 알고 있습니다.",
+    "edition": "HSoM",
+    "firstNight": 21,
+    "firstNightReminder": "바다정령을 깨워서 선한 참가자를 중독 시키세요. 선한 참가자를 깨워서 바다정령의 있음을 알려주세요. :reminder:",
+    "id": "ko_KR_seaspirit",
+    "image": [
+      "https://i.imgur.com/PyBWPSH.png",
+      "https://i.imgur.com/hmuzZMD.png"
+    ],
+    "name": "바다 정령",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "중독",
+      "알고있음"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "매일 밤, 참가자 한 명을 선택할 수 있습니다. 해당 참가자의 마을주민 능력은 다음 밤이 되기전까지 거짓 정보를 제공합니다. 만약 그날 밤에 죽어야 할 참가자라면, 하루 뒤 밤에 죽게 됩니다.",
+    "edition": "HSoM",
+    "firstNight": 22,
+    "firstNightReminder": "매일 밤, 참가자를 선택하게 하세요. 선택된 참가자가 마을주민이라면 황혼까지 잘못된 정보를 제공해야합니다. :reminder:",
+    "id": "ko_KR_flesheater",
+    "image": [
+      "https://i.imgur.com/LNyqSB6.png",
+      "https://i.imgur.com/6gcpm4P.png"
+    ],
+    "name": "살점 포식자",
+    "otherNight": 3,
+    "otherNightReminder": "매일 밤, 참가자를 선택하게 하세요. 선택된 참가자가 마을주민이라면 황혼까지 잘못된 정보를 제공해야합니다. 그가 오늘 밤 '사망' 한다면 ,대신 다음 밤 '사망'처리 됩니다. :reminder: 살점포식자에게 한입 먹힌 참가자는 그날 밤 죽을 수 없습니다. 다음 밤에 '사망'시키세요. :reminder:",
+    "reminders": [
+      "한입",
+      "사망"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "매일 밤*, 참가자 한 명을 선택해서 죽입니다. 처음 외부인을 죽였을 경우, 그 외부인의 살아있는 선한 이웃 중 한 명이 함께 죽습니다. [외부인 -1 또는 +1]",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_kraken",
+    "image": [
+      "https://i.imgur.com/ZYrcFpy.png",
+      "https://i.imgur.com/vCCT593.png"
+    ],
+    "name": "크라켄",
+    "otherNight": 7,
+    "otherNightReminder": "매일 밤, 참가자를 선택해 '사망'시킵니다.. 선택한 참가자가 외부인이라면 외부인의 살아있는 선한 이웃 한명을 더 죽입니다.(최초 1번) . :reminder:",
+    "reminders": [
+      "사망",
+      "사망"
+    ],
+    "setup": true,
+    "team": "demon"
+  },
+  {
+    "ability": "매일 밤, 3명의 참가자를 선택합니다. 전날 밤에 첫 번째로 선택했던 참가자가 죽습니다. 만약 그 참가자가 오늘 처형되었다면, 나머지 두 명이 오늘 밤에 죽습니다.",
+    "edition": "HSoM",
+    "firstNight": 23,
+    "firstNightReminder": "3명 고르게 하세요. :reminder: :reminder: :reminder:",
+    "id": "ko_KR_calypso",
+    "image": [
+      "https://i.imgur.com/zkuiY7L.png",
+      "https://i.imgur.com/jIWJkcJ.png"
+    ],
+    "name": "칼립소",
+    "otherNight": 8,
+    "otherNightReminder": "첫번째 참가자가 오늘 낮에 '처형' 됐다면 다른 두 명을 더 '사망'시키세요. 아니라면 첫번째 참가자를 '사망'시킵니다. 이 후 3명을 고르세요. :reminder: :reminder: 칼립소3명. :reminder: :reminder: :reminder:",
+    "reminders": [
+      "1번",
+      "2번",
+      "3번",
+      "사망",
+      "사망",
+      "사망"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "당신은 자신의 능력이 무엇인지 모르지만, 매일 밤 힌트를 얻습니다. 선한 참가자 1명이 당신의 능력을 알고 있습니다. 그 사람이 루살카가 게임에 있다는 것을 밝힐 경우 당신은 자신의 능력을 알게 됩니다.",
+    "edition": "HSoM",
+    "firstNight": 24,
+    "firstNightReminder": "루살카에게 능력의 힌트를 알려주세요. 선한 참가자를 깨워 루살카가 있음을 알려주세요. :reminder:",
+    "id": "ko_KR_rusalka",
+    "image": [
+      "https://i.imgur.com/zirCpWD.png",
+      "https://i.imgur.com/f7QsSSq.png"
+    ],
+    "name": "루살카",
+    "otherNight": 9,
+    "otherNightReminder": "루살카에게 능력의 힌트를 알려주세요. 루살카에게 고르게 하거나, 능력에 기반한 정보를 제공하시거나 하세요. :reminder:",
+    "reminders": [
+      "저주",
+      "사망"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "매일 밤*, 한 명을 선택해서 죽입니다. 두 우미보즈가 서로 다른 대상을 고르면 능력은 발동되지 않습니다. 당신은 하수인처럼 보일 수 있습니다. [하수인 중 한 명을 우미보즈로 변경]",
+    "edition": "HSoM",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_umibozu",
+    "image": [
+      "https://i.imgur.com/mlnGfWq.png",
+      "https://i.imgur.com/gMaxrgN.png"
+    ],
+    "name": "우미보즈",
+    "otherNight": 10,
+    "otherNightReminder": "우미보즈가 참가자를 선택하게 하세요. :reminder:",
+    "reminders": [
+      "사망"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "name": "bag-duplicate",
+        "type": "selection"
+      }
+    ],
+    "team": "demon"
+  }
+]

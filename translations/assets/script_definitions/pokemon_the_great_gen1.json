@@ -1,0 +1,39 @@
+{
+    "meta":
+    {
+        "name": "포켓몬스터: 위대한 1세대",
+        "author": "Castle Q"
+    },
+    "roles":
+    [
+        "pikachu",
+        "charmander",
+        "squirtle",
+        "bulbasaur",
+        "weedle",
+        "zubat",
+        "raichu",
+        "charizard",
+        "blastoise",
+        "venusaur",
+        "pidgeotto",
+        "ditto",
+        "slowpoke",
+        "greninja",
+        "slowbro",
+        "slowking",
+        "kakuna",
+        "gastly",
+        "magikarp",
+        "gyarados",
+        "mew",
+        "wobbuffet",
+        "muk",
+        "meowth",
+        "electrode",
+        "beedrill",
+        "gengar",
+        "mewtwo",
+        "teamrocket"
+    ]
+}

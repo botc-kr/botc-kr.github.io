@@ -1,0 +1,400 @@
+[
+  {
+    "ability": "Você começa vendo 3 jogadores. Apenas 1 deles é mau.",
+    "edition": "",
+    "firstNight": 43,
+    "firstNightReminder": "Aponte para 3 jogadores incluindo exatamente 1 mau em qualquer ordem.",
+    "id": "pt_BR_noble",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/noble.png?raw=true",
+    "name": "Nobre",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Visto"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Você começa o jogo sabendo de um personagem Cidadão em jogo. Se você alucinar ser esse personagem, você ganha aquela habilidade quando o mesmo morrer.",
+    "edition": "",
+    "firstNight": 29,
+    "firstNightReminder": "Mostre o token de um Cidadão que está em jogo.",
+    "id": "pt_BR_pixie",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/pixie.png?raw=true",
+    "name": "Pixie",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Alucinando",
+      "Tem habilidade"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Você começa vendo quantos pares de jogadores maus vizinhos existem.",
+    "edition": "tb",
+    "firstNight": 35,
+    "firstNightReminder": "Com os dedos, mostre o número correspondente à quantidade de pares de jogadores maus vizinhos.",
+    "id": "pt_BR_chef",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/chef.png?raw=true",
+    "name": "Chef",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "A cada noite, escolha um jogador vivo: você ou o alvo fica bêbado até o anoitecer. Você não pode morrer.",
+    "edition": "bmr",
+    "firstNight": 10,
+    "firstNightReminder": "O Marinheiro aponta para um jogador. Marque ou Marinheiro, ou o jogador escolhido como 'Bêbado'.",
+    "id": "pt_BR_sailor",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/sailor.png?raw=true",
+    "name": "Marinheiro",
+    "otherNight": 4,
+    "otherNightReminder": "Remova o token 'Bêbado'. O Marinheiro aponta para um jogador. Marque o Marinheiro ou o jogador escolhido como 'Bêbado'.",
+    "reminders": [
+      "Bêbado"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "A cada noite, você vê um jogador de um tipo diferente de personagem, até que tenha visto um jogador de cada tipo. [+1 Forasteiro]",
+    "edition": "",
+    "firstNight": 44,
+    "firstNightReminder": "Escolha um tipo de personagem. Aponte para um jogador cujo personagem é desse tipo. Coloque o lembrete 'Visto' do Balonista ao lado desse personagem.",
+    "id": "pt_BR_balloonist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/balloonist.png?raw=true",
+    "name": "Balonista",
+    "otherNight": 63,
+    "otherNightReminder": "Escolha um tipo de personagem que você ainda não escolheu. Informe ao Balonista um jogador cujo personagem é desse tipo, se houver algum. Coloque o lembrete 'Visto' do Balonista ao lado desse personagem.",
+    "reminders": [
+      "Cidadão Visto",
+      "Demônio Visto",
+      "Forasteiro Visto",
+      "Lacaio Visto",
+      "Viajante Visto"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "A cada noite, escolha 2 jogadores: você vê se algum dos alvos é um Demônio. Há um jogador bom que sempre registrado como Demônio para você.",
+    "edition": "tb",
+    "firstNight": 37,
+    "firstNightReminder": "A Vidente, aponta para dois jogadores. Com a cabeça, sinalize 'sim' ou 'não' para responder se algum dos alvos é um Demônio (ou o jogador marcado como 'Alarme Falso').",
+    "id": "pt_BR_fortuneteller",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fortuneteller.png?raw=true",
+    "name": "Vidente",
+    "otherNight": 54,
+    "otherNightReminder": "A Vidente, aponta para dois jogadores. Com a cabeça, sinalize 'sim' ou 'não' para responder se algum dos alvos é um Demônio (ou o jogador marcado como 'Alarme Falso').",
+    "reminders": [
+      "Alarme Falso"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "A cada noite, você vê quantos de seus 2 vizinhos vivos são maus.",
+    "edition": "tb",
+    "firstNight": 36,
+    "firstNightReminder": "Com os dedos, mostre o número correspondente à quantidade de vizinhos maus vivos do Empático.",
+    "id": "pt_BR_empath",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/empath.png?raw=true",
+    "name": "Empático",
+    "otherNight": 53,
+    "otherNightReminder": "Com os dedos, mostre o número correspondente à quantidade de vizinhos maus vivos do Empático.",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "A cada dia, você pode fazer uma alegação publicamente. À noite, se a alegação era verdadeira, um jogador morre.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_gossip",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/gossip.png?raw=true",
+    "name": "Fofoqueiro",
+    "otherNight": 47,
+    "otherNightReminder": "Se a alegação pública do Fofoqueiro era verdadeira: mate um jogador",
+    "reminders": [
+      "Morto"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "A cada dia, você pode visitar o Narrador para saber 2 coisas em segredo: 1 é verdadeira e 1 é falsa.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_savant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/savant.png?raw=true",
+    "name": "Prodígio",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Uma vez por jogo, à noite, escolha um jogador vivo. O alvo, se for a Donzela se torna um Cidadão de fora do jogo. [+Donzela]",
+    "edition": "",
+    "firstNight": 30,
+    "firstNightReminder": "O Caçador sinaliza 'não' com a cabeça, ou aponta para um jogador. Se apontar para a Donzela, mude o personagem do alvo para um Cidadão que não esteja em jogo. Avise o alvo sobre a troca.",
+    "id": "pt_BR_huntsman",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/huntsman.png?raw=true",
+    "name": "Caçador",
+    "otherNight": 51,
+    "otherNightReminder": "O Caçador sinaliza 'não' com a cabeça, ou aponta para um jogador. Se apontar para a Donzela, mude o personagem do alvo para um Cidadão que não esteja em jogo. Avise o alvo sobre a troca.",
+    "reminders": [
+      "Sem habilidade"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "O Demônio pensa que você é um Lacaio. Lacaios pensam que você é um Demônio.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_magician",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/magician.png?raw=true",
+    "name": "Mágico",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Se você morrer à Noite, será acordado para escolher um jogador: você vê o personagem do alvo.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_ravenkeeper",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/ravenkeeper.png?raw=true",
+    "name": "Mestre dos Corvos",
+    "otherNight": 42,
+    "otherNightReminder": "Se o Mestre dos corvos morreu esta noite, o mesmo aponta pra um jogador. Mostre o token de personagem do alvo.",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Na 1ª vez que você morreria, você não morre.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_fool",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fool.png?raw=true",
+    "name": "Bobo",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Sem habilidade"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Todos os Lacaios sabem que você está em jogo. Se um Lacaio advinhar quem você é publicamente (uma chance), seu time perde.",
+    "edition": "",
+    "firstNight": 31,
+    "firstNightReminder": "Acorde todos os Lacaios, mostre o token 'Este personagem está em jogo' e o token da Donzela.",
+    "id": "pt_BR_damsel",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/damsel.png?raw=true",
+    "name": "Donzela",
+    "otherNight": 52,
+    "otherNightReminder": "Se a Donzela foi escolhida pelo Caçador, acorde-a e mostre o token 'Você é' e o token de um Cidadão de fora do jogo.",
+    "reminders": [
+      "Chance usada"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "A cada noite, o 1º jogador que escolher você com a própria habilidade fica bêbado até o anoitecer. Você passa a a ter o mesmo alinhamento que este jogador.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_goon",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/goon.png?raw=true",
+    "name": "Capanga",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Bêbado"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Se você alucinar ser um Forasteiro, você pode ser executado.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_mutant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/mutant.png?raw=true",
+    "name": "Mutante",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Você pensa que é um Demônio, mas você não é. O Demônio sabe quem você é e quem você escolhe à noite.",
+    "edition": "bmr",
+    "firstNight": 7,
+    "firstNightReminder": "Caso este jogo tenha etapa de informação do Demônio, realize esta etapa com o Lunático dando informações arbitrárias. Se o Demônio acordaria hoje para receber informações ou fazer escolhas, faça o mesmo com o Lunático (informações arbitrárias). Acorde o Demônio, Mostre o token do Lunático e aponte para o jogador correspondente. Informe quaisquer alvos que o Lunático tenha escolhido com sua habilidade falsa.",
+    "id": "pt_BR_lunatic",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lunatic.png?raw=true",
+    "name": "Lunático",
+    "otherNight": 21,
+    "otherNightReminder": "Se o Demônio acordaria hoje para receber informações ou fazer escolhas, faça o mesmo com o Lunático (informações arbitrárias). Acorde o Demônio e informe quaisquer alvos que o Lunático tenha escolhido com sua habilidade falsa.",
+    "reminders": [
+      "Ataque 1",
+      "Ataque 2",
+      "Ataque 3"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "1 jogador está Bêbado, mesmo que você morra. Você pode adivinhar quem é (uma chance). Se acertar, você vê quem é o Demônio, você vê o jogador errado.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_puzzlemaster",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/puzzlemaster.png?raw=true",
+    "name": "Enigmático",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Bêbado",
+      "Chance usada"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Você começa sabendo quais Forasteiros estão em jogo. Se um Forasteiro morreu durante o dia, escolha um jogador esta noite: o alvo morre. [−1 ou +1 Forasteiro]",
+    "edition": "bmr",
+    "firstNight": 21,
+    "firstNightReminder": "Mostre cada token de Forasteiro em jogo.",
+    "id": "pt_BR_godfather",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/godfather.png?raw=true",
+    "name": "Chefe da Máfia",
+    "otherNight": 38,
+    "otherNightReminder": "Se um Forasteiro morreu hoje durante o dia: O Chefe da Máfia aponta para um jogador. Esse jogador morre.",
+    "reminders": [
+      "Morreu de dia",
+      "Morto"
+    ],
+    "setup": true,
+    "team": "minion"
+  },
+  {
+    "ability": "A cada Noite, escolha um personagem bom e um jogador: o alvo deve alucinar ser esse personagem amanhã, ou pode ser executado.",
+    "edition": "snv",
+    "firstNight": 25,
+    "firstNightReminder": "O Cerenovus escolhe um jogador e um personagem bom. (lembrete) Coloque o Cerenovus para dormir. Acorde o alvo. Mostre o token 'Você foi alvo desta habilidade', o token do Cerenovus e o token do personagem escolhido.",
+    "id": "pt_BR_cerenovus",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/cerenovus.png?raw=true",
+    "name": "Cerenovus",
+    "otherNight": 16,
+    "otherNightReminder": "O Cerenovus escolhe um jogador e um personagem bom. (lembrete) Coloque o Cerenovus para dormir. Acorde o alvo. Mostre o token 'Você foi alvo desta habilidade', o token do Cerenovus e o token do personagem escolhido.",
+    "reminders": [
+      "Alucinando"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "A cada noite, escolha um jogador: o alvo fica envenenado até o anoitecer.",
+    "edition": "tb",
+    "firstNight": 17,
+    "firstNightReminder": "O Envenenador aponta para um jogador. Marque-o com o lembrete 'Envenenado'.",
+    "id": "pt_BR_poisoner",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/poisoner.png?raw=true",
+    "name": "Envenenador",
+    "otherNight": 8,
+    "otherNightReminder": "Retire o lembrete 'Envenenado'. O Envenenador aponta para um jogador. Marque-o com o lembrete 'Envenenado'.",
+    "reminders": [
+      "Envenenado"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "Quando nomeado, você pode publicamente alegar ser o Goblin: Se for executado naquele dia, seu time vence.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_goblin",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/goblin.png?raw=true",
+    "name": "Goblin",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Alegou hoje"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "A cada noite*, escolha um jogador: o alvo morre. Se você escolher a si mesmo e morrer, um Lacaio se torna um Capeta.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_imp",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/imp.png?raw=true",
+    "name": "Capeta",
+    "otherNight": 24,
+    "otherNightReminder": "O Capeta aponta para um jogador. O alvo morre. Se o alvo morto for o Capeta, Troque o token de personagem de um dos Lacaios por um token extra de Capeta. Acorde o ex-Lacaio e avise-o sobre a mudança de personagem.",
+    "reminders": [
+      "Morto"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "A cada noite*, você escolhe um jogador: o alvo morre. O primeiro Forasteiro a ser morto assim, torna-se um Fang Gu mau e você morre em vez do alvo. [+1 Forasteiro]",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "pt_BR_fanggu",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fanggu.png?raw=true",
+    "name": "Fang Gu",
+    "otherNight": 29,
+    "otherNightReminder": "O Fang Gu escolhe um jogador. O alvo morre. Ou, se esse jogador for o Primeiro Forasteiro escolhido por um Fang Gu no Jogo: • O Fang Gu morre em vez do alvo. O alvo agora é um Fang Gu mau. • Acorde o novo Fang Gu. Informe-o que ele é um Fang Gu mau. Esta troca não poderá mais acontecer durante este jogo.",
+    "reminders": [
+      "Morto"
+    ],
+    "setup": true,
+    "team": "demon"
+  },
+  {
+    "ability": "A cada noite*, escolha um jogador: o alvo morre. Você começa escolhendo um jogador vivo: o alvo fica envenenado - você morre se e somente se este jogador morrer.",
+    "edition": "",
+    "firstNight": 15,
+    "firstNightReminder": "O Parasita aponta para um jogador. Marque-o com o lembrete 'Envenenado'.",
+    "id": "pt_BR_lleech",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lleech.png?raw=true",
+    "name": "Parasita",
+    "otherNight": 35,
+    "otherNightReminder": "O Parasita aponta para um jogador: o alvo morre.",
+    "reminders": [
+      "Dead",
+      "Poisoned"
+    ],
+    "setup": false,
+    "team": "demon"
+  }
+]

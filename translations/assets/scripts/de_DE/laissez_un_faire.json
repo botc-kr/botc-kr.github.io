@@ -1,0 +1,188 @@
+[
+  {
+    "ability": "Du kennst deine Fähigkeit nicht. Jeden Tag, versuche, sie privat zu erraten: du erfährst, wie richtig du liegst.",
+    "edition": "",
+    "firstNight": 12,
+    "firstNightReminder": "Suche eine Fähigkeit des Amnestikers aus. Wenn die Fähigkeit in der Nacht aktiv ist: Wecke den Amnestiker und spiele seine Fähigkeit.",
+    "id": "de_DE_amnesiac",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/amnesiac.png?raw=true",
+    "name": "Amnesiker",
+    "otherNight": 5,
+    "otherNightReminder": "Wenn die Fähigkeit in der Nacht aktiv ist: Wecke den Amnestiker und spiele seine Fähigkeit.",
+    "reminders": [
+      "?"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Einmal pro Spiel, am Tag, stelle dem Erzähler privat 1 beliebge Ja/Nein-Frage.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_artist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/artist.png?raw=true",
+    "name": "Künstlerin",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Keine Fähigkeit"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du erfährst jede Nacht 1 Spieler eines anderen Charaktertyps, bis keine übrig bleiben. [+1 Außenseiter]",
+    "edition": "",
+    "firstNight": 44,
+    "firstNightReminder": "Wähle eine Charakterklasse. Zeige auf einen Spieler dessen Charakter dieser Klasse entspricht. Platziere den \"Gesehen\" Reminder neben den Charakter.",
+    "id": "de_DE_balloonist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/balloonist.png?raw=true",
+    "name": "Ballonfahrer",
+    "otherNight": 63,
+    "otherNightReminder": "Wähle eine Charakterklasse neben dem noch kein \"Gesehen\" reminder liegt. Zeige auf einen Spieler dessen Charakter dieser Klasse entspricht. Platziere den \"Gesehen\" Reminder neben den Charakter.",
+    "reminders": [
+      "Dorfbewohner gesehen",
+      "Dämon gesehen",
+      "Reisender gesehen",
+      "Untergebener gesehen"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du besitzt die Fähigkeit des zuletzt hingerichteten toten Spielers. Ist der Spieler böse, bist du vergiftet, bis ein guter Spieler durch eine Hinrichtung stirbt.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_cannibal",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/cannibal.png?raw=true",
+    "name": "Kannibale",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Heute gestorben",
+      "vergiftet"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Einmal pro Spiel, am Tag, besuche den Erzähler für einen Ratschlag, um dir beim gewinnen zu helfen.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_fisherman",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fisherman.png?raw=true",
+    "name": "Fischer",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Keine Fähigkeit"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Wenn du öffentlich behauptest, der Kobold zu sein wenn du nominiert wirst & am selben Tag hingerichtet wirst, gewinnt dein Team.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_goblin",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/goblin.png?raw=true",
+    "name": "Kobold",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Behauptet"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "Wenn mehr als 1 guter Spieler hingerichtet wird, gewinnt das böse Team. Alle Spieler wissen, dass du im Spiel bist. Nach dem 5. Tag gewinnt das böse Team.",
+    "edition": "",
+    "firstNight": 53,
+    "firstNightReminder": "Platziere den Leviathan 'Tag 1' Marker. Kündige an: 'Der Leviathan ist im Spiel. Das ist Tag 1.'",
+    "id": "de_DE_leviathan",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/leviathan.png?raw=true",
+    "name": "Leviathan",
+    "otherNight": 73,
+    "otherNightReminder": "Wechsle den Leviathan Tag reminder für den nächsten Tag.",
+    "reminders": [
+      "Guter Spieler exekutiert",
+      "Tag 1",
+      "Tag 2",
+      "Tag 3",
+      "Tag 4",
+      "Tag 5"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Du weißt nicht, dass du der Wahnsinnige bist. Du denkst, du seist ein Dämon, bist du aber nicht. Der Dämon weiß, wer du bist und wen du angreifst.",
+    "edition": "bmr",
+    "firstNight": 7,
+    "firstNightReminder": "Bei 7 oder mehr Spielern: Zeige dem Wahnisnnigen  die Anzahl an falschen 'Untergebenen', die im Spiel sind.Wenn der Dämon, den der Wahnsinnige sieht ein Dämon ist, der in der Nacht erwacht: Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
+    "id": "de_DE_lunatic",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lunatic.png?raw=true",
+    "name": "Wahnsinniger",
+    "otherNight": 21,
+    "otherNightReminder": "Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
+    "reminders": [
+      "Angriff 1",
+      "Angriff 2",
+      "Angriff 3"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Wenn du \"besessen\" davon bist, ein Außenseiter zu sein, könntest du hingerichtet werden",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_mutant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/mutant.png?raw=true",
+    "name": "Mutant",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Du kannst jeden Tag privat zum Erzähler gehen und 2 Aussagen erhalten: 1 stimmt, 1 ist falsch",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_savant",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/savant.png?raw=true",
+    "name": "Gelehrter",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "In deiner ersten Nacht, schaue das Grimoire an & wähle 1 Spieler: er ist vergiftet. 1 guter Spieler weiss, dass eine Witwe im Spiel ist.",
+    "edition": "",
+    "firstNight": 18,
+    "firstNightReminder": "Zeige der Witwe das Grimoire so lange sie es benötigt. Die Witwe zeigt auf einen Spieler. Dieser Spieler ist vergiftet. Wecke einen guten Spieler. Zeige ihm die 'Dieser Charakter ist im Spiel' und danach den Token der Witwe.",
+    "id": "de_DE_widow",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/widow.png?raw=true",
+    "name": "Witwe",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Vergiftet"
+    ],
+    "remindersGlobal": [
+      "Kennt die Witwe"
+    ],
+    "setup": false,
+    "team": "minion"
+  }
+]

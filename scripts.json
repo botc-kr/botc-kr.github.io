@@ -6,9 +6,9 @@
     "id": "trouble_brewing",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/trouble_brewing.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/trouble_brewing.json",
-    "official": true,
+    "note": "'불길한 조짐'으로 번역한 이유\n\n시나리오 전반에 드리운 불안과 예감의 분위기를 담고자 했습니다. 먹구름이 뒤틀리고, 빨래가 섬뜩하게 춤추며, 불길한 속삭임이 이어지는 이 음험한 서사에 '소란'이라는 단어보다는 '불길한'이라는 표현이, 단순한 '발생'보다는 무언가가 다가오고 있음을 암시하는 '조짐'이라는 단어가 더 어울린다고 생각했습니다",
     "logo": "tb",
-    "note": "'불길한 조짐'으로 번역한 이유\n\n시나리오 전반에 드리운 불안과 예감의 분위기를 담고자 했습니다. 먹구름이 뒤틀리고, 빨래가 섬뜩하게 춤추며, 불길한 속삭임이 이어지는 이 음험한 서사에 '소란'이라는 단어보다는 '불길한'이라는 표현이, 단순한 '발생'보다는 무언가가 다가오고 있음을 암시하는 '조짐'이라는 단어가 더 어울린다고 생각했습니다"
+    "official": true
   },
   {
     "author": "The Pandemonium Institute",
@@ -17,9 +17,9 @@
     "id": "bad_moon_rising",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/bad_moon_rising.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/bad_moon_rising.json",
-    "official": true,
+    "note": "'어둠을 부르는 달'로 번역한 이유\n\n단순히 '악한 달 혹은 불길한 달이 뜨다'는 직역보다, 시나리오가 가진 능동적인 불길함을 전달하고자 했습니다. \n'달'이 단순히 떠오르는 것이 아니라 '어둠을 부른다'는 표현을 통해, 늑대의 울음소리, 흩어지는 까마귀, 기이한 눈동자들로 이어지는 시나리오의 점진적 긴장감을 더 잘 담아낼 수 있다고 생각했습니다. \n또한 Creedence Clearwater Revival의 Bad Moon Rising이라는 동명의 곡이 가진 묵시록적 예언의 뉘앙스도 자연스럽게 녹여내고자 했습니다.",
     "logo": "bmr",
-    "note": "'어둠을 부르는 달'로 번역한 이유\n\n단순히 '악한 달 혹은 불길한 달이 뜨다'는 직역보다, 시나리오가 가진 능동적인 불길함을 전달하고자 했습니다. \n'달'이 단순히 떠오르는 것이 아니라 '어둠을 부른다'는 표현을 통해, 늑대의 울음소리, 흩어지는 까마귀, 기이한 눈동자들로 이어지는 시나리오의 점진적 긴장감을 더 잘 담아낼 수 있다고 생각했습니다. \n또한 Creedence Clearwater Revival의 Bad Moon Rising이라는 동명의 곡이 가진 묵시록적 예언의 뉘앙스도 자연스럽게 녹여내고자 했습니다."
+    "official": true
   },
   {
     "author": "The Pandemonium Institute",
@@ -28,9 +28,9 @@
     "id": "sects_and_violets",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/sects_and_violets.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/sects_and_violets.json",
-    "official": true,
+    "note": "'환란의 화원'으로 번역한 이유\n\n원제 'Sects & Violets'의 다층적 의미(불길한 결사, 아름다운 꽃, Sex and Violence의 언어유희)를 반영하고자 했습니다. \n'화원'은 평화로운 표면을, '환란'은 그 이면의 혼란을 상징하며, 이 대비가 게임의 본질이라 생각했습니다. \n또한 '환란'이 주는 문학적 뉘앙스와 '화원'이 주는 포괄적 이미지를 통해 한국어의 미감도 살리고자 했습니다.",
     "logo": "snv",
-    "note": "'환란의 화원'으로 번역한 이유\n\n원제 'Sects & Violets'의 다층적 의미(불길한 결사, 아름다운 꽃, Sex and Violence의 언어유희)를 반영하고자 했습니다. \n'화원'은 평화로운 표면을, '환란'은 그 이면의 혼란을 상징하며, 이 대비가 게임의 본질이라 생각했습니다. \n또한 '환란'이 주는 문학적 뉘앙스와 '화원'이 주는 포괄적 이미지를 통해 한국어의 미감도 살리고자 했습니다."
+    "official": true
   },
   {
     "author": "Ekin",
@@ -39,8 +39,8 @@
     "id": "lunar_eclipse",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/lunar_eclipse.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/lunar_eclipse.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/lunar_eclipse.png",
-    "note": ""
+    "note": "",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/lunar_eclipse.png"
   },
   {
     "author": "Alex Sadlier (번역: 말론, 호두)",
@@ -49,8 +49,8 @@
     "id": "fall_of_rome",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/fall_of_rome.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/fall_of_rome.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/fall_of_rome.png",
-    "note": ""
+    "note": "",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/fall_of_rome.png"
   },
   {
     "author": "Gordon Edward Fitzgerald",
@@ -59,18 +59,18 @@
     "id": "high_seas_of_mutiny",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/high_seas_of_mutiny.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/high_seas_of_mutiny.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png",
-    "note": ""
+    "note": "",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/high_seas_of_mutiny.png"
   },
   {
     "author": "JJ and Mas",
-    "synopsis": "볼드모트와 그의 죽음을 먹는 자들이 호그와트에 잠입했습니다. 용감한 마법사들이 그의 음모를 밝혀낼 수 있을까요? 아니면 마법 세계에 다시 한 번 어둠이 내려앉을까요?\n",
+    "synopsis": "볼드모트와 그의 죽음을 먹는 자들이 호그와트에 잠입했습니다. 용감한 마법사들이 그의 음모를 밝혀낼 수 있을까요? 아니면 마법 세계에 다시 한 번 어둠이 내려앉을까요?",
     "name": "해리포터와 비밀의 방",
     "id": "harry_potter",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/harry_potter.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/harry_potter.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/harry_potter.png",
-    "note": ""
+    "note": "",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/harry_potter.png"
   },
   {
     "author": "Narninian and Zaba",
@@ -79,8 +79,8 @@
     "id": "hide_n_seek",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/hide_n_seek.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/hide_n_seek.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png",
-    "note": ""
+    "note": "",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/hide_n_seek.png"
   },
   {
     "author": "Ben Burns",
@@ -89,27 +89,8 @@
     "id": "everyone_can_play",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/everyone_can_play.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/everyone_can_play.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/everyone_can_play.png",
-    "note": ""
-  },
-  {
-    "author": "Matt",
-    "synopsis": "의문사는 세 가지 컨셉을 염두에 두고 설계되었습니다. 첫째는 Trouble Brewing과 다른 기본 스크립트들 사이 어딘가에 위치하는 스크립트를 만들어보려는 시도였습니다. 광기나 다중 처형 같은 개념들을 도입하되, 가벼운 방식으로 접근했죠. 둘째는 각 역할이 원래 스크립트에서와는 다른 핵심 플레이와 상호작용을 유도해보려는 것이었습니다. 셋째는 기본 3개 스크립트의 역할들만 사용하는 것이었습니다. (많은 논의 끝에 꼭두각시가 추가되었는데, 기본 하수인들 중 네 번째 자리에 딱 맞는 역할이 없었거든요)\n\n스크립트 내 중독 효과를 제한적으로 배치한 것은 의도적인 선택이었습니다. 선량한 팀이 악마의 중독 효과를 탐지하는 것을 게임 해결의 한 가지 경로로 만들되, 외지인들의 잘못된 정보(돌연변이/미치광이의 거짓말, 은둔자의 오탐지, 연인의 만취 효과)와 악의 블러프가 선량한 팀의 승리를 막는 핵심 요소가 되도록 했습니다.\n\n핵심 캐릭터\n푸카, 노다시, 꼭두각시",
-    "name": "의문사 (Uncertain Death)",
-    "id": "uncertain_death",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/uncertain_death.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/uncertain_death.json",
-    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/uncertain_death.png",
-    "note": ""
-  },
-  {
-    "author": "Ryback, emma, & Mullibok - Five of Swords Discord",
-    "synopsis": "이 스크립트는 'Strings Pulling'의 변형으로, 악한 참가자의 토큰을 확인하는 캐릭터들을 교체했습니다. '불길한 조짐'을 기반으로 다음과 같이 변경되었습니다.\n\n꼭두각시 추가\n장의사 대신 식인종 추가\n수사관 대신 귀족 추가\n\n이 변경은 꼭두각시의 토큰을 확인하여 악마를 즉시 위험에 빠뜨릴 수 있는 선한 캐릭터들을 제거하기 위한 것입니다.",
-    "name": "익어가는 파이 (Pies Baking)",
-    "id": "pies_baking",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/pies_baking.json",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/pies_baking.pdf",
-    "note": ""
+    "note": "",
+    "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/everyone_can_play.png"
   },
   {
     "author": "Steven Medway",
@@ -118,9 +99,9 @@
     "id": "no_greater_joy",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/no_greater_joy.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/no_greater_joy.json",
-    "teensyville": true,
+    "note": "",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/no_greater_joy.png",
-    "note": ""
+    "teensyville": true
   },
   {
     "author": "Steven Medway",
@@ -129,9 +110,9 @@
     "id": "laissez_un_faire",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/laissez_un_faire.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/laissez_un_faire.json",
-    "teensyville": true,
+    "note": "",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/laissez_un_faire.png",
-    "note": ""
+    "teensyville": true
   },
   {
     "author": "Andrew Nathenson",
@@ -140,9 +121,9 @@
     "id": "over_the_river",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/over_the_river.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/over_the_river.json",
-    "teensyville": true,
+    "note": "",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/over_the_river.png",
-    "note": ""
+    "teensyville": true
   },
   {
     "author": "Evin Donohoe",
@@ -151,27 +132,29 @@
     "id": "race_to_the_bottom",
     "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/race_to_the_bottom.pdf",
     "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/race_to_the_bottom.json",
-    "teensyville": true,
+    "note": "",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/race_to_the_bottom.png",
-    "note": ""
+    "teensyville": true
   },
   {
-    "author": "Emily",
-    "synopsis": "",
-    "name": "Catfishing",
-    "id": "catfishing",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/catfishing.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/catfishing.json",
-    "background": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/refs/heads/main/assets/images/bad_moon_rising_bg.webp",
-    "note": ""
+    "author": "TrashWarlock",
+    "synopsis": "TrashWarlock의 커뮤니티 스크립트입니다.",
+    "name": "7번 좌석의 발라드",
+    "id": "the_ballad_of_seat_7",
+    "pdf": "/translations/assets/pdf/ko_KR/the_ballad_of_seat_7.pdf",
+    "json": "/translations/assets/scripts/ko_KR/the_ballad_of_seat_7.json",
+    "note": "",
+    "logo": "/translations/assets/images/blood_on_the_clocktower.png"
   },
   {
-    "author": "Ryback",
-    "synopsis": "Pies Baking의 추가 변형 스크립트입니다. \n집사 대신 오우거를 추가했습니다. \n그리고 픽시를 추가했습니다. \n스크립트에 마을 주민을 추가로 넣는 것은 스토리텔러에게 더 많은 선택권을 주는 데 도움이 됩니다. 꼭두각시와 주정뱅이가 포함될 경우 마을 주민 캐릭터를 두 명 더 추가해야 하는데요, 인원이 많은 게임에서는 마을주민이 부족할 수 있기 때문입니다.",
-    "name": "Onion Pies",
-    "id": "onion_pies",
-    "pdf": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/pdf/ko_KR/onion_pies.pdf",
-    "json": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/scripts/ko_KR/onion_pies.json",
-    "note": ""
+    "author": "Brockwell",
+    "synopsis": "Brockwell의 틴시빌 스크립트입니다.",
+    "name": "아무도 움직이지 마",
+    "id": "nobody_fucking_move",
+    "pdf": "/translations/assets/pdf/ko_KR/nobody_fucking_move.pdf",
+    "json": "/translations/assets/scripts/ko_KR/nobody_fucking_move.json",
+    "note": "",
+    "logo": "/translations/assets/images/blood_on_the_clocktower.png",
+    "teensyville": true
   }
 ]

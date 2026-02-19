@@ -1,0 +1,195 @@
+[
+  {
+    "author": "Steven Medway",
+    "id": "_meta",
+    "isOfficial": false,
+    "name": "자유방임불공정주의 (Laissez un Faire)"
+  },
+  {
+    "ability": "매일 밤, 당신은 전날 밤과 다른 유형의 캐릭터인 참가자를 알게 됩니다. [외부인 +0 또는 +1]",
+    "edition": "experimental",
+    "firstNight": 64,
+    "firstNightReminder": "임의의 참가자를 보여줍니다.",
+    "id": "ko_KR_balloonist",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_balloonist.png?raw=true",
+    "name": "기구조종사",
+    "otherNight": 84,
+    "otherNightReminder": "이전에 보여준 캐릭터 유형과 다른 유형의 참가자를 보여줍니다.",
+    "reminders": [
+      "어제확인"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "매일 낮에 이야기꾼을 찾아가 두 가지 정보를 들을 수 있습니다. 하나는 진실이고 다른 하나는 거짓입니다.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "flavor": "바닥에 성냥개비 72개... 오늘따라 해가 일찍 저무는데, 달은 여전히 제시간에 떴어... 찢어진 천 조각... 저택 안의 악... 3이 3번... 우리가 믿었던 자의 정체가 달라... 초록빛이면 마그네슘... 흔적은 보이나 패턴이 틀려... 바닥에 성냥개비 72개...",
+    "id": "ko_KR_savant",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_savant.png?raw=true",
+    "name": "자폐증 천재",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "당신은 자신의 능력이 무엇인지 모릅니다. 매일, 비공개로 자신의 능력이 무엇인지 추측하세요: 당신은 얼마나 정확한지 알게 됩니다.",
+    "edition": "experimental",
+    "firstNight": 49,
+    "firstNightReminder": "기억상실자의 전체 능력을 결정하세요. 만약 기억상실자의 능력으로 인해 오늘 밤 깨어나야 한다면: 기억상실자를 깨우고 그들의 능력을 실행하세요.",
+    "id": "ko_KR_amnesiac",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_amnesiac.png?raw=true",
+    "name": "기억상실자",
+    "otherNight": 68,
+    "otherNightReminder": "만약 기억상실자의 능력으로 인해 오늘 밤 깨어나야 한다면: 기억상실자를 깨우고 그들의 능력을 실행하세요.",
+    "reminders": [
+      "?"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임 중 한 번, 낮 동안 이야기꾼을 방문하여 승리를 돕는 조언을 얻을 수 있습니다.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_fisherman",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_fisherman.png?raw=true",
+    "name": "어부",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "능력 없음"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "게임당 한 번, 낮 동안 이야기꾼에게 비밀리에 예/아니오로 답할 수 있는 질문을 할 수 있습니다.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "flavor": "오 마이 갓! 이건 진짜 브릴리언트하군! 내 이번 작품은... 어떻게 말해야 되나... 아, 그래! 쏘 펄펙트! 아트의 신이 깃들었어! 예스!",
+    "id": "ko_KR_artist",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_artist.png?raw=true",
+    "name": "예술가",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "능력 없음"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "당신은 최근 처형된 사람의 능력을 가집니다. 그 사람이 악하다면, 선한 참가자가 처형으로 죽을 때까지 당신은 중독됩니다.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_cannibal",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_cannibal.png?raw=true",
+    "name": "식인종",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "중독됨",
+      "오늘 사망"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "외부인이라는 사실을 밝힐 경우 처형당할 수 있습니다.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "flavor": "나는 괴물이 아니에요! 나도 사람이라구요! 제발 자비를...!",
+    "id": "ko_KR_mutant",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_mutant.png?raw=true",
+    "name": "돌연변이",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "당신은 자신이 악마라고 생각하지만, 그렇지 않습니다. 진짜 악마는 당신이 누구인지 알고, 당신이 밤에 누구를 선택하는 지 알고 있습니다.",
+    "edition": "bmr",
+    "firstNight": 20,
+    "firstNightReminder": "7명 이상의 참가자가 있을 경우: 미치광이에게 게임 내 하수인 수와 동일한 수의 임의의 '하수인' 참가자들을 보여줍니다. 임의의 선한 캐릭터 토큰 3개도 보여줍니다. 만약 미치광이가 받은 토큰이 오늘 밤 깨어날 악마라면: 미치광이가 악마의 행동을 수행하도록 허용합니다. 미치광이의 '공격' 표시를 배치합니다. 진짜 악마를 깨웁니다. 악마에게 자신의 실제 캐릭터 토큰을 보여줍니다. 악마에게 미치광이 참가자가 누구인지 보여줍니다. 만약 미치광이가 참가자들을 공격했다면: 진짜 악마에게 표시된 각 참가자를 보여줍니다. 미치광이의 '공격' 표시를 모두 제거합니다.",
+    "flavor": "나는 어둠의 화신이다... 아마도.",
+    "id": "ko_KR_lunatic",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_lunatic.png?raw=true",
+    "name": "미치광이",
+    "otherNight": 34,
+    "otherNightReminder": "미치광이가 악마의 행동을 수행하도록 허용합니다. 미치광이의 '공격' 표시를 배치합니다. 만약 미치광이가 참가자들을 선택했다면: 진짜 악마를 깨웁니다. '공격' 표시를 보여준 다음, 표시된 각 참가자를 가리킵니다. 미치광이의 '공격' 표시를 모두 제거합니다.",
+    "reminders": [
+      "공격1",
+      "공격2",
+      "공격3"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "첫날밤 그리모어를 보고 한 명을 선택해서 중독시킵니다. 1명의 선한 참가자는 과부가 게임에 있다는 것을 알고 시작합니다.",
+    "edition": "experimental",
+    "firstNight": 32,
+    "firstNightReminder": "과부에게 필요한 만큼 오래 그리모어를 보여줍니다. 과부가 참가자를 가리킵니다. 그 참가자는 중독됩니다. 선한 참가자 한 명을 깨웁니다. '이 캐릭터들이 게임에 있습니다' 카드를 보여준 다음, 과부 캐릭터 토큰을 보여줍니다.",
+    "id": "ko_KR_widow",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_widow.png?raw=true",
+    "name": "과부",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "중독됨"
+    ],
+    "remindersGlobal": [
+      "알고 있음"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "당신이 지명되었을 때 공개적으로 자신이 고블린이라고 주장하고 그 날 처형된다면, 당신의 팀이 승리합니다.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ko_KR_goblin",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_goblin.png?raw=true",
+    "name": "고블린",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "주장함"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "2명 이상의 선한 참가자가 처형되면, 당신이 승리합니다. 모든 참가자는 당신이 게임에 있다는 것을 알고 있습니다. 5일 후에는 악이 승리합니다.",
+    "edition": "experimental",
+    "firstNight": 76,
+    "firstNightReminder": "리바이어던 '1일차' 표시를 놓습니다. '리바이어던이 게임에 있습니다; 이것은 1일차입니다'라고 발표합니다.",
+    "id": "ko_KR_leviathan",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_leviathan.png?raw=true",
+    "name": "리바이어던",
+    "otherNight": 96,
+    "otherNightReminder": "리바이어던 일차 리마인더를 다음 날로 변경합니다.",
+    "reminders": [
+      "1일차",
+      "2일차",
+      "3일차",
+      "4일차",
+      "5일차",
+      "선한 참가자 처형됨"
+    ],
+    "setup": false,
+    "team": "demon"
+  }
+]

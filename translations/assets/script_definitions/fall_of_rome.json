@@ -1,0 +1,43 @@
+{
+    "meta":
+    {
+        "name": "로마의 몰락 (Fall of Rome)",
+        "author": "Alex Sadlier",
+        "logo": "https://www.bloodstar.xyz/p/AlexS/Fall_of_Rome/_meta.png"
+    },
+    "roles":
+    [
+        "sculptor_fall_of_rome",
+        "vestalvirgin_fall_of_rome",
+        "physician_fall_of_rome",
+        "legionary_fall_of_rome",
+        "trumpeter_fall_of_rome",
+        "mortician_fall_of_rome",
+        "standardbearer_fall_of_rome",
+        "centurion1_fall_of_rome",
+        "merchant_fall_of_rome",
+        "gladiator_fall_of_rome",
+        "actor_fall_of_rome",
+        "blacksmith_fall_of_rome",
+        "scholar_fall_of_rome",
+        "thetwins_fall_of_rome",
+        "winemaker_fall_of_rome",
+        "spartacus_fall_of_rome",
+        "badomen_fall_of_rome",
+        "temptress_fall_of_rome",
+        "haruspex_fall_of_rome",
+        "glykon1_fall_of_rome",
+        "augur_fall_of_rome",
+        "cleopatra_fall_of_rome",
+        "crassus_fall_of_rome",
+        "hannibal_fall_of_rome",
+        "caesar_fall_of_rome",
+        "mercenary_fall_of_rome",
+        "architect_fall_of_rome",
+        "sibyl_fall_of_rome",
+        "highpriest1_fall_of_rome",
+        "highpriest2_fall_of_rome",
+        "emperor_fall_of_rome",
+        "iamspartacus_fall_of_rome"
+    ]
+}

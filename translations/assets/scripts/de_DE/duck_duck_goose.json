@@ -1,0 +1,416 @@
+[
+  {
+    "ability": "Du beginnst das Spiel mit dem Wissen, dass ein bestimmter guter Spieler ein bestimmter Charakter ist. Wird der Spieler vom Dämon getötet, stirbst du auch.",
+    "edition": "bmr",
+    "firstNight": 39,
+    "firstNightReminder": "Zeige auf den als Enkel markierten Charaktertoken. Zeige auf den markierten Spieler.",
+    "id": "de_DE_grandmother",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/grandmother.png?raw=true",
+    "name": "Großmutter",
+    "otherNight": 50,
+    "otherNightReminder": "Stirbt der Enkel der Großmutter heute Nacht: Die Großmutter stirbt.",
+    "reminders": [
+      "Enkel"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du beginnst das Spiel mit dem Wissen, dass 1 Spieler böse ist. Wenn dieser Spieler stirbt, lernst du in der Nacht einen anderen bösen Spieler kennen. [1 Dorfbewohner ist böse]",
+    "edition": "",
+    "firstNight": 45,
+    "firstNightReminder": "Zeige auf 1 bösen Spieler. Wecke den Dorfbewohner, der böse ist und zeige Ihm die 'Du bist' Karte und das Daumen-runter böse Zeichen.",
+    "id": "de_DE_bountyhunter",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/bountyhunter.png?raw=true",
+    "name": "Kopfgeldjäger",
+    "otherNight": 65,
+    "otherNightReminder": "Wenn der bekannte böse Spieler stirbt, zeige auf einen anderen bösen Spieler.",
+    "reminders": [
+      "Bekannt"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du erfährst jede Nacht, wie viele deiner beiden lebenden Nachbarn böse sind.",
+    "edition": "tb",
+    "firstNight": 36,
+    "firstNightReminder": "Zeige mit der Hand (0, 1, 2)  wieviele lebende Nachbarn des Empathen böse sind.",
+    "id": "de_DE_empath",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/empath.png?raw=true",
+    "name": "Empath",
+    "otherNight": 53,
+    "otherNightReminder": "Zeige mit der Hand (0, 1, 2)  wieviele lebende Nachbarn des Empathen böse sind.",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Jede Nacht, wähle 1 lebenden Spieler: entweder du oder er ist bis Sonnenuntergang betrunken. Du kannst nicht sterben.",
+    "edition": "bmr",
+    "firstNight": 10,
+    "firstNightReminder": "Der Seemann zeigt auf einen lebenden Spieler. Entweder der Seemann oder der gewählte Spieler ist betrunken.",
+    "id": "de_DE_sailor",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/sailor.png?raw=true",
+    "name": "Seemann",
+    "otherNight": 4,
+    "otherNightReminder": "Der Spieler der zuvor betrunken wurde ist wieder nüchtern. Der Seemann zeigt auf einen lebenden Spieler. Entweder der Seemann oder der gewählte Spieler ist betrunken.",
+    "reminders": [
+      "Betrunken"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du erfährst jede Nacht 1 Spieler eines anderen Charaktertyps, bis keine übrig bleiben. [+1 Außenseiter]",
+    "edition": "",
+    "firstNight": 44,
+    "firstNightReminder": "Wähle eine Charakterklasse. Zeige auf einen Spieler dessen Charakter dieser Klasse entspricht. Platziere den \"Gesehen\" Reminder neben den Charakter.",
+    "id": "de_DE_balloonist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/balloonist.png?raw=true",
+    "name": "Ballonfahrer",
+    "otherNight": 63,
+    "otherNightReminder": "Wähle eine Charakterklasse neben dem noch kein \"Gesehen\" reminder liegt. Zeige auf einen Spieler dessen Charakter dieser Klasse entspricht. Platziere den \"Gesehen\" Reminder neben den Charakter.",
+    "reminders": [
+      "Dorfbewohner gesehen",
+      "Dämon gesehen",
+      "Reisender gesehen",
+      "Untergebener gesehen"
+    ],
+    "setup": true,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Jede Nacht, wähle 2 Spieler: du erfährst, ob sich unter ihnen ein Dämon befindet. Es gibt jedoch einen guten Spieler, der für dich auch als Dämon registriert.",
+    "edition": "tb",
+    "firstNight": 37,
+    "firstNightReminder": "Die Wahrsagerin zeigt auf zwei Spieler. Ist einer dieser Spieler der Dämon nicke mit dem Kopf, andernfalls schūttle den Kopf.",
+    "id": "de_DE_fortuneteller",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fortuneteller.png?raw=true",
+    "name": "Wahrsagerin",
+    "otherNight": 54,
+    "otherNightReminder": "Die Wahrsagerin zeigt auf zwei Spieler. Ist einer dieser Spieler der Dämon nicke mit dem Kopf, andernfalls schūttle den Kopf.",
+    "reminders": [
+      "Köder"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du darfst jeden Tag eine öffentliche Aussage treffen. Die darauffolgende Nacht, wenn die Aussage zutraf, stirbt ein Spieler.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_gossip",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/gossip.png?raw=true",
+    "name": "Schwätzer",
+    "otherNight": 47,
+    "otherNightReminder": "Wenn das öffentliche Statement des Schwätzers zutrifft: Wähle einen Spieler, der nicht vor dem Tod beschützt ist. Dieser Spieler stirbt",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Einmal pro Spiel, in der Nacht, wähle, welche Untergebenen oder welcher Dämon im Spiel ist.",
+    "edition": "",
+    "firstNight": 13,
+    "firstNightReminder": "Der Ingenieur schüttelt den Kopf (Nein) oder zeigt auf einen Dämon oder auf die richtige Anzahl von Untergebebenen.Wenn der Ingenieur Charaktere wählt, ersetze den Dämon oder die Untergebenen mit der Auswahl des Ingnieurs, danach wecke die betroffenen Spieler, zeige Ihnen die 'Du bist' Karte und danach die relevanten Charaktertokens.",
+    "id": "de_DE_engineer",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/engineer.png?raw=true",
+    "name": "Ingenieur",
+    "otherNight": 6,
+    "otherNightReminder": "Der Ingenieur schüttelt den Kopf (Nein) oder zeigt auf einen Dämon oder auf die richtige Anzahl von Untergebebenen.Wenn der Ingenieur Charaktere wählt, ersetze den Dämon oder die Untergebenen mit der Auswahl des Ingnieurs, danach wecke die betroffenen Spieler, zeige Ihnen die 'Du bist' Karte und danach die relevanten Charaktertokens.",
+    "reminders": [
+      "Keine Fähigkeit"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Einmal pro Spiel, in der Nacht, wähle 2 Spieler (nicht dich selbst): du erfährst, ob sie die selbe Gesinnung besitzen.",
+    "edition": "snv",
+    "firstNight": 42,
+    "firstNightReminder": "Die Schneiderin schüttelt entweder den Kopf (Nein) oder zeigt auf zwei Spieler. Sollte die Schneider Spieler auswählen, nicke (Ja) oder schüttle den Kopf (Nein) wenn die bbeiden Spieler die gleiche Gesinnung haben.",
+    "id": "de_DE_seamstress",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/seamstress.png?raw=true",
+    "name": "Schneiderin",
+    "otherNight": 61,
+    "otherNightReminder": "Wenn die Schneider ihre Fähigkeit noch nicht einsetzt hat: Die Schneiderin schüttelt entweder den Kopf (Nein) oder zeigt auf zwei Spieler. Sollte die Schneider Spieler auswählen, nicke (Ja) oder schüttle den Kopf (Nein) wenn die bbeiden Spieler die gleiche Gesinnung haben.",
+    "reminders": [
+      "Keine Fähigkeit"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du hast die Fähigkeit eines Untergebenen, der nicht im Spiel ist.",
+    "edition": "",
+    "firstNight": 3,
+    "firstNightReminder": "Zeige dem Alchemisten den Spielstein eines Untergebenen, der sich nicht im Spiel befindet",
+    "id": "de_DE_alchemist",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/alchemist.png?raw=true",
+    "name": "Alchemist",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [
+      "Ist der Alchimist"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du besitzt die Fähigkeit des zuletzt hingerichteten toten Spielers. Ist der Spieler böse, bist du vergiftet, bis ein guter Spieler durch eine Hinrichtung stirbt.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_cannibal",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/cannibal.png?raw=true",
+    "name": "Kannibale",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Heute gestorben",
+      "vergiftet"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Wenn beide deiner lebenden Nachbarn gut sind, können sie nicht sterben.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_tealady",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/tealady.png?raw=true",
+    "name": "Teedame",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Kann nicht sterben"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Untergebene & Dämonen kennen einander nicht. Wenn du stirbst, lernen sie einander in der Nacht kennen.",
+    "edition": "",
+    "firstNight": 4,
+    "firstNightReminder": "Sage weder dem Dämon noch den Untergebenen, wer die anderen bösen Mitspieler sind.",
+    "id": "de_DE_poppygrower",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/poppygrower.png?raw=true",
+    "name": "Mohnzüchter",
+    "otherNight": 3,
+    "otherNightReminder": "Stirbt der Mohnzüchter: zeige den Unteregebenen und dem Dämon, wer die anderen Spieler sind.",
+    "reminders": [
+      "Böse erwacht"
+    ],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Du könntest zu jederzeit sterben.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_tinker",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/tinker.png?raw=true",
+    "name": "Erfinder",
+    "otherNight": 48,
+    "otherNightReminder": "Der Erfinder könnte sterben.",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Du weißt nicht, dass du die Schnapsdrossel bist. Du denkst, du seist ein Dorfbewohner, aber deine Fähigkeit schlägt fehl.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_drunk",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/drunk.png?raw=true",
+    "name": "Schnapsdrossel",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [
+      "Betrunken"
+    ],
+    "setup": true,
+    "team": "outsider"
+  },
+  {
+    "ability": "Du kannst nur einmal pro Spiel nominieren. Wenn du nominierst, falls der Nominierte kein Dämon ist, stirbt er.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_golem",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/golem.png?raw=true",
+    "name": "Golem",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Kann nicht nominieren"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Du weißt nicht, dass du der Wahnsinnige bist. Du denkst, du seist ein Dämon, bist du aber nicht. Der Dämon weiß, wer du bist und wen du angreifst.",
+    "edition": "bmr",
+    "firstNight": 7,
+    "firstNightReminder": "Bei 7 oder mehr Spielern: Zeige dem Wahnisnnigen  die Anzahl an falschen 'Untergebenen', die im Spiel sind.Wenn der Dämon, den der Wahnsinnige sieht ein Dämon ist, der in der Nacht erwacht: Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
+    "id": "de_DE_lunatic",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lunatic.png?raw=true",
+    "name": "Wahnsinniger",
+    "otherNight": 21,
+    "otherNightReminder": "Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
+    "reminders": [
+      "Angriff 1",
+      "Angriff 2",
+      "Angriff 3"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Du beginnst das Spiel mit dem Wissen über ein geheimes Wort. Der erste gute Spieler, der dieses Wort ausspricht, wird in der Nacht böse.",
+    "edition": "",
+    "firstNight": 27,
+    "firstNightReminder": "Zeige Mezepheles das geheime Wort",
+    "id": "de_DE_mezepheles",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/mezepheles.png?raw=true",
+    "name": "Mezepheles",
+    "otherNight": 19,
+    "otherNightReminder": "Wecken den ersten guten Spieler, der das geheime Wort von Mezepheles ausspricht und zeige ihm die 'Du bist' Karte und danach das Daumen runter Signal um zu zeigen, dass er ab jetzt böse ist.",
+    "reminders": [
+      "Keine Fähigkeit",
+      "wird böse"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "Jede Nacht, wähle 1 lebenden Spieler (nicht denselben wie die Nacht zuvor): wird der Spieler morgen hingerichtet, stirbt er nicht.",
+    "edition": "bmr",
+    "firstNight": 22,
+    "firstNightReminder": "Des Teufels Anwalt zeigt auf einen lebenden Spieler. Dieser Spieler übberlebt die Exekution morgen.",
+    "id": "de_DE_devilsadvocate",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/devilsadvocate.png?raw=true",
+    "name": "Teufels Anwalt",
+    "otherNight": 14,
+    "otherNightReminder": "Des Teufels Anwalt zeigt auf einen (anderen) lebenden Spieler. Dieser Spieler übberlebt die Exekution morgen.",
+    "reminders": [
+      "Überlebt Exekution"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "Jede Nacht, wähle 1 Spieler: wenn du ihn nominierst & er hingerichtet wird, verliert sein Team. Alle Spieler erfahren, wenn du einen neuen Spieler wählst.",
+    "edition": "",
+    "firstNight": 26,
+    "firstNightReminder": "Der Panikmacher zeigt auf einen Spieler. Setze den Furcht Token neben den Spieler und verkünde, dass ein neuer Spieler mit der Fähigkeit des Panikmachers auserwählt wurde.",
+    "id": "de_DE_fearmonger",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/fearmonger.png?raw=true",
+    "name": "Panikmacher",
+    "otherNight": 18,
+    "otherNightReminder": "Der Panikmacher zeigt auf einen Spieler, der in der letzten Nacht nicht gewählt wurde. Setze den Furcht Token neben den Spieler und verkünde, dass ein neuer Spieler mit der Fähigkeit des Panikmachers auserwählt wurde.",
+    "reminders": [
+      "Furcht"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "Einmal pro Spiel, in der Nacht*, wähle 1 Spieler: der Spieler stirbt, auch wenn er eigentlich aus irgendeinem Grund überleben sollte.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_assassin",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/assassin.png?raw=true",
+    "name": "Assassine",
+    "otherNight": 37,
+    "otherNightReminder": "Hat der Assassine seine Fähigkeit noch nicht verwendet: Der Assassnie zeigt entweder ein 'Nein' Signal mit dem Kopf oder zeigt auf einen Spieler. Dieser Spieler stirbt.",
+    "reminders": [
+      "Keine Fähigkeit",
+      "Tot"
+    ],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "Jede Nacht entscheiden die Untergebenen, wer das Monster Klein-Charakterplättchen babysittet & der Dämon \"ist\". Ein Spieler stirbt jede Nacht*. [+1 Untergebener]",
+    "edition": "",
+    "firstNight": 16,
+    "firstNightReminder": "Wecke alle Untergebenen gemeinsam. Sie müssen sich einigen, wer von Ihnen das Monster Klein babysittet.",
+    "id": "de_DE_lilmonsta",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lilmonsta.png?raw=true",
+    "name": "Monster Klein",
+    "otherNight": 36,
+    "otherNightReminder": "Wecke alle Untergebenen gemeinsam. Sie müssen sich einigen, wer von Ihnen das Monster Klein babysittet. Wähle einen Spieler, dieser Spieler stirbt.",
+    "reminders": [],
+    "remindersGlobal": [
+      "Tot",
+      "ist der Dämon"
+    ],
+    "setup": true,
+    "team": "demon"
+  },
+  {
+    "ability": "Jede Nacht*, wähle 1 Spieler: er stirbt. Untergebene, die du tötest, behalten ihre Fähigkeit und vergiften 1 ihrer Dorfbewohner-Nachbarn. [-1 Außenseiter]",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_vigormortis",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/vigormortis.png?raw=true",
+    "name": "Vigormortis",
+    "otherNight": 32,
+    "otherNightReminder": "Der Vigormortis zeigt auf einen Spieler. Dieser Spieler stirbt. Ist es ein Untergebener, behält er seine Fähigkeit und ein Dorfbewohner ist vergiftet.",
+    "reminders": [
+      "Tot",
+      "hat Fähigkeit",
+      "vergiftet"
+    ],
+    "setup": true,
+    "team": "demon"
+  },
+  {
+    "ability": "Jede Nacht*, wähle 1 Spieler: er stirbt. Du beginnst das Spiel mit der Wahl eines Spielers: er ist vergiftet - du stirbst, falls (& nur falls) er stirbt.",
+    "edition": "",
+    "firstNight": 15,
+    "firstNightReminder": "Der Eegel zeigt auf einen Spieler. Platziere den Vergiftet Erinnerungstoken.",
+    "id": "de_DE_lleech",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/lleech.png?raw=true",
+    "name": "Eegel",
+    "otherNight": 35,
+    "otherNightReminder": "Der Eegel zeigt auf einen Spieler. Dieser Spieler stirbt.",
+    "reminders": [
+      "Tot",
+      "Vergiftet"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Jede Nacht*, wähle 1 Spieler: er stirbt. Deine beiden Dorfbewohner-Nachbarn sind vergiftet.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_nodashii",
+    "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/nodashii.png?raw=true",
+    "name": "No Dashii",
+    "otherNight": 30,
+    "otherNightReminder": "Der No Dashii zeigt auf einen Spieler. Dieser Spieler stirbt.",
+    "reminders": [
+      "Tot",
+      "vergiftet"
+    ],
+    "setup": false,
+    "team": "demon"
+  }
+]
