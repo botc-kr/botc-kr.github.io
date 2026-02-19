@@ -7,6 +7,13 @@ require Logger
 # Usage: mix run generate_json_from_csv.exs
 
 defmodule GenerateJsonFromCsv do
+  @night_order_overrides_dir "assets/night_orders"
+  @night_order_aliases %{
+    "minioninfo" => "minion_info",
+    "demoninfo" => "demon_info"
+  }
+  @ignored_night_order_ids MapSet.new(["dusk", "dawn"])
+
   # Main function
   def process_csv(csv_path) do
     Logger.info("Starting to process #{inspect(csv_path, pretty: true)}\n")
@@ -21,13 +28,15 @@ defmodule GenerateJsonFromCsv do
       |> File.stream!()
       |> CSV.decode!(headers: true, strip_fields: true)
 
+    night_order_overrides = load_night_order_overrides(locale)
+
     parsed_roles_from_csv =
       Enum.reduce(
         roles_from_csv,
         %{},
         fn row, acc ->
           # Convert a csv row to a role map with the same format as the clocktower.online ones.
-          parsed_csv_co_role = from_csv_row_to_co_role(row)
+          parsed_csv_co_role = from_csv_row_to_co_role(row, night_order_overrides)
           role_id = parsed_csv_co_role["id"]
 
           # Prune all empty fields.
@@ -89,11 +98,13 @@ defmodule GenerateJsonFromCsv do
   """
   def from_csv_row_to_co_role(
         %{
+          "id" => role_id,
           "reminders" => reminders,
           "remindersGlobal" => reminders_global,
           "firstNight" => first_night,
           "otherNight" => other_night
-        } = row
+        } = row,
+        night_order_overrides
       ) do
     parsed_reminders = from_comma_separated_array_to_list(reminders)
     parsed_reminders_global = from_comma_separated_array_to_mapset(reminders_global)
@@ -101,14 +112,16 @@ defmodule GenerateJsonFromCsv do
     # Convert night order strings to integers
     parsed_first_night = parse_night_order(first_night)
     parsed_other_night = parse_night_order(other_night)
+    override_first_night = lookup_night_order(night_order_overrides["firstNight"], role_id)
+    override_other_night = lookup_night_order(night_order_overrides["otherNight"], role_id)
 
     # Overwrite reminders and remindersGlobal with the parsed list, and night orders with integers
     %{
       row
       | "reminders" => parsed_reminders,
         "remindersGlobal" => MapSet.to_list(parsed_reminders_global),
-        "firstNight" => parsed_first_night,
-        "otherNight" => parsed_other_night
+        "firstNight" => override_first_night || parsed_first_night,
+        "otherNight" => override_other_night || parsed_other_night
     }
   end
 
@@ -146,7 +159,77 @@ defmodule GenerateJsonFromCsv do
       :error -> nil
     end
   end
+
   defp parse_night_order(_), do: nil
+
+  defp lookup_night_order(order_map, role_id) when is_map(order_map) and is_binary(role_id) do
+    normalized_role_id = normalize_night_order_id(role_id)
+    Map.get(order_map, normalized_role_id)
+  end
+
+  defp lookup_night_order(_order_map, _role_id), do: nil
+
+  defp load_night_order_overrides(locale) do
+    path = "#{@night_order_overrides_dir}/#{locale}.json"
+
+    case File.read(path) do
+      {:ok, body} ->
+        case Jason.decode(body) do
+          {:ok, overrides} ->
+            first_night_map = build_night_order_map(Map.get(overrides, "firstNight", []))
+            other_night_map = build_night_order_map(Map.get(overrides, "otherNight", []))
+
+            Logger.info(
+              "Loaded night-order overrides from #{path} (firstNight=#{map_size(first_night_map)}, otherNight=#{map_size(other_night_map)})"
+            )
+
+            %{"firstNight" => first_night_map, "otherNight" => other_night_map}
+
+          {:error, reason} ->
+            Logger.warn(
+              "Failed to decode #{path}: #{inspect(reason, pretty: true)}. Falling back to CSV/en_GB order."
+            )
+
+            %{"firstNight" => %{}, "otherNight" => %{}}
+        end
+
+      {:error, :enoent} ->
+        Logger.info("No night-order override file at #{path}; using CSV/en_GB order values.")
+        %{"firstNight" => %{}, "otherNight" => %{}}
+
+      {:error, reason} ->
+        Logger.warn(
+          "Failed to read #{path}: #{inspect(reason, pretty: true)}. Falling back to CSV/en_GB order."
+        )
+
+        %{"firstNight" => %{}, "otherNight" => %{}}
+    end
+  end
+
+  defp build_night_order_map(order_list) when is_list(order_list) do
+    order_list
+    |> Enum.map(&normalize_night_order_id/1)
+    |> Enum.reject(fn role_id ->
+      role_id == "" or MapSet.member?(@ignored_night_order_ids, role_id)
+    end)
+    |> Enum.with_index(1)
+    |> Enum.reduce(%{}, fn {role_id, index}, acc ->
+      Map.put_new(acc, role_id, index)
+    end)
+  end
+
+  defp build_night_order_map(_order_list), do: %{}
+
+  defp normalize_night_order_id(role_id) when is_binary(role_id) do
+    normalized_role_id =
+      role_id
+      |> String.trim()
+      |> String.downcase()
+
+    Map.get(@night_order_aliases, normalized_role_id, normalized_role_id)
+  end
+
+  defp normalize_night_order_id(_role_id), do: ""
 
   defp normalize_icon_path(%{"id" => role_id} = role) when is_binary(role_id) do
     image = Map.get(role, "image", "")

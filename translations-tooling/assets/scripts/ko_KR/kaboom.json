@@ -7,12 +7,12 @@
   {
     "ability": "당신은 자신의 능력이 무엇인지 모릅니다. 매일, 비공개로 자신의 능력이 무엇인지 추측하세요: 당신은 얼마나 정확한지 알게 됩니다.",
     "edition": "experimental",
-    "firstNight": 12,
+    "firstNight": 49,
     "firstNightReminder": "기억상실자의 전체 능력을 결정하세요. 만약 기억상실자의 능력으로 인해 오늘 밤 깨어나야 한다면: 기억상실자를 깨우고 그들의 능력을 실행하세요.",
     "id": "ko_KR_amnesiac",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_amnesiac.png?raw=true",
     "name": "기억상실자",
-    "otherNight": 5,
+    "otherNight": 68,
     "otherNightReminder": "만약 기억상실자의 능력으로 인해 오늘 밤 깨어나야 한다면: 기억상실자를 깨우고 그들의 능력을 실행하세요.",
     "reminders": [
       "?"
@@ -23,7 +23,7 @@
   {
     "ability": "하수인 능력 하나를 갖습니다. 해당 능력 사용 시, 이야기꾼이 다른 선택을 하도록 요청할 수 있습니다.",
     "edition": "experimental",
-    "firstNight": 3,
+    "firstNight": 14,
     "firstNightReminder": "YOU ARE' 토큰과 하수인 토큰을 보여줍니다.",
     "id": "ko_KR_alchemist",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_alchemist.png?raw=true",
@@ -40,12 +40,12 @@
   {
     "ability": "당신은 처음에 1명의 악한 참가자를 알고 시작합니다. 당신이 알고 있는 참가자가 죽으면, 오늘 밤 다른 악한 참가자를 알게 됩니다. [1명의 마을 주민이 악합니다]",
     "edition": "experimental",
-    "firstNight": 45,
+    "firstNight": 67,
     "firstNightReminder": "1명의 악한 참가자를 가리킵니다. 악한 마을 주민을 깨우고 '당신은' 카드와 엄지 아래로 향한 악한 표시를 보여줍니다.",
     "id": "ko_KR_bountyhunter",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_bountyhunter.png?raw=true",
     "name": "현상금 사냥꾼",
-    "otherNight": 65,
+    "otherNight": 87,
     "otherNightReminder": "알고 있던 악한 참가자가 죽었다면, 다른 악한 참가자를 가리킵니다.",
     "reminders": [
       "알고 있음"
@@ -73,12 +73,12 @@
   {
     "ability": "매일 밤, 당신은 살아있는 이웃의 진영이 됩니다. 모든 선한 참가자가 당신의 이교도에 합류하기로 선택하면, 당신의 팀이 승리합니다.",
     "edition": "experimental",
-    "firstNight": 47,
+    "firstNight": 69,
     "firstNightReminder": "사이비교주의 진영이 바뀌었다면, 그에 따라 엄지 위로 선한 신호 또는 엄지 아래로 악한 신호를 보여줍니다.",
     "id": "ko_KR_cultleader",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_cultleader.png?raw=true",
     "name": "사이비교주",
-    "otherNight": 67,
+    "otherNight": 89,
     "otherNightReminder": "사이비교주의 진영이 바뀌었다면, 그에 따라 엄지 위로 선한 신호 또는 엄지 아래로 악한 신호를 보여줍니다.",
     "reminders": [],
     "setup": false,
@@ -93,7 +93,7 @@
     "id": "ko_KR_gambler",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_gambler.png?raw=true",
     "name": "도박사",
-    "otherNight": 11,
+    "otherNight": 20,
     "otherNightReminder": "도박사가 참가자를 가리키고, 자신의 시트에서 캐릭터를 가리킵니다. 틀렸다면, 도박사가 죽습니다.",
     "reminders": [
       "사망"
@@ -110,7 +110,7 @@
     "id": "ko_KR_gossip",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_gossip.png?raw=true",
     "name": "험담꾼",
-    "otherNight": 47,
+    "otherNight": 57,
     "otherNightReminder": "험담꾼의 공개 성명이 사실이었다면: 오늘 밤 죽음으로부터 보호받지 않은 참가자 한 명을 선택합니다. 그 참가자는 죽습니다.",
     "reminders": [
       "사망"
@@ -127,7 +127,7 @@
     "id": "ko_KR_lycanthrope",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_lycanthrope.png?raw=true",
     "name": "늑대인간",
-    "otherNight": 23,
+    "otherNight": 36,
     "otherNightReminder": "늑대인간이 살아있는 참가자를 가리킵니다: 선하다면, 그들은 죽고 오늘 밤 다른 누구도 죽을 수 없습니다.",
     "reminders": [
       "사망",
@@ -139,7 +139,7 @@
   {
     "ability": "당신은 처음에 3명의 참가자를 알고 시작하며, 그 중 오직 1명만이 악합니다.",
     "edition": "experimental",
-    "firstNight": 43,
+    "firstNight": 63,
     "firstNightReminder": "특정 순서 없이 1명의 악한 참가자를 포함한 3명의 참가자를 가리킵니다.",
     "id": "ko_KR_noble",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_noble.png?raw=true",
@@ -155,12 +155,12 @@
   {
     "ability": "하수인들과 악마는 서로를 모릅니다. 당신이 죽으면, 그들은 그 날 밤 서로가 누구인지 알게 됩니다.",
     "edition": "experimental",
-    "firstNight": 4,
+    "firstNight": 15,
     "firstNightReminder": "악마/하수인들에게 서로가 누구인지 알리지 마세요",
     "id": "ko_KR_poppygrower",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_poppygrower.png?raw=true",
     "name": "양귀비 재배자",
-    "otherNight": 3,
+    "otherNight": 11,
     "otherNightReminder": "양귀비 재배자가 죽었다면, 하수인들/악마에게 서로가 누구인지 보여줍니다.",
     "reminders": [
       "악이 깨어남"
@@ -188,13 +188,13 @@
   {
     "ability": "매일 밤 생존자 중 한 명을 선택합니다. 만약 악마를 선택하면, 당신과 악마는 서로의 직업과 진영을 바꾸고 악마였던 사람은 중독 상태가 됩니다.",
     "edition": "snv",
-    "firstNight": 20,
+    "firstNight": 35,
     "firstNightReminder": "뱀 조련사가 참가자를 가리킵니다. 그 참가자가 악마라면: 악마와 뱀 조련사의 캐릭터와 진영을 바꿉니다. 각 참가자를 깨워 그들의 새로운 역할과 진영을 알립니다. 새로운 뱀 조련사는 중독됩니다.",
     "flavor": "나리, 비록 제가 보잘것없는 사람이지만, 이 황금 피리 한 곡조면 아무리 사나운 정령도 길들일 수 있지요. 그저 신의 뜻대로 할 뿐입니다. 세상 사람들은 욕심이 과하면 화를 부른다고 하지만... 저는 절대 아닙니다, 나리, 저는 절대 아니에요.",
     "id": "ko_KR_snakecharmer",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_snakecharmer.png?raw=true",
     "name": "뱀 조련사",
-    "otherNight": 12,
+    "otherNight": 22,
     "otherNightReminder": "뱀 조련사가 참가자를 가리킵니다. 그 참가자가 악마라면: 악마와 뱀 조련사의 캐릭터와 진영을 바꿉니다. 각 참가자를 깨워 그들의 새로운 역할과 진영을 알립니다. 새로운 뱀 조련사는 중독됩니다.",
     "reminders": [
       "중독됨"
@@ -259,7 +259,7 @@
     "id": "ko_KR_moonchild",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_moonchild.png?raw=true",
     "name": "달의 아이",
-    "otherNight": 49,
+    "otherNight": 71,
     "otherNightReminder": "달의 아이가 오늘 능력을 사용해 참가자를 지명했다면: 그 참가자가 선하다면, 그들은 죽습니다.",
     "reminders": [
       "사망"
@@ -276,7 +276,7 @@
     "id": "ko_KR_tinker",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_tinker.png?raw=true",
     "name": "땜장이",
-    "otherNight": 48,
+    "otherNight": 70,
     "otherNightReminder": "땜장이가 죽을 수 있습니다.",
     "reminders": [
       "사망"
@@ -293,7 +293,7 @@
     "id": "ko_KR_assassin",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_assassin.png?raw=true",
     "name": "암살자",
-    "otherNight": 37,
+    "otherNight": 55,
     "otherNightReminder": "암살자가 아직 능력을 사용하지 않았다면: 암살자는 '아니오' 머리 신호를 보이거나 참가자를 가리킵니다. 그 참가자는 죽습니다.",
     "reminders": [
       "사망",
@@ -320,12 +320,12 @@
   {
     "ability": "매일 밤, 참가자 한 명을 선택합니다. 당신이 그들을 지명하고 처형하면, 그들의 팀이 패배합니다. 당신이 새로운 참가자를 선택하면 모든 참가자가 알게 됩니다.",
     "edition": "experimental",
-    "firstNight": 26,
+    "firstNight": 42,
     "firstNightReminder": "공포조장가가 참가자를 가리킵니다. 그 참가자 옆에 공포 토큰을 놓고 공포조장가 능력으로 새로운 참가자가 선택되었음을 알립니다.",
     "id": "ko_KR_fearmonger",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_fearmonger.png?raw=true",
     "name": "공포조장가",
-    "otherNight": 18,
+    "otherNight": 29,
     "otherNightReminder": "공포조장가가 참가자를 가리킵니다. 전날 밤과 다르다면, 그 참가자 옆에 공포 토큰을 놓고 공포조장가 능력으로 새로운 참가자가 선택되었음을 알립니다.",
     "reminders": [
       "공포"
@@ -355,7 +355,7 @@
     "id": "ko_KR_alhadikhia",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_alhadikhia.png?raw=true",
     "name": "알-하디키아",
-    "otherNight": 33,
+    "otherNight": 50,
     "otherNightReminder": "알-하디키아가 3명의 참가자를 선택합니다. 첫 번째 참가자를 발표하고, 그들을 깨워 살기 위해 고개를 끄덕이거나 죽기 위해 고개를 흔들게 합니다. 그에 따라 죽이거나 부활시킨 후, 다시 재우고 다음 참가자를 발표합니다. 이 과정 후 3명 모두 살아있다면, 3명 모두 죽습니다.",
     "reminders": [
       "1",
@@ -376,7 +376,7 @@
     "id": "ko_KR_po",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_po.png?raw=true",
     "name": "포",
-    "otherNight": 28,
+    "otherNight": 43,
     "otherNightReminder": "포가 전날 밤에 아무도 선택하지 않았다면: 포가 세 명의 참가자를 가리킵니다. 그렇지 않다면: 포가 '아니오' 머리 신호를 보이거나, 참가자를 가리킵니다. 선택된 참가자들은 죽습니다.",
     "reminders": [
       "사망",
@@ -410,7 +410,7 @@
     "id": "ko_KR_shabaloth",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_shabaloth.png?raw=true",
     "name": "샤발로스",
-    "otherNight": 27,
+    "otherNight": 42,
     "otherNightReminder": "샤발로스가 전날 밤에 선택한 참가자 한 명이 부활할 수 있습니다. 샤발로스가 두 명의 참가자를 가리킵니다. 그 참가자들은 죽습니다.",
     "reminders": [
       "사망",

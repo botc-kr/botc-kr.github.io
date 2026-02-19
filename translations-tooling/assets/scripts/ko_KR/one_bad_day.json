@@ -6,7 +6,7 @@
   {
     "ability": "당신은 처음에 3명의 참가자를 알고 시작하며, 그 중 오직 1명만이 악합니다.",
     "edition": "experimental",
-    "firstNight": 43,
+    "firstNight": 63,
     "firstNightReminder": "특정 순서 없이 1명의 악한 참가자를 포함한 3명의 참가자를 가리킵니다.",
     "id": "ko_KR_noble",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_noble.png?raw=true",
@@ -22,7 +22,7 @@
   {
     "ability": "당신은 처음에 게임에 있는 마을 주민 1명을 알고 시작합니다. 당신이 이 캐릭터라고 미쳐 있었다면, 그들이 죽을 때 그들의 능력을 얻습니다.",
     "edition": "experimental",
-    "firstNight": 29,
+    "firstNight": 46,
     "firstNightReminder": "픽시에게 게임에 있는 마을 주민 캐릭터 토큰 1개를 보여줍니다.",
     "id": "ko_KR_pixie",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_pixie.png?raw=true",
@@ -39,7 +39,7 @@
   {
     "ability": "서로 인접한 악한 참가자 쌍의 수를 알고 시작합니다.",
     "edition": "tb",
-    "firstNight": 35,
+    "firstNight": 53,
     "firstNightReminder": "이웃한 악한 참가자 쌍의 수에 대한 손가락 신호(0, 1, 2, ...)를 보여줍니다.",
     "flavor": "오늘 저녁 예약 명단이 좀 이상하네. 메이웨더 부인이 허드슨 골목 그 불량배와 어울린 적은 한 번도 없었는데... 그런데 오늘 밤은 둘이서 자리를 잡았다고? 수상한걸.",
     "id": "ko_KR_chef",
@@ -54,13 +54,13 @@
   {
     "ability": "매일 밤, 살아있는 참가자 1명을 선택합니다. 오늘 밤부터 내일 낮까지 둘 중 한 명은 취합니다. 당신은 죽지 않습니다.",
     "edition": "bmr",
-    "firstNight": 18,
+    "firstNight": 24,
     "firstNightReminder": "선원이 살아있는 참가자를 가리킵니다. 선원이나 선택된 참가자 중 하나가 술에 취합니다.",
     "flavor": "누구라도 좋으니 덤벼보시지! 이봐 수다쟁이! 이 몸과 한판 붙어볼 배짱은 있나? 없다고? 그럼 할매는 어떠신가? 올드 맥킬리표 특제 향신료 럼이란 걸 들어는 보셨나? 이거 한 잔이면 털보 사내가 된다니까! 배에 올라타시라!",
     "id": "ko_KR_sailor",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_sailor.png?raw=true",
     "name": "선원",
-    "otherNight": 4,
+    "otherNight": 12,
     "otherNightReminder": "이전에 술에 취했던 참가자는 더 이상 술에 취하지 않습니다. 선원이 살아있는 참가자를 가리킵니다. 선원이나 선택된 참가자 중 하나가 술에 취합니다.",
     "reminders": [
       "취함"
@@ -71,12 +71,12 @@
   {
     "ability": "매일 밤, 당신은 전날 밤과 다른 유형의 캐릭터인 참가자를 알게 됩니다. [외부인 +0 또는 +1]",
     "edition": "experimental",
-    "firstNight": 44,
+    "firstNight": 64,
     "firstNightReminder": "임의의 참가자를 보여줍니다.",
     "id": "ko_KR_balloonist",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_balloonist.png?raw=true",
     "name": "기구조종사",
-    "otherNight": 63,
+    "otherNight": 84,
     "otherNightReminder": "이전에 보여준 캐릭터 유형과 다른 유형의 참가자를 보여줍니다.",
     "reminders": [
       "어제확인"
@@ -87,13 +87,13 @@
   {
     "ability": "매일 밤, 참가자 2명을 선택해서 그중에 악마가 있는지 알 수 있습니다. 단, 선한 진영 참가자 중 1명이 악마로 보입니다.",
     "edition": "tb",
-    "firstNight": 37,
+    "firstNight": 55,
     "firstNightReminder": "점쟁이가 두 명의 참가자를 가리킵니다. 그 참가자들 중 한 명이 악마인지에 대해 머리 신호를 줍니다(고개를 끄덕이면 예, 고개를 저으면 아니오).",
     "flavor": "당신한테서 엄청난 악의가 느껴져요! 아... 그건 그냥 향수 냄새일 수도 있겠네요. 전 엘더베리에 알레르기가 있거든요.",
     "id": "ko_KR_fortuneteller",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_fortuneteller.png?raw=true",
     "name": "점쟁이",
-    "otherNight": 55,
+    "otherNight": 76,
     "otherNightReminder": "점쟁이가 두 명의 참가자를 가리킵니다. 그 참가자들 중 한 명이 악마인지에 대해 머리 신호를 보여줍니다(고개를 끄덕이면 '예', 고개를 저으면 '아니오').",
     "reminders": [
       "붉은청어"
@@ -104,13 +104,13 @@
   {
     "ability": "매일 밤, 당신의 좌우에 인접한 생존자들 중 악한 진영의 수를 알 수 있습니다.",
     "edition": "tb",
-    "firstNight": 36,
+    "firstNight": 54,
     "firstNightReminder": "초민감자의 살아있는 이웃 중 악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
     "flavor": "소름이 돋네요. 뭔가 이상해요. 그걸 느낄 수 있어요.",
     "id": "ko_KR_empath",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_empath.png?raw=true",
     "name": "초민감자",
-    "otherNight": 54,
+    "otherNight": 75,
     "otherNightReminder": "악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
     "reminders": [],
     "setup": false,
@@ -125,7 +125,7 @@
     "id": "ko_KR_gossip",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_gossip.png?raw=true",
     "name": "험담꾼",
-    "otherNight": 47,
+    "otherNight": 57,
     "otherNightReminder": "험담꾼의 공개 성명이 사실이었다면: 오늘 밤 죽음으로부터 보호받지 않은 참가자 한 명을 선택합니다. 그 참가자는 죽습니다.",
     "reminders": [
       "사망"
@@ -151,12 +151,12 @@
   {
     "ability": "게임 중 한 번, 밤에 살아있는 참가자 한 명을 선택합니다: 아가씨가 선택되면, 게임에 없는 마을 주민이 됩니다. [+아가씨]",
     "edition": "experimental",
-    "firstNight": 30,
+    "firstNight": 47,
     "firstNightReminder": "사냥꾼이 고개를 '아니오'로 젓거나 참가자를 가리킵니다. 아가씨를 가리켰다면, 그 참가자를 깨우고 '당신은' 카드와 게임에 없는 캐릭터 토큰을 보여줍니다.",
     "id": "ko_KR_huntsman",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_huntsman.png?raw=true",
     "name": "사냥꾼",
-    "otherNight": 51,
+    "otherNight": 66,
     "otherNightReminder": "사냥꾼이 고개를 '아니오'로 젓거나 참가자를 가리킵니다. 아가씨를 가리켰다면, 그 참가자를 깨우고 '당신은' 카드와 게임에 없는 캐릭터 토큰을 보여줍니다.",
     "reminders": [
       "능력 없음"
@@ -167,7 +167,7 @@
   {
     "ability": "악마는 당신을 하수인으로 생각합니다. 하수인들은 당신을 악마로 생각합니다.",
     "edition": "experimental",
-    "firstNight": 0,
+    "firstNight": 17,
     "firstNightReminder": "",
     "id": "ko_KR_magician",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_magician.png?raw=true",
@@ -187,7 +187,7 @@
     "id": "ko_KR_ravenkeeper",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_ravenkeeper.png?raw=true",
     "name": "까마귀 사육사",
-    "otherNight": 42,
+    "otherNight": 74,
     "otherNightReminder": "까마귀 사육사가 오늘 밤 죽었다면: 까마귀 사육사가 참가자를 가리킵니다. 그 참가자의 캐릭터 토큰을 보여줍니다.",
     "reminders": [],
     "setup": false,
@@ -213,12 +213,12 @@
   {
     "ability": "모든 하수인은 당신이 게임에 있다는 것을 알고 있습니다. 하수인이 공개적으로 당신을 맞추면(한 번), 당신의 팀이 패배합니다.",
     "edition": "experimental",
-    "firstNight": 31,
+    "firstNight": 48,
     "firstNightReminder": "모든 하수인을 깨우고, '이 캐릭터가 당신을 선택했습니다' 카드와 아가씨 토큰을 보여줍니다.",
     "id": "ko_KR_damsel",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_damsel.png?raw=true",
     "name": "아가씨",
-    "otherNight": 52,
+    "otherNight": 67,
     "otherNightReminder": "사냥꾼에 의해 선택되었다면, 아가씨를 깨우고 '당신은' 카드와 게임에 없는 마을 주민 토큰을 보여줍니다.",
     "reminders": [
       "추측 사용됨"
@@ -261,13 +261,13 @@
   {
     "ability": "당신은 자신이 악마라고 생각하지만, 그렇지 않습니다. 진짜 악마는 당신이 누구인지 알고, 당신이 밤에 누구를 선택하는 지 알고 있습니다.",
     "edition": "bmr",
-    "firstNight": 14,
+    "firstNight": 20,
     "firstNightReminder": "7명 이상의 참가자가 있을 경우: 미치광이에게 게임 내 하수인 수와 동일한 수의 임의의 '하수인' 참가자들을 보여줍니다. 임의의 선한 캐릭터 토큰 3개도 보여줍니다. 만약 미치광이가 받은 토큰이 오늘 밤 깨어날 악마라면: 미치광이가 악마의 행동을 수행하도록 허용합니다. 미치광이의 '공격' 표시를 배치합니다. 진짜 악마를 깨웁니다. 악마에게 자신의 실제 캐릭터 토큰을 보여줍니다. 악마에게 미치광이 참가자가 누구인지 보여줍니다. 만약 미치광이가 참가자들을 공격했다면: 진짜 악마에게 표시된 각 참가자를 보여줍니다. 미치광이의 '공격' 표시를 모두 제거합니다.",
     "flavor": "나는 어둠의 화신이다... 아마도.",
     "id": "ko_KR_lunatic",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_lunatic.png?raw=true",
     "name": "미치광이",
-    "otherNight": 21,
+    "otherNight": 34,
     "otherNightReminder": "미치광이가 악마의 행동을 수행하도록 허용합니다. 미치광이의 '공격' 표시를 배치합니다. 만약 미치광이가 참가자들을 선택했다면: 진짜 악마를 깨웁니다. '공격' 표시를 보여준 다음, 표시된 각 참가자를 가리킵니다. 미치광이의 '공격' 표시를 모두 제거합니다.",
     "reminders": [
       "공격1",
@@ -297,13 +297,13 @@
   {
     "ability": "현재 어떤 외부인들이 게임에 참여 중인지 알고 시작합니다. 만약 낮에 외부인이 죽으면, 그날 밤 한 명을 선택해 죽일 수 있습니다. [외부인 -1 또는 +1]",
     "edition": "bmr",
-    "firstNight": 21,
+    "firstNight": 36,
     "firstNightReminder": "게임에 있는 각 외부인 토큰을 보여줍니다.",
     "flavor": "보통은 그저 일일 뿐이지. 하지만 네가 내 딸을 모욕했다는 건, 곧 나를 모욕한 거야. 그리고 나를 모욕한다는 건, 우리 가문 전체를 모욕하는 거지. 좀 더 조심했어야지. 불운한 사고라도 당하면 안타까울 텐데 말이야.",
     "id": "ko_KR_godfather",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_godfather.png?raw=true",
     "name": "대부",
-    "otherNight": 38,
+    "otherNight": 56,
     "otherNightReminder": "오늘 외부인이 죽었다면: 대부가 참가자를 가리킵니다. 그 참가자는 죽습니다.",
     "reminders": [
       "오늘 사망",
@@ -315,13 +315,13 @@
   {
     "ability": "매일 밤, 한 명의 참가자와 선한 진영의 캐릭터 하나를 지정합니다. 지정된 참가자는 다음날 광적으로 자신이 그 캐릭터라고 다른 이들을 설득해야 하며, 그러지 않으면 처형될 수 있습니다.",
     "edition": "snv",
-    "firstNight": 25,
+    "firstNight": 41,
     "firstNightReminder": "세레노부스가 참가자를 가리키고, 그 다음 자신의 시트에서 캐릭터를 가리킵니다. 그 참가자를 깨웁니다. '이 캐릭터가 당신을 선택했습니다' 카드를 보여준 다음, 세레노부스 토큰을 보여줍니다. 선택된 캐릭터 토큰을 보여줍니다. 참가자가 내일 그 캐릭터처럼 행동하지 않으면, 그들은 처형될 수 있습니다.",
     "flavor": "이른바 현실이란 건 말이지, 그저 하나의 생각에 지나지 않아. 좀 더 구체적으로 말하자면... 바로 내 생각이라는 거지",
     "id": "ko_KR_cerenovus",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_cerenovus.png?raw=true",
     "name": "세레노부스",
-    "otherNight": 16,
+    "otherNight": 27,
     "otherNightReminder": "세레노부스가 참가자를 가리키고, 그 다음 자신의 시트에서 캐릭터를 가리킵니다. 그 참가자를 깨웁니다. '이 캐릭터가 당신을 선택했습니다' 카드를 보여준 다음, 세레노부스 토큰을 보여줍니다. 선택된 캐릭터 토큰을 보여줍니다. 참가자가 내일 그 캐릭터라고 미치지 않으면, 그들은 처형될 수 있습니다.",
     "reminders": [
       "미침"
@@ -332,13 +332,13 @@
   {
     "ability": "매일 밤, 참가자 한 명을 선택해서 그날 밤부터 다음 날 낮까지 중독 상태로 만듭니다.",
     "edition": "tb",
-    "firstNight": 18,
+    "firstNight": 31,
     "firstNightReminder": "독살범이 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
     "flavor": "알파 화합물을 베타 화합물에 넣고... 너무 많이 넣지는 마!",
     "id": "ko_KR_poisoner",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_poisoner.png?raw=true",
     "name": "독살범",
-    "otherNight": 8,
+    "otherNight": 16,
     "otherNightReminder": "이전에 중독된 참가자는 더 이상 중독되지 않습니다. 독살범이 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
     "reminders": [
       "중독됨"
@@ -371,7 +371,7 @@
     "id": "ko_KR_imp",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_imp.png?raw=true",
     "name": "임프",
-    "otherNight": 24,
+    "otherNight": 39,
     "otherNightReminder": "임프가 참가자를 가리킵니다. 그 참가자는 죽습니다. 임프가 자신을 선택했다면: 살아있는 하수인 1명의 캐릭터를 여분의 임프 토큰으로 교체합니다. '당신은' 카드를 보여준 다음 임프 토큰을 보여줍니다.",
     "reminders": [
       "사망"
@@ -388,7 +388,7 @@
     "id": "ko_KR_fanggu",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_fanggu.png?raw=true",
     "name": "팡구",
-    "otherNight": 29,
+    "otherNight": 44,
     "otherNightReminder": "팡구가 참가자를 가리킵니다. 그 참가자는 죽습니다. 또는, 그 참가자가 외부인이고 다른 팡구가 게임에 없다면: 팡구가 선택된 참가자 대신 죽습니다. 선택된 참가자는 이제 악한 팡구가 됩니다. 새로운 팡구를 깨웁니다. '당신은' 카드를 보여준 다음 팡구 토큰을 보여줍니다. '당신은' 카드를 보여준 다음 엄지 아래로 '악한' 손 신호를 보여줍니다.",
     "reminders": [
       "사망",
@@ -400,12 +400,12 @@
   {
     "ability": "매일 밤*, 참가자 한 명을 선택해 죽입니다. 게임 시작 시 살아있는 참가자 한 명을 선택해 숙주로 만들고 중독시킵니다. 숙주가 살아있으면 죽지 않고, 숙주가 죽으면 같이 죽습니다.",
     "edition": "experimental",
-    "firstNight": 15,
+    "firstNight": 29,
     "firstNightReminder": "거거머리가 참가자를 가리킵니다. 중독 리마인더 토큰을 놓습니다.",
     "id": "ko_KR_lleech",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_lleech.png?raw=true",
     "name": "거거머리",
-    "otherNight": 35,
+    "otherNight": 51,
     "otherNightReminder": "거거머리가 참가자를 가리킵니다. 그 참가자는 죽습니다.",
     "reminders": [
       "사망",

@@ -6,7 +6,7 @@
   {
     "ability": "서로 인접한 악한 참가자 쌍의 수를 알고 시작합니다.",
     "edition": "tb",
-    "firstNight": 35,
+    "firstNight": 53,
     "firstNightReminder": "이웃한 악한 참가자 쌍의 수에 대한 손가락 신호(0, 1, 2, ...)를 보여줍니다.",
     "flavor": "오늘 저녁 예약 명단이 좀 이상하네. 메이웨더 부인이 허드슨 골목 그 불량배와 어울린 적은 한 번도 없었는데... 그런데 오늘 밤은 둘이서 자리를 잡았다고? 수상한걸.",
     "id": "ko_KR_chef",
@@ -27,7 +27,7 @@
     "id": "ko_KR_ravenkeeper",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_ravenkeeper.png?raw=true",
     "name": "까마귀 사육사",
-    "otherNight": 42,
+    "otherNight": 74,
     "otherNightReminder": "까마귀 사육사가 오늘 밤 죽었다면: 까마귀 사육사가 참가자를 가리킵니다. 그 참가자의 캐릭터 토큰을 보여줍니다.",
     "reminders": [],
     "setup": false,
@@ -36,13 +36,13 @@
   {
     "ability": "매일 밤, 살아있는 참가자 2명(본인 제외)을 선택합니다. 그 중 몇 명이 그날 밤, 그들 자신의 능력으로 인해 일어났는지 알 수 있습니다.",
     "edition": "bmr",
-    "firstNight": 50,
+    "firstNight": 74,
     "firstNightReminder": "하녀가 두 명의 참가자를 가리킵니다. 오늘 밤 그들의 능력으로 깨어난 참가자 수에 대한 숫자 신호(0, 1, 2, ...)를 보여줍니다.",
     "flavor": "귀부인, 전 수상한 건 아무것도 보지 못했어요. 다만 감히 하나 말씀드리자면... 설령 제가 뭔가를 보았다 하더라도, 그게 어젯밤 열한시 무렵 주인님께서 교수님의 실험실에 몰래 들어가 수상한 물약을 제조하시는 장면이었을 리가 없지요. 물론... 귀부인께서 말씀하신 바로 그 일 말입니다.",
     "id": "ko_KR_chambermaid",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_chambermaid.png?raw=true",
     "name": "하녀",
-    "otherNight": 70,
+    "otherNight": 94,
     "otherNightReminder": "하녀가 두 명의 참가자를 가리킵니다. 오늘 밤 그들의 능력으로 깨어난 참가자 수에 대한 숫자 신호(0, 1, 2, ...)를 보여줍니다.",
     "reminders": [],
     "setup": false,
@@ -51,13 +51,13 @@
   {
     "ability": "매일 밤, 당신의 좌우에 인접한 생존자들 중 악한 진영의 수를 알 수 있습니다.",
     "edition": "tb",
-    "firstNight": 36,
+    "firstNight": 54,
     "firstNightReminder": "초민감자의 살아있는 이웃 중 악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
     "flavor": "소름이 돋네요. 뭔가 이상해요. 그걸 느낄 수 있어요.",
     "id": "ko_KR_empath",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_empath.png?raw=true",
     "name": "초민감자",
-    "otherNight": 54,
+    "otherNight": 75,
     "otherNightReminder": "악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
     "reminders": [],
     "setup": false,
@@ -87,7 +87,7 @@
     "id": "ko_KR_monk",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_monk.png?raw=true",
     "name": "수도사",
-    "otherNight": 13,
+    "otherNight": 23,
     "otherNightReminder": "이전에 보호받던 참가자는 더 이상 보호받지 않습니다. 수도사가 자신을 제외한 참가자를 가리킵니다. 그 참가자를 '보호됨'으로 표시합니다.",
     "reminders": [
       "보호됨"
@@ -130,13 +130,13 @@
   {
     "ability": "매일 밤, 참가자 한 명을 선택해서 그날 밤부터 다음 날 낮까지 중독 상태로 만듭니다.",
     "edition": "tb",
-    "firstNight": 18,
+    "firstNight": 31,
     "firstNightReminder": "독살범이 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
     "flavor": "알파 화합물을 베타 화합물에 넣고... 너무 많이 넣지는 마!",
     "id": "ko_KR_poisoner",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_poisoner.png?raw=true",
     "name": "독살범",
-    "otherNight": 8,
+    "otherNight": 16,
     "otherNightReminder": "이전에 중독된 참가자는 더 이상 중독되지 않습니다. 독살범이 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
     "reminders": [
       "중독됨"
@@ -147,13 +147,13 @@
   {
     "ability": "매일 밤, 살아있는 참가자 1명(어제와 다른)을 선택합니다. 그는 내일 처형되더라도 죽지 않습니다.",
     "edition": "bmr",
-    "firstNight": 22,
+    "firstNight": 38,
     "firstNightReminder": "악마의 대변인이 살아있는 참가자를 가리킵니다. 그 참가자는 내일 처형에서 살아남습니다.",
     "flavor": "재판장님, 제 이의가 받아들여지지 않더라도 의뢰인의 무죄는 분명합니다. 검찰 측이 동사 활용에 관한 법령 27조 B항을 위반했으니까요. 어젯밤 배심원 아홉 명의 죽음은 일견 명백한 증거로 보일 것입니다. 하지만 윌스와 툴레의 역사적인 판결이 입증했듯이, 이처럼 자명해 보이는 증거야말로 제 의뢰인의 무죄를 방증하는 것이지요.",
     "id": "ko_KR_devilsadvocate",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_devilsadvocate.png?raw=true",
     "name": "악마의 대변인",
-    "otherNight": 14,
+    "otherNight": 25,
     "otherNightReminder": "악마의 대변인이 살아있는 참가자를 가리킵니다(전날 밤과 다른 사람). 그 참가자는 내일 처형에서 살아남습니다.",
     "reminders": [
       "처형에서 생존"
@@ -170,7 +170,7 @@
     "id": "ko_KR_vigormortis",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_vigormortis.png?raw=true",
     "name": "비거모티스",
-    "otherNight": 32,
+    "otherNight": 48,
     "otherNightReminder": "비거모티스가 참가자를 가리킵니다. 그 참가자는 죽습니다. 하수인이라면, 그들은 능력을 유지하고 그들의 마을 주민 이웃 중 한 명이 중독됩니다.",
     "reminders": [
       "사망",

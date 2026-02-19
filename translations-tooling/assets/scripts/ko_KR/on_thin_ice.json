@@ -23,13 +23,13 @@
   {
     "ability": "게임 중 한 번, 밤에 선한 캐릭터 하나를 선택하여 그 능력을 얻습니다. 만약 해당 캐릭터가 게임에 참여 중이라면, 그 캐릭터는 취한 상태가 됩니다.",
     "edition": "snv",
-    "firstNight": 18,
+    "firstNight": 13,
     "firstNightReminder": "철학자가 '아니오' 머리 신호를 보이거나, 자신의 시트에서 선한 캐릭터를 가리킵니다. 캐릭터를 선택했다면: 게임에 없는 캐릭터 토큰을 철학자 토큰과 교체합니다. 또는, 그 캐릭터가 게임에 있다면, 그 참가자에게 술취함 표시를 하고 철학자에게 철학자가 아님 토큰을 놓습니다.",
     "flavor": "진실이 무엇이냐 묻는다면? 그건 바로 맥주지. 마음껏 마시세나, 내일이면 우리 모두 죽을지도 모르니까.",
     "id": "ko_KR_philosopher",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_philosopher.png?raw=true",
     "name": "철학자",
-    "otherNight": 11,
+    "otherNight": 10,
     "otherNightReminder": "철학자가 아직 능력을 사용하지 않았다면: 철학자가 '아니오' 머리 신호를 보이거나, 자신의 시트에서 선한 캐릭터를 가리킵니다. 캐릭터를 선택했다면: 게임에 없는 캐릭터 토큰을 철학자 토큰과 교체합니다. 또는, 그 캐릭터가 게임에 있다면, 그 참가자에게 술취함 표시를 하고 철학자에게 철학자가 아님 토큰을 놓습니다.",
     "remindersGlobal": [
       "술취함",
@@ -47,7 +47,7 @@
     "id": "ko_KR_professor",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_professor.png?raw=true",
     "name": "교수",
-    "otherNight": 45,
+    "otherNight": 64,
     "otherNightReminder": "교수가 아직 능력을 사용하지 않았다면: 교수가 고개를 아니오로 젓거나, 참가자를 가리킵니다. 그 참가자가 마을 주민이라면, 그들은 이제 살아있습니다.",
     "reminders": [
       "생존",
@@ -59,13 +59,13 @@
   {
     "ability": "게임 중 한 번, 밤에 자신을 제외한 두 명의 참가자를 선택하여 그들이 같은 진영인지 알아낼 수 있습니다.",
     "edition": "snv",
-    "firstNight": 42,
+    "firstNight": 60,
     "firstNightReminder": "재봉사가 '아니오' 머리 신호를 보이거나, 다른 두 참가자를 가리킵니다. 재봉사가 참가자들을 선택했다면, 그들이 같은 진영인지에 대해 '예'로 끄덕이거나 '아니오'로 흔듭니다.",
     "flavor": "캐시미어 코트를 입은 그 낯선 사람이 우리 귀여운 벨에게 마음을 품었다는 소문 들으셨나요? 그리고 벨이 승낙했다는것도요? 하지만 그건 축제에서 해리와 저글러 사이에서 일어난 일에 비하면 진짜 아무것도 아니에요! 제가 입이 가벼운 사람이었다면 말해줄 수 있었으렌데... 정말이에요.",
     "id": "ko_KR_seamstress",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_seamstress.png?raw=true",
     "name": "재봉사",
-    "otherNight": 61,
+    "otherNight": 82,
     "otherNightReminder": "재봉사가 아직 능력을 사용하지 않았다면: 재봉사가 '아니오' 머리 신호를 보이거나, 다른 두 참가자를 가리킵니다. 재봉사가 참가자들을 선택했다면, 그들이 같은 진영인지에 대해 '예'로 끄덕이거나 '아니오'로 흔듭니다.",
     "reminders": [
       "능력 없음"
@@ -131,7 +131,7 @@
     "id": "ko_KR_moonchild",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_moonchild.png?raw=true",
     "name": "달의 아이",
-    "otherNight": 49,
+    "otherNight": 71,
     "otherNightReminder": "달의 아이가 오늘 능력을 사용해 참가자를 지명했다면: 그 참가자가 선하다면, 그들은 죽습니다.",
     "reminders": [
       "사망"
@@ -142,7 +142,7 @@
   {
     "ability": "당신과 상대 진영의 한 참가자는 서로의 정체를 알고 시작합니다. 선한 진영의 쌍둥이가 처형되면 악한 진영이 승리합니다. 두 쌍둥이가 모두 살아있는 한 선한 진영은 승리할 수 없습니다.",
     "edition": "snv",
-    "firstNight": 23,
+    "firstNight": 39,
     "firstNightReminder": "악한 쌍둥이와 그의 쌍둥이를 깨웁니다. 서로를 인식했는지 확인합니다. 악한 쌍둥이를 가리킵니다. 쌍둥이 참가자에게 그들의 악한 쌍둥이 토큰을 보여줍니다. 쌍둥이를 가리킵니다. 악한 쌍둥이 참가자에게 그들의 캐릭터 토큰을 보여줍니다.",
     "flavor": "저는 사라가 아니라니까요! 전 클라라예요! 저기 있는 저 여자가 사라라구요! 사라가 사악한 사람이에요, 제가 아니고!",
     "id": "ko_KR_eviltwin",
@@ -174,13 +174,13 @@
   {
     "ability": "매일 밤, 참가자 한 명을 선택해 중독시킵니다. 이전에 당신에게 중독된 참가자는 사망하고, 중독이 풀립니다.",
     "edition": "bmr",
-    "firstNight": 28,
+    "firstNight": 45,
     "firstNightReminder": "푸카가 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
     "flavor": "이렇게 아름다운 집에 저를 친절히 맞아주시다니 정말 감사합니다. 아 방금 실수로 긁어서 정말 죄송합니다만, 작은 상처일 뿐이니 걱정 마세요. 이 금으로 만든 이쑤시개를 제 사과의 의미로 받아주시겠어요?",
     "id": "ko_KR_pukka",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_pukka.png?raw=true",
     "name": "푸카",
-    "otherNight": 26,
+    "otherNight": 41,
     "otherNightReminder": "푸카가 참가자를 가리킵니다. 그 참가자는 중독됩니다. 이전에 중독된 참가자는 죽습니다.",
     "reminders": [
       "중독",

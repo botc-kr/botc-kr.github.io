@@ -8,13 +8,13 @@
   {
     "ability": "매일 밤 생존자 중 한 명을 선택합니다. 만약 악마를 선택하면, 당신과 악마는 서로의 직업과 진영을 바꾸고 악마였던 사람은 중독 상태가 됩니다.",
     "edition": "snv",
-    "firstNight": 20,
+    "firstNight": 35,
     "firstNightReminder": "뱀 조련사가 참가자를 가리킵니다. 그 참가자가 악마라면: 악마와 뱀 조련사의 캐릭터와 진영을 바꿉니다. 각 참가자를 깨워 그들의 새로운 역할과 진영을 알립니다. 새로운 뱀 조련사는 중독됩니다.",
     "flavor": "나리, 비록 제가 보잘것없는 사람이지만, 이 황금 피리 한 곡조면 아무리 사나운 정령도 길들일 수 있지요. 그저 신의 뜻대로 할 뿐입니다. 세상 사람들은 욕심이 과하면 화를 부른다고 하지만... 저는 절대 아닙니다, 나리, 저는 절대 아니에요.",
     "id": "ko_KR_snakecharmer",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_snakecharmer.png?raw=true",
     "name": "뱀 조련사",
-    "otherNight": 12,
+    "otherNight": 22,
     "otherNightReminder": "뱀 조련사가 참가자를 가리킵니다. 그 참가자가 악마라면: 악마와 뱀 조련사의 캐릭터와 진영을 바꿉니다. 각 참가자를 깨워 그들의 새로운 역할과 진영을 알립니다. 새로운 뱀 조련사는 중독됩니다.",
     "reminders": [
       "중독됨"
@@ -58,13 +58,13 @@
   {
     "ability": "게임 중 한 번, 밤에 선한 캐릭터 하나를 선택하여 그 능력을 얻습니다. 만약 해당 캐릭터가 게임에 참여 중이라면, 그 캐릭터는 취한 상태가 됩니다.",
     "edition": "snv",
-    "firstNight": 18,
+    "firstNight": 13,
     "firstNightReminder": "철학자가 '아니오' 머리 신호를 보이거나, 자신의 시트에서 선한 캐릭터를 가리킵니다. 캐릭터를 선택했다면: 게임에 없는 캐릭터 토큰을 철학자 토큰과 교체합니다. 또는, 그 캐릭터가 게임에 있다면, 그 참가자에게 술취함 표시를 하고 철학자에게 철학자가 아님 토큰을 놓습니다.",
     "flavor": "진실이 무엇이냐 묻는다면? 그건 바로 맥주지. 마음껏 마시세나, 내일이면 우리 모두 죽을지도 모르니까.",
     "id": "ko_KR_philosopher",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_philosopher.png?raw=true",
     "name": "철학자",
-    "otherNight": 11,
+    "otherNight": 10,
     "otherNightReminder": "철학자가 아직 능력을 사용하지 않았다면: 철학자가 '아니오' 머리 신호를 보이거나, 자신의 시트에서 선한 캐릭터를 가리킵니다. 캐릭터를 선택했다면: 게임에 없는 캐릭터 토큰을 철학자 토큰과 교체합니다. 또는, 그 캐릭터가 게임에 있다면, 그 참가자에게 술취함 표시를 하고 철학자에게 철학자가 아님 토큰을 놓습니다.",
     "remindersGlobal": [
       "술취함",
@@ -76,7 +76,7 @@
   {
     "ability": "하수인 능력 하나를 갖습니다. 해당 능력 사용 시, 이야기꾼이 다른 선택을 하도록 요청할 수 있습니다.",
     "edition": "experimental",
-    "firstNight": 3,
+    "firstNight": 14,
     "firstNightReminder": "YOU ARE' 토큰과 하수인 토큰을 보여줍니다.",
     "id": "ko_KR_alchemist",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_alchemist.png?raw=true",
@@ -124,12 +124,12 @@
   {
     "ability": "모든 하수인은 당신이 게임에 있다는 것을 알고 있습니다. 하수인이 공개적으로 당신을 맞추면(한 번), 당신의 팀이 패배합니다.",
     "edition": "experimental",
-    "firstNight": 31,
+    "firstNight": 48,
     "firstNightReminder": "모든 하수인을 깨우고, '이 캐릭터가 당신을 선택했습니다' 카드와 아가씨 토큰을 보여줍니다.",
     "id": "ko_KR_damsel",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_damsel.png?raw=true",
     "name": "아가씨",
-    "otherNight": 52,
+    "otherNight": 67,
     "otherNightReminder": "사냥꾼에 의해 선택되었다면, 아가씨를 깨우고 '당신은' 카드와 게임에 없는 마을 주민 토큰을 보여줍니다.",
     "reminders": [
       "추측 사용됨"
@@ -200,13 +200,13 @@
   {
     "ability": "매일 밤, 참가자 한 명을 선택해 중독시킵니다. 이전에 당신에게 중독된 참가자는 사망하고, 중독이 풀립니다.",
     "edition": "bmr",
-    "firstNight": 28,
+    "firstNight": 45,
     "firstNightReminder": "푸카가 참가자를 가리킵니다. 그 참가자는 중독됩니다.",
     "flavor": "이렇게 아름다운 집에 저를 친절히 맞아주시다니 정말 감사합니다. 아 방금 실수로 긁어서 정말 죄송합니다만, 작은 상처일 뿐이니 걱정 마세요. 이 금으로 만든 이쑤시개를 제 사과의 의미로 받아주시겠어요?",
     "id": "ko_KR_pukka",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_pukka.png?raw=true",
     "name": "푸카",
-    "otherNight": 26,
+    "otherNight": 41,
     "otherNightReminder": "푸카가 참가자를 가리킵니다. 그 참가자는 중독됩니다. 이전에 중독된 참가자는 죽습니다.",
     "reminders": [
       "중독",
@@ -225,7 +225,7 @@
     "id": "ko_KR_vortox",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_vortox.png?raw=true",
     "name": "볼톡스",
-    "otherNight": 31,
+    "otherNight": 46,
     "otherNightReminder": "볼톡스가 참가자를 가리킵니다. 그 참가자는 죽습니다.",
     "reminders": [
       "사망"
@@ -245,6 +245,7 @@
     "id": "ko_KR_duchess",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_duchess.png?raw=true",
     "name": "공작부인",
+    "otherNight": 1,
     "reminders": [
       "방문자",
       "거짓 정보"
