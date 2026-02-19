@@ -51,7 +51,7 @@ const Helper: FC<HelperProps> = ({ currentPage, onPageChange }) => {
 
         <Dialog.Root open={selectedCharacter !== null} onOpenChange={open => !open && setSelectedCharacter(null)}>
           <Dialog.Portal>
-            <Dialog.Overlay className="fixed inset-0 bg-black/50" />
+            <Dialog.Overlay className="fixed inset-0 bg-black/50 z-[60]" />
             {selectedCharacter && (
               <CharacterDialog
                 character={selectedCharacter}

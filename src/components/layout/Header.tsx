@@ -27,10 +27,13 @@ export const Header: FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       <div className="h-16" />
 
       <header className="fixed top-0 left-0 right-0 bg-gray-900 text-white z-50">
-        <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4">
-              <button type="button" onClick={() => onPageChange(PAGE_TYPES.SCRIPTS)} className="text-xl font-bold">
+        <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-4 overflow-x-auto">
+          <div className="flex flex-nowrap justify-between items-center">
+            <div className="flex items-center space-x-4 whitespace-nowrap">
+              <button
+                type="button"
+                onClick={() => onPageChange(PAGE_TYPES.SCRIPTS)}
+                className="text-xl font-bold whitespace-nowrap">
                 시계탑에 흐른 피
               </button>
 
@@ -52,7 +55,7 @@ export const Header: FC<HeaderProps> = ({ currentPage, onPageChange }) => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6 whitespace-nowrap">
               {TOP_NAV_ITEMS.map(navItem => (
                 <button
                   key={navItem.page}

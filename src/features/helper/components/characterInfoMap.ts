@@ -212,6 +212,20 @@ export const CHARACTER_INFO_MAP: Record<string, HelperInfo[]> = {
       message: '중독시킬 사람을 선택하세요. 이전에 중독되었던 사람은 죽고, 중독이 풀립니다.',
     },
   ],
+  dreamer: [
+    {
+      title: '매일 밤',
+      message: '둘 중 하나가 진짜 정체입니다.',
+      teams: ALL_TEAM,
+      count: 2,
+    },
+  ],
+  farmer: [
+    {
+      title: '당신이 죽었다면',
+      message: '당신은 농부입니다',
+    },
+  ],
 }
 
 export const getCharacterInfos = (characterId: string): HelperInfo[] => {

@@ -38,7 +38,7 @@ export const CharacterDialog: FC<CharacterDialogProps> = ({ character, scriptCha
   })
 
   return (
-    <Dialog.Content className="fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[90vw] max-w-md bg-white rounded-lg flex flex-col max-h-[80vh]">
+    <Dialog.Content className="fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[90vw] max-w-md bg-white rounded-lg flex flex-col max-h-[80vh] z-[70]">
       <div className="p-6 pb-0">
         <div className="flex items-center gap-4 mb-6">
           <img src={character.image} alt={character.name} className="w-16 h-16 object-contain" />
