@@ -11,7 +11,7 @@
     "firstNightReminder": "피카츄가 선택한 참가자에게 '엔젤링' 리마인더를 놓습니다.",
     "flavor": "",
     "id": "ko_KR_pikachu",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_pikachu.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_pikachu.png?raw=true",
     "name": "피카츄",
     "otherNightReminder": "",
     "reminders": [
@@ -26,7 +26,7 @@
     "firstNightReminder": "이상해씨 토큰을 보여주고 두 명의 참가자를 가리킵니다. 둘 중 한명은 이상해씨여야 합니다.",
     "flavor": "",
     "id": "ko_KR_charmander",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_charmander.png?raw=true",
+    "image": "https://raw.githubusercontent.com/botc-kr/botc-kr.github.io/main/public/translations/assets/icons/Icon_boffin.png",
     "name": "파이리",
     "otherNightReminder": "",
     "reminders": [
@@ -42,7 +42,7 @@
     "firstNightReminder": "파이리 토큰을 보여주고 두 명의 참가자를 가리킵니다. 둘 중 한명은 파이리여야 합니다.",
     "flavor": "",
     "id": "ko_KR_squirtle",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_squirtle.png?raw=true",
+    "image": "https://raw.githubusercontent.com/botc-kr/botc-kr.github.io/main/public/translations/assets/icons/Icon_harpy.png",
     "name": "꼬부기",
     "otherNightReminder": "",
     "reminders": [
@@ -58,7 +58,7 @@
     "firstNightReminder": "꼬부기 토큰을 보여주고 두 명의 참가자를 가리킵니다. 둘 중 한명은 꼬부기여야 합니다.",
     "flavor": "",
     "id": "ko_KR_bulbasaur",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_bulbasaur.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_bulbasaur.png?raw=true",
     "name": "이상해씨",
     "otherNightReminder": "",
     "reminders": [
@@ -74,7 +74,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_weedle",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_weedle.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_weedle.png?raw=true",
     "name": "뿔충이",
     "otherNightReminder": "악마에게 공격받으면 다른 참가자를 사망처리합니다. 이후 '딱충이'로 토큰을 변경하고 깨워서 알려줍니다.",
     "reminders": "",
@@ -87,7 +87,7 @@
     "firstNightReminder": "참가중이지 않은 포켓몬 3개를 알려줍니다.",
     "flavor": "",
     "id": "ko_KR_zubat",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_zubat.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_villageidiot.png?raw=true",
     "name": "주뱃",
     "otherNightReminder": "",
     "reminders": "",
@@ -100,7 +100,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_raichu",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_raichu.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_raichu.png?raw=true",
     "name": "라이츄",
     "otherNightReminder": "",
     "reminders": [
@@ -115,7 +115,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_charizard",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_charizard.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_charizard.png?raw=true",
     "name": "리자몽",
     "otherNightReminder": "어제와 다른 참가자 1명을 선택합니다. 악마를 지명했다면 악마를 깨워 리자몽이 누군지 알려줍니다. 악마는 오늘 밤 활동하지 않습니다.",
     "reminders": [
@@ -130,7 +130,7 @@
     "firstNightReminder": "거북왕이 선택한 숫자만큼 떨어진 참가자 2명에게 '물대포' 리마인더를 놓습니다.",
     "flavor": "",
     "id": "ko_KR_blastoise",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_blastoise.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_blastoise.png?raw=true",
     "name": "거북왕",
     "otherNightReminder": "거북왕이 선택한 숫자만큼 떨어진 참가자 2명에게 '물대포' 리마인더를 놓습니다.",
     "reminders": [
@@ -146,7 +146,7 @@
     "firstNightReminder": "이상해꽃의 살아있는 이웃 중 악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
     "flavor": "",
     "id": "ko_KR_venusaur",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_venusaur.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_venusaur.png?raw=true",
     "name": "이상해꽃",
     "otherNightReminder": "이상해꽃의 살아있는 이웃 중 악한 이웃의 수에 대한 손가락 신호(0, 1, 2)를 보여줍니다.",
     "reminders": "",
@@ -159,7 +159,7 @@
     "firstNightReminder": "휴식' 리마인더가 없다면 '공중날기' 사용 여부를 확인합니다. 사용한다면 '공중날기' 리마인더를 놓습니다. 밤이 끝나면 '휴식' 리마인더로 변경합니다.",
     "flavor": "",
     "id": "ko_KR_pidgeotto",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_pidgeotto.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_pidgeotto.png?raw=true",
     "name": "피죤",
     "otherNightReminder": "피죤에게 '휴식' 리마인더가 있다면 제거 후 아무것도 하지 않습니다. '휴식' 리마인더가 없다면 '공중날기' 사용 여부를 확인합니다. 사용한다면 '공중날기' 리마인더를 놓습니다. 밤이 끝날 때 '휴식' 리마인더로 변경합니다.",
     "reminders": [
@@ -175,7 +175,7 @@
     "firstNightReminder": "메타몽의 전체 능력을 결정하세요. 만약 메타몽의 능력으로 인해 오늘 밤 깨어나야 한다면 메타몽을 깨우고 능력을 실행하세요. (반드시 마지막에 깨우세요)",
     "flavor": "",
     "id": "ko_KR_ditto",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_ditto.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_gnome.png?raw=true",
     "name": "메타몽",
     "otherNightReminder": "만약 메타몽의 능력으로 인해 오늘 밤 깨어나야 한다면 메타몽을 깨우고 능력을 실행하세요. (반드시 마지막에 깨우세요)",
     "reminders": [
@@ -185,12 +185,12 @@
     "team": "townsfolk"
   },
   {
-    "ability": "자신이 외지인이라고 착각하고 있습니다. 악마에게 공격 받으면\n\r\n자연으로 돌아가지 않고, 야도란 혹은 야도킹으로 진화합니다.",
+    "ability": "자신이 이방인이라고 착각하고 있습니다. 악마에게 공격 받으면\n\r\n자연으로 돌아가지 않고, 야도란 혹은 야도킹으로 진화합니다.",
     "edition": "pokemon1",
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_slowpoke",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_slowpoke.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_slowpoke.png?raw=true",
     "name": "야돈",
     "otherNightReminder": "악마에게 공격받으면 야도란 혹은 야도킹으로 토큰 변경 후 깨워서 알려줍니다. 야도란이라면 바로 능력을 사용합니다.",
     "reminders": "",
@@ -205,7 +205,7 @@
     "firstNightReminder": "개굴닌자가 가리킨 참가자가 악마가 아닌 경우에만 '중독됨' 리마인더를 놓습니다.",
     "flavor": "",
     "id": "ko_KR_greninja",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_greninja.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_boffin.png?raw=true",
     "name": "개굴닌자",
     "otherNightReminder": "개굴닌자가 가리킨 참가자가 악마가 아닌 경우에만 '중독됨' 리마인더를 놓습니다.",
     "reminders": [
@@ -220,7 +220,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_slowbro",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_slowbro.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_slowbro.png?raw=true",
     "name": "야도란",
     "otherNightReminder": "야도란이 죽은 참가자를 선택하고, 해당 참가자의 캐릭터를 알려줍니다.",
     "reminders": "",
@@ -233,7 +233,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_slowking",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_slowking.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_slowking.png?raw=true",
     "name": "야도킹",
     "otherNightReminder": "",
     "reminders": "",
@@ -246,7 +246,7 @@
     "firstNightReminder": "딱충이에게 '밤1' 리마인더를 놓습니다.",
     "flavor": "",
     "id": "ko_KR_kakuna",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_kakuna.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_kakuna.png?raw=true",
     "name": "딱충이",
     "otherNightReminder": "딱충이에게 '밤1' 리마인더가 있다면 '밤2' 리마인더를 놓습니다. '밤2' 리마인더가 있다면 '진화' 리마인더를 놓습니다. '진화' 리마인더가 있다면 독침붕 토큰으로 교체하고 깨워서 알려줍니다. 원래 악마는 사망합니다.",
     "reminders": [
@@ -263,7 +263,7 @@
     "firstNightReminder": "고오스에게 '밤1' 리마인더를 놓습니다.",
     "flavor": "",
     "id": "ko_KR_gastly",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_gastly.png?raw=true",
+    "image": "https://raw.githubusercontent.com/botc-kr/botc-kr.github.io/main/public/translations/assets/icons/Icon_villageidiot.png",
     "name": "고오스",
     "otherNightReminder": "고오스에게 '밤1' 리마인더가 있다면 '밤2' 리마인더를, '밤2' 리마인더가 있다면 '진화' 리마인더를 놓습니다. '진화' 리마인더가 있다면 팬텀으로 토큰을 교체합니다. 하수인과 악마를 모두 깨워 서로를 확인시킵니다.",
     "reminders": [
@@ -282,7 +282,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_magikarp",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_magikarp.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_magikarp.png?raw=true",
     "name": "잉어킹",
     "otherNightReminder": "잉어킹에게 '지명됨' 토큰이 있을 경우 갸라도스로 토큰을 변경한 뒤 깨워서 알려줍니다. 임의의 참가자 1명이 사망합니다.",
     "reminders": [
@@ -297,7 +297,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_gyarados",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_gyarados.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_gyarados.png?raw=true",
     "name": "갸라도스",
     "otherNightReminder": "",
     "reminders": "",
@@ -310,7 +310,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_mew",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mew.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_mew.png?raw=true",
     "name": "뮤",
     "otherNightReminder": "뮤가 처형되었고 악마가 모두 죽었다면 악팀의 승리입니다",
     "reminders": [
@@ -325,7 +325,7 @@
     "firstNightReminder": "마자용이 참가자를 가리킵니다. 그 참가자를 깨웁니다. '이 캐릭터가 당신을 선택했습니다' 카드를 보여준 다음, 마자용 토큰을 보여줍니다. 참가자가 내일 \"마자용\" 이외의 대화를 할 경우 처형될 수 있습니다.",
     "flavor": "",
     "id": "ko_KR_wobbuffet",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_wobbuffet.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_wobbuffet.png?raw=true",
     "name": "마자용",
     "otherNightReminder": "마자용이 어제와 다른 살아있는 참가자를 가리킵니다. 그 참가자를 깨웁니다. '이 캐릭터가 당신을 선택했습니다' 카드를 보여준 다음, 마자용 토큰을 보여줍니다. 참가자가 내일 \"마자용\" 이외의 대화를 할 경우 처형될 수 있습니다.",
     "reminders": [
@@ -340,7 +340,7 @@
     "firstNightReminder": "질뻐기가 가리킨 참가자에게 '중독됨' 리마인더를 놓습니다.",
     "flavor": "",
     "id": "ko_KR_muk",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_muk.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_muk.png?raw=true",
     "name": "질뻐기",
     "otherNightReminder": "질뻐기가 가리킨 참가자에게 '중독됨' 리마인더를 놓습니다.",
     "reminders": [
@@ -355,7 +355,7 @@
     "firstNightReminder": "나옹이 자신을 제외한 참가자를 가리킵니다. 그 참가자 옆에 '마이너스투표' 리마인더를 놓습니다.",
     "flavor": "",
     "id": "ko_KR_meowth",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_meowth.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_meowth.png?raw=true",
     "name": "나옹",
     "otherNightReminder": "나옹이 자신을 제외한 참가자를 가리킵니다. 그 참가자 옆에 '마이너스투표' 리마인더를 놓습니다.",
     "reminders": [
@@ -370,7 +370,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_electrode",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_electrode.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_electrode.png?raw=true",
     "name": "붐볼",
     "otherNightReminder": "낮에 처형되었다면, 살아있는 선한 참가자 2명이 죽을 수 있습니다.",
     "reminders": [
@@ -385,7 +385,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_beedrill",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_beedrill.png?raw=true",
+    "image": "https://raw.githubusercontent.com/botc-kr/botc-kr.github.io/main/public/translations/assets/icons/Icon_gnome.png",
     "name": "독침붕",
     "otherNightReminder": "독침붕이 참가자 1명을 선택합니다. 그 참가자는 사망합니다. 사망자와 이웃한 선한 참가자들에게 '중독됨' 리마인더를 놓습니다.",
     "reminders": [
@@ -396,12 +396,12 @@
     "team": "demon"
   },
   {
-    "ability": "매일 밤*, 참가자 1명을 선택해 자연으로 돌려보냅니다.\n\r\n[+0~1 외지인]",
+    "ability": "매일 밤*, 참가자 1명을 선택해 자연으로 돌려보냅니다.\n\r\n[+0~1 이방인]",
     "edition": "pokemon1",
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_gengar",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_gengar.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_gengar.png?raw=true",
     "name": "팬텀",
     "otherNightReminder": "팬텀이 참가자 1명을 선택합니다. 그 참가자는 사망합니다.",
     "reminders": "",
@@ -414,7 +414,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_mewtwo",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mewtwo.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_harpy.png?raw=true",
     "name": "뮤츠",
     "otherNightReminder": "뮤츠에게 '휴식' 토큰이 있다면 깨우지 않고 '휴식' 토큰만 제거합니다. '휴식' 토큰이 없다면 뮤츠를 깨웁니다. 뮤츠는 참가자를 1명 또는 3명 선택합니다. 3명을 선택하면 뮤츠에게 '휴식' 리마인더를 놓습니다.",
     "reminders": [
@@ -429,7 +429,7 @@
     "firstNightReminder": "",
     "flavor": "",
     "id": "ko_KR_teamrocket",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_teamrocket.png?raw=true",
+    "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_teamrocket.png?raw=true",
     "name": "로켓단",
     "otherNightReminder": "로켓단을 차례로 깨웁니다. 각각 선택한 참가자에게 '선택' 리마인더를 놓습니다. 리마인더가 겹칠 경우 해당 참가자를 깨워 악팀이 되었음을 알립니다. 겹치지 않으면 두 명 모두 사망합니다.",
     "reminders": [

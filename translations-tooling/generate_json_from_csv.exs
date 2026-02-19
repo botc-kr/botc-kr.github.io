@@ -30,11 +30,6 @@ defmodule GenerateJsonFromCsv do
           parsed_csv_co_role = from_csv_row_to_co_role(row)
           role_id = parsed_csv_co_role["id"]
 
-              parsed_csv_co_role,
-              "image",
-              "../../assets/icons/Icon_#{role_id}.png"
-            )
-
           # Prune all empty fields.
           pruned_csv_co_role =
             Enum.reject(parsed_csv_co_role, fn {_key, value} ->
@@ -70,7 +65,18 @@ defmodule GenerateJsonFromCsv do
         [merged_role | acc]
       end)
 
-    result_json = Jason.encode!(merged_with_all_co_roles)
+    # Keep roles that exist in CSV but not in en_GB.json (e.g. newer experimental roles).
+    extra_roles_from_csv =
+      parsed_roles_from_csv
+      |> Enum.reject(fn {role_id, _role} -> Map.has_key?(co_roles, role_id) end)
+      |> Enum.map(fn {_role_id, role} -> role end)
+
+    merged_roles =
+      merged_with_all_co_roles
+      |> Kernel.++(extra_roles_from_csv)
+      |> Enum.map(&normalize_icon_path/1)
+
+    result_json = Jason.encode!(merged_roles)
 
     json_path = "assets/json/#{locale}.json"
     File.write!(json_path, result_json)
@@ -141,6 +147,42 @@ defmodule GenerateJsonFromCsv do
     end
   end
   defp parse_night_order(_), do: nil
+
+  defp normalize_icon_path(%{"id" => role_id} = role) when is_binary(role_id) do
+    image = Map.get(role, "image", "")
+
+    should_normalize =
+      cond do
+        image == "" ->
+          true
+
+        is_binary(image) ->
+          String.starts_with?(image, "../../assets/icons/Icon_") or
+            String.starts_with?(
+              image,
+              "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_"
+            ) or
+            String.starts_with?(
+              image,
+              "https://github.com/botc-kr/botc-kr.github.io/blob/main/public/translations/assets/icons/Icon_"
+            )
+
+        true ->
+          false
+      end
+
+    if should_normalize do
+      Map.put(
+        role,
+        "image",
+        "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_#{role_id}.png?raw=true"
+      )
+    else
+      role
+    end
+  end
+
+  defp normalize_icon_path(role), do: role
 end
 
 # Process only ko_KR locale

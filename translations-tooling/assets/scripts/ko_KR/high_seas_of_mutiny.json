@@ -12,7 +12,10 @@
     "firstNight": 25,
     "firstNightReminder": "노련한 선원을 깨워 캐릭터 토큰 5개를 (참가 2개, 미참가 3개) 보여주세요.",
     "id": "ko_KR_oldseadog",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_oldseadog.png?raw=true",
+    "image": [
+      "https://i.imgur.com/k39Xmch.png",
+      "https://i.imgur.com/l0Khig7.png"
+    ],
     "name": "노련한 선원",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -21,12 +24,15 @@
     "team": "townsfolk"
   },
   {
-    "ability": "게임 시작 시 3명의 참가자를 알게 됩니다. 마을주민 1명, 외지인 1명, 하수인 1명입니다. (순서 임의) [외지인 -1 또는 +1]",
+    "ability": "게임 시작 시 3명의 참가자를 알게 됩니다. 마을주민 1명, 외부인 1명, 하수인 1명입니다. (순서 임의) [외부인 -1 또는 +1]",
     "edition": "HSoM",
     "firstNight": 26,
-    "firstNightReminder": "마을주민, 외지인, 하수인 3명을 각각 지명하세요.(순서 임의)",
+    "firstNightReminder": "마을주민, 외부인, 하수인 3명을 각각 지명하세요.(순서 임의)",
     "id": "ko_KR_navigator",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_navigator.png?raw=true",
+    "image": [
+      "https://i.imgur.com/XpuIxJ8.png",
+      "https://i.imgur.com/OiXAFl0.png"
+    ],
     "name": "항해사",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -44,7 +50,10 @@
     "firstNight": 27,
     "firstNightReminder": "몇명인지 알려주세요.",
     "id": "ko_KR_boatswain",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_boatswain.png?raw=true",
+    "image": [
+      "https://i.imgur.com/1usGD0a.png",
+      "https://i.imgur.com/GUNDBF7.png"
+    ],
     "name": "갑판장",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -58,7 +67,10 @@
     "firstNight": 28,
     "firstNightReminder": "플레이중인 캐릭터 하나를 알려주세요. :reminder:",
     "id": "ko_KR_deckhand",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_deckhand.png?raw=true",
+    "image": [
+      "https://i.imgur.com/nwlUvWo.png",
+      "https://i.imgur.com/15zDhIy.png"
+    ],
     "name": "갑판원",
     "otherNight": 12,
     "otherNightReminder": "알려준 캐릭터가 죽는다면, 다른 진영(선,악)의 캐릭터를 알려줍니다. :reminder:",
@@ -75,7 +87,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_captain",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_captain.png?raw=true",
+    "image": [
+      "https://i.imgur.com/5m0eAeo.png",
+      "https://i.imgur.com/38nxM17.png"
+    ],
     "name": "선장",
     "otherNight": 4,
     "otherNightReminder": "선장이 2명을 고르게 하세요. 첫번째는 '보호'토큰을 두번째는 '표적 '토큰을 놓으세요. :reminder: :reminder:",
@@ -93,7 +108,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_buccaneer",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_buccaneer.png?raw=true",
+    "image": [
+      "https://i.imgur.com/g6UfiGF.png",
+      "https://i.imgur.com/dSTwUou.png"
+    ],
     "name": "카리브 해적",
     "otherNight": 5,
     "otherNightReminder": "두명의 참가자(본인제외)를 선택하게 하세요, 선택한 참가자들의 팀(선,악)이 다르다면, 해적을 사망 시키세요. :reminder:",
@@ -110,7 +128,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_landlubber",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_landlubber.png?raw=true",
+    "image": [
+      "https://i.imgur.com/mf8iTiR.png",
+      "https://i.imgur.com/FNGcwT0.png"
+    ],
     "name": "풋내기 선원",
     "otherNight": 13,
     "otherNightReminder": "그가 지명한 참가자가 하수인이라면 '사망'시키세요. :reminder:",
@@ -126,7 +147,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_wench",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_wench.png?raw=true",
+    "image": [
+      "https://i.imgur.com/enGPWJ8.png",
+      "https://i.imgur.com/BpNt3BG.png"
+    ],
     "name": "여급",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -140,7 +164,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_privateer",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_privateer.png?raw=true",
+    "image": [
+      "https://i.imgur.com/ykfyVbK.png",
+      "https://i.imgur.com/UJpSybI.png"
+    ],
     "name": "사략선 해적",
     "otherNight": 14,
     "otherNightReminder": "과제를 달성하면 캐릭터 하나를 알려주세요.",
@@ -156,7 +183,10 @@
     "firstNight": 29,
     "firstNightReminder": "능력을 쓸지 물어보세요. 쓴다면 숫자로 알려주세요 :reminder:",
     "id": "ko_KR_firstmate",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_firstmate.png?raw=true",
+    "image": [
+      "https://i.imgur.com/hsOWoTm.png",
+      "https://i.imgur.com/SN65swP.png"
+    ],
     "name": "1등 항해사",
     "otherNight": 15,
     "otherNightReminder": "능력을 쓸지 물어보세요. 쓴다면 숫자로 알려주세요 :reminder:",
@@ -172,7 +202,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_powdermonkey",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_powdermonkey.png?raw=true",
+    "image": [
+      "https://i.imgur.com/bMIE7Sk.png",
+      "https://i.imgur.com/tVztqgk.png"
+    ],
     "name": "화약 운반수",
     "otherNight": 11,
     "otherNightReminder": "선택한 참가자 중에 하수인이 있다면 화약운반수와 하수인 둘다 죽이세요. :reminder: :reminder:",
@@ -189,7 +222,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_corsair",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_corsair.png?raw=true",
+    "image": [
+      "https://i.imgur.com/p8YsrZS.png",
+      "https://i.imgur.com/cTa53Rm.png"
+    ],
     "name": "지중해 해적",
     "otherNight": 16,
     "otherNightReminder": "지중해 해적이 밤에 '사망'하면, 참가자와 마을주민을 고르게 하고, 악마가 아니라면 그 참가자의 캐릭터를 바꾸세요.",
@@ -198,13 +234,16 @@
     "team": "townsfolk"
   },
   {
-    "ability": "생존자가 3명만 남았을 때 당신이 한 번도 참가자를 지명한 적이 없다면: 소라게 팀이 승리하게 [외지인 +1]",
+    "ability": "생존자가 3명만 남았을 때 당신이 한 번도 참가자를 지명한 적이 없다면: 소라게 팀이 승리하게 [외부인 +1]",
     "edition": "HSoM",
     "firstNight": 0,
     "firstNightReminder": "",
     "flavor": "인격이란 가면 뒤에는 그 가면을 다루는 영혼이 존재한다. 때로는 그 영혼이 가면을 벗고 심연과 마주할 때가 오느니...",
     "id": "ko_KR_hermitcrab",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_hermitcrab.png?raw=true",
+    "image": [
+      "https://i.imgur.com/SLRZcx2.png",
+      "https://i.imgur.com/gkC5J3B.png"
+    ],
     "name": "소라게",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -220,7 +259,10 @@
     "firstNight": 30,
     "firstNightReminder": "참가자를 선택하게 하세요. :reminder:",
     "id": "ko_KR_barnacle",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_barnacle.png?raw=true",
+    "image": [
+      "https://i.imgur.com/p0sFBR2.png",
+      "https://i.imgur.com/nVUNVuV.png"
+    ],
     "name": "따개비",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -231,12 +273,15 @@
     "team": "outsider"
   },
   {
-    "ability": "당신은 마을주민이라고 생각하지만, 사실은 딸기코입니다. 당신은 악한 진영으로 간주되며 하수인 또는 외지인으로 보일 수 있습니다.",
+    "ability": "당신은 마을주민이라고 생각하지만, 사실은 딸기코입니다. 당신은 악한 진영으로 간주되며 하수인 또는 외부인으로 보일 수 있습니다.",
     "edition": "HSoM",
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_grogblossom",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_grogblossom.png?raw=true",
+    "image": [
+      "https://i.imgur.com/wlWW00z.png",
+      "https://i.imgur.com/51XoW7o.png"
+    ],
     "name": "딸기코",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -263,7 +308,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_mermaid",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mermaid.png?raw=true",
+    "image": [
+      "https://i.imgur.com/WeGkkuk.png",
+      "https://i.imgur.com/HzBhOAW.png"
+    ],
     "name": "인어",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -279,7 +327,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_stowaway",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_stowaway.png?raw=true",
+    "image": [
+      "https://i.imgur.com/X2IebgS.png",
+      "https://i.imgur.com/sIk4lJH.png"
+    ],
     "name": "밀항자",
     "otherNight": 2,
     "otherNightReminder": "밀항자가 '사망'했다면 하수인들을 깨워 그리모어를 보여주세요.",
@@ -303,7 +354,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_mysticpriestess",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_mysticpriestess.png?raw=true",
+    "image": [
+      "https://i.imgur.com/snOBOyh.png",
+      "https://i.imgur.com/OHw4Zkw.png"
+    ],
     "name": "비밀 여사제",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -321,7 +375,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_undeadpirate",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_undeadpirate.png?raw=true",
+    "image": [
+      "https://i.imgur.com/jFejeUW.png",
+      "https://i.imgur.com/Hb070Ra.png"
+    ],
     "name": "언데드 해적",
     "otherNight": 6,
     "otherNightReminder": "처형으로 '사망'하면, 오늘 밤 살아있는 선한 이웃을 선택하게 하세요. 그는 '사망'합니다. :reminder:",
@@ -338,7 +395,10 @@
     "firstNight": 21,
     "firstNightReminder": "바다정령을 깨워서 선한 참가자를 중독 시키세요. 선한 참가자를 깨워서 바다정령의 있음을 알려주세요. :reminder:",
     "id": "ko_KR_seaspirit",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_seaspirit.png?raw=true",
+    "image": [
+      "https://i.imgur.com/PyBWPSH.png",
+      "https://i.imgur.com/hmuzZMD.png"
+    ],
     "name": "바다 정령",
     "otherNight": 0,
     "otherNightReminder": "",
@@ -355,7 +415,10 @@
     "firstNight": 22,
     "firstNightReminder": "매일 밤, 참가자를 선택하게 하세요. 선택된 참가자가 마을주민이라면 황혼까지 잘못된 정보를 제공해야합니다. :reminder:",
     "id": "ko_KR_flesheater",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_flesheater.png?raw=true",
+    "image": [
+      "https://i.imgur.com/LNyqSB6.png",
+      "https://i.imgur.com/6gcpm4P.png"
+    ],
     "name": "살점 포식자",
     "otherNight": 3,
     "otherNightReminder": "매일 밤, 참가자를 선택하게 하세요. 선택된 참가자가 마을주민이라면 황혼까지 잘못된 정보를 제공해야합니다. 그가 오늘 밤 '사망' 한다면 ,대신 다음 밤 '사망'처리 됩니다. :reminder: 살점포식자에게 한입 먹힌 참가자는 그날 밤 죽을 수 없습니다. 다음 밤에 '사망'시키세요. :reminder:",
@@ -367,15 +430,18 @@
     "team": "minion"
   },
   {
-    "ability": "매일 밤*, 참가자 한 명을 선택해서 죽입니다. 처음 외지인을 죽였을 경우, 그 외지인의 살아있는 선한 이웃 중 한 명이 함께 죽습니다. [외지인 -1 또는 +1]",
+    "ability": "매일 밤*, 참가자 한 명을 선택해서 죽입니다. 처음 외부인을 죽였을 경우, 그 외부인의 살아있는 선한 이웃 중 한 명이 함께 죽습니다. [외부인 -1 또는 +1]",
     "edition": "HSoM",
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_kraken",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_kraken.png?raw=true",
+    "image": [
+      "https://i.imgur.com/ZYrcFpy.png",
+      "https://i.imgur.com/vCCT593.png"
+    ],
     "name": "크라켄",
     "otherNight": 7,
-    "otherNightReminder": "매일 밤, 참가자를 선택해 '사망'시킵니다.. 선택한 참가자가 외지인이라면 외지인의 살아있는 선한 이웃 한명을 더 죽입니다.(최초 1번) . :reminder:",
+    "otherNightReminder": "매일 밤, 참가자를 선택해 '사망'시킵니다.. 선택한 참가자가 외부인이라면 외부인의 살아있는 선한 이웃 한명을 더 죽입니다.(최초 1번) . :reminder:",
     "reminders": [
       "사망",
       "사망"
@@ -389,7 +455,10 @@
     "firstNight": 23,
     "firstNightReminder": "3명 고르게 하세요. :reminder: :reminder: :reminder:",
     "id": "ko_KR_calypso",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_calypso.png?raw=true",
+    "image": [
+      "https://i.imgur.com/zkuiY7L.png",
+      "https://i.imgur.com/jIWJkcJ.png"
+    ],
     "name": "칼립소",
     "otherNight": 8,
     "otherNightReminder": "첫번째 참가자가 오늘 낮에 '처형' 됐다면 다른 두 명을 더 '사망'시키세요. 아니라면 첫번째 참가자를 '사망'시킵니다. 이 후 3명을 고르세요. :reminder: :reminder: 칼립소3명. :reminder: :reminder: :reminder:",
@@ -410,7 +479,10 @@
     "firstNight": 24,
     "firstNightReminder": "루살카에게 능력의 힌트를 알려주세요. 선한 참가자를 깨워 루살카가 있음을 알려주세요. :reminder:",
     "id": "ko_KR_rusalka",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_rusalka.png?raw=true",
+    "image": [
+      "https://i.imgur.com/zirCpWD.png",
+      "https://i.imgur.com/f7QsSSq.png"
+    ],
     "name": "루살카",
     "otherNight": 9,
     "otherNightReminder": "루살카에게 능력의 힌트를 알려주세요. 루살카에게 고르게 하거나, 능력에 기반한 정보를 제공하시거나 하세요. :reminder:",
@@ -427,7 +499,10 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "ko_KR_umibozu",
-    "image": "https://github.com/wonhyo-e/botc-translations/blob/main/assets/icons/Icon_umibozu.png?raw=true",
+    "image": [
+      "https://i.imgur.com/mlnGfWq.png",
+      "https://i.imgur.com/gMaxrgN.png"
+    ],
     "name": "우미보즈",
     "otherNight": 10,
     "otherNightReminder": "우미보즈가 참가자를 선택하게 하세요. :reminder:",

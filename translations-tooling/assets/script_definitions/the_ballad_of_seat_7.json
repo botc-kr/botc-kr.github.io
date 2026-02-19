@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "name": "The Ballad of Seat 7",
+    "author": "TrashWarlock"
+  },
+  "roles": [
+    "noble",
+    "librarian",
+    "shugenja",
+    "balloonist",
+    "villageidiot",
+    "dreamer",
+    "oracle",
+    "innkeeper",
+    "seamstress",
+    "fisherman",
+    "farmer",
+    "virgin",
+    "magician",
+    "drunk",
+    "recluse",
+    "saint",
+    "damsel",
+    "harpy",
+    "boomdandy",
+    "scarletwoman",
+    "boffin",
+    "baron",
+    "pukka",
+    "imp",
+    "vigormortis",
+    "gnome",
+    "bureaucrat",
+    "scapegoat",
+    "harlot"
+  ]
+}
