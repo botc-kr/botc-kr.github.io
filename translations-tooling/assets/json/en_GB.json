@@ -4005,5 +4005,21 @@
     "reminders": [],
     "remindersGlobal": [],
     "team": ""
+  },
+  {
+    "ability": "",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "flavor": "",
+    "id": "alsaahir",
+    "image": "",
+    "name": "",
+    "note": "",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [],
+    "team": "townsfolk"
   }
 ]

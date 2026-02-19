@@ -2,13 +2,18 @@ import os
 import logging
 from typing import List, Dict, Any
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import SimpleDocTemplate
+from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 from .config import FontConfig
 from .constants import (
-    PAGE_SIZE, MARGIN_RIGHT, MARGIN_LEFT, MARGIN_TOP, MARGIN_BOTTOM
+    MARGIN_BOTTOM,
+    MARGIN_LEFT,
+    MARGIN_RIGHT,
+    MARGIN_TOP,
+    PAGE_SIZE,
+    TEAM_TEXT_HEADER_SPACING,
 )
 from .exceptions import FontRegistrationError, PDFGenerationError
 from .models import PDFData, TeamSection
@@ -124,6 +129,9 @@ class PDFGenerator:
             team_image = self.table_builder.get_team_image(team_section.team.value)
             if team_image:
                 elements.append(team_image)
+                # Fallback text headers (e.g. missing fabled.png) need extra gap to avoid overlap.
+                if isinstance(team_image, Paragraph):
+                    elements.append(Spacer(1, TEAM_TEXT_HEADER_SPACING))
             
             # Add team table
             team_table = self.table_builder.create_team_table(team_section)

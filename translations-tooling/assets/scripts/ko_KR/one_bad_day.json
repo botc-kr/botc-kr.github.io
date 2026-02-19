@@ -231,7 +231,7 @@
     "edition": "bmr",
     "firstNight": 0,
     "firstNightReminder": "",
-    "flavor": "예, 형님. 그 녀석한테 확실히 말해줬습죠. 더는 설명 안 해도 될 만큼이요. 아이고 형님, 의사고 뭐고 필요 없습니다. 그냥 칼에 찔린 것뿐인데요 뭐. 내일 아침이면 멀쩡할 겁니다요.",
+    "flavor": "예, 형님. 그 녀석한테 확실히 \b말해줬습죠. 더는 설명 안 해도 될 만큼이요. 아이고 형님, 의사고 뭐고 필요 없습니다. 그냥 칼에 찔린 것뿐인데요 뭐. 내일 아침이면 멀쩡할 겁니다요.",
     "id": "ko_KR_goon",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_goon.png?raw=true",
     "name": "깡패",

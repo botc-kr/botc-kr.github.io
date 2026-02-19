@@ -12,6 +12,7 @@ MARGIN_BOTTOM: Final = 0 * mm
 
 # Table configuration
 TEAM_IMAGE_HEIGHT: Final = 72
+TEAM_TEXT_HEADER_SPACING: Final = 8
 MEMBER_IMAGE_SIZE: Final = (int(2 * inch), int(2 * inch))
 DISPLAY_IMAGE_SIZE: Final = (0.51 * inch, 0.51 * inch)
 TABLE_COL_WIDTHS: Final = [0.4 * inch, 1.0 * inch, A4[0] - 2.0 * inch]
@@ -36,7 +37,7 @@ ASSETS_IMAGES_PATH: Final = "assets/images"
 ASSETS_ICONS_PATH: Final = "assets/icons"
 
 # Valid teams
-VALID_TEAMS: Final = ["townsfolk", "outsider", "minion", "demon"]
+VALID_TEAMS: Final = ["townsfolk", "outsider", "minion", "demon", "fabled"]
 
 # Footer text
 FOOTER_COPYRIGHT: Final = "© StevenMedway, bloodontheclocktower.com | Korean PDF by botc-kr.github.io"

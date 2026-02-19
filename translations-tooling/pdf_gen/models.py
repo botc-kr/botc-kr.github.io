@@ -9,6 +9,7 @@ class TeamType(Enum):
     OUTSIDER = "outsider"
     MINION = "minion"
     DEMON = "demon"
+    FABLED = "fabled"
 
 
 @dataclass

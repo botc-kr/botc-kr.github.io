@@ -145,5 +145,16 @@
     "json": "/translations/assets/scripts/ko_KR/the_ballad_of_seat_7.json",
     "note": "",
     "logo": "/translations/assets/images/blood_on_the_clocktower.png"
+  },
+  {
+    "author": "Brockwell",
+    "synopsis": "Brockwell의 틴시빌 스크립트입니다.",
+    "name": "아무도 움직이지 마",
+    "id": "nobody_fucking_move",
+    "pdf": "/translations/assets/pdf/ko_KR/nobody_fucking_move.pdf",
+    "json": "/translations/assets/scripts/ko_KR/nobody_fucking_move.json",
+    "note": "",
+    "logo": "/translations/assets/images/blood_on_the_clocktower.png",
+    "teensyville": true
   }
 ]

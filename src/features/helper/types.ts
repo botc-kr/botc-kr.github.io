@@ -4,6 +4,7 @@ export enum Team {
   Minion = 'minion',
   Demon = 'demon',
   Traveler = 'traveler',
+  Fabled = 'fabled',
   Info = 'info',
 }
 

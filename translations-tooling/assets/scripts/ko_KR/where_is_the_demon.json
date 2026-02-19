@@ -286,7 +286,7 @@
     "edition": "bmr",
     "firstNight": 0,
     "firstNightReminder": "",
-    "flavor": "예, 형님. 그 녀석한테 확실히 말해줬습죠. 더는 설명 안 해도 될 만큼이요. 아이고 형님, 의사고 뭐고 필요 없습니다. 그냥 칼에 찔린 것뿐인데요 뭐. 내일 아침이면 멀쩡할 겁니다요.",
+    "flavor": "예, 형님. 그 녀석한테 확실히 \b말해줬습죠. 더는 설명 안 해도 될 만큼이요. 아이고 형님, 의사고 뭐고 필요 없습니다. 그냥 칼에 찔린 것뿐인데요 뭐. 내일 아침이면 멀쩡할 겁니다요.",
     "id": "ko_KR_goon",
     "image": "https://github.com/botc-kr/botc-kr.github.io/blob/main/src/assets/icons/Icon_goon.png?raw=true",
     "name": "깡패",
@@ -397,6 +397,7 @@
     "team": "demon"
   },
   {
+    "\bnote": "ojo(오호)는 스페인어로 '눈(eye)'을 의미합니다. 캐릭터의 배경 설명에 등장하는 모닥불과 연관 지어, 오호의 캐릭터 아이콘은 불타오르는 눈동자의 모습을 하고 있습니다.",
     "ability": "매일 밤* 한 명의 캐릭터를 선택하면 그 캐릭터는 사망합니다. 만약 선택한 캐릭터가 게임에 없다면, 이야기꾼이 누가 사망할지 결정합니다.",
     "edition": "experimental",
     "firstNight": 0,
@@ -405,7 +406,6 @@
     "id": "ko_KR_ojo",
     "image": "https://github.com/gitorcat/BOTCH/blob/main/art/icons/pandemonium_institute/ojo.png?raw=true",
     "name": "오호",
-    "note": "ojo(오호)는 스페인어로 '눈(eye)'을 의미합니다. 캐릭터의 배경 설명에 등장하는 모닥불과 연관 지어, 오호의 캐릭터 아이콘은 불타오르는 눈동자의 모습을 하고 있습니다.",
     "otherNight": 24,
     "otherNightReminder": "The Ojo points to a character. That character, if in play, dies. If that character is not in play, choose zero, one, or more players to die.",
     "reminders": [

@@ -19,6 +19,7 @@ export const HELPER_SCRIPTS = [
   createHelperScript('pies_baking', '익어가는 파이 (Pies Baking)'),
   createHelperScript('catfishing', 'Catfishing'),
   createHelperScript('onion_pies', 'Onion Pies'),
+  createHelperScript('nobody_fucking_move', '아무도 움직이지 마'),
   createHelperScript('the_ballad_of_seat_7', '7번 좌석의 발라드'),
 ] as const
 
