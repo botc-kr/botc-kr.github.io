@@ -135,5 +135,15 @@
     "note": "",
     "logo": "https://raw.githubusercontent.com/wonhyo-e/botc-translations/main/assets/images/race_to_the_bottom.png",
     "teensyville": true
+  },
+  {
+    "author": "TrashWarlock",
+    "synopsis": "TrashWarlock의 커뮤니티 스크립트입니다.",
+    "name": "7번 좌석의 발라드",
+    "id": "the_ballad_of_seat_7",
+    "pdf": "/translations/assets/pdf/ko_KR/the_ballad_of_seat_7.pdf",
+    "json": "/translations/assets/scripts/ko_KR/the_ballad_of_seat_7.json",
+    "note": "",
+    "logo": "/translations/assets/images/blood_on_the_clocktower.png"
   }
 ]
